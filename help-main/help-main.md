@@ -4,7 +4,7 @@ Basically all modules have an implicit filename called `__main__`, so when you u
 
 ### Create two new files:
 
-First:
+first.py:
 ```python    
 # first.py
 
@@ -14,7 +14,7 @@ else:
   print 'This print statement is ran from a different module'
 ```
 
-Second:
+second.py:
 ```python
 #second.py
 
@@ -33,7 +33,7 @@ This print statement is ran from a different module
 
 ### What's going on?
 
-1. By setting the `__name__` variable equal to `"__main__"`, we indicate that we're running the statements in the current module (since each module has an rather than importing it. So the first file runs the code within the current module, while teh second file imports the code from the first.
+By setting the `__name__` variable equal to `"__main__"`, we indicate that we're running the statements in the current module (since each module has an rather than importing it. So the first file runs the code within the current module, while teh second file imports the code from the first.
 
 
 
