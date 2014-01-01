@@ -4,24 +4,22 @@ Basically all modules have an implicit filename called `__main__`, so when you u
 
 ### Create two new files:
 
-  1. First:
+First:
+  ```python    
+  # first.py
 
-    ```python    
-    # first.py
+  if __name__ == '__main__':
+    print 'This print statement is ran from the current module.'
+  else:
+    print 'This print statement is ran from a different module'
+  ```
 
-    if __name__ == '__main__':
-      print 'This print statement is ran from the current module.'
-    else:
-      print 'This print statement is ran from a different module'
-    ```
+Second:
+  ```python
+  #second.py
 
-  2: Second:
-
-    ```python
-    #second.py
-
-    import first
-    ```
+  import first
+  ```
         
 ### Now run the files:
 
