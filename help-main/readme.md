@@ -33,7 +33,8 @@ This print statement is ran from a different module
 
 ### What's going on?
 
-By setting the `__name__` variable equal to `"__main__"`, we indicate that we're running the statements in the current module (since each module has an rather than importing it. So the first file runs the code within the current module, while teh second file imports the code from the first.
+By setting the `__name__` variable equal to `"__main__"`, we indicated that we're running the statements in the current file rather than importing it. So the first file runs the code within the current module, while teh second file imports the code from the first.
+
 
 
 
