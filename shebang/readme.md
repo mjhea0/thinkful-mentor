@@ -15,8 +15,6 @@ The latter way is preferred since it's not dependent on a particular installatio
 
 To find the location of Python on your machine:
 
-#### Windows
-
 ```shell
 c:\> python
 >>> import os
@@ -24,10 +22,6 @@ c:\> python
 >>> os.path.dirname(sys.executable)
 'C:\\Python27'
 ```
-
-#### Mac/Linux
-
-coming soon ...
 
 ### Setting the Path
 
