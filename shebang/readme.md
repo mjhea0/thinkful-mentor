@@ -27,6 +27,8 @@ c:\> python
 
 #### Mac/Linux
 
+coming soon ...
+
 ### Setting the Path
 
 #### Windows
