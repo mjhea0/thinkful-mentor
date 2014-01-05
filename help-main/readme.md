@@ -1,6 +1,6 @@
 ## What does `if __name__ == “__main__”:` do?
 
-Basically all modules have an implicit filename called `__main__`, so when you use the `__name__ == '__main__'` statement, you are basically running that module. There's a bit of black magic happening. Let's look at an example.
+Basically all modules have an implicit filename called `__main__`, so `__name__` will be equal to `__main__` when you run the module from the command line. There's a bit of black magic happening. Let's look at an example.
 
 ### Create two new files:
 
