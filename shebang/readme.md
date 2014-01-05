@@ -3,7 +3,7 @@
 ### What's the difference between `#!/usr/bin/python` and `#!/usr/bin/env python`?
 
 1. `#!/usr/local/bin/python` specifies the *exact* location of Python on your machine, which will be used to interpret the remainder of the script.
-2. `#!/usr/bin/env python` uses the version of Python that is *default* in your current enviornment (by searching the PATH), making that interpret the rest of the script. "env" executes the first thing it finds in the PATH env variable. 
+2. `#!/usr/bin/env python` uses the version of Python that is *default* in your current enviornment (by searching the PATH), making that interpret the rest of the script. "env" executes the first thing it finds in the PATH enviornment variable. 
 
 ### What does this mean?
 
@@ -17,12 +17,27 @@ To find the location of Python on your machine:
 
 #### Windows
 
-```
+```shell
+c:\> python
 >>> import os
 >>> import sys
->>> os.path.dir
+>>> os.path.dirname(sys.executable)
 'C:\\Python27'
 ```
 
-#### Mac
+#### Mac/Linux
+
+### Setting the Path
+
+#### Windows
+
+```
+set PYTHONPATH=c:\python27;
+```
+
+#### Mac/Linux
+
+```
+set PYTHONPATH=/usr/local/lib/python
+```
 
