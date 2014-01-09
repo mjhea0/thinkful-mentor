@@ -54,5 +54,5 @@ $ python test.py
 
   Essentially, `zip` returns a list of tuples from any number of sequences, where the first tuple contains the first item from each sequence, the second tuple contains the second item from each sequence, and so forth.
 
-2. Next, look at the logic in the `for` loop. The loop outputs the greater value in each tuple. In the first iteration, 3 is greater than 2, so 2 is outputted. And in the next iteration, 9 is greater than 4 so 9 is output ...
+2. Next, look at the logic in the `for` loop. The loop outputs the greater value in each tuple. In the first iteration, 3 is greater than 2, so 2 is outputted. And in the next iteration, 9 is greater than 4, so 9 is output ...
 
