@@ -44,15 +44,15 @@ $ python test.py
 
 1. First, you must understand the `zip` function before you can even start this problem. So start analyzing the output of the following:
 
-```
->>> list_a = [3, 9, 17, 15, 19]
->>> list_b = [2, 4, 8, 10, 30, 40, 50, 60, 70, 80, 90]
->>> test = zip(list_a, list_b)
->>> print test
-[(3, 2), (9, 4), (17, 8), (15, 10), (19, 30)]
-```
+  ```
+  >>> list_a = [3, 9, 17, 15, 19]
+  >>> list_b = [2, 4, 8, 10, 30, 40, 50, 60, 70, 80, 90]
+  >>> test = zip(list_a, list_b)
+  >>> print test
+  [(3, 2), (9, 4), (17, 8), (15, 10), (19, 30)]
+  ```
 
-Essentially, `zip` returns a list of tuples from any number of sequences, where the first tuple contains the first item from each sequence, the second tuple contains the second item from each sequence, and so forth.
+  Essentially, `zip` returns a list of tuples from any number of sequences, where the first tuple contains the first item from each sequence, the second tuple contains the second item from each sequence, and so forth.
 
-2. Next, look at the logic in the `for` loop. The loop outputs the greater value in each tuple.
+2. Next, look at the logic in the `for` loop. The loop outputs the greater value in each tuple. In the first iteration, 3 is greater than 2, so 2 is outputted. And in the next iteration, 9 is greater than 4 so 9 is output ...
 
