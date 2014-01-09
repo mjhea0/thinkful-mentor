@@ -2,11 +2,7 @@
 
 ## Lecture
 
-It's also common to need to iterate over two lists at once. This is where the built-in `zip` function comes in handy.
-
-`zip` will create pairs of elements when passed two lists, and will stop at the end of the shorter list.
-
-`zip` can handle three or more lists as well!
+It's common to need to iterate over two lists at once. This is where the built-in `zip` function comes in handy. `zip` will create pairs of elements when passed two lists, and will stop at the end of the shorter list. `zip` can handle three or more lists as well!
 
 ## Problem
 
