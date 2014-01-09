@@ -42,7 +42,7 @@ $ python test.py
 
 ## Explanation
 
-1. First, you must understand the `zip` function before you can even start this problem. So start analyzing the output of the following:
+1. First, you must understand the `zip` function before you can even start this problem. So start by analyzing the output of the following:
 
   ```
   >>> list_a = [3, 9, 17, 15, 19]
