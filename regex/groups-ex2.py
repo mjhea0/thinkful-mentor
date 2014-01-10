@@ -3,7 +3,7 @@ import re
 string = "Michael Herman"
 
 # re.match(pattern, string, flags=0)
-m = re.match("(?P<first>\w+)\W+(?P<last>\w+)", string)
+m = re.match(r"(?P<first>\w+)\W+(?P<last>\w+)", string)
 
 if m:
    print "group(0) : ", m.group(0)

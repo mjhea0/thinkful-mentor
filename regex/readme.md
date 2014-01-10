@@ -44,7 +44,7 @@ import re
 string = "Michael Herman"
 
 # re.match(pattern, string, flags=0)
-m = re.match("(?P<first>\w+)\W+(?P<last>\w+)", string)
+m = re.match(r"(?P<first>\w+)\W+(?P<last>\w+)", string)
 
 if m:
    print "group(0) : ", m.group(0)
@@ -71,6 +71,36 @@ group("last") :  Herman
 #### What's going on?
 
 Group 0 defines the string matched from the entire regular expression, while Group 1 and 2 still represent the sub-groups. Since we also added in named groups, we can also respresent the substrings with "first" and "last".
+
+## Alternative Syntax
+
+```python
+import re
+
+name = 'Michael Herman'
+
+print name
+print
+
+for pattern in [r"(?P<first>\w+)",r"\W+(?P<last>\w+)"]:
+    regex = re.compile(pattern)
+    match = regex.search(name)
+    print 'Matching "%s"' % pattern
+    print '  ', match.groups()
+    print
+```
+
+Results:
+
+```shell
+Michael Herman
+
+Matching "(?P<first>\w+)"
+   ('Michael',)
+
+Matching "\W+(?P<last>\w+)"
+   ('Herman',)
+```
 
 
 
