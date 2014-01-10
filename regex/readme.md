@@ -38,7 +38,7 @@ You can also define groups names, which makes the groups easier to read.
 
 ### Example
 
-```
+```python
 import re
 
 string = "Michael Herman"
