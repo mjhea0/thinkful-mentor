@@ -45,3 +45,46 @@ while num > 0:
             print "\n"+x,
 ```
 
+### Continue
+
+Continue is used to skip the remaining code in a loop, which then returns the program to the beginning, contining on to the iteration.
+
+#### First Example
+
+```python
+array = []
+
+for letter in 'testing':
+    if letter == 'i':
+        continue
+    array.append(letter)
+
+print array
+```
+
+#### Second Example
+
+```
+num = 13                 
+while num > 0:              
+    print num,
+    num = num - 1
+    if num == 5:
+        continue
+```
+
+#### Third Example
+
+```
+num = 13                 
+while num > 0:              
+    print num,
+    num = num - 1
+    if num == 5:
+        for x in "STRING":
+            if x == 'R':
+                continue
+            print "\n"+x,
+        print ""
+```
+
