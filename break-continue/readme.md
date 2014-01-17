@@ -6,7 +6,7 @@ Loops are usually used to iterate over a block of code then exit after some cond
 
 Break is used to terminate the loop. The program then moves to the next statement after the loop. 
 
-#### First Example
+#### First
 
 ```python
 array = []
@@ -19,9 +19,9 @@ for letter in 'testing':
 print array
 ```
 
-#### Second Example
+#### Second
 
-```
+```python
 num = 13                 
 while num > 0:              
     print num,
@@ -30,9 +30,9 @@ while num > 0:
         break
 ```
 
-#### Third Example
+#### Third
 
-```
+```python
 num = 13                 
 while num > 0:              
     print num,
@@ -49,7 +49,7 @@ while num > 0:
 
 Continue is used to skip the remaining code in a loop, which then returns the program to the beginning, contining on to the iteration.
 
-#### First Example
+#### First
 
 ```python
 array = []
@@ -62,9 +62,9 @@ for letter in 'testing':
 print array
 ```
 
-#### Second Example
+#### Second
 
-```
+```python
 num = 13                 
 while num > 0:              
     print num,
@@ -73,9 +73,9 @@ while num > 0:
         continue
 ```
 
-#### Third Example
+#### Third
 
-```
+```python
 num = 13                 
 while num > 0:              
     print num,
