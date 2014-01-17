@@ -5,7 +5,7 @@ while num > 0:
     if num == 5:
         for x in "STRING":
             if x == 'R':
-                print "\nEXIT INNER LOOP"
+            	print "\nEXIT INNER LOOP"
                 break
             print "\n"+x,
 

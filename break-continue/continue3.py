@@ -8,3 +8,4 @@ while num > 0:
                 continue
             print "\n"+x,
         print ""
+
