@@ -24,3 +24,4 @@ def calculate_total(num1,num2,num3):
 
 calculate_total(1,2,-3)
 calculate_total(1,2,3)
+calculate_total(-10,2,3)
