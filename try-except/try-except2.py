@@ -8,7 +8,8 @@ def assert_positive(num_list):
         except AssertionError:
             print "Sorry. " + str(num) + " is less than zero. Try again"
             return 0
-    return 1
+        else:
+            return 1
 
 
 def calculate_total(num1,num2,num3):
