@@ -19,6 +19,8 @@ Process of converting a data structure into a format that can be stored (file or
 >>>
 ```
 
+ > The `dump()` function takes a serializeable data structure as an argument (a dictionary, in this case), then serializes it into binary.
+
 ### Loading from a file
 
 ```sh
@@ -30,6 +32,8 @@ Process of converting a data structure into a format that can be stored (file or
 {'Age': 30, 'Name': 'Michael', 'Class': 'First'}
 >>>
 ```
+
+> The `load()` function takes an object (sample_dict.pickle), and then creates/returns a new object (my_dict) from the serialized data.
 
 ### Saving/Loading from memory
 
