@@ -1,3 +1,5 @@
+# needs to be refactored
+
 import sys
 
 def calculate_total(meal_price):
