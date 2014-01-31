@@ -4,6 +4,8 @@
 
 Process of converting a data structure into a format that can be stored (file or cache) or transmitted, which can then be deserialized later. Python uses the [Pickle](https://wiki.python.org/moin/UsingPickle) and [JSON](http://docs.python.org/2/library/json) modules for serialization and deseralization.
 
+*JSON vs SimpleJSON?*
+
 ## Pickle
 
 ### Saving to a file
