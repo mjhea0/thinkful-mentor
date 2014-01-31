@@ -63,7 +63,7 @@ True
 
 ### Loading from a JSON file
 
-```
+```sh
 >>> import json
 >>> import codecs
 >>> with codecs.open('json-file.json','r', encoding='utf-8') as file:
