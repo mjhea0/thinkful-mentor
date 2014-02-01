@@ -17,8 +17,6 @@ def assert_arguments(meal,tax,tip):
             tax = raw_input("Re-enter tax rate as a decimal (i.e., .12 = 12%): " )
             tip = raw_input("Reenter how much would you like to tip? (i.e., .20 = 20%): ")
                     
-
- 
 def calculate_rate(base, percentage):
     return base * percentage
  
