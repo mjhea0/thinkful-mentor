@@ -8,7 +8,7 @@ def calculate_total(meal_price):
     """
     while True:
         try:
-            assert meal_price > 0
+            meal_price > 0
             break
         except AssertionError:
             print "\nOops! The meal price must be > $0. Try again.\n"

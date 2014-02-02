@@ -8,7 +8,7 @@ def assert_arguments(meal,tax,tip):
     num_list = []
     while True:
         try:
-            assert type(float(meal)) and type(float(tax)) and type(float(tip)) != str
+            # assert type(float(meal)) and type(float(tax)) and type(float(tip)) != str
             num_list.extend([float(meal),float(tax),float(tip)])
             return num_list
         except ValueError:
