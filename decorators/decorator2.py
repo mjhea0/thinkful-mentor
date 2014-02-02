@@ -10,4 +10,4 @@ print baz(num) == 4
 
 # OR #
 
-print baz(foo(2)) = 4
+print baz(foo(2)) == 4
