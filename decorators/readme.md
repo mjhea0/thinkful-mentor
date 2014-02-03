@@ -215,7 +215,8 @@ Python allows you to simplfy the calling of decorators using the `@` symbol:
       my_decorator()
   ```
 
-2. Okay. Stay with me. Let's look at how to call the function with the decorator:
+  Okay. Stay with me. Let's look at how to call the function with the decorator:
+
   ```python
   from decorator7 import my_decorator
 
@@ -226,9 +227,42 @@ Python allows you to simplfy the calling of decorators using the `@` symbol:
   just_some_function()
   ```
 
+  When you run this example, you should get the same output as in the previous one:
+
+  ```sh
+  Yes!
+  Wheee!
+  Something is happening after some_function() is called.
+  ```
+
+  So, `@my_decorator` is just an easier way of saying `just_some_function = my_decorator(just_some_function)`.
+
+### How about a real world example?
 
 
 
+  ```python
+  import time
 
+  def timing_function(func):
+      def wrapper():
+          t1 = time.time()
+          my_function()
+          t2 = time.time()
+          return (t2-t1)
+      return wrapper
+
+  def just_some_function(num):
+      num_list = []      
+      for x in (range(0,num)):
+          num_list.append(x)
+      return (sum(num_list))
+
+  @timing_function
+  just_some_function(10000)
+
+  @timing_function
+  just_some_function(100000)
+  ```
 
 
