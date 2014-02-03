@@ -5,7 +5,7 @@ def timing_function(some_function):
         t1 = time.time()
         some_function()
         t2 = time.time()
-        return (t2-t1)
+        return "Time it took to run the function: " + str((t2-t1)) + "\n"
     return wrapper
 
 @timing_function
@@ -13,7 +13,7 @@ def my_function():
     num_list = []      
     for x in (range(0,10000)):
         num_list.append(x)
-    return (sum(num_list))
+    print "\nSum of all the numbers: " +str((sum(num_list)))
 
 
 print my_function()

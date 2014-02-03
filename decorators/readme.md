@@ -247,7 +247,7 @@ Python allows you to simplfy the calling of decorators using the `@` symbol:
           t1 = time.time()
           some_function()
           t2 = time.time()
-          return (t2-t1)
+          return "Time it took to run the function: " + str((t2-t1)) + "\n"
       return wrapper
 
   @timing_function
@@ -255,10 +255,16 @@ Python allows you to simplfy the calling of decorators using the `@` symbol:
       num_list = []      
       for x in (range(0,10000)):
           num_list.append(x)
-      return (sum(num_list))
+      print "\nSum of all the numbers: " +str((sum(num_list)))
 
 
   print my_function()
   ```
+
+  This returns the time before you run the function as well as the time after. Then we simply subtract the two to see how long it took to run the function.
+
+  Run the function. Work through the code, line by line. Make sure you understand how it works.
+
+  Cheers!
 
 
