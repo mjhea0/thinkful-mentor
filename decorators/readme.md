@@ -103,7 +103,7 @@ Decorators are a form on Python metaprogramming, using functions to manipulate c
   <function second_child at 0x1004a8cf8>
   ```
 
-  This simply means that `foo` point to the `first_child()` function, while `bar` points to the `second_child()` function.
+  This simply means that `foo` points to the `first_child()` function, while `bar` points to the `second_child()` function.
 
   The output of the second two functions confirms this:
 
