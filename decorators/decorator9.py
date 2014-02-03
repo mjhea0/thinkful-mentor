@@ -11,7 +11,7 @@ def timing_function(some_function):
 @timing_function
 def my_function():
     num_list = []      
-    for x in (range(0,1000000)):
+    for x in (range(0,10000)):
         num_list.append(x)
     return (sum(num_list))
 

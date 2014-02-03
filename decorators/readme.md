@@ -242,25 +242,23 @@ Python allows you to simplfy the calling of decorators using the `@` symbol:
   ```python
   import time
 
-  def timing_function(func):
+  def timing_function(some_function):
       def wrapper():
           t1 = time.time()
-          my_function()
+          some_function()
           t2 = time.time()
           return (t2-t1)
       return wrapper
 
-  def just_some_function(num):
+  @timing_function
+  def my_function():
       num_list = []      
-      for x in (range(0,num)):
+      for x in (range(0,10000)):
           num_list.append(x)
       return (sum(num_list))
 
-  @timing_function
-  just_some_function(10000)
 
-  @timing_function
-  just_some_function(100000)
+  print my_function()
   ```
 
 
