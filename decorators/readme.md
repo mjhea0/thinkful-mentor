@@ -67,8 +67,8 @@ Decorators are a form on Python metaprogramming, using functions to manipulate c
 
   What have we learned?
 
-  - Whenever you call `parent()`, the sibling functions, `first_child()` and `second_child()` are also called. 
-  - Beacuse of scope, both of the sibling functions are not available (e.g., cannot be called) outside of the parent function.
+  Whenever you call `parent()`, the sibling functions, `first_child()` and `second_child()` are also called. 
+  Beacuse of scope, both of the sibling functions are not available (e.g., cannot be called) outside of the parent function.
 
 4. Python also allows you to return functions from other functions. Let's alter the previous function for this example.
   ```python
@@ -238,8 +238,6 @@ Python allows you to simplfy the calling of decorators using the `@` symbol:
   So, `@my_decorator` is just an easier way of saying `just_some_function = my_decorator(just_some_function)`.
 
 ### How about a real world example?
-
-
 
   ```python
   import time
