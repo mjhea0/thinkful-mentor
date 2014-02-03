@@ -1,4 +1,4 @@
-## Decorators
+## Primer on Python Decorators
 
 Decorators are a form of Python metaprogramming, using functions to manipulate code. 
 
