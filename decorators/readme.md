@@ -1,6 +1,6 @@
 ## Decorators
 
-Decorators are a form on Python metaprogramming, using functions to manipulate code. 
+Decorators are a form of Python metaprogramming, using functions to manipulate code. 
 
 > You can find all the examples from this article [here](https://github.com/mjhea0/thinkful-mentor/tree/master/decorators).
 
