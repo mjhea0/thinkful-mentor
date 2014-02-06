@@ -75,24 +75,34 @@ Notice how we use dot notation to access attributes of each object.
 
 ## Instance Methods
 
-Instance methods are functions defined inside a class and are used to perform operations with the attributes of our objects. Like initializers, the first paraemeter is `self`.
+Instance methods are functions defined inside a class and are used to perform operations with the attributes of our objects. Like initializers, the first paraemeter is always `self`.
 
 ```python
 class Dog(object):
-	is_alive = "True"
 
+    # Class Attribute
+    species = 'mammal'
+
+    # Initializer / Instance Attributes
     def __init__(self, name, age):
         self.name = name
         self.age = age
 
+    # instance method
     def description(self):
-        print self.name
-        print self.age
+        return self.name, self.age
+
+    # instance method
+    def speak(self, sound):
+        return "%s says %s" % (self.name, sound)
+
+# Instantiate the Dog object
+mikey = Dog("Mikey", 6)
+
+# call our instance method
+print mikey.description()
+print mikey.speak("Gruff Gruff")
 ```
-
-second_dog = Dog("Mikey", 6)
-print second_dog.description
-
 
 
 ## Real world Example
