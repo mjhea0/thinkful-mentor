@@ -144,89 +144,9 @@ print mikey.get_species()
 
 ## Inheritence
 
-Inheritance is the process by which one class takes on the attributes and methods of another.
+Inheritance is the process by which one class takes on the attributes and methods of another. Newly formed classes are called derived (or sub) classes, and the classes that we derive from are called base classes. It's important to note that derived classes override or extend the functionality of base classes.
 
 ```python
-class Customer(object):
-    """Produces objects that represent customers."""
-    def __init__(self, customer_id):
-        self.customer_id = customer_id
-	
-    def display_cart(self):
-        print "I'm a string that stands in for the contents of your shopping cart!"
-
-class ReturningCustomer(Customer):
-    """For customers of the repeat variety."""
-    def display_order_history(self):
-        print "I'm a string that stands in for your order history!"
-
-monty_python = ReturningCustomer("ID: 12345")
-monty_python.display_cart()
-monty_python.display_order_history()
+examples!!!!
 ```
-
-## Superclass
-
-
-
-
-## Example
-
-```python
-class Triangle(object):
-    number_of_sides = 3
-    def __init__(self, angle1, angle2, angle3):
-        self.angle1 = angle1
-        self.angle2 = angle2
-        self.angle3 = angle3
-    def check_angles(self):
-        if self.angle1 + self.angle2 + self.angle3 == 180:
-            return True
-        else:
-            return False
-            
-class Equilateral(Triangle):
-    angle = 60
-    def __init__(self):
-        self.angle1 = self.angle
-        self.angle2 = self.angle
-        self.angle3 = self.angle        
-    
-my_triangle = Triangle(10, 90, 80)
-
-print my_triangle.number_of_sides
-print my_triangle.check_angles()
-```
-
-## Real world Example
-
-```python
-class ShoppingCart(object):
-    """Creates shopping cart objects
-    for users of our fine website."""
-    items_in_cart = {}
-    def __init__(self, customer_name):
-        self.customer_name = customer_name
-		
-    def add_item(self, product, price):
-        """Add product to the cart."""
-        if not product in self.items_in_cart:
-            self.items_in_cart[product] = price
-            print product + " added."
-        else:
-            print product + " is already in the cart."
-		
-    def remove_item(self, product):
-        """Remove product from the cart."""
-        if product in self.items_in_cart:
-            del self.items_in_cart[product]
-            print product + " removed."
-        else:
-            print product + " is not in the cart."
-
-my_cart = ShoppingCart("Michael")
-my_cart.add_item("bread", 10)
-```
-
-
 
