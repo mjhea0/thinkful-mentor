@@ -1,4 +1,4 @@
-# Python OOP
+# Primer on Object-Oriented Programming in Python
 
 Object-oriented programming (OOP) is a programming paradigm that organizes your code eloquently into classes and objects.
 
@@ -8,9 +8,12 @@ Defining a class is simple:
 
 ```python
 class Dog(object):
+    # class attributes and methods go here
 ```
 
 Start with the `class` keyword, add the name of the class (using CamelCase notation), and then within the parenthesis, add the class you are sublassing or inheriting from. In this example, we are inheriting from the default `object` class.
+
+In essence, classes are blueprints for the associated instances, attributes, and methods.
 
 ## Instance Attributes
 
@@ -139,39 +142,6 @@ mikey = Dog("Mikey", 6)
 print mikey.get_species()
 ```
 
-
-## Real world Example
-
-```python
-class ShoppingCart(object):
-    """Creates shopping cart objects
-    for users of our fine website."""
-    items_in_cart = {}
-    def __init__(self, customer_name):
-        self.customer_name = customer_name
-		
-    def add_item(self, product, price):
-        """Add product to the cart."""
-        if not product in self.items_in_cart:
-            self.items_in_cart[product] = price
-            print product + " added."
-        else:
-            print product + " is already in the cart."
-		
-    def remove_item(self, product):
-        """Remove product from the cart."""
-        if product in self.items_in_cart:
-            del self.items_in_cart[product]
-            print product + " removed."
-        else:
-            print product + " is not in the cart."
-
-my_cart = ShoppingCart("Michael")
-my_cart.add_item("bread", 10)
-
-```
-
-
 ## Inheritence
 
 Inheritance is the process by which one class takes on the attributes and methods of another.
@@ -226,6 +196,36 @@ my_triangle = Triangle(10, 90, 80)
 
 print my_triangle.number_of_sides
 print my_triangle.check_angles()
+```
+
+## Real world Example
+
+```python
+class ShoppingCart(object):
+    """Creates shopping cart objects
+    for users of our fine website."""
+    items_in_cart = {}
+    def __init__(self, customer_name):
+        self.customer_name = customer_name
+		
+    def add_item(self, product, price):
+        """Add product to the cart."""
+        if not product in self.items_in_cart:
+            self.items_in_cart[product] = price
+            print product + " added."
+        else:
+            print product + " is already in the cart."
+		
+    def remove_item(self, product):
+        """Remove product from the cart."""
+        if product in self.items_in_cart:
+            del self.items_in_cart[product]
+            print product + " removed."
+        else:
+            print product + " is not in the cart."
+
+my_cart = ShoppingCart("Michael")
+my_cart.add_item("bread", 10)
 ```
 
 
