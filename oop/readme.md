@@ -2,14 +2,6 @@
 
 In the world of Object Oriented Programming, *things* are represented as objects. Objects, which are created, or instantiated, by defining classes store data (or fields) as well as associated operations (or methods).
 
-
-1. Defining a class
-2. Initilizer
-3. Instantiang
-4. Instance Methods
-5. Class Methods
-6. Static Methods
-
 ## Defining a class
 
 Defining a class is simple:
@@ -19,6 +11,10 @@ class Dog(object):
 ```
 
 Start with the reserved `class` keyword, then add the name of the class (using CamelCase notation), and then within the parenthesis, add the class you are sublassing or inheriting from. In the example, we are inheriting from the default `object` class.
+
+## Class Attributes
+
+ruff ruff 
 
 ## Initilizer
 
@@ -37,9 +33,16 @@ Each instance of the `Dog` class will have a `name` and `age` specific to that i
 
 ## Instantiang
 
+Let's create two dogs:
 
--Create a class for dogs
--The dog should have a method called bark which prints "ruff ruff"
--dogs should have an age property and a name property
--create two dogs, Philo and Mikey
--save this file as dogs.py
+```python
+first_dog = Dog("Philo", 5)
+print first_dog.name, first_dog.age
+
+second_dog = Dog("Mikey", 6)
+print second_dog.name, first_dog.name
+```
+
+Notice how we use dot notation to access attributes of each object.
+
+## Scope
