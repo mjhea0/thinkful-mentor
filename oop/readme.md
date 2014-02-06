@@ -27,7 +27,7 @@ class Dog(object):
 
 Each instance of the `Dog` class will have a `name` and `age` specific to that instance. In other words, each dog will have a unique name and age.
 
-## Class Attributes (member variables)
+## Class Attributes
 
 While instance attributes are specific to each object, class attributes are the same for all instances.
 
@@ -75,7 +75,7 @@ Notice how we use dot notation to access attributes of each object.
 
 ## Instance Methods
 
-Instance methods are functions defined inside a class and are used to perform operations with the attributes of our objects. Like initializers, the first paraemeter is always `self`.
+Instance methods are functions defined inside a class and are used to perform operations with the attributes of our objects. Like initializers, the first argument is always `self`.
 
 ```python
 class Dog(object):
@@ -102,6 +102,41 @@ mikey = Dog("Mikey", 6)
 # call our instance method
 print mikey.description()
 print mikey.speak("Gruff Gruff")
+```
+
+## Class Methods
+
+Like class attributes, class methods are applied to each instance. They always take the keyword `cls` as the first argument.
+
+```python
+class Dog(object):
+
+    # Class Attribute
+    species = 'mammal'
+
+    # Initializer / Instance Attributes
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    # instance method
+    def description(self):
+        return self.name, self.age
+
+    # instance method
+    def speak(self, sound):
+        return "%s says %s" % (self.name, sound)
+
+    # class method
+    def get_species(cls):
+        return cls.species
+
+
+# Instantiate the Dog object
+mikey = Dog("Mikey", 6)
+
+# call our class method
+print mikey.get_species()
 ```
 
 
