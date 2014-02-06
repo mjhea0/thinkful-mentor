@@ -1,6 +1,6 @@
 # Python OOP
 
-In the world of Object Oriented Programming, *things* are represented as objects. Objects, which are created, or instantiated, by defining classes store data (or fields) as well as associated operations (or methods).
+Object-oriented programming (OOP) is a programming paradigm that organizes your code eloquently into classes and objects.
 
 ## Defining a class
 
@@ -10,46 +10,72 @@ Defining a class is simple:
 class Dog(object):
 ```
 
-Start with the reserved `class` keyword, then add the name of the class (using CamelCase notation), and then within the parenthesis, add the class you are sublassing or inheriting from. In the example, we are inheriting from the default `object` class.
+Start with the `class` keyword, add the name of the class (using CamelCase notation), and then within the parenthesis, add the class you are sublassing or inheriting from. In this example, we are inheriting from the default `object` class.
 
-## Class Attributes (member variables)
+## Instance Attributes
 
-ruff ruff 
-
-is_alive = "True"
-
-## Initilizer
-
-All classes create objects. In order to do this, we must use an `__init__()` function to initialze each object. The function itself must have at least one argument as well as the `self` keyword, which refers to the object. 
-
+All classes create objects, and all objects contain characteristics called attributes. Use the `__init__()` function to initialze an object's attributes (commonly referred to as instance attributes). The function itself must have at least one argument as well as the `self` keyword, which refers to the object itself. 
 
 ```python
 class Dog(object):
-	is_alive = "True"
 
+	# Initializer / Instance Attributes
     def __init__(self, name, age):
         self.name = name
         self.age = age
 ```
 
-Each instance of the `Dog` class will have a `name` and `age` specific to that instance. In other words, each do will have a unique name and age.
+Each instance of the `Dog` class will have a `name` and `age` specific to that instance. In other words, each dog will have a unique name and age.
 
-## Instantiang
+## Class Attributes (member variables)
 
-Let's create two dogs:
+While instance attributes are specific to each object, class attributes are the same for all instances.
 
 ```python
-first_dog = Dog("Philo", 5)
-print first_dog.name, first_dog.age
+class Dog(object):
 
-second_dog = Dog("Mikey", 6)
-print second_dog.name, first_dog.name
+	# Class Attribute
+	species = 'mammal'
+
+	# Initializer / Instance Attributes
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+```
+
+So while each dog will have a unique name and age, every dog is a mammal.
+
+
+## Instantiating
+
+Let's create (or instantiate) two dogs:
+
+```python
+class Dog(object):
+
+	# Class Attribute
+	species = 'mammal'
+
+	# Initializer / Instance Attributes
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+
+# Instantiate the Dog object
+philo = Dog("Philo", 5)
+mikey = Dog("Mikey", 6)
+
+# access the instance attributes
+print philo.name, philo.age
+print mikey.name, mikey.age
 ```
 
 Notice how we use dot notation to access attributes of each object.
 
-## Methods
+## Instance Methods
 
+Instance methods are functions defined inside a class and are used to perform operations with the attributes of our objects. Like initializers, the first paraemeter is `self`.
 
 ```python
 class Dog(object):
