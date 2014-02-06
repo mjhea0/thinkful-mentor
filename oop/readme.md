@@ -5,7 +5,7 @@ In the world of Object Oriented Programming, *things* are represented as objects
 
 1. Defining a class
 2. Initilizer
-
+3. Instantiang
 4. Instance Methods
 5. Class Methods
 6. Static Methods
@@ -35,7 +35,7 @@ class Dog(object):
 
 Each instance of the `Dog` class will have a `name` and `age` specific to that instance. In other words, each do will have a unique name and age.
 
-
+## Instantiang
 
 
 -Create a class for dogs
