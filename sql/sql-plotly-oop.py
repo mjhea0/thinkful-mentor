@@ -11,23 +11,22 @@ class TestDatabase(object):
         """create db, add dummy data"""
 
         # establish connection
-        connection = sqlite3.connect(self.test_db)
+        with sqlite3.connect(self.test_db) as connection:
 
-    	# add values
-        cursor = connection.cursor()
-        cursor.execute('drop table if exists test_table')
-        cursor.execute('create table test_table(name varchar(10), number int)')
-        cursor.execute('insert into test_table (name, number) values(?, ?)', ('Bobby', 10))
-        cursor.execute('insert into test_table (name, number) values(?, ?)', ('Michael', 20))
-        cursor.execute('insert into test_table (name, number) values(?, ?)', ('John', 20))
-        cursor.execute('select * from test_table')
+            # add values
+            cursor = connection.cursor()
+            cursor.execute('drop table if exists test_table')
+            cursor.execute('create table test_table(name varchar(10), number int)')
+            cursor.execute('insert into test_table (name, number) values(?, ?)', ('Bobby', 10))
+            cursor.execute('insert into test_table (name, number) values(?, ?)', ('Michael', 20))
+            cursor.execute('insert into test_table (name, number) values(?, ?)', ('John', 20))
+            cursor.execute('select * from test_table')
 
-        # commit data
-        connection.commit()
+            # commit data
+            connection.commit()
 
-        # close cursor, connection
-        cursor.close()
-        connection.close()
+            # close cursor, connection
+            cursor.close()
 
     def search(self):
 
@@ -39,32 +38,23 @@ class TestDatabase(object):
         all_data=[]
 
         # establish connection
-        connection = sqlite3.connect(self.test_db)
+        with sqlite3.connect(self.test_db) as connection:
 
-        # grab all data
-        cursor = connection.cursor()
-        cursor.execute('select * from test_table')
-        for row in cursor.fetchall():
-            name.append(str(row[0]))
-            age.append(row[1])
+            # grab all data
+            cursor = connection.cursor()
+            cursor.execute('select * from test_table')
+            for row in cursor.fetchall():
+                name.append(str(row[0]))
+                age.append(row[1])
 
-        # append lists to a list
-        all_data.extend([name,age])
+            # append lists to a list
+            all_data.extend([name,age])
 
-        # close cursor, connection
-        cursor.close()
-        connection.close()
+            # close cursor, connection
+            cursor.close()
 
         return all_data
 
-
-
-def main(list_of_list,username,key):
-
-    """connect to plot.ly API, send data, create graph"""
-
-    py = plotly.plotly(username,key)
-    py.plot(list_of_list[0],list_of_list[1])
 
 if __name__ == '__main__':
 
@@ -76,4 +66,6 @@ if __name__ == '__main__':
     all_data = new_db.search()
 
     print all_data == [['Bobby', 'Michael', 'John'], [10, 20, 20]]
-    main(all_data,"GET_YOUR_OWN_USERNAME", "GET_YOUR_OWN_KEY")
+
+    py = plotly.plotly("GET_YOUR_OWN_USERNAME", "GET_YOUR_OWN_KEY")
+    py.plot(all_data[0],all_data[1])
