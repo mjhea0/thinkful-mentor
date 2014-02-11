@@ -17,7 +17,6 @@ class TestShoppingCart(unittest.TestCase):
 
     def test_empty_shopping_cart(self):
         pass
-        
 
 if __name__ == '__main__':
     unittest.main()
