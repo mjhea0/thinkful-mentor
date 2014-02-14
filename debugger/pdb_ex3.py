@@ -10,7 +10,6 @@ while True:
     print "To exit this game type 'exit'" 
     pdb.set_trace()
     answer = raw_input("What is " + choice(random2) + " times " + choice(random1) + "? ") 
-
     # exit
     if answer == "exit":
         print "Now exiting game!"
