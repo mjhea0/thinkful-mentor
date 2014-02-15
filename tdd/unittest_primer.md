@@ -1,10 +1,11 @@
 ## unittest primer
 
-Testing is important. Python's [unittest](http://docs.python.org/2/library/unittest.html) library, wich is part of Python's standard library makes testing easy. 
+Testing is important. Python's [unittest](http://docs.python.org/2/library/unittest.html) library, which is part of Python's standard library makes testing easy. 
 
-In this post, we'll look at the basics of the library to create and run a simple test.
+In this post, we'll look at the basics of the library in order to create and run a simple test.
 
 Let's take a quick look at a basic workflow:
+
 1. Define your class that's subclassed from the `unittest.TestCase` base class
 2. Add the two methods `setUp()` and `tearDown()` - which run before and after each method
 3. Then add your own methods for testing that start with `test_`
