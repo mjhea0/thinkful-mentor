@@ -61,5 +61,5 @@ def call_plotly(list_of_list,username,key):
 
 create_db("test_database")
 all_data = search_db("test_database")
-print all_data == [['Bobby', 'Michael', 'John'], [10, 20, 20]]
-call_plotly(all_data,"GET_YOUR_OWN_USERNAME", "GET_YOUR_OWN_KEY")
+# print all_data == [['Bobby', 'Michael', 'John'], [10, 20, 20]]
+# call_plotly(all_data,"GET_YOUR_OWN_USERNAME", "GET_YOUR_OWN_KEY")
