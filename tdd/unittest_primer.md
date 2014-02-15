@@ -9,7 +9,7 @@ Let's take a quick look at a basic workflow:
 1. Define your class that's subclassed from the `unittest.TestCase` base class
 2. Add the two methods `setUp()` and `tearDown()` - which run before and after each method
 3. Then add your own methods for testing that start with `test_`
-4. Make sure to add an [`assert()`](http://docs.python.org/2/library/unittest.html#unittest.TestCase) function, such as as `assertEqual()` so that *something* is actually tested
+4. Make sure to add an `assert()` function, such as as `assertEqual()` so that *something* is actually tested
 5. Add the following code snippet to the bottom of the file:
   ```python
   if __name__ == '__main__':
@@ -51,3 +51,4 @@ if __name__ == '__main__':
     unittest.main()
 ```
 
+[assert() functions](http://docs.python.org/2/library/unittest.html#unittest.TestCase)
