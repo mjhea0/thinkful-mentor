@@ -1,6 +1,7 @@
 
 import sqlite3
 import plotly
+import pdb
 
 
 # Function to create a sample database
@@ -27,13 +28,14 @@ def search_db(db_name):
     all_data=[]
     for row in cursor.fetchall(): #grabs all data
         name.append(str(row[0]))
-        number.append(str(row[1]))
-        all_data.extend([name, number])
+        number.append(row[1])
+    all_data.extend([name, number])
         # print name
         # print all_data[0]
-    return all_data
+    print all_data
     cursor.close()
     connection.close()
+
 
 # Push to plot.ly
 def plotly_api(data):
@@ -42,7 +44,7 @@ def plotly_api(data):
 
 
 create_sample_db("test_db")
-search_db("test_db")
+# search_db("test_db")
 data = search_db("test_db")
 # plotly_api(data)
 

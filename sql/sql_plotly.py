@@ -50,7 +50,7 @@ def search_db(test_db):
     cursor.close()
     connection.close()
 
-    return all_data
+    print all_data
 
 def call_plotly(list_of_list,username,key):
 
