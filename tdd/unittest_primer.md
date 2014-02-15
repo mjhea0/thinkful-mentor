@@ -85,7 +85,7 @@ def test_numbers_3_4(self):
     self.assertEqual(multiply_nums(3,4), 12)
 ```
 
--we created a method that takes the `self` argument. We then used the `assertEqual()` method to assert that the results of the function `multiply_nums(3,4)` is `12` - which is true. 
+-we created a method that takes the `self` argument. We then used the `assertEqual()` method to assert that the result of the function `multiply_nums(3,4)` is `12` - which is true, obviously. 
 
 ### Next Steps
 
