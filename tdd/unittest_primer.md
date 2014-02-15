@@ -23,15 +23,21 @@ In this example, save the first file as *multiply.py*. We will be testing this f
 #### File for testing
 
 ```python
-def multiply(n1,n2):
+def multiply_nums(n1,n2):
     return n1*n2
+
+def multiply_strings(string, num):
+    if type(string) == str:
+        return string*num
+    else:
+        return "Not a string"
 ```
 
 #### unittest
 
 ```python
 import unittest
-import multiply
+from multiply import multiply_nums, multiply_strings
  
 class TestUM(unittest.TestCase):
  
@@ -42,13 +48,45 @@ class TestUM(unittest.TestCase):
         pass
  
     def test_numbers_3_4(self):
-        self.assertEqual( multiply(3,4), 12)
+        self.assertEqual(multiply_nums(3,4), 12)
  
     def test_strings_a_3(self):
-        self.assertEqual( multiply('a',3), 'aaa')
+        self.assertEqual(multiply_strings('hi',4), 'hihihihi')
+
+    def test_exception(self):
+        self.assertEqual(multiply_strings(1,4), "Not a string")
  
 if __name__ == '__main__':
     unittest.main()
 ```
 
-[assert() functions](http://docs.python.org/2/library/unittest.html#unittest.TestCase)
+#### Run the test
+
+```sh
+$ python multiply_test.py -v
+test_exception (__main__.TestUM) ... ok
+test_numbers_3_4 (__main__.TestUM) ... ok
+test_strings_a_3 (__main__.TestUM) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.000s
+
+OK
+```
+
+Yay! They all pass!
+
+#### What's going on?
+
+Looking at this method-
+
+```python
+def test_numbers_3_4(self):
+    self.assertEqual(multiply_nums(3,4), 12)
+```
+
+-we created a method that takes the `self` argument. We then used the `assertEqual()` method to assert that the results of the function `multiply_nums(3,4)` is `12` - which is true. 
+
+### Next Steps
+
+Try changing the assertion so that it doesn't passes just to see what happens. Then try some different `assert()` methods found [here](http://docs.python.org/2/library/unittest.html#unittest.TestCase).

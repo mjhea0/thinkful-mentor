@@ -16,7 +16,7 @@ class TestUM(unittest.TestCase):
         self.assertEqual(multiply_strings('hi',4), 'hihihihi')
 
     def test_exception(self):
-        self.assertEqual(multiply_strings(1,4), ValueError)
+        self.assertEqual(multiply_strings(1,4), "Not a string")
  
 if __name__ == '__main__':
     unittest.main()
