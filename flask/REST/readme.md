@@ -17,6 +17,7 @@ Designing a REST API with Flask and Python, from a TDD perspective.
 ### What is an API?
 
 Put simply, an API is collection of functions that other programs can access or manipulate data from. Each function has an associated endpoint (also called a resource). One can make changes to a resource via the HTTP verbs:
+
 1. GET - view a resource
 2. POST - create a new resource
 3. PUT - update a resourc
