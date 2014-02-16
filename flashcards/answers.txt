@@ -1,0 +1,9 @@
+base assert allowing you to write your own assertions
+check a and b are equal
+check a and b are not equal
+check that a is in the item b
+check that a is not in the item b
+check that the value of a is False
+check the value of a is True
+check that a is of type "TYPE"
+check that when a is called with args that it raises ERROR

@@ -13,6 +13,7 @@ class Dog(object):
     def speak(self, sound):
         return "%s says %s" % (self.name, sound)
 
+    # class method
     def moves(self, verb):
         return "{} is {}".format(self.name,verb)
 

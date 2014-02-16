@@ -69,3 +69,5 @@ if __name__ == '__main__':
 
     py = plotly.plotly("GET_YOUR_OWN_USERNAME", "GET_YOUR_OWN_KEY")
     py.plot(all_data[0],all_data[1])
+
+    py.plot([name][age])

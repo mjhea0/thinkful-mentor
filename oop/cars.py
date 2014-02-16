@@ -20,5 +20,9 @@ class Car(object):
 
 # instantiate object
 test = Car(0)
+
 print test.drive(10)
+test.see_if_at_destination(0)
 print test.drive(12)
+test.see_if_at_destination(0)
+
