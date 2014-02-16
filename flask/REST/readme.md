@@ -6,11 +6,12 @@ Designing a REST API with Flask and Python, from a TDD perspective.
 
 ## Steps
 
-1. Start with user stories. 
-2. Break user stories into pseudo code - which will eventually become comments.
-3. Write Tests from a behavior standpoint - BDD
-4. Test - Code - Refactor
-5. Program iteratively, starting lean. OOP. Maybe some discussion on design patterns if there is time.
+1. Define APIs
+2. Start with user stories. 
+3. Break user stories into pseudo code - which will eventually become comments.
+4. Write Tests from a behavior standpoint - BDD
+5. Test - Code - Refactor
+6. Program iteratively, starting lean. OOP. Maybe some discussion on design patterns if there is time.
 
 ## APIs
 
@@ -36,7 +37,7 @@ For example, let's say we are designing a basic todo API. The endpoint `/todos/`
 
 We can then get more specif with our searches using query strings - i.e., `GET /todos/?limit=10`. This could potentially just return the first 10 todos from the collection.
 
-### Workflow
+### Workflow for creating an API via Flask
 
 1. Source data
 2. Setup persistence layer
