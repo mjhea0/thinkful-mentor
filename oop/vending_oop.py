@@ -20,11 +20,11 @@ class VendingMachine(object):
         self.stock[item] = number
         return self.stock
 
-vending = VendingMachine(156700)
-print vending.sell('sprite')
-print vending.replenish('sprite', 20)
-vending.sell('sprite')
-vending.sell('sprite')
-vending.sell('sprite')
-vending.sell('sprite')
-print vending.sell('sprite')
+# vending = VendingMachine(156700)
+# print vending.sell('sprite')
+# print vending.replenish('sprite', 20)
+# vending.sell('sprite')
+# vending.sell('sprite')
+# vending.sell('sprite')
+# vending.sell('sprite')
+# print vending.sell('sprite')
