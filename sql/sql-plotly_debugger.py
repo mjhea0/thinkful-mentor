@@ -39,7 +39,7 @@ def search_db(db_name):
 
 # Push to plot.ly
 def plotly_api(data):
-    py = plotly.plotly('emlopez', 'o096mmi2tl')
+    py = plotly.plotly('FOO', 'BAR')
     py.plot(data[0], data[1])
 
 
