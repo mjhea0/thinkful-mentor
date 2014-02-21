@@ -78,26 +78,26 @@ class FlashCards(object):
 
 
 
-# if __name__ == '__main__':
-#     count = 0
-#     score = 0
-#     again = 0
-#     file1 = open('questions.txt', 'r')
-#     file2 = open('answers.txt', 'r')
-#     create = FlashCards(file1, file2)
-#     data = create.read_files()
-#     create.clear_screen()
-#     while True:
-#         if again == "x":
-#             sys.exit() 
-#         else:
-#             answers = create.display_question(data)
-#             correct = create.check_if_correct(answers)
-#             if correct == '\nCorrect!':
-#                 score += 1
-#             print '\nYour score is {}'.format(score)
-#             again = create.play_again()
-#             count += 1
-#             create.clear_screen()
+if __name__ == '__main__':
+    count = 0
+    score = 0
+    again = 0
+    file1 = open('questions.txt', 'r')
+    file2 = open('answers.txt', 'r')
+    create = FlashCards(file1, file2)
+    data = create.read_files()
+    create.clear_screen()
+    while True:
+        if again == "x":
+            sys.exit() 
+        else:
+            answers = create.display_question(data)
+            correct = create.check_if_correct(answers)
+            if correct == '\nCorrect!':
+                score += 1
+            print '\nYour score is {}'.format(score)
+            again = create.play_again()
+            count += 1
+            create.clear_screen()
 
 

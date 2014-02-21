@@ -14,7 +14,7 @@ to do:
 
 import os, random, sys
 
-def cls():
+def clear_screen():
     """ clears the screen """
     os.system(['clear','cls'][os.name == 'nt'])
 
@@ -87,7 +87,7 @@ if __name__ == '__main__':
         if again == "x":
             sys.exit() 
         else:
-            cls()
+            clear_screen()
             data = read_files()
             answers =display_question(data)
             again = answer_question(answers)
