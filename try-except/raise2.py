@@ -10,15 +10,10 @@ def raise_test(filename):
         f = open(filename)
         s = f.readline()
         i = int(s.strip())
-    except IOError as (errno, strerror):
-        print "I/O error({0}): {1}".format(errno, strerror)
-    except ValueError:
-        print "No valid integer in line."
-    except:
-        print "Unexpected error:", sys.exc_info()[0]
-        raise
+    except (IOError, ValueError) as e:
+        print "oops"
 
 ### --- run code --- ###
 
-# raise_test('integers.txt')
+raise_test('integers2.txt')
 raise_test('ints.txt')
