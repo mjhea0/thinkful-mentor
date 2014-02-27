@@ -15,7 +15,6 @@ Make sure you have Jinja installed before running these examples - `pip install 
 >>> t.render(something="World")
 u'Hello World!'
 >>>
->>> from jinja2 import Template
 >>> t = Template("My favorite numbers: {% for n in range(1,10) %}{{n}} " "{% endfor %}")
 >>> t.render()
 u'My favorite numbers: 1 2 3 4 5 6 7 8 9 '
