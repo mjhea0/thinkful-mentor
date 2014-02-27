@@ -77,7 +77,7 @@ Code can be found [here](https://github.com/mjhea0/thinkful-mentor/tree/master/j
         <p>Loop through the list:</p>
         <ul>
           {% for n in my_list %}
-          <li>{{n}}
+          <li>{{n}}</li>
           {% endfor %}
         </ul>
       </div>
@@ -151,7 +151,7 @@ Let's add inheritance to our example.
     <p>Loop through the list:</p>
     <ul>
       {% for n in my_list %}
-      <li>{{n}}
+      <li>{{n}}</li>
       {% endfor %}
     </ul>
     <h3> This is the end of my child template</h3>
@@ -236,7 +236,7 @@ If you need to render a block from the base template, use the a [super block](ht
     <p>Loop through the list:</p>
     <ul>
       {% for n in my_list %}
-      <li>{{n}}
+      <li>{{n}}</li>
       {% endfor %}
     </ul>
     <h3> This is the end of my child template</h3>
