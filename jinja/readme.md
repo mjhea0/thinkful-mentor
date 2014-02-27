@@ -28,19 +28,79 @@ Notice how the actual output rendered to the user falls within the `{{ ... }}` t
 
 1. Create the following product structure:
   ```sh
-  ├── app
-  │   ├── __init__.py
-  │   ├── models.py
-  │   ├── static
-  │   ├── templates
-  │   └── views.py
   ├── requirements.txt
-  └── run.py
+  ├── run.py
+  └── templates
   ```
 
 2. Activate a virtualenv then install flask:
-  ```
+  ```sh
   $ pip install flask
   ```
 
-3. 
+3. Add the following code to *run.py*:
+  ```python
+  from flask import Flask, render_template
+  app = Flask(__name__)
+
+
+  @app.route("/")
+  def template_test():
+      return render_template('template.html', my_string="Wheeeee!", my_list=[0,1,2,3,4,5])
+
+
+  if __name__ == '__main__':
+      app.run(debug=True)
+  ```
+
+  Here we are establishing the route `/`, which renders the template `template.html`. We also are passing in two variables to the template, `my_string` and `my_list`.
+
+4. Add the template:
+  ```html
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <title>Flask Template Example</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
+      <style type="text/css">
+        .container {
+          max-width: 300px;
+          padding-top: 100px;
+        }
+      </style>
+    </head>
+    <body>
+      <div class="container">
+        <p>My string: {{my_string}}</p>
+        <p>Value from the list: {{my_list[3]}}</p>
+        <p>Loop through the list:</p>
+        <ul>
+          {% for n in my_list %}
+          <li>{{n}}
+          {% endfor %}
+        </ul>
+      </div>
+      <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+      <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    </body>
+  </html>
+  ```
+
+Save this as *template.html* in the templates directory. Notice the template tags. Can you guess the outpit before you run the app?
+
+5. Run the app:
+  ```sh
+  $ python run.py
+  ```
+
+  You should see:
+
+  ![flask-jinja](https://raw.github.com/mjhea0/thinkful-mentor/master/jinja/flask_example/flask-jinja.png)
+
+## Inheritence
+
+## Conclusion
+
+That's it.
+
