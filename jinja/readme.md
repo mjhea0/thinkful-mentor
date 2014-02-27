@@ -136,7 +136,7 @@ Let's add inheritance to our example.
 
   Save this as *layout.html*.
 
-  Did you notice the `{% block %}` tags? This defines a block (or area) that child template can fill in. Further, this just informs the templating engine that a child template may override the block of the template.
+  Did you notice the `{% block %}` tags? This defines a block (or area) that child templates can fill in. Further, this just informs the templating engine that a child template may override the block of the template.
 
   Let's do that.
 
