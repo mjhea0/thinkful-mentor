@@ -100,7 +100,7 @@ Code can be found [here](https://github.com/mjhea0/thinkful-mentor/tree/master/j
 
 ## Inheritance
 
-Templates usually take advantage of [inheritance](http://jinja.pocoo.org/docs/templates/#template-inheritance), which includes into a single base template that defines the basic structure of all the child templates. You use the tags {% extends %} and {% block %} to implement inheritance.
+Templates usually take advantage of [inheritance](http://jinja.pocoo.org/docs/templates/#template-inheritance), which includes a single base template that defines the basic structure of all subsequent child templates. You use the tags {% extends %} and {% block %} to implement inheritance.
 
 Let's add inheritance to our example.
 
