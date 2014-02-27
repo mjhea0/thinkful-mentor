@@ -26,7 +26,7 @@ Notice how the actual output rendered to the user falls within the `{{ ... }}` t
 
 Code can be found [here](https://github.com/mjhea0/thinkful-mentor/tree/master/jinja).
 
-1. Create the following product structure:
+1. Create the following project structure:
   ```sh
   ├── requirements.txt
   ├── run.py
