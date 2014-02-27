@@ -65,7 +65,7 @@ Notice how the actual output rendered to the user falls within the `{{ ... }}` t
       <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
       <style type="text/css">
         .container {
-          max-width: 300px;
+          max-width: 500px;
           padding-top: 100px;
         }
       </style>
@@ -99,6 +99,70 @@ Save this as *template.html* in the templates directory. Notice the template tag
   ![flask-jinja](https://raw.github.com/mjhea0/thinkful-mentor/master/jinja/flask_example/flask-jinja.png)
 
 ## Inheritence
+
+Templates usually take advantage of [inheritence](http://jinja.pocoo.org/docs/templates/#template-inheritance), which inclues into a single base template that defines the basic structure of all the child templates. You use the tags {% extends %} and {% block %} to implement inheritence.
+
+Let's add inheritence to our example.
+
+1. Create the base (or parent) template:
+  ```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Flask Template Example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <style type="text/css">
+      .container {
+        max-width: 500px;
+        padding-top: 100px;
+      }
+      h2 {color: red;}
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>This is part of my base template</h2>
+      <br>
+      {% block content %}{% endblock %}
+      <br>
+      <h2>This is part of my base template</h2>
+    </div>
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+  </body>
+</html>
+  ```
+
+  Save this as *layout.html**.
+
+  Did you notice the the `{% block %}` tags? This defines a block (or area) that child template can fill in. Further, this just informs the templating engine that a child template may override the block of the template.
+
+  Let's do that.
+
+2. Update *template.html*:
+  ```sh
+  {% extends "layout.html" %}
+  {% block content %}
+    <h3> This is the start of my child template</h3>
+    <br>
+    <p>My string: {{my_string}}</p>
+    <p>Value from the list: {{my_list[3]}}</p>
+    <p>Loop through the list:</p>
+    <ul>
+      {% for n in my_list %}
+      <li>{{n}}
+      {% endfor %}
+    </ul>
+    <h3> This is the end of my child template</h3>
+  {% endblock %}
+  ```
+
+  So, the `{% extends %}` informs the templating engine that this template "extends" another template, *layout.html*.
+
+3. Run it. You should see:
+
+  ![flask-jinja2](https://raw.github.com/mjhea0/thinkful-mentor/master/jinja/flask_example/flask-jinja2.png)
 
 ## Conclusion
 
