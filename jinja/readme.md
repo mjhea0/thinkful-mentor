@@ -96,7 +96,7 @@ Code can be found [here](https://github.com/mjhea0/thinkful-mentor/tree/master/j
 
   You should see:
 
-  ![flask-jinja](https://raw.github.com/mjhea0/thinkful-mentor/master/jinja/flask-jinja.png)
+  ![flask-jinja](https://raw.github.com/mjhea0/thinkful-mentor/master/jinja/images/flask-jinja.png)
 
 ## Inheritance
 
@@ -162,7 +162,7 @@ Let's add inheritance to our example.
 
 3. Run it. You should see:
 
-  ![flask-jinja2](https://raw.github.com/mjhea0/thinkful-mentor/master/jinja/flask-jinja2.png)
+  ![flask-jinja2](https://raw.github.com/mjhea0/thinkful-mentor/master/jinja/images/flask-jinja2.png)
 
 
 ## Super Blocks
@@ -223,7 +223,7 @@ If you need to render a block from the base template, use the a [super block](ht
 
 2. Run the app. You should see that the footer is just part of the base:
 
-  ![jinja-super](https://raw.github.com/mjhea0/thinkful-mentor/master/jinja/jinja-super.png)
+  ![jinja-super](https://raw.github.com/mjhea0/thinkful-mentor/master/jinja/images/jinja-super.png)
 
 3. Now, add the super block to *template.html*
   ```python
@@ -248,7 +248,7 @@ If you need to render a block from the base template, use the a [super block](ht
 
 4. Check it out in your browser:
 
-  ![jinja-super2](https://raw.github.com/mjhea0/thinkful-mentor/master/jinja/jinja-super2.png)
+  ![jinja-super2](https://raw.github.com/mjhea0/thinkful-mentor/master/jinja/images/jinja-super2.png)
 
 5. The super block is used for common code that both the parent and child templates share, such as the `<title>` where both templates share part of the title, then you would just need to pass in the other part. Or for a heading. 
 For example:
@@ -272,7 +272,7 @@ For example:
 
   Let's see that in action:
 
-  ![jinja-super3](https://raw.github.com/mjhea0/thinkful-mentor/master/jinja/jinja-super3.png)
+  ![jinja-super3](https://raw.github.com/mjhea0/thinkful-mentor/master/jinja/images/jinja-super3.png)
 
   See what happens when you remove `{% block page %}Home{% endblock %}` from the child template
 
