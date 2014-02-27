@@ -1,8 +1,9 @@
 # Primer on Jinja Templating
 
-Flask includes the powerful [Jinja](http://jinja.pocoo.org/docs/) templating language, right out of the box. It's modelled after Django templates (but it renders much faster), and, although, Flask does not force you to use any templating language, it assumes that you'll be using Jinga since it does come pre-installed.
+Flask includes the powerful [Jinja](http://jinja.pocoo.org/docs/) templating language, right out of the box. It's modeled after Django templates (but it renders much faster), and, although, Flask does not force you to use any templating language, it assumes that you'll be using Jinja since it does come pre-installed.
 
-For those who have not been exposted to a templating language before, such languagues essentially contain variables as well as some programming logic, which when evaluated (or rendered into HTML) are replaced with **actual** values. The variables and/or logic are placed between tags or delimeters. For example, Jinga templates use `{% ... %}` for expressions or logic (like for loops), while `{{ ... }}` are used for outputting the results to the template. The latter tag, when rendered, is replaced with a value or values, which are seen by the end user.
+For those who have not been exposed to a templating language before, such languages essentially contain variables as well as some programming logic, which when evaluated (or rendered into HTML) are replaced with **actual** values. The variables and/or logic are placed between tags or delimiters. For example, Jinja templates use `{% ... %}` for expressions or logic (like for loops), while `{{ ... }}` are used for outputting the results to the template. The latter tag, when rendered, is replaced with a value or values, which are seen by the end user.
+
 
 ## Quick Examples
 
@@ -23,6 +24,8 @@ u'My favorite numbers: 1 2 3 4 5 6 7 8 9 '
 Notice how the actual output rendered to the user falls within the `{{ ... }}` tags.
 
 ## Flask Examples
+
+Code can be found [here](https://github.com/mjhea0/thinkful-mentor/tree/master/jinja).
 
 1. Create the following product structure:
   ```sh
@@ -85,7 +88,7 @@ Notice how the actual output rendered to the user falls within the `{{ ... }}` t
   </html>
   ```
 
-  Save this as *template.html* in the templates directory. Notice the template tags. Can you guess the outpit before you run the app?
+  Save this as *template.html* in the templates directory. Notice the template tags. Can you guess the output before you run the app?
 
 5. Run the app:
   ```sh
@@ -96,11 +99,11 @@ Notice how the actual output rendered to the user falls within the `{{ ... }}` t
 
   ![flask-jinja](https://raw.github.com/mjhea0/thinkful-mentor/master/jinja/flask_example/flask-jinja.png)
 
-## Inheritence
+## Inheritance
 
-Templates usually take advantage of [inheritence](http://jinja.pocoo.org/docs/templates/#template-inheritance), which inclues into a single base template that defines the basic structure of all the child templates. You use the tags {% extends %} and {% block %} to implement inheritence.
+Templates usually take advantage of [inheritance](http://jinja.pocoo.org/docs/templates/#template-inheritance), which includes into a single base template that defines the basic structure of all the child templates. You use the tags {% extends %} and {% block %} to implement inheritance.
 
-Let's add inheritence to our example.
+Let's add inheritance to our example.
 
 1. Create the base (or parent) template:
   ```html
@@ -167,9 +170,117 @@ Let's add inheritence to our example.
 
 If you need to render a block from the base template, use the a [super block](http://jinja.pocoo.org/docs/templates/#super-blocks) - `{{ super() }}`.
 
+1. Add a footer to the base template:
+
+  ```python
+  <div class="footer">
+    {% block footer %}
+      Watch! This will be added to my base and child templates using the super powerful super block!
+      <br>
+      <br>
+    {% endblock %}
+  </div>
+  ```
+
+  Updated code:
+
+  ```python
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title>Flask Template Example</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
+      <style type="text/css">
+        .container {
+          max-width: 500px;
+          padding-top: 100px;
+        }
+        h2 {color: red;}
+      </style>
+    </head>
+    <body>
+      <div class="container">
+        <h2>This is part of my base template</h2>
+        <br>
+        {% block content %}{% endblock %}
+        <br>
+        <h2>This is part of my base template</h2>
+        <br>
+        <div class="footer">
+          {% block footer %}
+            Watch! This will be added to my base and child templates using the super powerful super block!
+            <br>
+            <br>
+            <br>
+          {% endblock %}
+        </div>
+      </div>
+      <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+      <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    </body>
+  </html>
+  ```
+
+2. Run the app. You should see that the footer is just part of the base:
+
+  ![jinja-super](https://raw.github.com/mjhea0/thinkful-mentor/master/jinja/flask_example/jinja-super.png)
+
+3. Now, add the super block to *template.html*
+  ```python
+  {% extends "layout.html" %}
+  {% block content %}
+    <h3> This is the start of my child template</h3>
+    <br>
+    <p>My string: {{my_string}}</p>
+    <p>Value from the list: {{my_list[3]}}</p>
+    <p>Loop through the list:</p>
+    <ul>
+      {% for n in my_list %}
+      <li>{{n}}
+      {% endfor %}
+    </ul>
+    <h3> This is the end of my child template</h3>
+    {% block footer %}
+    {{super()}}
+    {% endblock %}
+  {% endblock %}
+  ```
+
+4. Check it out in your browser:
+
+  ![jinja-super2](https://raw.github.com/mjhea0/thinkful-mentor/master/jinja/flask_example/jinja-super2.png)
+
+5. The super block is used for common code that both the parent and child templates share, such as the `<title>` where both templates share part of the title, then you would just need to pass in the other part. Or for a heading. 
+For example:
+
+  **Parent**
+
+  ```python
+  {% block heading %}
+    <h1>{% block page %}{% endblock %} - Flask Super Example</h1>
+  {% endblock %}
+  ```
+
+  **Child**
+
+  ```python
+  {% block page %}Home{% endblock %}
+  {% block heading %}
+    {{ super() }}
+  {% endblock %}
+  ```
+
+  Let's see that in action:
+
+  ![jinja-super3](https://raw.github.com/mjhea0/thinkful-mentor/master/jinja/flask_example/jinja-super3.png)
+
+  See what happens when you remove `{% block page %}Home{% endblock %}` from the child template
+
+  Try to update the `<title>` using the same method with the super block. Check out my code if you need help.
 
 
 ## Conclusion
 
-That's it.
+That's it. Grab the sample code [here](https://github.com/mjhea0/thinkful-mentor/tree/master/jinja).
 
