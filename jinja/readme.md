@@ -134,7 +134,7 @@ Let's add inheritance to our example.
 </html>
   ```
 
-  Save this as *layout.html**.
+  Save this as *layout.html*.
 
   Did you notice the the `{% block %}` tags? This defines a block (or area) that child template can fill in. Further, this just informs the templating engine that a child template may override the block of the template.
 
