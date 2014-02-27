@@ -8,8 +8,6 @@ For those who have not been exposted to a templating language before, such langu
 
 Make sure you have Jinja installed before running these examples - `pip install jinja2`
 
-First:
-
 ```sh
 >>> from jinja2 import Template
 >>> t = Template("Hello {{ something }}!")
@@ -87,7 +85,7 @@ Notice how the actual output rendered to the user falls within the `{{ ... }}` t
   </html>
   ```
 
-Save this as *template.html* in the templates directory. Notice the template tags. Can you guess the outpit before you run the app?
+  Save this as *template.html* in the templates directory. Notice the template tags. Can you guess the outpit before you run the app?
 
 5. Run the app:
   ```sh
@@ -163,6 +161,13 @@ Let's add inheritence to our example.
 3. Run it. You should see:
 
   ![flask-jinja2](https://raw.github.com/mjhea0/thinkful-mentor/master/jinja/flask_example/flask-jinja2.png)
+
+
+## Super Blocks
+
+If you need to render a block from the base template, use the a [super block](http://jinja.pocoo.org/docs/templates/#super-blocks) - `{{ super() }}`.
+
+
 
 ## Conclusion
 
