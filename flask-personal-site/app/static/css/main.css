@@ -1,0 +1,96 @@
+/*
+ * Display navigation links inline
+ */
+
+.menu {
+    float: right;
+    margin-top: 10px;
+}
+
+.menu li {
+    display: inline;
+}
+
+.menu li + li {
+    margin-left: 20px;
+}
+
+.menu li a {
+    color: white;
+    text-decoration: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #666666;
+}
+
+/*
+ * Create dark grey header with white logo
+ */
+
+header {
+    background-color: #333333;
+    height: 55px;
+    width: 100%;
+    opacity: .9;
+    margin-bottom: 10px;
+}
+
+header h1.logo {
+    margin: 0;
+    font-size: 3em;
+    color: #FFF;
+    text-transform: uppercase;
+    float: left;
+}
+
+header h1.logo:hover{
+    color: ;
+    text-decoration: none;
+}
+
+/*
+ * Center the body content
+ */
+
+.container {
+    width: 940px;
+    margin: 0 auto;
+}
+
+
+
+div.jumbo {
+    padding: 10px 0 30px 0;
+    background-color: ;
+    -webkit-border-radius: 6px;
+        -moz-border-radius: 6px;
+            border-radius: 6px;
+}
+
+h2 {
+    font-size: 1.8em;
+    margin-top: 50px;
+    text-align: left;
+    letter-spacing: -1px;
+}
+
+h3 {
+    font-size: 1.7em;
+    font-weight: bold;
+    margin-top: 60px;
+    text-align: center;
+    letter-spacing: -1px;
+    color: #660066 ;
+}
+
+h4 {
+    font-size: 1.2em;
+    margin-top: 10px;
+    text-align: center;
+    color: 
+}
+
