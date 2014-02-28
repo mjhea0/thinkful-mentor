@@ -53,7 +53,8 @@ Code can be found [here](https://github.com/mjhea0/thinkful-mentor/tree/master/j
       app.run(debug=True)
   ```
 
-  Here we are establishing the route `/`, which renders the template `template.html`. We also are passing in two variables to the template, `my_string` and `my_list`.
+  Here we are establishing the route `/`, which renders the template `template.html` via the function `render_template()`. This function must have a template name. Optionally, you can pass in arguments to the template, like in the example - `my_string` and `my_list`. 
+
 
 4. Add the template:
   ```html
@@ -98,9 +99,13 @@ Code can be found [here](https://github.com/mjhea0/thinkful-mentor/tree/master/j
 
   ![flask-jinja](https://raw.github.com/mjhea0/thinkful-mentor/master/jinja/images/flask-jinja.png)
 
+6. It's worth nothing that Jinja supports only a few control structures - `if`-statements and `for`-loops are the two primary structures. The syntax is similar to Python,  differing only in that no colon is required and that termination of the block is done using an `endif` or `endfor` respectively instead of by whitespace. You can also complete the logic within your controller or views and then pass each value to the template using the template tags. However, it is much easier to perform such logic within the templates themselves.
+
 ## Inheritance
 
 Templates usually take advantage of [inheritance](http://jinja.pocoo.org/docs/templates/#template-inheritance), which includes a single base template that defines the basic structure of all subsequent child templates. You use the tags {% extends %} and {% block %} to implement inheritance.
+
+The use case for this is simple: as your application grows, and you continue adding new templates, you will need to keep common code (like a navigation bar) in syc, which can be a lot of work. Using inheritance, we can move those common pieces to a parent template so that we can create or edit such code one and all child templates will inherent such code.
 
 Let's add inheritance to our example.
 
@@ -158,7 +163,7 @@ Let's add inheritance to our example.
   {% endblock %}
   ```
 
-  So, the `{% extends %}` informs the templating engine that this template "extends" another template, *layout.html*.
+  So, the `{% extends %}` informs the templating engine that this template "extends" another template, *layout.html*. This establishes the link between the templates, in other words.
 
 3. Run it. You should see:
 
@@ -282,4 +287,3 @@ For example:
 ## Conclusion
 
 That's it. Grab the sample code [here](https://github.com/mjhea0/thinkful-mentor/tree/master/jinja/flask_example).
-
