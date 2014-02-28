@@ -41,28 +41,34 @@ class FlashCards(object):
         content_list.extend([file1_content, file2_content])
         return content_list
 
-    def display_question(self, content):
+    def display_question_and_answers(self, content):
         
         """
         displays question, list of potential answers (options)
-        returns question, options, and user answer in a list
+        returns question, options, and user answer from a list
         """
 
+        output_list = []
+
         question = randint(0, len(content[0])-1)
-        print "\nUnit Test:", content[0][question], ''
         options = [randint(0, len(content[1])-1),
         randint(0, len(content[1])-1),
         randint(0, len(content[1])-1)]
         options[randint(0,2)] = question
-        print '1: ', content[1][options[0]],
-        print '\n2: ', content[1][options[1]],
-        print '\n3: ', content[1][options[2]],
+
+        output_list.extend([
+            [content[0][question]],
+            [[content[1][options[0]]],
+            [content[1][options[1]]],
+            [content[1][options[2]]] 
+            ]])
+        return output_list 
+
+
+    def get_answer(self):
 
         answer = input('\nYour choice: ')
-
-        answers_list = []
-        answers_list.extend([options,answer,question])
-        return answers_list
+        return answer
 
     def check_if_correct(self, options_question_answer_list):
 
@@ -96,11 +102,20 @@ if __name__ == '__main__':
         if again == "x":
             sys.exit() 
         else:
-            answers = create.display_question(data)
-            correct = create.check_if_correct(answers)
-            score = create.calculate_score(score)
-            again = create.play_again()
-            count += 1
-            create.clear_screen()
+            answers = create.display_question_and_answers(data)
+            print "Question: {}".format((", ".join(answers[0])))
+            print "Options:"
+            x = 1
+            for answer in answers[1]:
+                print "{}) {}".format(x, (", ".join(answer)).rstrip())
+                x += 1
+            results = create.get_answer()
+            print results
+            break
+            # correct = create.check_if_correct(answers)
+            # score = create.calculate_score(score)
+            # again = create.play_again()
+            # count += 1
+            # create.clear_screen()
 
 
