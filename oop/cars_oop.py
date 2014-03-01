@@ -1,6 +1,6 @@
 # determine if the driver is at the destination
 
-class Drive(object):
+class RoadTrip(object):
 
     def __init__(self, starting_miles):
         self.starting_miles = starting_miles  
@@ -30,16 +30,15 @@ total of {} miles!\n".format(miles_driven, cumulative_total)
         if remaining > 0:
             return "However, you are {} miles past our destination. Go back.".format(remaining)
         elif remaining < 0:
-            return "Not there yet. {} miles to go.".format(remaining*-1)
+            return "Sorry. Not there yet. {} miles to go.".format(remaining*-1)
         else:
             return "You made it!"
 
 
 # --------------------------------- #
 
-
 def main():
-    create = Drive(0)
+    create = RoadTrip(0) # starting miles
     total = 0
     while total < 100:
         total_driven_today = create.get_miles()
