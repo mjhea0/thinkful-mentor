@@ -27,7 +27,6 @@ class FlashCards(object):
         system(['clear','cls'][name == 'nt'])
 
     def read_files(self):
-
         """ 
         opens the question and answer files
         then parses them line by line
@@ -42,7 +41,6 @@ class FlashCards(object):
         return content_list
 
     def display_question_and_answers(self, content):
-        
         """
         displays question, list of potential answers (options)
         returns question, options, and user answer from a list
@@ -66,23 +64,28 @@ class FlashCards(object):
 
 
     def get_answer(self):
+        """ get answer from the user """
 
         answer = input('\nYour choice: ')
         return answer
 
     def check_if_correct(self, options_question_answer_list):
-
         """ determines if user answer is correct """
+        print options_question_answer_list[0]
         if options_question_answer_list[0][options_question_answer_list[1]-1] == options_question_answer_list[2]:
             return '\nCorrect!'
         else:
             return '\nIncorrect!!'
 
     def play_again(self):
+        """ ask user if s/he wants to play again """
+
         again = raw_input('\nPress Enter to continue (or x then Enter to exit) ...')
         return again
 
     def calculate_score(self, score):
+        """ calculates score for each correct answer """
+
         if correct == '\nCorrect!':
             score += 1
         print '\nYour score is {}'.format(score)
@@ -110,12 +113,10 @@ if __name__ == '__main__':
                 print "{}) {}".format(x, (", ".join(answer)).rstrip())
                 x += 1
             results = create.get_answer()
-            print results
-            break
-            # correct = create.check_if_correct(answers)
+            # correct = create.check_if_correct(results)
             # score = create.calculate_score(score)
-            # again = create.play_again()
-            # count += 1
-            # create.clear_screen()
+            again = create.play_again()
+            count += 1
+            create.clear_screen()
 
 
