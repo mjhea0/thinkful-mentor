@@ -1,3 +1,4 @@
+{% from "macros.html" import nav_link with context %}
 <!DOCTYPE html>
 <html>
   <head>
@@ -23,13 +24,14 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Jinja!</a>
+          <a class="navbar-brand" href="/">Jinja!</a>
         </div>
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Link</a></li>
-            <li><a href="#">Link</a></li>
+            {{ nav_link('home', 'Home') }}
+            {{ nav_link('about', 'About') }}
+            {{ nav_link('contact', 'Contact Us') }}
           </ul>
           <form class="navbar-form navbar-left" role="search">
             <div class="form-group">

@@ -182,7 +182,7 @@ Let's add inheritance to our example.
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">Jinja!</a>
+        <a class="navbar-brand" href="/">Jinja!</a>
       </div>
 
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -308,7 +308,7 @@ For example:
 
   **Parent**
 
-  ```python
+  ```html
   {% block heading %}
     <h1>{% block page %}{% endblock %} - Flask Super Example</h1>
   {% endblock %}
@@ -316,7 +316,7 @@ For example:
 
   **Child**
 
-  ```python
+  ```html
   {% block page %}Home{% endblock %}
   {% block heading %}
     {{ super() }}
@@ -330,6 +330,80 @@ For example:
   See what happens when you remove `{% block page %}Home{% endblock %}` from the child template
 
   Try to update the `<title>` using the same method with the super block. Check out my code if you need help.
+
+  Instead of hard coding the name of the template, let's make it dynamic. 
+
+6. Update the two code snippets in *template.html*: 
+  ```html
+  {% block title %}{{title}}{% endblock %}
+  ```
+
+  and
+
+  ```html
+  {% block page %}{{title}}{% endblock %}
+  ```
+
+7. Now we need to pass in a `title` variable to our template from our controller, *run.py*:
+  ```python
+  @app.route("/")
+  def template_test():
+      return render_template('template.html', my_string="Wheeeee!", my_list=[0,1,2,3,4,5], title="Home")
+  ```
+
+  Test this out.
+
+## Macros
+
+In Jinja2, we can place commonly used code snippets that are used over and over to not repeat yourself. It's common to highlight the link of the current page on the navigation bar (active link). We'd have to use if/elif/else statements to determine the active link. Using macros, we can abstract out such code into a seperate file. 
+
+1. Add a *macros.html* file to the "templates" directory:
+  ```html
+  {% macro nav_link(endpoint, name) %}
+  {% if request.endpoint.endswith(endpoint) %}
+    <li class="active"><a href="{{ url_for(endpoint) }}">{{name}}</a></li>
+  {% else %}
+    <li><a href="{{ url_for(endpoint) }}">{{name}}</a></li>
+  {% endif %}
+  {% endmacro %}
+  ```
+
+  Here, we're using Flask's request object, which is part of Jinja by default, to check the requested endpoint, then assigning the `active` class to that endpoint. 
+
+2. Update the unordered list with the `nav navbar-nav` class in the base template
+  ```html
+  <ul class="nav navbar-nav">
+    {{ nav_link('home', 'Home') }}
+    {{ nav_link('about', 'About') }}
+    {{ nav_link('contact', 'Contact Us') }}
+  </ul>
+  ```
+
+  Also, make sure to add the import at the top of the template: `{% from "macros.html" import nav_link with context %}`.
+
+  Notice how we're calling the `nav-link` macro and passing it two arguments, the endpoint (which comes from our controller) and the text we want displayed.
+
+3. Finally, let's add three new endpoints to the controller:
+  ```python
+  @app.route("/home")
+  def home():
+      return render_template('template.html', my_string="Wheeeee!", my_list=[0,1,2,3,4,5], title="Home")
+
+  @app.route("/about")
+  def about():
+      return render_template('template.html', my_string="Wheeeee!", my_list=[0,1,2,3,4,5], title="About")
+
+  @app.route("/contact")
+  def contact():
+      return render_template('template.html', my_string="Wheeeee!", my_list=[0,1,2,3,4,5], title="Contact Us")
+  ```
+
+4. Refresh the page. Test out the links at the top. Does the current page get highlighted? It should.
+
+  ![jinja-macros](https://raw.github.com/mjhea0/thinkful-mentor/master/jinja/images/jinja-macros.png)
+
+## Custom filters
+
 
 
 ## Conclusion
