@@ -30,3 +30,17 @@ speed = my_car.accelerate(-60, speed[0])
 print speed[1]
 print my_car.check_speed(speed[0])
 
+
+# ----------- #
+
+"""
+To Do -
+
+1. Create a new "blue" car with the current speed of 40, and accelerate its speed by 10, 20 and 40 units.
+2. Create a new method called "pulled_over()". 
+Use logic to deterime that if a cop is nearby, you will get pulled over if you are speeding. 
+Otherwise you're in the clear.
+3. Change the "accelerate()" method to show whether a car has accelerated or decelerated.
+"""
+
+
