@@ -146,7 +146,7 @@ Let's add inheritance to our example.
   Let's do that.
 
 2. Update *template.html*:
-  ```sh
+  ```html
   {% extends "layout.html" %}
   {% block content %}
     <h3> This is the start of my child template</h3>
@@ -169,6 +169,54 @@ Let's add inheritance to our example.
 
   ![flask-jinja2](https://raw.github.com/mjhea0/thinkful-mentor/master/jinja/images/flask-jinja2.png)
 
+  One common use case is to add a navigation bar.
+
+4. Add the foloowing code to the base template, just after the opening `<body>` tag:
+```html
+  <nav class="navbar navbar-inverse" role="navigation">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Jinja!</a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Link</a></li>
+          <li><a href="#">Link</a></li>
+        </ul>
+        <form class="navbar-form navbar-left" role="search">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Search">
+          </div>
+          <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#">Link</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+  ```
+
+  Now every single child template that extends from the base, will have the same navigation bar. To steal a line from Java philosophy: "Write once, use anywhere."
+
+  ![flask-jinja3](https://raw.github.com/mjhea0/thinkful-mentor/master/jinja/images/flask-jinja3.png)
 
 ## Super Blocks
 
