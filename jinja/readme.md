@@ -355,7 +355,7 @@ For example:
 
 ## Macros
 
-In Jinja2, we can place commonly used code snippets that are used over and over to not repeat yourself. It's common to highlight the link of the current page on the navigation bar (active link). We'd have to use if/elif/else statements to determine the active link. Using macros, we can abstract out such code into a seperate file. 
+In Jinja2, we can place commonly used code snippets that are used over and over to not repeat ourselves. It's common to highlight the link of the current page on the navigation bar (active link). We'd have to use if/elif/else statements to determine the active link. Using [macros](http://jinja.pocoo.org/docs/templates/#macros), we can abstract out such code into a seperate file. 
 
 1. Add a *macros.html* file to the "templates" directory:
   ```html
@@ -404,6 +404,7 @@ In Jinja2, we can place commonly used code snippets that are used over and over 
 
 ## Custom filters
 
+http://jinja.pocoo.org/docs/api/#custom-filters
 
 
 ## Conclusion
