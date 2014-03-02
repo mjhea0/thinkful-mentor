@@ -1,4 +1,4 @@
-class SchoolMember:
+class SchoolMember(object):
 
     """Represents any member of the school."""
 
