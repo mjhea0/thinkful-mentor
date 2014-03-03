@@ -54,20 +54,13 @@ speed = my_blue_car.accelerate(20, speed[0])
 print speed[1]
 print my_blue_car.check_speed(speed[0])
 print my_blue_car.pulled_over(speed[0])
-speed = my_blue_car.accelerate(40, speed[0])
+speed = my_blue_car.accelerate(41, speed[0])
 print speed[1]
 print my_blue_car.check_speed(speed[0])
 print my_blue_car.pulled_over(speed[0])
-speed = my_blue_car.accelerate(20, speed[0])
+speed = my_blue_car.accelerate(-20, speed[0])
 print speed[1]
 print my_blue_car.check_speed(speed[0])
 print my_blue_car.pulled_over(speed[0])
-
-# ----------- #
-
-"""
-To Do -
-1. Change the "accelerate()" method to show whether a car has accelerated or decelerated.
-"""
 
 
