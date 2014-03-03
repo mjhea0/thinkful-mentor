@@ -17,8 +17,8 @@ class Car(object):
         else:
             return "You're under the speed limit."
 
-    def pulled_over(self):
-        if self.cop == True:
+    def pulled_over(self, speed):
+        if self.cop == True and speed > 70:
             return "Cop! You got pulled over. Bummer."
         else:
             return "No cops. Speed all you want!"
@@ -30,12 +30,15 @@ my_car = Car("red",10, True)
 speed = my_car.accelerate(50)
 print speed[1]
 print my_car.check_speed(speed[0])
+print my_car.pulled_over(speed[0])
 speed = my_car.accelerate(20, speed[0])
 print speed[1]
 print my_car.check_speed(speed[0])
+print my_car.pulled_over(speed[0])
 speed = my_car.accelerate(-60, speed[0])
 print speed[1]
 print my_car.check_speed(speed[0])
+print my_car.pulled_over(speed[0])
 
 print "\n------------"
 
@@ -43,12 +46,15 @@ my_blue_car = Car("blue",40, True)
 speed = my_blue_car.accelerate(10)
 print speed[1]
 print my_blue_car.check_speed(speed[0])
+print my_blue_car.pulled_over(speed[0])
 speed = my_blue_car.accelerate(20, speed[0])
 print speed[1]
 print my_blue_car.check_speed(speed[0])
+print my_blue_car.pulled_over(speed[0])
 speed = my_blue_car.accelerate(40, speed[0])
 print speed[1]
 print my_blue_car.check_speed(speed[0])
+print my_blue_car.pulled_over(speed[0])
 
 
 # ----------- #
