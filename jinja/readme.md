@@ -1,8 +1,8 @@
 # Primer on Jinja Templating
 
-Flask includes the powerful [Jinja](http://jinja.pocoo.org/docs/) templating language, right out of the box. It's modeled after Django templates (but it renders much faster), and, although, Flask does not force you to use any templating language, it assumes that you'll be using Jinja since it does come pre-installed.
+Right out of the box, Flask includes the powerful [Jinja](http://jinja.pocoo.org/docs/) templating language. It's modeled after Django templates (but it renders much faster) and, although, Flask does not force you to use any templating language, it assumes that you'll be using Jinja since it does come pre-installed.
 
-For those who have not been exposed to a templating language before, such languages essentially contain variables as well as some programming logic, which when evaluated (or rendered into HTML) are replaced with **actual** values. The variables and/or logic are placed between tags or delimiters. For example, Jinja templates use `{% ... %}` for expressions or logic (like for loops), while `{{ ... }}` are used for outputting the results to the end user. The latter tag, when rendered, is replaced with a value or values, which are seen by the end user.
+For those who have not been exposed to a templating language before, such languages essentially contain variables as well as some programming logic, which when evaluated (or rendered into HTML) is replaced with **actual** values. The variables and/or logic are placed between tags or delimiters. For example, Jinja templates use `{% ... %}` for expressions or logic (like for loops), while `{{ ... }}` are used for outputting the results to the end user. The latter tag, when rendered, is replaced with a value or values, and are seen by the end user.
 
 > Jinja Templates are just .html files. By convention they live in the "/templates" directory in a Flask project.
 
@@ -100,7 +100,7 @@ Code can be found [here](https://github.com/mjhea0/thinkful-mentor/tree/master/j
 
   ![flask-jinja](https://raw.github.com/mjhea0/thinkful-mentor/master/jinja/images/flask-jinja.png)
 
-6. It's worth nothing that Jinja supports only a few control structures - `if`-statements and `for`-loops are the two primary structures. The syntax is similar to Python,  differing only in that no colon is required and that termination of the block is done using an `endif` or `endfor` respectively instead of by whitespace. You can also complete the logic within your controller or views and then pass each value to the template using the template tags. However, it is much easier to perform such logic within the templates themselves.
+6. It's worth noting that Jinja only supports a few control structures - `if`-statements and `for`-loops are the two primary structures. The syntax is similar to Python, differing in that no colon is required and that termination of the block is done using an `endif` or `endfor` instead of by whitespace. You can also complete the logic within your controller or views and then pass each value to the template using the template tags. However, it is much easier to perform such logic within the templates themselves.
 
 ## Inheritance
 
@@ -433,7 +433,7 @@ Test this out. Add the following line to *template.html*
 <p>Same list with a filter: {{ my_list|join(', ') }}</p>
 ```
 
-Now, besides the builtin filters, we can create our [own](http://jinja.pocoo.org/docs/api/#custom-filters).
+Now, besides the built-in filters, we can create our [own](http://jinja.pocoo.org/docs/api/#custom-filters).
 
 Let's add one of our own. One common example is a custom datetime filter.
 
