@@ -2,8 +2,9 @@
 
 Flask includes the powerful [Jinja](http://jinja.pocoo.org/docs/) templating language, right out of the box. It's modeled after Django templates (but it renders much faster), and, although, Flask does not force you to use any templating language, it assumes that you'll be using Jinja since it does come pre-installed.
 
-For those who have not been exposed to a templating language before, such languages essentially contain variables as well as some programming logic, which when evaluated (or rendered into HTML) are replaced with **actual** values. The variables and/or logic are placed between tags or delimiters. For example, Jinja templates use `{% ... %}` for expressions or logic (like for loops), while `{{ ... }}` are used for outputting the results to the template. The latter tag, when rendered, is replaced with a value or values, which are seen by the end user.
+For those who have not been exposed to a templating language before, such languages essentially contain variables as well as some programming logic, which when evaluated (or rendered into HTML) are replaced with **actual** values. The variables and/or logic are placed between tags or delimiters. For example, Jinja templates use `{% ... %}` for expressions or logic (like for loops), while `{{ ... }}` are used for outputting the results to the end user. The latter tag, when rendered, is replaced with a value or values, which are seen by the end user.
 
+> Jinja Templates are just .html files. By convention they live in the "/templates" directory in a Flask project.
 
 ## Quick Examples
 
@@ -105,7 +106,7 @@ Code can be found [here](https://github.com/mjhea0/thinkful-mentor/tree/master/j
 
 Templates usually take advantage of [inheritance](http://jinja.pocoo.org/docs/templates/#template-inheritance), which includes a single base template that defines the basic structure of all subsequent child templates. You use the tags {% extends %} and {% block %} to implement inheritance.
 
-The use case for this is simple: as your application grows, and you continue adding new templates, you will need to keep common code (like a navigation bar) in syc, which can be a lot of work. Using inheritance, we can move those common pieces to a parent template so that we can create or edit such code one and all child templates will inherent such code.
+The use case for this is simple: as your application grows, and you continue adding new templates, you will need to keep common code (like a HTML navigation bar, Javascript libraries, CSS stylesheets, and so forth) in sync, which can be a lot of work. Using inheritance, we can move those common pieces to a parent template so that we can create or edit such code one and all child templates will inherent such code.
 
 Let's add inheritance to our example.
 
@@ -141,7 +142,9 @@ Let's add inheritance to our example.
 
   Save this as *layout.html*.
 
-  Did you notice the `{% block %}` tags? This defines a block (or area) that child templates can fill in. Further, this just informs the templating engine that a child template may override the block of the template.
+  Did you notice the `{% block %}` tags? This defines a block (or area) that child templates can fill in. Further, this just informs the templating engine that a child template may override the block of the template. 
+
+  > Think of these as placeholders to be filled in by code from the child template(s).
 
   Let's do that.
 
@@ -171,7 +174,7 @@ Let's add inheritance to our example.
 
   One common use case is to add a navigation bar.
 
-4. Add the foloowing code to the base template, just after the opening `<body>` tag:
+4. Add the following code to the base template, just after the opening `<body>` tag:
 ```html
   <nav class="navbar navbar-inverse" role="navigation">
     <div class="container-fluid">
@@ -355,7 +358,7 @@ For example:
 
 ## Macros
 
-In Jinja2, we can place commonly used code snippets that are used over and over to not repeat ourselves. It's common to highlight the link of the current page on the navigation bar (active link). We'd have to use if/elif/else statements to determine the active link. Using [macros](http://jinja.pocoo.org/docs/templates/#macros), we can abstract out such code into a seperate file. 
+In Jinja2, we can place commonly used code snippets that are used over and over to not repeat ourselves. It's common to highlight the link of the current page on the navigation bar (active link). We'd have to use if/elif/else statements to determine the active link. Using [macros](http://jinja.pocoo.org/docs/templates/#macros), we can abstract out such code into a separate file. 
 
 1. Add a *macros.html* file to the "templates" directory:
   ```html
@@ -404,9 +407,69 @@ In Jinja2, we can place commonly used code snippets that are used over and over 
 
 ## Custom filters
 
-http://jinja.pocoo.org/docs/api/#custom-filters
+Jinja uses [filters](http://jinja.pocoo.org/docs/templates/#filters) to modify variables, mostly for formatting purpose.
+
+For example:
+
+```python
+{{ num | round }}
+```
+
+This will round the `num` variable. So, if we pass argument `num=46.99` into the template, `47.0` will be outputted.
+
+As you can tell, you specify the variable then a pipe (|) followed by the filter. Check out this [link](http://jinja.pocoo.org/docs/templates/#builtin-filters) for the list of filters already included within Jinja. In some cases, you can specify optional arguments in parentheses.
+
+For example:
+
+```python
+{{ list|join(', ') }}
+```
+
+This will join a list by the comma delimiter.
+
+Test this out. Add the following line to *template.html*
+
+```python
+<p>Same list with a filter: {{ my_list|join(', ') }}</p>
+```
+
+Now, besides the builtin filters, we can create our [own](http://jinja.pocoo.org/docs/api/#custom-filters).
+
+Let's add one of our own. One common example is a custom datetime filter.
+
+1. Add the following code to our controller after we create the app - `app = Flask(__name__)`:
+  ```python
+  @app.template_filter()
+  def datetimefilter(value, format='%Y/%m/%d %H:%M'):
+      """convert a datetime to a different format."""
+      return value.strftime(format)
+
+  app.jinja_env.filters['datetimefilter'] = datetimefilter
+  ```
+
+  Using the `@app.template_filter()` decorator we are registering the `datetimefilter()` function as a filter. 
+
+  > The default name for the filter is just the name of the function; however, you can customize it by passing in an argument to the function - e.g, `@app.template_filter(formatdate)`.
+
+  Next, we are adding the filter to the Jinja environment, making it accessible. Now it's ready for use.
+
+2. Add the following code to our child template:
+  ```html
+  <h4>Current date/time: {{ current_time | datetimefilter }}</h4>
+  ```
+
+3. Finally, just pass in the datetime to our template:
+   ```python
+   current_time=datetime.datetime.now()
+   ```
+
+4. Test.
+
+  ![jinja-filter](https://raw.github.com/mjhea0/thinkful-mentor/master/jinja/images/jinja-filter.png)
 
 
 ## Conclusion
 
 That's it. Grab the sample code [here](https://github.com/mjhea0/thinkful-mentor/tree/master/jinja/flask_example).
+
+Did I miss anything? Comment below.
