@@ -61,11 +61,7 @@ print my_blue_car.pulled_over(speed[0])
 
 """
 To Do -
-
-
-Use logic to deterime that if a cop is nearby, you will get pulled over if you are speeding. 
-Otherwise you're in the clear.
-2. Change the "accelerate()" method to show whether a car has accelerated or decelerated.
+1. Change the "accelerate()" method to show whether a car has accelerated or decelerated.
 """
 
 
