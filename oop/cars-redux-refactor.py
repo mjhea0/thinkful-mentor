@@ -1,14 +1,17 @@
 class Car(object):
 
-    def __init__(self, color, speed, cop):
+    def __init__(self, color, cop):
         self.color = color
-        self.speed = speed
         self.cop = cop
 
     def accelerate(self, amount=10, car_speed=0):
         accelerate = []
-        new_speed = self.speed + amount + car_speed
-        accelerate.extend([new_speed,"\nYour {} car accelerated to {}.".format(self.color, new_speed)])
+        new_speed =  amount + car_speed
+        accelerate.append(new_speed)
+        if amount >= 0:
+            accelerate.append("\nYour {} car accelerated to {}.".format(self.color, new_speed))
+        else:
+            accelerate.append("\nYour {} car decelerated to {}.".format(self.color, new_speed))
         return accelerate
 
     def check_speed(self, current_speed):
@@ -26,7 +29,7 @@ class Car(object):
 
 # ----------- #
 
-my_car = Car("red",10, True)
+my_car = Car("red", True)
 speed = my_car.accelerate(50)
 print speed[1]
 print my_car.check_speed(speed[0])
@@ -42,7 +45,7 @@ print my_car.pulled_over(speed[0])
 
 print "\n------------"
 
-my_blue_car = Car("blue",40, True)
+my_blue_car = Car("blue", True)
 speed = my_blue_car.accelerate(10)
 print speed[1]
 print my_blue_car.check_speed(speed[0])
@@ -55,7 +58,10 @@ speed = my_blue_car.accelerate(40, speed[0])
 print speed[1]
 print my_blue_car.check_speed(speed[0])
 print my_blue_car.pulled_over(speed[0])
-
+speed = my_blue_car.accelerate(20, speed[0])
+print speed[1]
+print my_blue_car.check_speed(speed[0])
+print my_blue_car.pulled_over(speed[0])
 
 # ----------- #
 

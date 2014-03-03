@@ -1,12 +1,11 @@
 class Car(object):
 
-    def __init__(self, color, speed):
+    def __init__(self, color):
         self.color = color
-        self.speed = speed
 
     def accelerate(self, amount=10, car_speed=0):
         accelerate = []
-        new_speed = self.speed + amount + car_speed
+        new_speed =  amount + car_speed
         accelerate.extend([new_speed,"\nYour car {} accelerated to {}.".format(self.color, new_speed)])
         return accelerate
 
@@ -19,7 +18,7 @@ class Car(object):
 
 # ----------- #
 
-my_car = Car("red",10)
+my_car = Car("red")
 speed = my_car.accelerate(50)
 print speed[1]
 print my_car.check_speed(speed[0])
