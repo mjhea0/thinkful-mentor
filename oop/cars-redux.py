@@ -7,7 +7,7 @@ class Car(object):
     def accelerate(self, amount=10, car_speed=0):
         accelerate = []
         new_speed = self.speed + amount + car_speed
-        accelerate.extend([new_speed,"\nYour car accelerated to {}.".format(new_speed)])
+        accelerate.extend([new_speed,"\nYour car {} accelerated to {}.".format(self.color, new_speed)])
         return accelerate
 
     def check_speed(self, current_speed):
