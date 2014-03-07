@@ -1,4 +1,4 @@
-# ensures that options are unqiue
+# ensures that options are unqiue (incomplete)
 
 """
 to do:
@@ -8,6 +8,7 @@ to do:
 3. timer
 4. display questions at the end (that the user got wrong) with their right answer
 5. error handling - input (must be number!)
+6. summary at the end
 
 """
 
