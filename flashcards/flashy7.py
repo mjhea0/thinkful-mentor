@@ -46,7 +46,6 @@ class FlashCards(object):
         return content_list
 
 
-
     def display_question_answers(self,content):
         
         """
@@ -62,6 +61,7 @@ class FlashCards(object):
         # grab options
         while len(options) < 3:
             test = randint(0, len(content[1])-1)
+            print test
             if test not in options:
                 options.append(test)
 
@@ -80,6 +80,7 @@ class FlashCards(object):
         answer_list.extend([answer])
         return answer_list
 
+
     def check_answer(self, options_question_answer_list, answer):
 
         """ determines if user answer is correct """
@@ -96,7 +97,6 @@ class FlashCards(object):
 
         again = raw_input('Press Enter to continue (or x then Enter to exit) ...')
         return again
-
 
 
     def calculate_score(self, score, results):
