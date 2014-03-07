@@ -1,4 +1,4 @@
-# oop
+# ensures that options are unqiue
 
 """
 to do:
@@ -59,6 +59,7 @@ class FlashCards(object):
 
         question = randint(0, len(content[0])-1)
 
+        # grab options
         while len(options) < 3:
             test = randint(0, len(content[1])-1)
             if test not in options:
