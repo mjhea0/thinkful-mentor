@@ -55,23 +55,27 @@ class FlashCards(object):
         """
 
         options = []
+        output_set = set()
         output_list=[]
 
 
         question = randint(0, len(content[0])-1)
 
         # grab options
-        while len(options) < 3:
+        while len(output_set) < 3:
             test = randint(0, len(content[1])-1)
-            print test
-            if test not in options:
-                options.append(test)
+            output_set.add(test)
 
-        options[randint(0,2)] = question
+        # convert set to list
+        options = list(output_set)
+
+        # grab question
+        question = options[randint(0,2)]
 
         output_list.extend([options,question, content[0][question], content[1][options[0]],
                              content[1][options[1]], content[1][options[2]]])
-        print output_list
+
+        return output_list
 
     
     def get_answer(self):
@@ -126,14 +130,13 @@ if __name__ == '__main__':
             create.cls()
             data = create.read_files()
             display = create.display_question_answers(data)
-            break
-            # print 'Question: ' + display[2]
-            # print '1: ' + display[3]
-            # print '2: ' + display[4]
-            # print '3: ' + display[5]
-            # results = create.get_answer()
-            # correct = create.check_answer(display,results)
-            # print correct
-            # score = create.calculate_score (score, correct)
-            # again = create.play_again ()
-            # count += 1
+            print 'Question: ' + display[2]
+            print '1: ' + display[3]
+            print '2: ' + display[4]
+            print '3: ' + display[5]
+            results = create.get_answer()
+            correct = create.check_answer(display,results)
+            print correct
+            score = create.calculate_score (score, correct)
+            again = create.play_again ()
+            count += 1
