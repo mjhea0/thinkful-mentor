@@ -110,7 +110,9 @@ class FlashCards(object):
         """ calculates score for each correct answer """
 
         if results == "Correct!":
-            score += 1
+            score[0] += 1
+        else:
+            score[1] += 1
 
         return score
 
@@ -119,7 +121,7 @@ if __name__ == '__main__':
 
     again = 0
     count = 0
-    score = 0
+    score = [0,0]
     create = FlashCards()
     while True:
         if again == "x":
@@ -134,8 +136,12 @@ if __name__ == '__main__':
             print '3: ' + display[5]
             results = create.get_answer()
             correct = create.check_answer(display,results)
+            create.cls()
             print correct
             score = create.calculate_score(score, correct)
-            print "Your score is {}".format(score)
+            print "\n# ------- Summary ------- #"
+            print "Your score is {}.".format(score[0])
+            print "You answered {} correct and {} incorrect.".format(score[0], score[1])
+            print "# ----------------------- #\n"
             again = create.play_again ()
             count += 1
