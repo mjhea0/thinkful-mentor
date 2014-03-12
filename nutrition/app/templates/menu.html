@@ -1,0 +1,35 @@
+
+{% extends "base.html" %}
+{% block content %}
+{% from "_formhelpers.html" import render_field %}
+<form method=post action="/food_log">
+
+<h3>Here is the food_log page!</h3>
+<p>
+    Please enter Food and Amount of Food in grams:
+</p>
+{% if total %}
+<p>
+    Sum: {{ total }}
+</p>
+{% endif %}
+ 
+    Food: <input type ="text" name ="food">
+    Quantity: <input type="text" name="quantity">
+    <br>
+    Food: <input type ="text" name ="food">
+    Quantity: <input type="text" name="quantity">
+    <br>
+    Food: <input type ="text" name ="food">
+    Quantity: <input type="text" name="quantity">
+    <br>
+    <input type="submit" class="btn btn-default" name="submit" value="Add these numbers"><br>
+
+
+</form>
+{% endblock %}
+
+
+
+
+

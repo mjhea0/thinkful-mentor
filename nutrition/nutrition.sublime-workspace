@@ -1,0 +1,786 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"SQL",
+				"SQLALCHEMY_MIGRATE_REPO"
+			],
+			[
+				"SQLAL",
+				"SQLALCHEMY_DATABASE_URI"
+			],
+			[
+				"text-",
+				"text-decoration"
+			],
+			[
+				"user",
+				"username"
+			],
+			[
+				"amino",
+				"amino_acid"
+			],
+			[
+				"gram",
+				"grams_desired"
+			],
+			[
+				"number",
+				"number_types"
+			],
+			[
+				"pr",
+				"protein"
+			],
+			[
+				"Amino",
+				"Amino_Acids_Consumed"
+			],
+			[
+				"amino_acid",
+				"amino_acid_amount"
+			],
+			[
+				"kilo",
+				"kilogram"
+			],
+			[
+				"discou",
+				"discount_amount"
+			],
+			[
+				"out",
+				"output_f"
+			],
+			[
+				"ou",
+				"output_f"
+			],
+			[
+				"tip",
+				"tip_value"
+			],
+			[
+				"cars_",
+				"cars_not_driven"
+			],
+			[
+				"cars",
+				"cars_driven"
+			],
+			[
+				"font",
+				"font-style"
+			],
+			[
+				"background-",
+				"background-position"
+			],
+			[
+				"backgrou",
+				"background-repeat"
+			],
+			[
+				"margin",
+				"margin-right"
+			],
+			[
+				"last",
+				"lastName"
+			],
+			[
+				"s",
+				"s"
+			],
+			[
+				"display",
+				"displayHand"
+			],
+			[
+				"word",
+				"wordList"
+			],
+			[
+				"get",
+				"getWordScore"
+			],
+			[
+				"Sc",
+				"SCRABBLE_LETTER_VALUES"
+			],
+			[
+				"a",
+				"aStr"
+			],
+			[
+				"recur",
+				"recurPowerNew"
+			],
+			[
+				"guess",
+				"guessedLetter"
+			],
+			[
+				"sere",
+				"secretWord"
+			],
+			[
+				"lette",
+				"lettersGuessed"
+			],
+			[
+				"lett",
+				"lettersNotGuessed"
+			],
+			[
+				"letters",
+				"lettersNotGuessed"
+			],
+			[
+				"guessed",
+				"guessedLetter"
+			],
+			[
+				"ret",
+				"return"
+			],
+			[
+				"leters",
+				"lettersGuessed"
+			],
+			[
+				"sect",
+				"secretWord"
+			],
+			[
+				"secret",
+				"secretWord"
+			],
+			[
+				"sec",
+				"secretWord"
+			],
+			[
+				"new",
+				"new_balance"
+			],
+			[
+				"upper",
+				"upper_balance"
+			],
+			[
+				"e",
+				"epsilon"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"text-de",
+				"text-decoration"
+			],
+			[
+				"pa",
+				"padding"
+			],
+			[
+				"c",
+				"C2A36D"
+			],
+			[
+				"text-a",
+				"text-align"
+			],
+			[
+				"tex",
+				"text-transform"
+			],
+			[
+				"max",
+				"max-width"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "__init__.py",
+			"settings":
+			{
+				"buffer_size": 68,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "views.py",
+			"settings":
+			{
+				"buffer_size": 268,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/templates/index.html",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "run.py",
+			"settings":
+			{
+				"buffer_size": 60,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 87.0,
+		"selected_items":
+		[
+			[
+				"sspy",
+				"Set Syntax: Python"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"sshtml",
+				"Set Syntax: HTML"
+			]
+		],
+		"width": 476.0
+	},
+	"console":
+	{
+		"height": 146.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/lpalay/Desktop/Computer/Thinkful/Unit3Lesson5/microblog/app/db_create.py",
+		"/Users/lpalay/Desktop/Computer/Thinkful/Unit3Lesson4/sqlalchemy_tutorial.py",
+		"/Users/lpalay/Desktop/Computer/Thinkful/Unit3Lesson5/microblog/app/init.py",
+		"/Users/lpalay/Desktop/Computer/Thinkful/Unit3Lesson1/linda_profile/app/templates/layout.html",
+		"/Users/lpalay/Desktop/Computer/Thinkful/Unit3Lesson1/app/routes.py",
+		"/Users/lpalay/venvs/flaskapp/app/templates/layout3.html",
+		"/Users/lpalay/venvs/flaskapp/app/templates/layout0.html",
+		"/Users/lpalay/Desktop/Computer/Thinkful/Unit3Lesson1_flask/hello.py",
+		"/Users/lpalay/Desktop/Computer/Thinkful/Unit2Lesson6/VeganProgramJoe/example.py",
+		"/Users/lpalay/VeganProgramJoe/food0.py",
+		"/Users/lpalay/Library/Containers/com.apple.mail/Data/Library/Mail Downloads/C037795B-4A8F-43A3-BF5F-B49E5C82CD6C/example.py",
+		"/Users/lpalay/Desktop/Computer/Thinkful/Unit2Lesson6/VeganProgram/person0.py",
+		"/Users/lpalay/venvs/flaskapp/lib/python2.7/site-packages/werkzeug/wrappers.py",
+		"/Users/lpalay/Desktop/Computer/Thinkful/Unit2Lesson6/VeganProgram/amino_acid_class_test.py",
+		"/Users/lpalay/Desktop/Computer/Thinkful/Unit2Lesson6/VeganProgram/Protein.py",
+		"/Users/lpalay/Desktop/Computer/Thinkful/Unit3Lesson1_flask/flask/flask/url_building",
+		"/Users/lpalay/Desktop/Computer/Thinkful/Unit2Lesson4/Unit2Lesson6/vegan.py",
+		"/Users/lpalay/Desktop/Computer/Thinkful/Unit2Lesson2/calculator.py",
+		"/Users/lpalay/Desktop/Computer/Thinkful/Unit2Lesson3/python_koans/python2/contemplate_koans.py",
+		"/Users/lpalay/Desktop/Computer/Thinkful/Unit2Lesson1/exceptions.py",
+		"/Users/lpalay/Desktop/Computer/Thinkful/Unit2Lesson1/exception_test.py",
+		"/Users/lpalay/Desktop/Computer/Thinkful/Unit2Lesson1/exceptions_test2.py",
+		"/Users/lpalay/Desktop/Computer/Thinkful/Unit2Lesson1/assert.py",
+		"/Users/lpalay/Desktop/Computer/Thinkful/Unit2Lesson1/multipleexcetions.py",
+		"/Users/lpalay/Desktop/Computer/Thinkful/Unit2Lesson1/multipleexceptionstuple.py",
+		"/Users/lpalay/Desktop/Computer/Thinkful/Unit2Lesson1/finally2.py",
+		"/Users/lpalay/Desktop/Computer/Thinkful/document_tagger/part3/pg_doc_tagger_part2.py",
+		"/Users/lpalay/Desktop/Computer/Thinkful/Unit1Lesson9/helloFunction.py",
+		"/Users/lpalay/Desktop/Computer/Thinkful/Unit1Lesson1/Thinkful:Lesson1:Comprehension",
+		"/Users/lpalay/Desktop/Computer/Thinkful/Unit1Lesson3/Thinkful:Lesson3:Comprehension",
+		"/Users/lpalay/Desktop/Computer/Thinkful/formatting",
+		"/Users/lpalay/Desktop/Computer/Thinkful/lists",
+		"/Users/lpalay/Desktop/Computer/Thinkful/Dictionaries",
+		"/Users/lpalay/Desktop/Computer/Thinkful/escapeCharacters",
+		"/Users/lpalay/Desktop/Computer/Thinkful/listsAndDIctionaries",
+		"/Users/lpalay/Desktop/Computer/Thinkful/Unit1Lesson4/Thinkful:Unit1:Lesson4:Comprehension",
+		"/Users/lpalay/Desktop/Computer/Thinkful/Conditionals & Control Flow",
+		"/Users/lpalay/Desktop/Computer/Thinkful/Unit1Lesson6/Thinkful:Lesson6:Comprehensoin",
+		"/Users/lpalay/Desktop/Computer/Thinkful/document_tagger/part2/doc_tagger.py",
+		"/Users/lpalay/Desktop/Computer/Thinkful/input_output",
+		"/Users/lpalay/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/lpalay/Desktop/Computer/Thinkful/Unit1Lesson7/document_tagger/part1/script1.py",
+		"/Users/lpalay/Desktop/Computer/Thinkful/Unit1Lesson7/document_tagger/part1/pg_sample_texts.py",
+		"/Users/lpalay/Desktop/Computer/Thinkful/Unit1Lesson7/parsingstrings.py",
+		"/Users/lpalay/Desktop/Computer/Thinkful/Unit1Lesson7/Regular Expressions:Dive into Python.txt",
+		"/Users/lpalay/Desktop/Computer/Thinkful/Unit1Lesson5/tip_calculator/tip_calculator2.py",
+		"/Users/lpalay/Desktop/Computer/Thinkful/Unit1Lesson5/tip_calculator/sys.argv.py",
+		"/Users/lpalay/Desktop/Computer/Thinkful/linda.py",
+		"/Users/lpalay/Desktop/Computer/Thinkful/Unit1Lesson5/tip_calculator/tip_calculator3.py",
+		"/Users/lpalay/Desktop/Computer/Thinkful/Unit1Lesson5/tip_calculator/tip_calculator4.py",
+		"/Users/lpalay/Desktop/Computer/Thinkful/Unit1Lesson6/CodecademyControlFlowAndLoopsLesson2/lesson2:comparators.py",
+		"/Users/lpalay/Desktop/Computer/Thinkful/Unit1Lesson5/tip_calculator/tip_calculator.py",
+		"/Users/lpalay/Desktop/Computer/Thinkful/Unit1Lesson6/while.py",
+		"/Users/lpalay/Desktop/Computer/Thinkful/Unit1Lesson6/for.py",
+		"/Users/lpalay/Desktop/Computer/Thinkful/Unit1Lesson6/break.py",
+		"/Users/lpalay/Desktop/Computer/Thinkful/Unit1Lesson6/continue.py",
+		"/Users/lpalay/Desktop/Computer/Thinkful/Unit1Lesson6/CodeademyControlFlowAndLoopsLesson1/ControlFlowLesson1.py",
+		"/Users/lpalay/Desktop/Computer/Thinkful/Unit1Lesson6/if.py",
+		"/Users/lpalay/Desktop/Computer/Thinkful/Unit1Lesson6/CodeademyControlFlowAndLoopsLesson1/lesson2:comparators.py",
+		"/Users/lpalay/Desktop/Computer/Thinkful/LPTHW/ex7.py",
+		"/Users/lpalay/Desktop/Computer/Thinkful/codecademy/lesson2.py",
+		"/Users/lpalay/Desktop/Computer/Thinkful/LPTHW/lesson3a.py",
+		"/Users/lpalay/Desktop/Computer/Thinkful/LPTHW/lesson3.py",
+		"/Users/lpalay/Desktop/Computer/Thinkful/LPTHW/ex6.py",
+		"/Users/lpalay/Desktop/Computer/Thinkful/LPTHW/ex5.py",
+		"/Users/lpalay/Desktop/Computer/Thinkful/LPTHW/functions.py",
+		"/Users/lpalay/Desktop/Computer/Thinkful/LPTHW/ex10b.py",
+		"/Users/lpalay/Desktop/Computer/Thinkful/LPTHW/ex10a.py",
+		"/Users/lpalay/Desktop/Computer/Thinkful/LPTHW/ex10.py",
+		"/Users/lpalay/Desktop/Computer/Thinkful/LPTHW/ex9.py",
+		"/Users/lpalay/Desktop/Computer/Thinkful/LPTHW/ex8.py",
+		"/Users/lpalay/Desktop/Computer/Thinkful/LPTHW/ex1.py",
+		"/Users/lpalay/Desktop/Computer/Thinkful/LPTHW/ex4.py",
+		"/Users/lpalay/Desktop/Computer/Thinkful/LPTHW/ex3.py",
+		"/Users/lpalay/Desktop/Computer/Slate_Code/Slate_Code.docx",
+		"/Users/lpalay/Downloads/Slate.dmg",
+		"/Users/lpalay/Desktop/escape.html",
+		"/Users/lpalay/ComputerProgrammingInformation/HeadFirstHTML:CSS/hfhtmlcss/chapter9/lounge/lounge.css",
+		"/Users/lpalay/ComputerProgrammingInformation/HeadFirstHTML:CSS/hfhtmlcss/chapter9/lounge/lounge.html",
+		"/Users/lpalay/ComputerProgrammingInformation/HeadFirstHTML:CSS/Lounge/lounge.html",
+		"/Users/lpalay/ComputerProgrammingInformation/HeadFirstHTML:CSS/hfhtmlcss/chapter3/journal/segway'nUSA.html",
+		"/Users/lpalay/ComputerProgrammingInformation/HeadFirstHTML:CSS/hfhtmlcss/chapter3/journal/journal1.html",
+		"/Users/lpalay/ComputerProgrammingInformation/HeadFirstHTML:CSS/hfhtmlcss/chapter2/completelounge/images/drinks.gif",
+		"/Users/lpalay/ComputerProgrammingInformation/HeadFirstHTML:CSS/starbuzz:index.html",
+		"/Users/lpalay/helloworld-2/index.yaml",
+		"/Users/lpalay/venvs/django_tutorial/lib/python2.7/site-packages/django/conf/locale/de_CH/formats.py",
+		"/Users/lpalay/venvs/django_tutorial/lib/python2.7/site-packages/django/contrib/admindocs/templates/admin_doc/index.html",
+		"/Users/lpalay/venvs/django_tutorial/lib/python2.7/site-packages/django/contrib/admin/templates/admin/index.html",
+		"/Applications/Quicken 2007/Quicken 2007/Contents/Resources/English.lproj/Quicken Help/index.html",
+		"/Users/lpalay/helloworld-2/favicon.ico",
+		"/Users/lpalay/helloworld/helloworld.py",
+		"/Users/lpalay/helloworld/app.yaml",
+		"/Users/lpalay/mystuff/udcacityWebDevelopmentClass.html",
+		"/Users/lpalay/django-projects/mysite/manage.py",
+		"/Users/lpalay/mystuff/fibonacci.py",
+		"/Users/lpalay/Udacity/helloworld/helloworld.py",
+		"/Users/lpalay/Udacity/helloworld/app.yaml",
+		"/Users/lpalay/django-projects/mysite/mysite/__init__.py",
+		"/Users/lpalay/django-projects/mysite/mysite/templates/admin/base_site.html",
+		"/Users/lpalay/mystuff/palidrome.py",
+		"/Users/lpalay/mystuff/palindromeNumbers.py",
+		"/Users/lpalay/django-projects/mysite/mysite/prime_numbers.py",
+		"/Users/lpalay/django-projects/mysite/mysite/settings.py",
+		"/Users/lpalay/mystuff/ucacityWebDevelopmentClass.html",
+		"/Users/lpalay/django-projects/mysite/templates/admin/base_site.html",
+		"/Users/lpalay/mysite/mysite/settings.py",
+		"/Users/lpalay/mysite/manage.py",
+		"/Users/lpalay/django-projects/blogger/blog/templates/base.html",
+		"/Users/lpalay/django-projects/blogger/blog/templates/all_posts.html",
+		"/Users/lpalay/django-projects/blogger/blog/templates/all_authors.html",
+		"/Users/lpalay/django-projects/blogger/blog/templates/post.html",
+		"/Users/lpalay/django-projects/blogger/blog/templates/home.html",
+		"/Users/lpalay/django-projects/blogger/blog/models.py",
+		"/Users/lpalay/django-projects/blogger/blog/views.py",
+		"/Users/lpalay/django-projects/blogger/blogger/urls.py",
+		"/Users/lpalay/django-projects/blogger/blogger/settings.py",
+		"/Users/lpalay/django-projects/blogger/blog/__init__.py",
+		"/Users/lpalay/venvs/blogs/bin/activate",
+		"/Users/lpalay/Documents/6.00xfiles/recursion.py",
+		"/Users/lpalay/Documents/6.00xfiles/ProblemSet5/ProblemSet5/recursion.py",
+		"/Users/lpalay/Documents/6.00xfiles/recursionProblem.py",
+		"/Users/lpalay/Documents/6.00xfiles/ProblemSet5/ProblemSet5/recursion copy.py",
+		"/Users/lpalay/Documents/6.00xfiles/wordgame.py",
+		"/Users/lpalay/Documents/6.00xfiles/ProblemSet5.py/ProblemSet5/classCoordinate.py",
+		"/Users/lpalay/Documents/6.00xfiles/ProblemSet5.py/ProblemSet5/classes.py",
+		"/Users/lpalay/Documents/6.00xfiles/ProblemSet5.py/ProblemSet5/queue.py",
+		"/Users/lpalay/Documents/6.00xfiles/ProblemSet5.py/ProblemSet5/spells.py",
+		"/Users/lpalay/Documents/6.00xfiles/ProblemSet5.py/ProblemSet5/inheritance.py"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"about",
+			"content",
+			"HIS",
+			"VAL",
+			"PHETYR",
+			"METCYS",
+			"LEU",
+			"ISO",
+			"THR",
+			"TR",
+			"protein)",
+			"protein",
+			"Protein",
+			"\\t",
+			"sys",
+			"	",
+			"inventions",
+			">\n",
+			"elixer.html",
+			"reslut",
+			"n",
+			"TEMPLATE_DIRS",
+			" i ",
+			" i",
+			"i",
+			"title",
+			"h4",
+			"h1",
+			"Admin",
+			"BlogPost",
+			"admin",
+			"	",
+			"__unicode",
+			"unicode",
+			"#",
+			"finished",
+			"mp",
+			"up",
+			"lp",
+			"nb",
+			"ir",
+			"b",
+			"ar",
+			"ir",
+			"r",
+			"b",
+			"ans = str(raw_inp",
+			"style3",
+			"href",
+			"h6",
+			"h1",
+			"cf",
+			";",
+			"heref",
+			"\"/\"",
+			"/",
+			"images/photos_reduced/harbor.jpg\"",
+			"images/photos_reduced/harbor.jpg",
+			"</div>",
+			"img",
+			"255",
+			"h1 style"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			"   ",
+			"annualInterestRate",
+			"balance",
+			"annualInterestRate",
+			"monthlyPaymentRate",
+			"balance"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": false
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "__init__.py",
+					"settings":
+					{
+						"buffer_size": 68,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								68,
+								68
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Djaneiro/Syntaxes/Python Django.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "views.py",
+					"settings":
+					{
+						"buffer_size": 268,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								102,
+								102
+							]
+						],
+						"settings":
+						{
+							"is_xml": false,
+							"syntax": "Packages/Djaneiro/Syntaxes/Python Django.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/templates/index.html",
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Djaneiro/Syntaxes/HTML (Django).tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "run.py",
+					"settings":
+					{
+						"buffer_size": 60,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								18,
+								18
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Djaneiro/Syntaxes/Python Django.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 34.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 352.0
+	},
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"home",
+				"app/templates/home.html"
+			],
+			[
+				"paint",
+				"app/templates/paintings.html"
+			],
+			[
+				"",
+				"app/templates/paintings.html"
+			],
+			[
+				"lay",
+				"templates/layout.html"
+			],
+			[
+				"rou",
+				"routes.py"
+			],
+			[
+				"main",
+				"static/css/main.css"
+			],
+			[
+				"b",
+				"mysite/templates/admin/base_site.html"
+			],
+			[
+				"ba",
+				"templates/admin/base_site.html"
+			],
+			[
+				"set",
+				"mysite/settings.py"
+			],
+			[
+				"mod",
+				"polls/models.py"
+			],
+			[
+				"posthtml",
+				"blog/templates/post.html"
+			],
+			[
+				"al",
+				"blog/templates/all_posts.html"
+			],
+			[
+				"basehtml",
+				"blog/templates/base.html"
+			],
+			[
+				"blog/views",
+				"blog/views.py"
+			],
+			[
+				"all",
+				"blog/templates/all_posts.html"
+			],
+			[
+				"models",
+				"blog/models.py"
+			],
+			[
+				"mo",
+				"blog/models.py"
+			],
+			[
+				"urls",
+				"blogger/urls.py"
+			],
+			[
+				"views",
+				"blog/views.py"
+			],
+			[
+				"post",
+				"blog/templates/post.html"
+			],
+			[
+				"ur",
+				"blogger/urls.py"
+			],
+			[
+				"setti",
+				"blogger/settings.py"
+			],
+			[
+				"sett",
+				"blogger/settings.py"
+			],
+			[
+				"recursion",
+				"ProblemSet5/ProblemSet5/recursion.py"
+			],
+			[
+				"word",
+				"wordgame.py"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 173.0,
+	"status_bar_visible": true
+}

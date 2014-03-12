@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{%  block content %}
+{% from "_formhelpers.html" import render_field %}
+<form method="post" action="/profile">
+
+<h3>Here is the profile page!</h3>
+    
+        {{ render_field(form.calorie_goal) }}
+        {{ render_field(form.protein_goal) }}
+        {{ render_field(form.carbohydrate_goal) }}
+        {{ render_field(form.fat_goal) }}
+    
+    <p><input type="submit" class="btn btn-primary" value="Profile"></p>
+</form>
+{% endblock %}
+
+
+
