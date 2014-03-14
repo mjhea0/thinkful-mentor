@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block content %}
+    <form action="/results" method="post">
+      <div name="form_field">
+        <label for="meal_cost">Meal cost:</label>
+        <input type="text" name="meal_cost" />
+      </div>
+      <div name="form_field">
+        <label for="tip_percentage">Tip percentage:</label>
+        <input type="text" name="tip_percentage" />
+      </div>
+      <input type="submit" id="submit" value="calculate" />
+    </form>
+{% endblock %}

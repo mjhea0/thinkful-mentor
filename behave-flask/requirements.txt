@@ -1,0 +1,12 @@
+Flask==0.10.1
+Jinja2==2.7.2
+MarkupSafe==0.19
+Werkzeug==0.9.4
+behave==1.2.4
+enum34==0.9.23
+itsdangerous==0.23
+parse==1.6.3
+parse-type==0.3.4
+selenium==2.40.0
+six==1.6.1
+wsgiref==0.1.2
