@@ -10,7 +10,11 @@ def home():
 def results():
     cost = request.form['meal_cost']
     percent = request.form['tip_percentage']
-    tip=int(cost)*float(percent)
+    try:
+        tip=int(cost)*float(percent)
+    except ValueError:
+        tip_error = "Enter a number"
+        return render_template("home.html",tip_error=tip_error)
     return render_template('results.html',tip=tip)
  
 if __name__ == '__main__':

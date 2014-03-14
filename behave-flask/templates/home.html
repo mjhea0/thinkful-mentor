@@ -1,6 +1,7 @@
 {% extends "layout.html" %}
 {% block content %}
     <form action="/results" method="post">
+      <div class="error">{{tip_error}}</div>
       <div name="form_field">
         <label for="meal_cost">Meal cost:</label>
         <input type="text" name="meal_cost" />
