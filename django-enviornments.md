@@ -15,13 +15,13 @@ Add this final to your project root.
 ## shell
 
 ```python
-$ manage.py runserver shell
+$ python django-admin.py shell
 ```
 
 ## runserver
 
 ```python
-$ manage.py runserver [optional port]
+$ python manage.py runserver [optional port]
 ```
 
 
