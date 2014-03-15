@@ -18,6 +18,8 @@ Add this final to your project root.
 $ python django-admin.py shell
 ```
 
+Starts the Python interactive interpreter.
+
 ## runserver
 
 ```python
