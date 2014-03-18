@@ -1,15 +1,14 @@
 {% extends "layout.html" %}
 {% block content %}
-    <form action="/results" method="post">
-      <div class="error">{{tip_error}}</div>
-      <div name="form_field">
-        <label for="meal_cost">Meal cost:</label>
-        <input type="text" name="meal_cost" />
+    <form action="/results" method="post" role="form">
+      <div id="error">{{tip_error}}</div>
+      <br>
+      <div name="form_field" class="form-group">
+        <input type="text" name="meal_cost" class="form-control" placeholder="Enter meal cost">
       </div>
-      <div name="form_field">
-        <label for="tip_percentage">Tip percentage:</label>
-        <input type="text" name="tip_percentage" />
+      <div name="form_field" class="form-group">
+        <input type="text" name="tip_percentage" class="form-control" placeholder="Enter tip percentage">
       </div>
-      <input type="submit" id="submit" value="calculate" />
+      <input type="submit" id="submit" class="btn btn-default" value="calculate">
     </form>
 {% endblock %}
