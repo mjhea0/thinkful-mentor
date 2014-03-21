@@ -3,12 +3,16 @@ from flask import Flask, render_template, request, session, \
 import sqlite3
 
 DATABASE = 'checklist.db'
-SECRET_KEY = 'hard_to_guess'
+SECRET_KEY = 'SHHHH!'
 
 app = Flask(__name__)
 app.config.from_object(__name__)
+
+def connect_db():
+    return sqlite3.connect(app.config['DATABASE'])
    
- 
+
+@app.route('/', methods=['GET'])
 def home():
     g.db = connect_db()
     cur = g.db.execute('select * from items')
@@ -19,7 +23,7 @@ def home():
 @app.route('/add', methods=['POST'])
 def add():
     item = request.form['item']
-    amount = request.form['post']
+    amount = request.form['amount']
     if not item or not amount:
         flash("All fields are required. Please try again.")
         return redirect(url_for('home'))   
@@ -30,11 +34,11 @@ def add():
         g.db.commit()
         g.db.close()
         flash('New entry was successfully posted!')
-        return redirect(url_for('main'))
+        return redirect(url_for('home'))
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
 
 
 

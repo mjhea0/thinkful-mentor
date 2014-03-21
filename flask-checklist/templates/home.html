@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 {% block content %}
-  <form action="" method="post" role="form">
+  <form action="/add" method="post" role="form">
     <div id="error">{{form_error}}</div>
     <br>
     <div name="form_field" class="form-group">
@@ -18,16 +18,16 @@
     <table class="table table-hover">
       <thead>
         <tr>
-          <th class="center">Item</th>
-          <th class="center">Amount</th>
+          <th>Item</th>
+          <th>Amount</th>
           <th class="center">Complete?</th>
         </tr>
       </thead>
       <tbody>
-        {% for key in my_items: %}
+        {% for item in my_items: %}
         <tr>
-          <td>{{key}}</td>
-          <td>{{my_items[key]}}</td>
+          <td>{{item.item}}</td>
+          <td>{{item.amount}}</td>
           <td class="center"><button type="button" class="btn btn-primary btn-xs">X</button></td>
         </tr>
         {% endfor %}
