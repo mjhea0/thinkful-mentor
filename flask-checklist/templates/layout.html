@@ -19,11 +19,17 @@
     .center {
       text-align: center;
     }
+    .closed {
+      text-decoration: line-through;
+    }
   </style>
   </head>
   <body>
     <div class="container">
-      <h1 class="logo">CHECKLIST{% block title %}{% endblock %}</h1>
+      <h1 class="logo">My List{% block title %}{% endblock %}</h1>
+      {% for message in get_flashed_messages() %}
+        <div class="alert alert-info">{{ message }}</div>
+      {% endfor %}
       {% block content %}
       {% endblock %}
     </div>
