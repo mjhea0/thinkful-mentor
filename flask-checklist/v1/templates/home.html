@@ -24,14 +24,14 @@
         </tr>
       </thead>
       <tbody>
-        {% for item in open_items: %}
+        {% for item in my_items: %}
         <tr>
           <td>{{item.description}}</td>
           <td>{{item.amount}}</td>
-          <td class="center"><a href='/complete/{{item.item_id}}'><button type="button" class="btn btn-primary btn-xs">X</button></a></td>
+          <td class="center"><a href='/complete/{{item.id}}'><button type="button" class="btn btn-primary btn-xs">X</button></a></td>
         </tr>
         {% endfor %}
-        {% for item in closed_items: %}
+        {% for item in my_closed_items: %}
         <tr class="closed">
           <td>{{item.description}}</td>
           <td>{{item.amount}}</td>

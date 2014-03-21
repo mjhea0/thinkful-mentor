@@ -1,26 +1,35 @@
 from flask import Flask, render_template, request, session, \
     flash, redirect, url_for, g
-import sqlite3
-
-DATABASE = 'checklist.db'
-SECRET_KEY = 'SHHHH!'
+from flask.ext.sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
-app.config.from_object(__name__)
+app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///checklist.db"
+app.config["SECRET_KEY"] = "Shhhh!"
 
-def connect_db():
-    return sqlite3.connect(app.config['DATABASE'])
-   
+db = SQLAlchemy(app)
+
+class Items(db.Model):
+
+    __tablename__ = "items"
+
+    item_id = db.Column(db.Integer, primary_key=True)
+    description = db.Column(db.String, nullable=False)
+    amount = db.Column(db.Float, nullable=False)
+    status = db.Column(db.Integer)
+
+    def __init__(self, description, amount, status):
+        self.description = description
+        self.amount = amount
+        self.status = status
+
+    def __repr__(self):
+        return '<description %r>' % (self.body)
 
 @app.route('/', methods=['GET'])
 def home():
-    g.db = connect_db()
-    open_items = g.db.execute('select * from items where status = 1')
-    closed_items = g.db.execute('select * from items where status = 0')
-    my_items = [dict(id=row[0], description=row[1], amount=row[2]) for row in open_items.fetchall()] 
-    my_closed_items = [dict(id=row[0], description=row[1], amount=row[2]) for row in closed_items.fetchall()]  
-    g.db.close()
-    return render_template('home.html', my_items=my_items,my_closed_items=my_closed_items)
+    open_items = db.session.query(Items).filter_by(status='1')
+    closed_items = db.session.query(Items).filter_by(status='0')
+    return render_template('home.html',open_items=open_items, closed_items=closed_items)
 
 @app.route('/add', methods=['POST'])
 def add():
@@ -30,29 +39,26 @@ def add():
         flash("All fields are required. Please try again.")
         return redirect(url_for('home'))   
     else:
-        g.db = connect_db()
-        g.db.execute('insert into items (description, amount, status) values (?, ?, ?)',
-         [request.form['description'], request.form['amount'],1])                 
-        g.db.commit()
-        g.db.close()
+        new_item = Items(
+                    description,
+                    amount,
+                    '1'
+                    )
+        db.session.add(new_item)
+        db.session.commit()
         flash('New entry was successfully posted!')
         return redirect(url_for('home'))
 
-@app.route('/complete/<int:id>')
-def complete(id):
-    g.db = connect_db()
-    g.db.execute('update items set status = 0 where id ='+ str(id))
-    g.db.commit()
-    g.db.close()
+@app.route('/complete/<int:item_id>')
+def complete(item_id):
+    new_id = item_id
+    db.session.query(Items).filter_by(item_id = new_id).update({"status":"0"})
+    db.session.commit()
     flash('Completed!')
     return redirect(url_for('home'))
 
-
-if __name__ == '__main__':
+if __name__ == "__main__":
     app.run(debug=True)
-
-
-
 
 
 

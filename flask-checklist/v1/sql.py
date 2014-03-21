@@ -8,7 +8,7 @@ with sqlite3.connect("checklist.db") as connection:
 
     # create the table
     c.execute("""CREATE TABLE items
-             (item_id INTEGER primary key autoincrement, description TEXT, amount NUMBER, status INTEGER) 
+             (id INTEGER primary key autoincrement, description TEXT, amount NUMBER, status INTEGER) 
               """)
 
 
