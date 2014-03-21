@@ -3,33 +3,36 @@
   <head>
     <title>Do you have everything?</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
-  <style>
-    body {
-      background-color: #E6E6E6;
-    }
-    .container {
-      padding-top: 100px;
-      max-width: 400px;
-    }
-    table {
-      background-color: white;
-    }
-    .center {
-      text-align: center;
-    }
-    .closed {
-      text-decoration: line-through;
-    }
-  </style>
+    <link href="http://netdna.bootstrapcdn.com/bootswatch/3.1.1/cosmo/bootstrap.min.css" rel="stylesheet" media="screen">
+    <style>
+      body {
+        background-color: #eaeaea;
+      }
+      .container {
+        padding-top: 100px;
+        max-width: 400px;
+      }
+      table {
+        background-color: white;
+      }
+      .center {
+        text-align: center;
+      }
+      .closed {
+        text-decoration: line-through;
+        font-style: italic;
+      }
+    </style>
   </head>
   <body>
     <div class="container">
-      <h1 class="logo">My List{% block title %}{% endblock %}</h1>
       {% for message in get_flashed_messages() %}
-        <div class="alert alert-info">{{ message }}</div>
+        <div class="alert alert-warning alert-dismissable">
+          <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+          {{message}}
+        </div>
       {% endfor %}
+      <h1 class="center">Grocery List</h1>
       {% block content %}
       {% endblock %}
     </div>
