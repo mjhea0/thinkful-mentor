@@ -4,12 +4,15 @@
     <title>Do you have everything?</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="http://netdna.bootstrapcdn.com/bootswatch/3.1.1/cosmo/bootstrap.min.css" rel="stylesheet" media="screen">
-    <style>
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>    
+    <script src="{{ url_for('static', filename='main.js') }}"></script>  
+    <style >
       body {
         background-color: #eaeaea;
       }
       .container {
-        padding-top: 100px;
+        padding-top: 50px;
         max-width: 400px;
       }
       table {
@@ -22,7 +25,10 @@
         text-decoration: line-through;
         font-style: italic;
       }
-    </style>
+      #open_table, #closed_table, .hide_label { 
+        display: none; 
+      }
+    </style>   
   </head>
   <body>
     <div class="container">
@@ -36,7 +42,5 @@
       {% block content %}
       {% endblock %}
     </div>
-    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
   </body>
 </html>
