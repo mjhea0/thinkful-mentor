@@ -4,7 +4,6 @@ Feature: confirming that adding items to a checklist works
         When I go to the checklist
         Then I should see the checklist form
 
-
     Scenario: check to see if table is working
         When I go to the checklist
         And I submit the item and amount
@@ -14,3 +13,8 @@ Feature: confirming that adding items to a checklist works
         When I go to the checklist
         And I check the completed box
         Then I should see a strikethough through the item
+
+    Scenario: check that an error populates if the field is left blank
+        When I go to the checklist
+        And I submit a blank form
+        Then I should see an error
