@@ -14,7 +14,7 @@ class Items(db.Model):
 
     item_id = db.Column(db.Integer, primary_key=True)
     description = db.Column(db.String, nullable=False)
-    amount = db.Column(db.Float, nullable=False)
+    amount = db.Column(db.Integer, nullable=False)
     status = db.Column(db.Integer)
 
     def __init__(self, description, amount, status):
