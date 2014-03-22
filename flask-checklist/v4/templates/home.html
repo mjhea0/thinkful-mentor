@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+{% block content %}
+  <form action="/add" method="post" role="form" id="my_wonderful_form">
+    <div id="error">{{form_error}}</div>
+    <br>
+    <div name="form_field" class="form-group">
+      <input type="text" name="description" class="form-control" placeholder="Enter item">
+    </div>
+    <div name="form_field" class="form-group">
+      <input type="text" name="amount" class="form-control" placeholder="Enter amount">
+    </div>
+    <div class="center">
+      <input type="submit" id="submit" class="btn btn-primary btn-lg" value="Add Item">
+    </div>
+  </form>
+  <br>
+  <div>
+    <p>
+    <table class="table table-hover">
+      <thead>
+        <tr class="open">
+          <th>Item Description</th>
+          <th>Amount</th>
+          <th class="center">Complete?</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for item in open_items: %}
+        <tr>
+          <td>{{item.description}}</td>
+          <td>{{item.amount}}</td>
+          <td class="center"><a href='/complete/{{item.item_id}}'><button type="button" class="btn btn-primary btn-xs completed_box">X</button></a></td>
+        </tr>
+        {% endfor %}
+        {% for item in closed_items: %}
+        <tr class="closed">
+          <td>{{item.description}}</td>
+          <td>{{item.amount}}</td>
+          <td class="center">N/A</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>      
+    </p>
+  </div>
+{% endblock %}
