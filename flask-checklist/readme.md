@@ -1,6 +1,6 @@
 ## Basic Grocery Lists
 
-Just a basic list, utilizing Flask, SQLAlchemy, Behave (BDD), and Selenium. Enjoy!
+Just a basic list, utilizing jQuery, Flask, SQLAlchemy, Behave (BDD), and Selenium. Enjoy!
 
 ### Requirements
 
