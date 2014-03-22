@@ -1,0 +1,9 @@
+#!/Users/michaelherman/Documents/repos/github/thinkful-mentor/flask-checklist/venv/bin/python
+# EASY-INSTALL-ENTRY-SCRIPT: 'behave==1.2.4','console_scripts','behave'
+__requires__ = 'behave==1.2.4'
+import sys
+from pkg_resources import load_entry_point
+
+sys.exit(
+   load_entry_point('behave==1.2.4', 'console_scripts', 'behave')()
+)

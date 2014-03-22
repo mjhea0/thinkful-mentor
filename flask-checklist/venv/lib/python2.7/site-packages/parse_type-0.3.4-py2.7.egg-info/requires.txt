@@ -1,0 +1,13 @@
+parse>= 1.6
+six
+enum34
+
+[docs]
+sphinx>=1.1
+
+[develop]
+coverage
+pytest
+pytest-cov
+pytest-runner
+tox
