@@ -4,11 +4,5 @@ Jinja2==2.7.2
 MarkupSafe==0.19
 SQLAlchemy==0.9.3
 Werkzeug==0.9.4
-behave==1.2.4
-enum34==0.9.23
 itsdangerous==0.24
-parse==1.6.3
-parse-type==0.3.4
-selenium==2.41.0
-six==1.6.1
 wsgiref==0.1.2

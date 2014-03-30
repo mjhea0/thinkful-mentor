@@ -11,5 +11,10 @@ with sqlite3.connect("flashcards.db") as connection:
              (question_id INTEGER primary key autoincrement, description TEXT) 
               """)
 
+    c.execute("""CREATE TABLE answers
+             (answer_id INTEGER primary key autoincrement, description TEXT, question_id INTEGER) 
+              """)
+
+
 
 

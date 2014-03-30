@@ -8,38 +8,12 @@ def step_impl(context):
     br = context.browser
     assert br.find_element_by_id('question')
 
-# @when(u'I submit the item and amount')
-# def step_impl(context):
-#     br = context.browser
-#     item = br.find_element_by_name("description")
-#     item.send_keys("apples")
-#     amount = br.find_element_by_name("amount")
-#     amount.send_keys("20")
-#     br.find_element_by_id("submit").click()
+@then(u'I should see three options')
+def step_impl(context):
+    br = context.browser
+    assert br.find_element_by_class_name('answer')
 
-# @then(u'I should see the the item and amount added to a table')
-# def step_impl(context):
-#     br = context.browser
-#     br.find_element_by_class_name("open_label").click()
-#     assert br.find_element_by_class_name('open')
-
-# @when(u'I check the completed box')
-# def step_impl(context):
-#     br = context.browser
-#     br.find_element_by_class_name("open_label").click()
-#     br.find_element_by_class_name("completed_box").click()
-
-# @then(u'I should see a strikethough through the item')
-# def step_impl(context):
-#     br = context.browser
-#     assert br.find_element_by_class_name("closed")
-
-# @when(u'I submit a blank form')
-# def step_impl(context):
-#     br = context.browser
-#     br.find_element_by_id("submit").click()
-
-# @then(u'I should see an error')
-# def step_impl(context):
-#     br = context.browser
-#     assert br.find_element_by_class_name("alert-dismissable")
+@then(u'I should see three unique answers')
+def step_impl(context):
+    br = context.browser
+    assert br.find_element_by_class_name('test')

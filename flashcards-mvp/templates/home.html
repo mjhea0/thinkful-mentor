@@ -2,5 +2,11 @@
 {% block content %}
   <div class="container">
     <p id="question">{{ question }}</p>
+    {% for option in options %}
+    <p class="answer">{{option}}</p>
+    {% endfor %}
+    {% for x in test%}
+    <p class="test">{{x}}</p>
+    {% endfor %}
   </div>
 {% endblock %}
