@@ -1,4 +1,4 @@
-# if upper, turn to lower; if lower turn to upper
+# if UPPER, turn to lower; if lower turn to UPPER
 
 
 def flip_case(word):
