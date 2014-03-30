@@ -12,8 +12,3 @@ def step_impl(context):
 def step_impl(context):
     br = context.browser
     assert br.find_element_by_class_name('answer')
-
-@then(u'I should see three unique answers')
-def step_impl(context):
-    br = context.browser
-    assert br.find_element_by_class_name('test')

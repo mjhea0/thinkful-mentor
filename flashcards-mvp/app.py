@@ -41,6 +41,10 @@ class Answer(db.Model):
 def home():
     rand = random.randrange(0, db.session.query(Question).count()) 
     question = db.session.query(Question)[rand]
+    options = generate_options()
+    return render_template('home.html',question=question, options=options)
+
+def generate_options():
     # make sure answers don't repeat
     options = []
     while len(options) < 3:
@@ -48,10 +52,7 @@ def home():
         answer = db.session.query(Answer)[rand_answer]
         if answer not in options:
             options.append(answer)
-    test = []
-    if options[0] != options[1] and options[0] != options[2] and  options[1] != options[2]:
-        test.append("")
-    return render_template('home.html',question=question, options=options, test=test)
+    return options
 
 
 if __name__ == "__main__":
