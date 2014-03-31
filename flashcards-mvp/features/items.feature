@@ -1,4 +1,4 @@
-Feature: confirming that user can see questions and answers
+Feature: confirming that user can see questions and answers, submit, and receive response
     
     Scenario: check that a question displays
         When I go to the homepage
