@@ -26,9 +26,12 @@ def generate_options():
             options.append(answer)
     return options
 
-@app.route('/answer/')
-def complete():
-    flash('yay!')
+@app.route('/answer/<int:answer_id>')
+def answer(answer_id):
+    new_id = answer_id
+    db.session.query(Answer).filter_by(answer_id = new_id)
+    db.session.commit()
+    flash('Completed!')
     return redirect(url_for('home'))
 
 
