@@ -39,10 +39,14 @@ class Answer(db.Model):
 
 @app.route('/', methods=['GET'])
 def home():
-    rand = random.randrange(0, db.session.query(Question).count()) 
-    question = db.session.query(Question)[rand]
+    question = grab_question()
     options = generate_options()
     return render_template('home.html',question=question, options=options)
+
+def grab_question():
+    rand = random.randrange(0, db.session.query(Question).count()) 
+    question = db.session.query(Question)[rand]
+    return question
 
 def generate_options():
     # make sure answers don't repeat
@@ -57,7 +61,6 @@ def generate_options():
 @app.route('/answer/<int:answer_id>')
 def answer(answer_id):
     new_id = answer_id
-    db.session.query(Answer).filter_by(answer_id = new_id)
     db.session.commit()
     flash('Completed!')
     return redirect(url_for('home'))
