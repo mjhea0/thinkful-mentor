@@ -18,3 +18,13 @@ def step_impl(context):
     br = context.browser
     assert br.find_element_by_class_name('answer-button')
 
+@then(u'I click a button')
+def step_impl(context):
+    br = context.browser
+    br.find_element_by_class_name("answer-button").click()
+
+@then(u'Then I should see a message')
+def step_impl(context):
+    br = context.browser
+    assert br.find_element_by_class_name('flash-answer')
+        
