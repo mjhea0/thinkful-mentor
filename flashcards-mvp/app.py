@@ -40,7 +40,7 @@ class Answer(db.Model):
 @app.route('/', methods=['GET'])
 def home():
     question = grab_question()
-    options = generate_options()
+    options = generate_options(question)
     return render_template('home.html',question=question, options=options)
 
 def grab_question():
@@ -48,15 +48,20 @@ def grab_question():
     question = db.session.query(Question)[rand]
     return question
 
-def generate_options():
-    # make sure answers don't repeat
+def generate_options(question):
     options = []
+    # grab option associated with the question
+    option = db.session.query(Answer).filter(Answer.question_id == question.question_id).first()
+    options.append(option)
     while len(options) < 3:
         rand_answer = random.randrange(0, db.session.query(Answer).count())
         answer = db.session.query(Answer)[rand_answer]
         if answer not in options:
             options.append(answer)
     return options
+
+def correct_answer(question,options):
+    pass
 
 @app.route('/answer/<int:answer_id>')
 def answer(answer_id):
