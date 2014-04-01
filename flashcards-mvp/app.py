@@ -19,13 +19,17 @@ def home():
 
 @app.route('/answer/<int:answer_id>/<string:question>')
 def answer(answer_id, question):
+    updated_question = (str(question)+"?")
     answer_query    = db.session.query(Answer).filter(Answer.answer_id == str(answer_id)).first()
-    question_query  = db.session.query(Question).filter(Question.description == str(question)+"?").first()
+    question_query  = db.session.query(Question).filter(Question.description == updated_question).first()
+    right_answer    = db.session.query(Question).filter(Question.description == updated_question).first()
+    answer = get_correct_answer(right_answer)
     if answer_query.question_id == question_query.question_id:
         flash("right")
+        return redirect(url_for('home'))
     else:
-        flash("wrong")
-    return redirect(url_for('home'))
+        flash("Wrong. The corect answer is "+str(answer))
+        return redirect(url_for('home'))
 
 # helper functions
 def get_question():
@@ -48,7 +52,8 @@ def get_options(question):
         answer = db.session.query(Answer)[rand_answer]
         if answer not in options:
             options.append(answer)
-    return options
+    shuffled = random.sample(options, len(options))
+    return shuffled
 
 def get_correct_answer(question):
     answer = db.session.query(Answer).filter(Answer.question_id == question.question_id).first()
