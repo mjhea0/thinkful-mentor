@@ -29,15 +29,16 @@
   </head>
   <body>
     <div class="container">
+      <h1 class="center">Flashcards</h1>
+      {% block content %}
+      {% endblock %}
+      <br>
       {% for message in get_flashed_messages() %}
         <div class="alert alert-warning alert-dismissable flash-answer">
           <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
           {{message}}
         </div>
       {% endfor %}
-      <h1 class="center">Flashcards</h1>
-      {% block content %}
-      {% endblock %}
     </div>
     <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>

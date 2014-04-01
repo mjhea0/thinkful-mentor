@@ -25,11 +25,11 @@ def answer(answer_id, question):
     right_answer    = db.session.query(Question).filter(Question.description == updated_question).first()
     answer = get_correct_answer(right_answer)
     if answer_query.question_id == question_query.question_id:
-        flash("right")
-        return redirect(url_for('home'))
+        correct = flash("Correct!")
+        return render_template('check.html', correct=correct)
     else:
-        flash("Wrong. The corect answer is "+str(answer))
-        return redirect(url_for('home'))
+        correct = flash(('Wrong. The corect answer to "{}" is "{}"').format(question,answer))
+        return render_template('check.html', correct=correct)
 
 # helper functions
 def get_question():
