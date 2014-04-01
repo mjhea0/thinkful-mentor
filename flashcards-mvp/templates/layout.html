@@ -15,30 +15,24 @@
         padding-top: 100px;
         max-width: 400px;
       }
-      table {
-        background-color: white;
-      }
       .center {
         text-align: center;
-      }
-      .closed {
-        text-decoration: line-through;
-        font-style: italic;
       }
     </style>
   </head>
   <body>
     <div class="container">
-      <h1 class="center">Flashcards</h1>
-      {% block content %}
-      {% endblock %}
-      <br>
+      <h1>Flashcards</h1>
       {% for message in get_flashed_messages() %}
+        <br>
         <div class="alert alert-warning alert-dismissable flash-answer">
           <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
           {{message}}
         </div>
       {% endfor %}
+      <br>
+      {% block content %}
+      {% endblock %}
     </div>
     <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>

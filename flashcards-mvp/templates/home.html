@@ -1,9 +1,8 @@
 {% extends "layout.html" %}
 {% block content %}
-  <div class="container">
-    <p id="question">{{ question }}</p>
-    {% for option in options %}
-    <p class="answer"><a href="/answer/{{option.answer_id}}/{{question}}"><button type="button" class="btn btn-primary btn-xs answer-button">X</button></a> {{option}}</p>
-    {% endfor %}
-  </div>
+  <h3 id="question">{{ question }}</h3>
+  <br>
+  {% for option in options %}
+    <h4 class="answer">&nbsp;&nbsp;<a href="/answer/{{option.answer_id}}/{{question}}"><button type="button" class="btn btn-primary btn-xs answer-button">&#8594;</button></a>&nbsp;&nbsp;{{option}}</h4>
+  {% endfor %}
 {% endblock %}
