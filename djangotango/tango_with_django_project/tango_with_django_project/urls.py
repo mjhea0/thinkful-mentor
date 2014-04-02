@@ -2,8 +2,8 @@ from django.conf.urls import patterns, include, url
 from django.conf import settings
 
 # Uncomment the next two lines to enable the admin:
-# from django.contrib import admin
-# admin.autodiscover()
+from django.contrib import admin
+admin.autodiscover()
 
 urlpatterns = patterns('',
     # Examples:
@@ -17,6 +17,7 @@ urlpatterns = patterns('',
     # url(r'^admin/', include(admin.site.urls)),
 
     url(r'^rango/', include('rango.urls')), # ADD THIS NEW TUPLE!
+    url(r'^admin/', include(admin.site.urls)), # ADD THIS LINE
 )
 
 # UNDERNEATH your urlpatterns definition, add the following two lines:
