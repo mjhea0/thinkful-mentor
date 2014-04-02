@@ -38,15 +38,12 @@ def get_question():
     return question
 
 def get_options(question):
-    """
-    1. pass in the question
-    2. get the answer associated with that question
-    3. append that answer to the list
-    4. grab two more random answers, append them to the list
-    """
     options = []
+    # pass in the question to get the answer associated with that question
     option = get_correct_answer(question)
+    # append that answer to the list
     options.append(option)
+    # grab two more random, unique answers; append them to the list
     while len(options) < 3:
         rand_answer = random.randrange(0, db.session.query(Answer).count())
         answer = db.session.query(Answer)[rand_answer]
