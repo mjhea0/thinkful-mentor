@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Trivia</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="http://netdna.bootstrapcdn.com/bootswatch/3.1.1/cosmo/bootstrap.min.css" rel="stylesheet" media="screen">
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script src="{{ url_for('static', filename='main.js') }}"></script> 
+    <style>
+      body {
+        background-color: #D8D8D8  ;
+      }
+      .container {
+        padding-top: 100px;
+        max-width: 400px;
+      }
+      .center {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+  <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+    <div class="container">
+      <h1>Country Trivia Quiz</h1>
+      {% for message in get_flashed_messages() %}
+        <br>
+        <div class="alert alert-warning alert-dismissable flash-answer">
+          <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+          {{message}}
+        </div>
+      {% endfor %}
+      <br>
+      {% block content %}
+      {% endblock %}
+    </div>
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+  </body>
+</html>
