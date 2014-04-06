@@ -19,7 +19,8 @@ def home():
 
 @app.route('/answer/<int:answer_id>/<string:question>')
 def answer(answer_id, question):
-    updated_question = (str(question)+"?")
+    updated_question = (question.replace('_', ' ')+'?')
+    print updated_question
     answer_query    = db.session.query(Answer).filter(Answer.answer_id == str(answer_id)).first()
     question_query  = db.session.query(Question).filter(Question.description == updated_question).first()
     right_answer    = db.session.query(Question).filter(Question.description == updated_question).first()
@@ -28,7 +29,7 @@ def answer(answer_id, question):
         correct = flash("Correct!")
         return render_template('check.html', correct=correct)
     else:
-        correct = flash(('Wrong. The corect answer to "{}" is "{}"').format(question,answer))
+        correct = flash(('Wrong. The corect answer to "{}" is "{}"').format(updated_question,answer))
         return render_template('check.html', correct=correct)
 
 # helper functions

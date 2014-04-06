@@ -3,6 +3,6 @@
   <h3 id="question">{{ question }}</h3>
   <br>
   {% for option in options %}
-    <h4 class="answer">&nbsp;&nbsp;<a href="/answer/{{option.answer_id}}/{{question}}"><button type="button" class="btn btn-primary btn-xs answer-button">&#8594;</button></a>&nbsp;&nbsp;{{option}}</h4>
+    <h4 class="answer">&nbsp;&nbsp;<a href="/answer/{{option.answer_id}}/{{question | replace(' ', '_')}}"><button type="button" class="btn btn-primary btn-xs answer-button">&#8594;</button></a>&nbsp;&nbsp;{{option}}</h4>
   {% endfor %}
 {% endblock %}
