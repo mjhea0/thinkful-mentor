@@ -1,7 +1,8 @@
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponseRedirect, HttpResponse
 from django.template import RequestContext
 from django.shortcuts import render_to_response
+from django.contrib.auth.decorators import login_required
 
 from rango.models import Category
 from rango.models import Page
@@ -70,6 +71,7 @@ def about(request):
     context = RequestContext(request)
     return render_to_response('rango/about.html',context)
 
+@login_required
 def add_category(request):
     # Get the context from the request.
     context = RequestContext(request)
@@ -99,6 +101,7 @@ def add_category(request):
 
 from rango.forms import PageForm
 
+@login_required
 def add_page(request, category_name_url):
     context = RequestContext(request)
 
@@ -204,6 +207,7 @@ def register(request):
 def user_login(request):
     # Like before, obtain the context for the user's request.
     context = RequestContext(request)
+    context_dict = {}
 
     # If the request is a HTTP POST, try to pull out the relevant information.
     if request.method == 'POST':
@@ -232,7 +236,10 @@ def user_login(request):
         else:
             # Bad login details were provided. So we can't log the user in.
             print "Invalid login details: {0}, {1}".format(username, password)
-            return HttpResponse("Invalid login details supplied.")
+            context_dict['bad_details'] = True
+            return render_to_response('rango/login.html', context_dict, context)
+            
+            
 
     # The request is not a HTTP POST, so display the login form.
     # This scenario would most likely be a HTTP GET.
@@ -240,6 +247,19 @@ def user_login(request):
         # No context variables to pass to the template system, hence the
         # blank dictionary object...
         return render_to_response('rango/login.html', {}, context)
+
+# Use the login_required() decorator to ensure only those logged in can access the view.
+@login_required
+def user_logout(request):
+    # Since we know the user is logged in, we can now just log them out.
+    logout(request)
+
+    # Take the user back to the homepage.
+    return HttpResponseRedirect('/rango/')
+
+@login_required
+def restricted(request):
+    return HttpResponse("Since you're logged in, you can see this text!")
 
 
 # helper functions

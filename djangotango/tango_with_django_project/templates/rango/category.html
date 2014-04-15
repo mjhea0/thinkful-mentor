@@ -19,6 +19,8 @@
         {% else %}
             The specified category {{ category_name }} does not exist!
         {% endif %}
-        <a href="/rango/category/{{category_name_url}}/add_page">Add a New Page</a>
+        {% if user.is_authenticated %}
+            <a href="/rango/category/{{category_name_url}}/add_page">Add a New Page</a>
+        {% endif %}
     </body>
 </html>

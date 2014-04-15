@@ -8,6 +8,12 @@
     <body>
         <h1>Login to Rango</h1>
 
+        {% if bad_details %}
+        <p><strong>Your username and/or password were incorrect!</strong></p>
+        {% elif disabled_account %}
+        <p><strong>Your Rango account is currently disabled; we can't log you in!</strong></p>
+        {% endif %}
+
         <form id="login_form" method="post" action="/rango/login/">
             {% csrf_token %}
             Username: <input type="text" name="username" value="" size="50" />
