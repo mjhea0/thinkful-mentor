@@ -1,28 +1,37 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <!-- Is anyone getting tired of repeatedly entering the header over and over?? -->
-        <title>Rango</title>
-    </head>
+{% extends "rango/base.html" %}
 
-    <body>
-        <h1>Login to Rango</h1>
+{% block title %}Login to Rango{% endblock %}
 
-        {% if bad_details %}
-        <p><strong>Your username and/or password were incorrect!</strong></p>
-        {% elif disabled_account %}
-        <p><strong>Your Rango account is currently disabled; we can't log you in!</strong></p>
-        {% endif %}
+{% block body_block %}
+<div class="hero-unit">
+    <h1>Login to Rango</h1>
 
-        <form id="login_form" method="post" action="/rango/login/">
+    <div class="container">
+        <form class="form-signin span4" id="login_form" method="post" action="/rango/login/">
+            <h2 class="form-signin-heading">Please sign in</h2>
+            {% if bad_details %}
+            <p><strong>Your username and/or password were incorrect!</strong></p>
+            {% elif disabled_account %}
+            <p><strong>Your Rango account is currently disabled; we can't log you in!</strong></p>
+            {% endif %}
+
+
             {% csrf_token %}
-            Username: <input type="text" name="username" value="" size="50" />
-            <br />
-            Password: <input type="password" name="password" value="" size="50" />
-            <br />
+            Username: <input type="text" class="input-block-level" placeholder="Username" name="username" value=""
+                             size="50"/>
+            <br/>
+            Password: <input type="password" class="input-block-level" placeholder="Password" name="password" value=""
+                             size="50"/>
+            <br/>
 
-            <input type="submit" value="submit" />
+            <button class="btn btn-primary" type="submit">Sign in</button>
         </form>
 
-    </body>
-</html>
+
+    </div>
+    <!-- /container -->
+
+</div>
+
+
+{% endblock %}

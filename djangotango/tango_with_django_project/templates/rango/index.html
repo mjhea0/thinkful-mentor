@@ -1,49 +1,44 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Rango</title>
-    </head>
+{% extends "rango/base.html" %}
 
-    <body>
-        {% if user.is_authenticated %}
-        <h1>Rango says... hello {{ user.username }}!</h1>
+{% block title %}Welcome to Rango!{% endblock %}
+
+{% block body_block %}
+<div class="hero-unit">
+    <h1>Ready to Rango</h1>
+
+    <p>Find, Add, Share and Rango useful links and resources.</p>
+</div>
+
+<div class="row-fluid">
+    <div class="span6">
+        <h2>Top Five Categories</h2>
+        {% if categories %}
+        <ul>
+            {% for category in categories %}
+            <li><a href="/rango/category/{{ category.url }}">{{ category.name }}</a></li>
+            {% endfor %}
+        </ul>
         {% else %}
-        <h1>Rango says... hello world!</h1>
+        <strong>No categories at present.</strong>
         {% endif %}
 
-        <br>
-        <h2>Top 5 Categories:</h2>
-        {% if categories %}
-            <ul>
-                {% for category in categories %}
-                <!-- Following line changed to add an HTML hyperlink -->
-                <li><a href="/rango/category/{{ category.url }}">{{ category.name }}</a></li>
-                {% endfor %}
-            </ul>
-       {% else %}
-            <strong>There are no categories present.</strong>
-       {% endif %}
-
-        <br>
-        <h2>Top 5 Pages:</h2>
+    </div>
+    <!--/span-->
+    <div class="span6">
+        <h2>Top Five Pages</h2>
         {% if pages %}
-            <ul>
-                {% for page in pages %}
-                <li>{{ page.title }}</li>
-                {% endfor %}
-            </ul>
-       {% else %}
-            <strong>There are no pages present.</strong>
-       {% endif %}
-      {% if user.is_authenticated %}
-        <a href="/rango/restricted/">Restricted Page</a><br />
-        <a href="/rango/logout/">Logout</a><br />
-        <a href="/rango/add_category/">Add a New Category</a><br />
-      {% else %}
-        <a href="/rango/register/">Register Here</a><br />
-        <a href="/rango/login/">Login</a><br />
-      {% endif %}
+        <ul>
+            {% for page in pages %}
+            <li><a href="{{ page.url}}">{{ page.title }}</a> - {{ page.category}} ({{ page.views }} view(s))</li>
+            {% endfor %}
+        </ul>
+        {% else %}
+        <strong>No pages at present.</strong>
+        {% endif %}
 
-      <a href="/rango/about/">About</a><br/>
-    </body>
-</html>
+    </div>
+    <!--/span-->
+</div><!--/row-->
+
+
+{% endblock %}
