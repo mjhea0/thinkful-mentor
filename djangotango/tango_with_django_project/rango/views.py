@@ -1,3 +1,5 @@
+from datetime import datetime
+
 from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponseRedirect, HttpResponse
 from django.template import RequestContext
@@ -11,23 +13,30 @@ from rango.forms import PageForm
 
 
 def index(request):
-    # Obtain the context from the HTTP request.
     context = RequestContext(request)
 
-    # Query for categories - add the list to our context dictionary.
-    category_list = Category.objects.order_by('-likes')[:5]
+    category_list = Category.objects.all()
     context_dict = {'categories': category_list}
-    page_list = Page.objects.order_by('-views')[:5]
-    context_dict['pages'] = page_list
-    print context_dict
 
-    # The following two lines are new.
-    # We loop through each category returned, and create a URL attribute.
-    # This attribute stores an encoded URL (e.g. spaces replaced with underscores).
     for category in category_list:
         category.url = encode_url(category.name)
 
-    # Render the response and return to the client.
+    page_list = Page.objects.order_by('-views')[:5]
+    context_dict['pages'] = page_list
+
+    if request.session.get('last_visit'):
+        # The session has a value for the last visit
+        last_visit_time = request.session.get('last_visit')
+        visits = request.session.get('visits', 0)
+
+        if (datetime.now() - datetime.strptime(last_visit_time[:-7], "%Y-%m-%d %H:%M:%S")).seconds > 1:
+            request.session['visits'] = visits + 1
+            request.session['last_visit'] = str(datetime.now())
+    else:
+        # The get returns None, and the session does not have a value for the last visit.
+        request.session['last_visit'] = str(datetime.now())
+        request.session['visits'] = 1
+    # Render and return the rendered response back to the user.
     return render_to_response('rango/index.html', context_dict, context)
 
 def category(request, category_name_url):
@@ -69,7 +78,16 @@ def category(request, category_name_url):
 
 def about(request):
     context = RequestContext(request)
-    return render_to_response('rango/about.html',context)
+    # If the visits session varible exists, take it and use it.
+    # If it doesn't, we haven't visited the site so set the count to zero.
+    if request.session.get('visits'):
+        count = request.session.get('visits')
+    else:
+        count = 0
+
+    # remember to include the visit data
+    return render_to_response('rango/about.html', {'visits': count, 'last_visited': request.session.get('last_visit')}, context)
+
 
 @login_required
 def add_category(request):
@@ -145,6 +163,12 @@ def add_page(request, category_name_url):
 from rango.forms import UserForm, UserProfileForm
 
 def register(request):
+
+    # test cookie
+    if request.session.test_cookie_worked():
+        print ">>>> TEST COOKIE WORKED!"
+        request.session.delete_test_cookie()
+
     # Like before, get the request's context.
     context = RequestContext(request)
 
