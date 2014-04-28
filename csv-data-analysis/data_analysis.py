@@ -1,5 +1,5 @@
 import csv
-
+import pandas
 
 my_file = 'us_arrests.csv'
 
@@ -13,9 +13,7 @@ def import_data(delimited_file):
 def seperate_headings_from_data(data):
     headings = data[0]
     data.pop(0)
-    print headings
-    print "\n#-----------------------------------#\n"
-    print data
+    print pandas.DataFrame(data, columns=headings)
 
 data = import_data(my_file)
 seperate_headings_from_data(data)
