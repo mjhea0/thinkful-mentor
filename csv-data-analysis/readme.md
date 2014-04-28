@@ -1,6 +1,6 @@
-# Python for Data Analysis: Analyzing CSV Data with Numpy and Pandas
+# Python for Data Analysis: Analyzing CSV Data with Numpy, Pandas, and Matplotlib
 
-In this intro tutorial, we're going to analyze a small dataset of the [U.S. crime rate](http://link) broken down by state using Numpy and Pandas. After importing and organizing the data, we'll calculate some summary statistics as well as provide a graphical display of the data itself.
+In this intro tutorial, we're going to analyze a small dataset of the [U.S. crime rate](http://link) broken down by state using Numpy, Pandas, and Matplotlib. After importing and organizing the data, we'll calculate some summary statistics as well as provide a graphical display of the data itself.
 
 ## Importing CSV Data
 
@@ -99,9 +99,212 @@ def seperate_headings_from_data(data):
     print pandas.DataFrame(data, columns=headings)
 ```
 
-The [`DataFrame()`](http://pandas.pydata.org/pandas-docs/version/0.13.1/generated/pandas.DataFrame.html) class outputs a nice table. We also used our `headings` list for the optional `columns` argument. 
+The [`DataFrame()`](http://pandas.pydata.org/pandas-docs/version/0.13.1/generated/pandas.DataFrame.html) class outputs the data in a nice table. We also used our `headings` list for the optional `columns` argument. 
 
 ![pandas_dataframe_ouput](http://pandas_dataframe_ouput.png)
 
-## Basic Statistical Analysis
+## Basic Statistical Analysis with Numpy
+
+Let's start with some summary statistics - e.g., the min, max, mean, median, and standard deviation. We'll look just at murder to simplify things.
+
+First, install Numpy if you don't already have it:
+
+```
+$ pip install numpy
+```
+
+Next, we need to create a list for all of the murder rates:
+
+```python
+def get_basic_statistics(data):
+    murder = []
+    for crime in data:
+        murder.append(float(crime[1]))
+    return murder
+```
+
+Here, we're just using a `for` loop to iterate through the data and then grabbing the murder list using basic list manipulation. Simple, right? Then we return the new list.
+
+Updated code:
+
+```python
+import csv
+import pandas
+import numpy
+
+my_file = 'us_arrests.csv'
+
+
+def import_data(delimited_file):
+    with open(delimited_file, 'rb') as csvfile:
+        all_data = list(csv.reader(csvfile, delimiter=','))
+    return all_data
+
+
+def seperate_headings_from_data(data):
+    headings = data[0]
+    data.pop(0)
+    print pandas.DataFrame(data, columns=headings)
+
+
+def get_basic_statistics(data):
+    murder = []
+    for crime in data:
+        murder.append(float(crime[1]))
+    return murder
+
+
+data = import_data(my_file)
+seperate_headings_from_data(data)
+get_basic_statistics(data)
+```
+
+Now let's use Numpy to sumarize the murder rate using two new functions:
+
+```python
+def calculate_statistics(crime):
+    return numpy.mean(crime), numpy.median(crime), numpy.std(crime)
+
+def calculate_min_and_max(crime):
+    return numpy.min(crime), numpy.max(crime)
+```
+
+If you print the outputs, you should see a two tuples - one with the mean, median, and standard deviation, and the second with the min and max values:
+
+```
+(7.7879999999999994, 7.25, 4.3117346857152512)
+(0.80000000000000004, 17.399999999999999)
+```
+
+Add `main()` and output stats:
+
+```python
+import csv
+import pandas
+import numpy
+
+my_file = 'us_arrests.csv'
+
+
+def import_data(delimited_file):
+    with open(delimited_file, 'rb') as csvfile:
+        all_data = list(csv.reader(csvfile, delimiter=','))
+    return all_data
+
+
+def seperate_headings_from_data(data):
+    headings = data[0]
+    data.pop(0)
+    print pandas.DataFrame(data, columns=headings)
+
+
+def get_basic_statistics(data):
+    murder = []
+    for crime in data:
+        murder.append(float(crime[1]))
+    return murder
+
+
+def calculate_statistics(crime):
+    return numpy.mean(crime), numpy.median(crime), numpy.std(crime)
+
+
+def calculate_min_and_max(crime):
+    return numpy.min(crime), numpy.max(crime)
+
+
+if __name__ == '__main__':
+    data = import_data(my_file)
+    seperate_headings_from_data(data)
+    murder = get_basic_statistics(data)
+    stats = calculate_statistics(murder)
+    print "\nMurder Statistics"
+    print "-----------------"
+    print "Mean: {}".format((stats)[0])
+    print "Median: {}".format((stats)[1])
+    print "Std. Deviation: {}".format((stats)[2])
+```
+
+What are we missing? The min and max values as well as their respective states. The question is: How do we the min and max back to their respective U.S. states? 
+
+We need to the grab the index of each value, then pass those values into a new list that includes each state:
+
+```python
+def get_state(crime, min_max, data):
+    state = []
+    min_index = crime.index(min_max[0])
+    max_index = crime.index(min_max[1])
+    for crime in data:
+        state.append(crime[0])
+    return state[min_index], state[max_index]
+```
+
+Update:
+
+```python
+import csv
+import pandas
+import numpy
+
+my_file = 'us_arrests.csv'
+
+
+def import_data(delimited_file):
+    with open(delimited_file, 'rb') as csvfile:
+        all_data = list(csv.reader(csvfile, delimiter=','))
+    return all_data
+
+
+def seperate_headings_from_data(data):
+    headings = data[0]
+    data.pop(0)
+    print pandas.DataFrame(data, columns=headings)
+    
+
+def get_basic_statistics(data):
+    murder = []
+    for crime in data:
+        murder.append(float(crime[1]))
+    return murder
+
+
+def calculate_statistics(crime):
+    return numpy.mean(crime), numpy.median(crime), numpy.std(crime)
+
+
+def calculate_min_and_max(crime):
+    return numpy.min(crime), numpy.max(crime)
+
+
+def get_state(crime, min_max, data):
+    state = []
+    min_index = crime.index(min_max[0])
+    max_index = crime.index(min_max[1])
+    for crime in data:
+        state.append(crime[0])
+    return state[min_index], state[max_index]
+
+if __name__ == '__main__':
+    data = import_data(my_file)
+    seperate_headings_from_data(data)
+    murder = get_basic_statistics(data)
+    stats = calculate_statistics(murder)
+    min_max = calculate_min_and_max(murder)
+    states = get_state(murder, min_max, data)
+    print "\nMurder Statistics"
+    print "-----------------"
+    print "Mean: {}".format((stats)[0])
+    print "Median: {}".format((stats)[1])
+    print "Std. Deviation: {}".format((stats)[2])
+    print "Highest crime rate: {} with a rate of {}".format(
+        (states)[0], (min_max)[0])
+    print "Lowest crime rate: {} with a rate of {}".format(
+        (states)[1], (min_max)[1])
+```
+
+## Charting Data with Matplotlib
+
+
+
+
 
