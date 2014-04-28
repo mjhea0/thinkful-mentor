@@ -68,3 +68,40 @@ seperate_headings_from_data(data)
 
 ## Displaying Data with Pandas
 
+Before we look at Pandas, you could use pretty-print to at least make the list legible:
+
+```python
+def seperate_headings_from_data(data):
+    import pprint
+    headings = data[0]
+    data.pop(0)
+    pp = pprint.PrettyPrinter(indent=4)
+    print headings
+    print "\n#-----------------------------------#\n"
+    pp.pprint(data)
+```
+
+However, Pandas makes it easy to print the data in tabular format.
+
+
+Simply install Pandas with pip:
+
+```
+$ pip install pandas
+```
+
+Then import the library and update the function:
+
+```python
+def seperate_headings_from_data(data):
+    headings = data[0]
+    data.pop(0)
+    print pandas.DataFrame(data, columns=headings)
+```
+
+The [`DataFrame()`](http://pandas.pydata.org/pandas-docs/version/0.13.1/generated/pandas.DataFrame.html) class outputs a nice table. We also used our `headings` list for the optional `columns` argument. 
+
+![pandas_dataframe_ouput](http://pandas_dataframe_ouput.png)
+
+## Basic Statistical Analysis
+
