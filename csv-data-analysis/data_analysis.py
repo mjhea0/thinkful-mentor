@@ -54,7 +54,7 @@ def create_histogram(crime):
     plt.xlabel("murder rates")
     plt.ylabel("# of murders")
     plt.legend()
-    plt.show() 
+    plt.show()
 
 
 if __name__ == '__main__':
