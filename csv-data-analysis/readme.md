@@ -173,14 +173,16 @@ def calculate_min_and_max(crime):
     return numpy.min(crime), numpy.max(crime)
 ```
 
-If you print the outputs, you should see a two tuples - one with the mean, median, and standard deviation, and the second with the min and max values:
+If you print the outputs, you should see a two tuples - one with the mean, median, and standard deviation, and the other with the min and max values:
 
 ```
 (7.7879999999999994, 7.25, 4.3117346857152512)
 (0.80000000000000004, 17.399999999999999)
 ```
 
-Add `main()` and output stats:
+> Want a challenge? Instead of using the statistic functions from Numpy, built the functions yourself, within a seperate file, then import them in. Check out an example of the media [here]. This is great practice for beginners.
+
+Also add the `main` variable and the output stats:
 
 ```python
 import csv
@@ -229,7 +231,7 @@ if __name__ == '__main__':
     print "Std. Deviation: {}".format((stats)[2])
 ```
 
-What are we missing? The min and max values as well as their respective states. The question is: How do we the min and max back to their respective U.S. states? 
+What's the output missing? The min and max values as well as their respective states. The question is: How do we the min and max back to their respective U.S. states? 
 
 We need to the grab the index of each value, then pass those values into a new list that includes each state:
 
