@@ -1,6 +1,8 @@
 import csv
 import pandas
 import numpy
+import matplotlib.pyplot as plt
+
 
 my_file = 'us_arrests.csv'
 
@@ -40,6 +42,21 @@ def get_state(crime, min_max, data):
         state.append(crime[0])
     return state[min_index], state[max_index]
 
+
+def create_frequency_distribution(crime):
+    hist, bin_edges = numpy.histogram(crime, bins=10)
+    return hist, bin_edges
+
+
+def create_histogram(crime):
+    plt.hist(crime, facecolor='green', label='murders')
+    plt.title("Murder Rate Histogram")
+    plt.xlabel("murder rates")
+    plt.ylabel("# of murders")
+    plt.legend()
+    plt.show() 
+
+
 if __name__ == '__main__':
     data = import_data(my_file)
     seperate_headings_from_data(data)
@@ -54,5 +71,7 @@ if __name__ == '__main__':
     print "Std. Deviation: {}".format((stats)[2])
     print "Highest crime rate: {} with a rate of {}".format(
         (states)[0], (min_max)[0])
-    print "Lowest crime rate: {} with a rate of {}".format(
+    print "Lowest crime rate: {} with a rate of {}\n".format(
         (states)[1], (min_max)[1])
+    print create_frequency_distribution(murder)
+    create_histogram(murder)
