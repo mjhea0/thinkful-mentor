@@ -1,10 +1,10 @@
 # Python for Data Analysis: Analyzing CSV Data with Numpy, Pandas, and Matplotlib
 
-In this intro tutorial, we're going to analyze a small dataset of the [U.S. crime rate](http://link) broken down by state using Numpy, Pandas, and Matplotlib. After importing and organizing the data, we'll calculate some summary statistics as well as provide a graphical display of the data itself.
+In this intro tutorial, we're going to analyze a small dataset of the [U.S. crime rate](https://github.com/mjhea0/thinkful-mentor/blob/master/csv-data-analysis/us_arrests.csv) broken down by state using Numpy, Pandas, and Matplotlib. After importing and organizing the data, we'll calculate some summary statistics as well as provide a graphical display of the data itself.
 
 ## Importing CSV Data
 
-Before beginning open up the CSV file in Excel or a text editor to see how it's organized, the data types, and the type of delimiter used for separating the data. Essentially, we're working with strings, integers, and floats, separated by commas. Now, let's start by importing the data in a Python-friendly format using the CSV library:
+Before beginning open up the CSV file in Excel or a text editor (or just view the link above) to see how it's organized, the data types, and the type of delimiter used for separating the data. Essentially, we're working with strings, integers, and floats, separated by commas. Now, let's start by importing the data in a Python-friendly format using the CSV library:
 
 ```python
 import csv
@@ -303,6 +303,119 @@ if __name__ == '__main__':
 ```
 
 ## Charting Data with Matplotlib
+
+Now, let's quickly look at how to create a nice chart with Matplotlib. Perhaps you would like to see a histogram (a plot type used to show the frequency across a continuous or discrete variable) of the state murder rates. We can use the matplotlib.pyplot package's [`hist()`](http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.hist) function for this. Make sure to install [Matplotlib](http://matplotlib.org/downloads.html).
+
+Before creating thr histrogram, let's first use Numpy to create a frequency distribution:
+
+```python
+def create_frequency_distribution(crime):
+    hist, bin_edges = numpy.histogram(crime, bins=10)
+    return hist, bin_edges
+```
+
+Call this function and you should see the following output:
+
+```
+(array([5, 8, 5, 9, 6, 3, 5, 4, 3, 2]), array([  0.8 ,   2.46,   4.12,   5.78,   7.44,   9.1 ,  10.76,  12.42,
+        14.08,  15.74,  17.4 ]))
+```
+
+This means that there are 5 states that have a murder rate between 0.8 and 2.46, 8 states that have a rate between 2.46 and 4.12, and so on.
+
+Now, let's graph it:
+
+```python
+def create_histogram(crime):
+    plt.hist(crime, facecolor='green', label='murders')
+    plt.title("Murder Rate Histogram")
+    plt.xlabel("murder rates")
+    plt.ylabel("# of murders")
+    plt.legend()
+    plt.show() 
+```
+
+Final code:
+
+```python
+import csv
+import pandas
+import numpy
+import matplotlib.pyplot as plt
+
+
+my_file = 'us_arrests.csv'
+
+
+def import_data(delimited_file):
+    with open(delimited_file, 'rb') as csvfile:
+        all_data = list(csv.reader(csvfile, delimiter=','))
+    return all_data
+
+
+def seperate_headings_from_data(data):
+    headings = data[0]
+    data.pop(0)
+    print pandas.DataFrame(data, columns=headings)
+
+
+def get_basic_statistics(data):
+    murder = []
+    for crime in data:
+        murder.append(float(crime[1]))
+    return murder
+
+
+def calculate_statistics(crime):
+    return numpy.mean(crime), numpy.median(crime), numpy.std(crime)
+
+
+def calculate_min_and_max(crime):
+    return numpy.min(crime), numpy.max(crime)
+
+
+def get_state(crime, min_max, data):
+    state = []
+    min_index = crime.index(min_max[0])
+    max_index = crime.index(min_max[1])
+    for crime in data:
+        state.append(crime[0])
+    return state[min_index], state[max_index]
+
+
+def create_frequency_distribution(crime):
+    hist, bin_edges = numpy.histogram(crime, bins=10)
+    return hist, bin_edges
+
+
+def create_histogram(crime):
+    plt.hist(crime, facecolor='green', label='murders')
+    plt.title("Murder Rate Histogram")
+    plt.xlabel("murder rates")
+    plt.ylabel("# of murders")
+    plt.legend()
+    plt.show() 
+
+
+if __name__ == '__main__':
+    data = import_data(my_file)
+    seperate_headings_from_data(data)
+    murder = get_basic_statistics(data)
+    stats = calculate_statistics(murder)
+    min_max = calculate_min_and_max(murder)
+    states = get_state(murder, min_max, data)
+    print "\nMurder Statistics"
+    print "-----------------"
+    print "Mean: {}".format((stats)[0])
+    print "Median: {}".format((stats)[1])
+    print "Std. Deviation: {}".format((stats)[2])
+    print "Highest crime rate: {} with a rate of {}".format(
+        (states)[0], (min_max)[0])
+    print "Lowest crime rate: {} with a rate of {}\n".format(
+        (states)[1], (min_max)[1])
+    print create_frequency_distribution(murder)
+    create_histogram(murder)
+```
 
 
 
