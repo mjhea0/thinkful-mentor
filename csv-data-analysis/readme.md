@@ -1,6 +1,6 @@
 # Python for Data Analysis: Analyzing CSV Data with Numpy, Pandas, and Matplotlib
 
-In this intro tutorial, we're going to analyze a small dataset of the [U.S. crime rate](https://github.com/mjhea0/thinkful-mentor/blob/master/csv-data-analysis/us_arrests.csv) broken down by state using Numpy, Pandas, and Matplotlib. After importing and organizing the data, we'll calculate some summary statistics as well as provide a graphical display of the data itself.
+In this intro tutorial, we're going to analyze a small dataset of the [U.S. crime rate](https://github.com/mjhea0/thinkful-mentor/blob/master/csv-data-analysis/us_arrests.csv) broken down by state using **[Numpy](http://www.numpy.org/)**, **[Pandas](http://pandas.pydata.org/)**, and [Matplotlib](http://matplotlib.org/). After importing and organizing the data, we'll calculate some summary statistics as well as provide a graphical display of the data itself.
 
 ## Importing CSV Data
 
@@ -28,7 +28,8 @@ print import_data(my_file)
 Save this as *data_analysis.py* then run it. This should give you all of the rows of the dataset wrapped in a list:
 
 ```
-[['State,"Murder","Assault","UrbanPop","Rape"'], ['Alabama,13.2,236,58,21.2'], ['Alaska,10,263,48,44.5'], ['Arizona,8.1,294,80,31'], ... ]
+[['State,"Murder","Assault","UrbanPop","Rape"'], ['Alabama,13.2,236,58,21.2'], 
+['Alaska,10,263,48,44.5'], ['Arizona,8.1,294,80,31'], ... ]
 ```
 
 The first row, `all_data[0]` contains the headings. Let's seperate the headings from the data to make analysis easier with another function:
@@ -85,8 +86,7 @@ def seperate_headings_from_data(data):
     pp.pprint(data)
 ```
 
-However, Pandas makes it easy to print the data in tabular format.
-
+Test this out. Looks better, right. Well, Pandas makes it even easier to print the data in tabular format.
 
 Simply install Pandas with pip:
 
