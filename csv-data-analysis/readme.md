@@ -1,6 +1,6 @@
 # Python for Data Analysis: Analyzing CSV Data with Numpy, Pandas, and Matplotlib
 
-In this intro tutorial, we're going to analyze a small dataset of the [U.S. crime rate](https://github.com/mjhea0/thinkful-mentor/blob/master/csv-data-analysis/us_arrests.csv) broken down by state using **[Numpy](http://www.numpy.org/)**, **[Pandas](http://pandas.pydata.org/)**, and [Matplotlib](http://matplotlib.org/). After importing and organizing the data, we'll calculate some summary statistics as well as provide a graphical display of the data itself.
+In this intro tutorial, we're going to analyze a small dataset of the [U.S. crime rate](https://github.com/mjhea0/thinkful-mentor/blob/master/csv-data-analysis/us_arrests.csv) broken down by state using **[Numpy](http://www.numpy.org/)**, **[Pandas](http://pandas.pydata.org/)**, and **[Matplotlib](http://matplotlib.org/)**. After importing and organizing the data, we'll calculate some summary statistics as well as provide a graphical display of the data itself.
 
 ## Importing CSV Data
 
