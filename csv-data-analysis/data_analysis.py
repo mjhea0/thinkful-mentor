@@ -6,6 +6,7 @@ from statistic_helpers import calculate_median
 
 
 my_file = 'us_arrests.csv'
+updated_file = 'us_arrets_updated.csv'
 
 
 def import_data(delimited_file):
@@ -24,6 +25,7 @@ def seperate_headings_from_data(data):
     headings = data[0]
     data.pop(0)
     print pandas.DataFrame(data, columns=headings)
+    return headings
 
 
 def get_basic_statistics(data):
@@ -63,6 +65,51 @@ def get_state(crime, min_max, data):
     return state[min_index], state[max_index]
 
 
+def urban_percent(data):
+    """
+    calculates median using helper function, then returns
+    list of values ("low" or "high") based on whether the
+    UrbanPop is above or below the median
+    """
+    urban_pop = []
+    urban_level = []
+    for column in data:
+        urban_pop.append(int(column[3]))
+        if int(column[3]) > calculate_median(urban_pop):
+            urban_level.append("high")
+        else:
+            urban_level.append("low")
+    return urban_level
+
+
+def add_data(data, new_list):
+    """
+    append a new list into a list of a list
+    """
+    for count in range(len(data)):
+        data[count].append(new_list[count])
+    return data
+
+
+def add_headings_to_data(data, headings):
+    """
+    add the headings back to the data
+    """
+    headings.append("UrbanLevel")
+    data.insert(0, headings)
+    return data
+
+
+def export_data(delimited_file, data):
+    """
+    export the new data list to a new delimited file
+    """
+    with open(delimited_file, 'wb') as csvfile:
+        writer = csv.writer(csvfile, delimiter=',')
+        for row in data:
+            writer.writerow(row)
+
+
 def create_frequency_distribution(crime):
     """
     creates a frequency distribution chart
@@ -85,7 +132,7 @@ def create_histogram(crime):
 
 if __name__ == '__main__':
     data = import_data(my_file)
-    seperate_headings_from_data(data)
+    headings = seperate_headings_from_data(data)
     murder = get_basic_statistics(data)
     stats = calculate_statistics(murder)
     min_max = calculate_min_and_max(murder)
@@ -99,6 +146,9 @@ if __name__ == '__main__':
         (states)[0], (min_max)[0])
     print "Lowest crime rate: {} with a rate of {}\n".format(
         (states)[1], (min_max)[1])
+    add_data(data, urban_percent(data))
+    updated_data = add_headings_to_data(data, headings)
+    export_data(updated_file, updated_data)
     print create_frequency_distribution(murder)
     print calculate_median(murder) == numpy.median(murder)
     create_histogram(murder)

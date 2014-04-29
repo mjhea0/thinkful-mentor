@@ -10,7 +10,7 @@ def calculate_median(list_data):
     ceiling = list_data[list_length/2]
     floor = list_data[list_length/2-1]
     if list_length % 2 == 0:
-        return (ceiling + floor) / 2
+        return (ceiling + floor) / 2.0
     else:
         return list_data[list_length/2]
 
