@@ -427,4 +427,4 @@ if __name__ == '__main__':
 
 ## Conclusion
 
-That's it for now. We have only scratched the surface of what each of these libraries can do. If you'd like to explore more, check out [Real Python](http://www.realpython.com) where we dig a bit deeper. Check out my repo to grab the scripts and CSV file. Comment below with questions, comments, and/or suggestions.
+That's it for now. We have only scratched the surface of what each of these libraries can do. If you'd like to explore more, check out [Real Python](http://www.realpython.com) where we dig a bit deeper. Check out my [repo](https://github.com/mjhea0/thinkful-mentor/tree/master/csv-data-analysis) to grab the scripts and CSV file. Comment below with questions, comments, and/or suggestions.
