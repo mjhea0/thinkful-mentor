@@ -109,7 +109,7 @@ The [`DataFrame()`](http://pandas.pydata.org/pandas-docs/version/0.13.1/generate
 
 ## Basic Statistical Analysis with Numpy
 
-Let's start with some summary statistics - e.g., the min, max, mean, median, and standard deviation. We'll look just at murder to simplify things.
+Let's start with some summary statistics - e.g., the min, max, mean, median, and standard deviation. We'll look just at the murder rate to simplify things.
 
 First, install Numpy if you don't already have it:
 
