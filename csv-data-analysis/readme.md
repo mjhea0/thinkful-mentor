@@ -4,7 +4,11 @@ In this intro tutorial, we're going to analyze a small dataset of the [U.S. crim
 
 ## Importing CSV Data
 
-Before beginning open up the CSV file in Excel or a text editor (or just view the link above) to see how it's organized, the data types, and the type of delimiter used for separating the data. Essentially, we're working with strings, integers, and floats, separated by commas. Now, let's start by importing the data in a Python-friendly format using the CSV library:
+Before beginning open up the CSV file in Excel or a text editor (or just view the link above) to see how it's organized, the data types, and the delimiter used for separating the data. 
+
+![csv_data_us_crimes](https://raw.githubusercontent.com/mjhea0/thinkful-mentor/master/csv-data-analysis/img/csv_data_us_crimes.png)
+
+Essentially, we're working with strings, integers, and floats, separated by commas. Now, let's start by importing the data in a Python-friendly format using the CSV library:
 
 ```python
 import csv
