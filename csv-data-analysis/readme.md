@@ -231,7 +231,7 @@ if __name__ == '__main__':
     print "Std. Deviation: {}".format((stats)[2])
 ```
 
-What's the output missing? The min and max values as well as their respective states. The question is: How do we the min and max back to their respective U.S. states? 
+What's the output missing? The min and max values as well as their respective states. The question is: How do we relate the min and max back to their respective U.S. states? 
 
 We need to the grab the index of each value, then pass those values into a new list that includes each state:
 
