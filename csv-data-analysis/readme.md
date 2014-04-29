@@ -312,7 +312,7 @@ if __name__ == '__main__':
 
 Now, let's quickly look at how to create a nice chart with Matplotlib. Perhaps you would like to see a [histogram](http://en.wikipedia.org/wiki/Histogram) (graphical representation of the distribution of data) of the state murder rates. We can use the matplotlib.pyplot package's [`hist()`](http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.hist) function for this. Make sure to install [Matplotlib](http://matplotlib.org/downloads.html) first.
 
-Before creating thr histrogram, let's first use Numpy to create a frequency distribution:
+Before creating the histogram, let's use Numpy to create a [frequency distribution](http://en.wikipedia.org/wiki/Frequency_distribution) (a graph organized to show the frequency of occurrence):
 
 ```python
 def create_frequency_distribution(crime):
@@ -327,7 +327,7 @@ Call this function and you should see the following output:
         14.08,  15.74,  17.4 ]))
 ```
 
-This means that there are 5 states that have a murder rate between 0.8 and 2.46, 8 states that have a rate between 2.46 and 4.12, and so on.
+What does this mean? Well, there are 5 states that have a murder rate that falls between 0.8 and 2.46, 8 states that have a rate between 2.46 and 4.12, and so on...
 
 Now, let's graph it:
 
@@ -423,7 +423,6 @@ if __name__ == '__main__':
     create_histogram(murder)
 ```
 
+## Conclusion
 
-
-
-
+That's it for now. We have only scratched the surface of what each of these libraries can do. If you'd like to explore more, check out [Real Python](http://www.realpython.com) where we dig a bit deeper. Check out my repo to grab the scripts and CSV file. Comment below with questions, comments, and/or suggestions.
