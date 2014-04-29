@@ -42,7 +42,7 @@ def seperate_headings_from_data(data):
     print data
 ```
 
-The `pop()` method removes an item from a list, which in this case is the 0-th element (the header list). This also removes the headers from our main lisr, seperating the headers from the *actual* data. You should now have two lists, assigned to two variables.
+The `pop()` method removes an item from a list, which in this case is the 0-th element (the header list). This also removes the headers from our main list, seperating the headers from the *actual* data. You should now have two lists, assigned to two variables, `headings` and `data`.
 
 Updated code:
 
