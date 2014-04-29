@@ -341,6 +341,8 @@ def create_histogram(crime):
     plt.show() 
 ```
 
+![murder_rate_histogram](https://raw.githubusercontent.com/mjhea0/thinkful-mentor/master/csv-data-analysis/img/murder_rate_histogram.png)
+
 Final code:
 
 ```python
