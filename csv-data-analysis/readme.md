@@ -105,7 +105,7 @@ def seperate_headings_from_data(data):
 
 The [`DataFrame()`](http://pandas.pydata.org/pandas-docs/version/0.13.1/generated/pandas.DataFrame.html) class outputs the data in a nice table. We also used our `headings` list for the optional `columns` argument. 
 
-![pandas_dataframe_ouput](http://pandas_dataframe_ouput.png)
+![pandas_dataframe_ouput](https://raw.githubusercontent.com/mjhea0/thinkful-mentor/master/csv-data-analysis/img/pandas_dataframe_ouput.png)
 
 ## Basic Statistical Analysis with Numpy
 
