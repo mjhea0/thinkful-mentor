@@ -2,6 +2,7 @@ import csv
 import pandas
 import numpy
 import matplotlib.pyplot as plt
+from statistic_helpers import calculate_median
 
 
 my_file = 'us_arrests.csv'
@@ -99,4 +100,5 @@ if __name__ == '__main__':
     print "Lowest crime rate: {} with a rate of {}\n".format(
         (states)[1], (min_max)[1])
     print create_frequency_distribution(murder)
+    print calculate_median(murder) == numpy.median(murder)
     create_histogram(murder)
