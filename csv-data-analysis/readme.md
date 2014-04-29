@@ -180,7 +180,7 @@ If you print the outputs, you should see a two tuples - one with the mean, media
 (0.80000000000000004, 17.399999999999999)
 ```
 
-> Want a challenge? Instead of using the statistic functions from Numpy, built the functions yourself, within a seperate file, then import them in. Check out an example of the media [here]. This is great practice for beginners.
+> Want a challenge? Instead of using the statistic functions from Numpy, built the functions yourself, within a seperate file, then import them in. Check out an example of the median [here](https://github.com/mjhea0/thinkful-mentor/blob/master/csv-data-analysis/statistic_helpers.py). This is great practice for beginners.
 
 Also add the `main` variable and the output stats:
 
