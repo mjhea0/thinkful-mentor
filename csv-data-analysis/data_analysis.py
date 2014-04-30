@@ -6,7 +6,7 @@ from statistic_helpers import calculate_median
 
 
 my_file = 'us_arrests.csv'
-updated_file = 'us_arrets_updated.csv'
+updated_file = 'us_arrests_updated.csv'
 
 
 def import_data(delimited_file):
