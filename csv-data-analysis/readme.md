@@ -478,13 +478,9 @@ if __name__ == '__main__':
     export_data(updated_file, updated_data)
 ```
 
-## Linear Regression with Numpy
-
-Boom!
-
 ## Charting Data with Matplotlib
 
-Now, let's quickly look at how to create a nice chart with Matplotlib. Perhaps you would like to see a [histogram](http://en.wikipedia.org/wiki/Histogram) (graphical representation of the distribution of data) of the state murder rates. We can use the matplotlib.pyplot package's [`hist()`](http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.hist) function for this. Make sure to install [Matplotlib](http://matplotlib.org/downloads.html) first.
+Finally, let's quickly look at how to create a nice chart with Matplotlib. Perhaps you would like to see a [histogram](http://en.wikipedia.org/wiki/Histogram) (graphical representation of the distribution of data) of the state murder rates. We can use the matplotlib.pyplot package's [`hist()`](http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.hist) function for this. Make sure to install [Matplotlib](http://matplotlib.org/downloads.html) first.
 
 Before creating the histogram, let's use Numpy to create a [frequency distribution](http://en.wikipedia.org/wiki/Frequency_distribution) (a graph organized to show the frequency of occurrence):
 
