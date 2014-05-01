@@ -22,3 +22,6 @@ class FizzBuzz(unittest.TestCase):
         result = self.buzzer.fizzbuzz(22)
         self.assertEqual(result,22)
 
+
+if __name__ == '__main__':
+    unittest.main()
