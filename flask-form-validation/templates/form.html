@@ -1,0 +1,12 @@
+<form action="/" method="post">
+  <div class="row">
+    {{ form.csrf_token }}
+    <h2>{{ form.question_one.label }}</h2>
+    {{ form.question_one }} 
+    {{ answer }}  
+    {{ errors }}          
+  </div>
+  <div class="row">
+    <input type="submit">
+  </div>
+</form>
