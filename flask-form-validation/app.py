@@ -32,6 +32,7 @@ def error_list():
     errors = ["first error", "second error", "third error", "fourth error"]
     return errors
 
+
 def get_form_data(data):
     right_answers = {'q2': u'yes', 'q1': u'yes', 'q3': u'yes'}
     return True if set(data.values()) - set(right_answers.values()) == set([]) else False
