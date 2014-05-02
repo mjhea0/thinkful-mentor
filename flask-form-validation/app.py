@@ -13,7 +13,15 @@ app.config.from_object(__name__)
 
 # form
 class QuestionForm(Form):
-    question_one = RadioField(
+    q1 = RadioField(
+        'Please answer yes',
+        validators=[Required("Please answer the question.")],
+        choices=[('yes', 'Yes'), ('no', 'No')])
+    q2 = RadioField(
+        'Please answer yes',
+        validators=[Required("Please answer the question.")],
+        choices=[('yes', 'Yes'), ('no', 'No')])
+    q3 = RadioField(
         'Please answer yes',
         validators=[Required("Please answer the question.")],
         choices=[('yes', 'Yes'), ('no', 'No')])
@@ -24,6 +32,10 @@ def error_list():
     errors = ["first error", "second error", "third error", "fourth error"]
     return errors
 
+def get_form_data(data):
+    right_answers = {'q2': u'yes', 'q1': u'yes', 'q3': u'yes'}
+    return True if set(data.values()) - set(right_answers.values()) == set([]) else False
+
 
 @app.route('/', methods=['post', 'get'])
 def form():
@@ -31,9 +43,8 @@ def form():
     answer = ""
     errors = ""
     if form.validate_on_submit():
-        if form.data['question_one'] == 'yes':
-            answer = "Thanks for submitting {}".format(
-                form.data['question_one'])
+        if get_form_data(form.data) is True:
+            answer = "Thanks for submitting!"
         else:
             answer = error_list()[randrange(0, len(error_list()))]
     else:

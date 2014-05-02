@@ -1,8 +1,10 @@
 <form action="/" method="post">
   <div class="row">
     {{ form.csrf_token }}
-    <h2>{{ form.question_one.label }}</h2>
-    {{ form.question_one }} 
+    <h2>{{ form.q1.label }}</h2>
+    {{ form.q1 }} 
+    {{ form.q2 }} 
+    {{ form.q3 }} 
     {{ answer }}  
     {{ errors }}          
   </div>
