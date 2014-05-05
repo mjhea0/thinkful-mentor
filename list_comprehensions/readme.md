@@ -1,6 +1,6 @@
 # Python List Comprehensions
 
-Before beginning make sure you have a basic understanding of Lists, which are just containers to hold data. Besides basic lists, Python supports a data structure called a "list comprehension", used to construct lists in a natural, easy way.
+Before beginning make sure you have a basic understanding of Lists, which are just containers to hold data. Besides basic lists, Python supports a data structure called a "list comprehension", used to construct lists in a natural, easy way. In many cases, a complex task can be constructed in a single line.
 
 ## Part 1: Intro
 
@@ -26,7 +26,7 @@ alpha_list = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H']
 print create_list(alpha_list)
 ```
 
-In this example, we are creating a new list, `beta_list` of letters greater than or equal to 'B' by iterating through the `alpha_list` and applying the appropriate filter on the list. *This filter is just an expression called a predicate.*
+In this example, we are creating a new list, `beta_list`, of letters greater than or equal to 'B' by iterating through the `alpha_list` and applying the appropriate filter on the list. *This filter is just an expression called a predicate.*
 
 When you run this code you should see:
 
@@ -138,7 +138,7 @@ Test this out:
 ['A-2', 'A-4', 'B-2', 'B-4']
 ```
 
-You could possibly use the `zup()` function for some of the above examples, depending on what you're trying to achieve:
+You could possibly use the `zip()` function for some of the above examples, depending on what you're trying to achieve:
 
 ```
 >>> alpha_list = ['A', 'B', 'C']
@@ -149,43 +149,48 @@ You could possibly use the `zup()` function for some of the above examples, depe
 
 ## Part 3: Reversed / Iterators
 
-rev_old = reversed(alpha_list)
-print [i + a for i in alpha_list for a in rev_old]
+```python
+# reversed / iterators - ex3
 
-print [i for i in rev_old]
-print rev_old
 
-rev_old = reversed(alpha_list)
-out_list = []
-for y in alpha_list:
-    out_list_inner = []
-    for x in rev_old:
-        out_list_inner.append('%s-%s' % (x, y))
-    out_list.append(out_list_inner)
+alpha_list = ['A', 'B', 'C']
 
-print out_list
-
+# reversed 
 rev_list = list(reversed(alpha_list))
 print [i + a for i in alpha_list for a in rev_list]
-
 print [i + a for i in alpha_list for a in reversed(alpha_list)]
-
 rev_old = reversed(alpha_list)
-print [i + a for i in rev_old for a in alpha_list]
 print [i + a for i in alpha_list for a in alpha_list[::-1]]
 rev_old = alpha_list[::-1]
 print [i + a for i in alpha_list for a in rev_old]
+```
+
+Output:
+
+```
+['AC', 'AB', 'AA', 'BC', 'BB', 'BA', 'CC', 'CB', 'CA']
+['AC', 'AB', 'AA', 'BC', 'BB', 'BA', 'CC', 'CB', 'CA']
+['AC', 'AB', 'AA', 'BC', 'BB', 'BA', 'CC', 'CB', 'CA']
+['AC', 'AB', 'AA', 'BC', 'BB', 'BA', 'CC', 'CB', 'CA']
+```
+
+Reversing a list is not the easiest thing to do in Python. In the above example the `reversed()` method creates a generator which we have to iterate over to get a list. This can be a costly task.
 
 
-# 4 - Dictionary comprehension
-keys = [10,30,50]
+## Part 4 - Dictionary Comprehension
+
+As you probably guessed, a dictionary comprehension is like a list comprehension only it models a dictionary instead of a list.
+
+```python
+# dict comps - ex4
+
+
+num_list = [2, 4, 6]
+keys = [1, 3, 5]
+
 print dict((x, y) for x in keys for y in num_list)
-
-print [(x, y) for x in keys for y in num_list]
-
-print [x for x in zip(keys, num_list)]
-
 print dict(zip(keys, num_list))
+
 
 class Person(object):
     def __init__(self, id, name):
@@ -193,16 +198,26 @@ class Person(object):
         self.name = name
 
     def __repr__(self):
-        return "%s (%d)" % (self.name, self.id)
+        return "{} ({})".format(self.name, self.id)
 
 people = [
-    Person(1, 'Joe'),
-    Person(2, 'Marry'),
-    Person(3, 'Kieth')
+    Person(1, 'Josh'),
+    Person(2, 'Megan'),
+    Person(3, 'Ken')
 ]
 
 print dict([(p.id, p) for p in people])
+```
+
+Output:
+
+```
+{1: 6, 3: 6, 5: 6}
+{1: 2, 3: 4, 5: 6}
+{1: Josh (1), 2: Megan (2), 3: Ken (3)}
+```
+
 
 ## Conclusion
 
-List comprehension in Python can often provide a neat, clear, and concise syntax for creating lists from other lists. However, one should always be aware that, particularly for complex transformations or predicates, the concise and terse syntax can quickly become very difficult to read. In these cases, it’s often beneficial to revert to traditional looping constructs.
+List comprehension in Python can provide a clear, concise syntax for creating lists from other lists. Just be aware that often more complex lists, especially nested or chained lists can be much more difficult to read using list comprehensions - so you may need to use regular list constructs.
