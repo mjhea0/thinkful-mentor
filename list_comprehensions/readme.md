@@ -1,12 +1,15 @@
 # Python List Comprehensions
 
-Python supports a concept called "list comprehensions", which can be a bit confusing at first - but once mastered, it can be used to construct lists in a natural, easy way.
+Before beginning make sure you have a basic understanding of Lists, which are just containers to hold data. Besides basic lists, Python supports a data structure called a "list comprehension", used to construct lists in a natural, easy way.
 
 ## Part 1: Intro
 
 Let’s start with looking at simple list. It's common to construct a new list based on values from an existing list after they, say, are filtered. 
 
 ```python
+# intro - ex1a
+
+
 def create_list(alpha_list):
     beta_list = []
     for letter in alpha_list:
@@ -23,7 +26,7 @@ alpha_list = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H']
 print create_list(alpha_list)
 ```
 
-In this example, we are creating a new list, `beta_list` of letters greater than or equal to 'B' by iterating through the `alpha_list` and applying the appropriate filter on the list.
+In this example, we are creating a new list, `beta_list` of letters greater than or equal to 'B' by iterating through the `alpha_list` and applying the appropriate filter on the list. *This filter is just an expression called a predicate.*
 
 When you run this code you should see:
 
@@ -34,7 +37,7 @@ When you run this code you should see:
 How do we do this with a list comprehension: 
 
 ```python
-# intro - ex2
+# intro - ex1b
 
 
 def create_list(alpha_list):
@@ -50,4 +53,156 @@ alpha_list = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H']
 print create_list(alpha_list)
 ```
 
-Run the code. You should see the same output. Now read it outloud, left to write: "return the letter for each letter in `alpha_list` if it's greater than or equal to 'B'". Simple, right?
+Run the code. You should see the same output. Now read it outloud, left to write: "return the letter for each letter in `alpha_list` if it's greater than or equal to 'B'". Simple. Concise. Efficient.
+
+## Part 2: Chained vs Nested
+
+Now that we have a a basic understanding of list comprehensions, let's take it a step further and look at how to chain or combine list comprehensions, which are akin to nested lists - both of which are used for iterate on more than one loop (loops of loops).
+
+```python
+# chained and nested loops - ex2
+
+
+num_list = [2, 4, 6]
+alpha_list = ['A', 'B', 'C']
+
+print "\n# 1) ------------ #\n"
+
+# chain
+print ['{}-{}'.format(letter, number) for letter in alpha_list for number in num_list]
+
+# nest
+beta_list = []
+for letter in alpha_list:
+    for number in num_list:
+        beta_list.append('{}-{}'.format(letter, number))
+
+print beta_list
+
+print "\n# 2) ------------ #\n"
+
+# chain
+print [['{}-{}'.format(letter, number) for letter in alpha_list] for number in num_list]
+
+# nest
+beta_list = []
+for number in num_list:
+    beta_list_inner = []
+    for letter in alpha_list:
+        beta_list_inner.append('{}-{}'.format(letter, number))
+    beta_list.append(beta_list_inner)
+print beta_list
+
+print "\n# 3) ------------ #\n"
+
+# chain
+print ['{}-{}'.format(letter, number) for letter in alpha_list if letter < 'C' for number in num_list if number < 5]
+print ['{}-{}'.format(letter, number) for letter in alpha_list for number in num_list if number < 5 and letter < 'C']
+
+
+# nest
+beta_list = []
+for letter in alpha_list:
+    if letter < 'C':
+        for number in num_list:
+            if number < 5:
+                beta_list.append('{}-{}'.format(letter, number))
+print beta_list
+
+beta_list = []
+for letter in alpha_list:
+    for number in num_list:
+        if number < 5 and letter < 'C':
+            beta_list.append('{}-{}'.format(letter, number))
+print beta_list
+```
+
+Test this out:
+
+```
+# 1) ------------ #
+
+['A-2', 'A-4', 'A-6', 'B-2', 'B-4', 'B-6', 'C-2', 'C-4', 'C-6']
+['A-2', 'A-4', 'A-6', 'B-2', 'B-4', 'B-6', 'C-2', 'C-4', 'C-6']
+
+# 2) ------------ #
+
+[['A-2', 'B-2', 'C-2'], ['A-4', 'B-4', 'C-4'], ['A-6', 'B-6', 'C-6']]
+[['A-2', 'B-2', 'C-2'], ['A-4', 'B-4', 'C-4'], ['A-6', 'B-6', 'C-6']]
+
+# 3) ------------ #
+
+['A-2', 'A-4', 'B-2', 'B-4']
+['A-2', 'A-4', 'B-2', 'B-4']
+['A-2', 'A-4', 'B-2', 'B-4']
+['A-2', 'A-4', 'B-2', 'B-4']
+```
+
+You could possibly use the `zup()` function for some of the above examples, depending on what you're trying to achieve:
+
+```
+>>> alpha_list = ['A', 'B', 'C']
+>>> num_list = [2, 4, 6]
+>>> zip(alpha_list, num_list)
+[('A', 2), ('B', 4), ('C', 6)]
+```
+
+## Part 3: Reversed / Iterators
+
+rev_old = reversed(alpha_list)
+print [i + a for i in alpha_list for a in rev_old]
+
+print [i for i in rev_old]
+print rev_old
+
+rev_old = reversed(alpha_list)
+out_list = []
+for y in alpha_list:
+    out_list_inner = []
+    for x in rev_old:
+        out_list_inner.append('%s-%s' % (x, y))
+    out_list.append(out_list_inner)
+
+print out_list
+
+rev_list = list(reversed(alpha_list))
+print [i + a for i in alpha_list for a in rev_list]
+
+print [i + a for i in alpha_list for a in reversed(alpha_list)]
+
+rev_old = reversed(alpha_list)
+print [i + a for i in rev_old for a in alpha_list]
+print [i + a for i in alpha_list for a in alpha_list[::-1]]
+rev_old = alpha_list[::-1]
+print [i + a for i in alpha_list for a in rev_old]
+
+
+# 4 - Dictionary comprehension
+keys = [10,30,50]
+print dict((x, y) for x in keys for y in num_list)
+
+print [(x, y) for x in keys for y in num_list]
+
+print [x for x in zip(keys, num_list)]
+
+print dict(zip(keys, num_list))
+
+class Person(object):
+    def __init__(self, id, name):
+        self.id = id
+        self.name = name
+
+    def __repr__(self):
+        return "%s (%d)" % (self.name, self.id)
+
+people = [
+    Person(1, 'Joe'),
+    Person(2, 'Marry'),
+    Person(3, 'Kieth')
+]
+
+print dict([(p.id, p) for p in people])
+
+## Conclusion
+
+List comprehension in Python can often provide a neat, clear, and concise syntax for creating lists from other lists. However, one should always be aware that, particularly for complex transformations or predicates, the concise and terse syntax can quickly become very difficult to read. In these cases, it’s often beneficial to revert to traditional looping constructs.
