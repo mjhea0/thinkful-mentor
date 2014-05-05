@@ -235,9 +235,30 @@ Output:
 {1: Josh (1), 2: Megan (2), 3: Ken (3)}
 ```
 
+Try this out in your shell:
+
+```
+>>> abc = {'a': 1, 'b': 2, 'c': 3}
+>>> {value:key for key, value in abc.items()}
+{1: 'a', 2: 'b', 3: 'c'}
+```
+
+This just flipped the keys and valyes of the `abc` dict.
+
 ## Part 5: Set Comprehensions
 
 As you probably guessed, set Comprehensions allow sets to be constructed in the same manner as list comprehensions.
+
+Test it out:
+
+```
+>>> basic_set = set(range(19))
+>>> {num for num in basic_set if num % 2 == 0}
+set([0, 2, 4, 6, 8, 10, 12, 14, 16, 18])
+```
+
+That's it.
+
 
 ## Conclusion
 
