@@ -78,7 +78,7 @@ alpha_list = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H']
 print create_list(alpha_list)
 ```
 
-Run the code. You should see the same output. Now read it outloud, right to left: "return the letter for each letter in `alpha_list` if it's greater than or equal to 'B'". Simple. Concise. Efficient.
+Run the code. You should see the same output. Now read it outloud, left to right: "return the letter for each letter in `alpha_list` if it's greater than or equal to 'B'". Simple. Concise. Efficient.
 
 ## Part 2: Chained vs. Nested Lists
 
@@ -262,4 +262,40 @@ That's it.
 
 ## Conclusion
 
-List comprehensions provide a clear, concise means for creating lists. Just be aware that, often, more complex lists, especially nested or chained lists, can be much more difficult to read using list comprehensions - so you may need to use regular list constructs instead.
+List comprehensions provide a clear, concise means for creating lists plus they provide a substantial performance boost because they run a C language speed within the Python interpreter:
+
+```python
+import time
+
+
+class ExecutionTime:
+    def __init__(self):
+        self.start_time = time.time()
+
+    def duration(self):
+        return time.time() - self.start_time
+
+# ---- run code ---- #
+
+test_list = xrange(1, 90000000)
+
+comp_timer = ExecutionTime()
+[num for num in test_list  if num % 2 == 0]
+print 'List Comprehension finished in {} seconds.'.format(comp_timer.duration())
+
+regular_list = list()
+regular_timer = ExecutionTime()
+for num in test_list:
+    if num % 2 == 0:
+        regular_list.append(num)
+print 'Regular List finished in {} seconds.'.format(regular_timer.duration())
+```
+
+Results:
+
+```
+List Comprehension finished in 14.3765029907 seconds.
+Regular List finished in 18.2762210369 seconds.
+```
+
+Just be aware that, often, more complex lists, especially nested or chained lists, can be much more difficult to read using list comprehensions - so you may need to use regular list constructs instead.
