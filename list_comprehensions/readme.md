@@ -197,7 +197,7 @@ Output:
 
 ## Part 4 - Dictionary Comprehension
 
-As you probably guessed, a dictionary comprehension is like a list comprehension only it models a dictionary instead of a list.
+Dictionary comprehension is like list comprehension only it models a dictionary instead of a list.
 
 ```python
 # dict comps - ex4
@@ -235,7 +235,10 @@ Output:
 {1: Josh (1), 2: Megan (2), 3: Ken (3)}
 ```
 
+## Part 5: Set Comprehensions
+
+As you probably guessed, set Comprehensions allow sets to be constructed in the same manner as list comprehensions.
 
 ## Conclusion
 
-List comprehension in Python can provide a clear, concise syntax for creating lists from other lists. Just be aware that often more complex lists, especially nested or chained lists can be much more difficult to read using list comprehensions - so you may need to use regular list constructs.
+List comprehension provide a clear, concise means for creating lists. Just be aware that, often, more complex lists, especially nested or chained lists, can be much more difficult to read using list comprehensions - so you may need to use regular list constructs instead.
