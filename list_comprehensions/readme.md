@@ -262,4 +262,4 @@ That's it.
 
 ## Conclusion
 
-List comprehension provide a clear, concise means for creating lists. Just be aware that, often, more complex lists, especially nested or chained lists, can be much more difficult to read using list comprehensions - so you may need to use regular list constructs instead.
+List comprehensions provide a clear, concise means for creating lists. Just be aware that, often, more complex lists, especially nested or chained lists, can be much more difficult to read using list comprehensions - so you may need to use regular list constructs instead.
