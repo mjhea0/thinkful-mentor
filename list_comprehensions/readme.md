@@ -1,10 +1,35 @@
 # Python List Comprehensions
 
-Before beginning make sure you have a basic understanding of Lists, which are just containers to hold data. Besides basic lists, Python supports a data structure called a "list comprehension", used to construct lists in a natural, easy way. In many cases, a complex task can be constructed in a single line.
+Before beginning make sure you have a basic understanding of Lists, which are just containers to hold data. Besides basic lists, Python supports a data structure called a "list comprehension", used to construct lists in a natural, easy way. In many cases, a complex task can be constructed using just a single line.
 
 ## Part 1: Intro
 
-Let’s start with looking at simple list. It's common to construct a new list based on values from an existing list after they, say, are filtered. 
+Let’s start with looking at simple list. It's common to construct a new list based on values from an existing list after they, say, are filtered by an expression. 
+
+Try this in your shell:
+
+```
+>>> numbers = [3, 27, 34, 12, 5]
+>>> [num * 3 for num in numbers]
+[9, 81, 102, 36, 15]
+```
+
+Read this from right to left. We're looping through `numbers`, assigning each indiivdual numbers to the temprary variable, `num`. We're then applying the expression `num * 3`, then apppending the result to a new list.
+
+How would you do this using a regular list construct?
+
+```
+>>> numbers = [3, 27, 34, 12, 5]
+>>> new_numbers = list()
+>>> for num in numbers:
+...     new_numbers.append(num * 3)
+...
+>>> new_numbers
+[9, 81, 102, 36, 15]
+```
+
+Let's try something a little more advanced.
+
 
 ```python
 # intro - ex1a
@@ -53,7 +78,7 @@ alpha_list = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H']
 print create_list(alpha_list)
 ```
 
-Run the code. You should see the same output. Now read it outloud, left to write: "return the letter for each letter in `alpha_list` if it's greater than or equal to 'B'". Simple. Concise. Efficient.
+Run the code. You should see the same output. Now read it outloud, right to left: "return the letter for each letter in `alpha_list` if it's greater than or equal to 'B'". Simple. Concise. Efficient.
 
 ## Part 2: Chained vs Nested
 
