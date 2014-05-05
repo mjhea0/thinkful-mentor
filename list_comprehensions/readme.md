@@ -163,14 +163,7 @@ Test this out:
 ['A-2', 'A-4', 'B-2', 'B-4']
 ```
 
-You could possibly use the `zip()` function for some of the above examples, depending on what you're trying to achieve:
-
-```
->>> alpha_list = ['A', 'B', 'C']
->>> num_list = [2, 4, 6]
->>> zip(alpha_list, num_list)
-[('A', 2), ('B', 4), ('C', 6)]
-```
+So, you can nest a number of list comprehensions inside of one another; however, by doing so, you often sacrafice readability. 
 
 ## Part 3: Reversed / Iterators
 
