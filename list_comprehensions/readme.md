@@ -14,7 +14,7 @@ Try this in your shell:
 [9, 81, 102, 36, 15]
 ```
 
-Read this from right to left. We're looping through `numbers`, assigning each indiivdual numbers to the temprary variable, `num`. We're then applying the expression `num * 3`, then apppending the result to a new list.
+Read this from right to left. We're looping through `numbers`, assigning each indiivdual numbers to the temprary variable, `num`. We're then applying the expression `num * 3`, then apppending each result to a new list.
 
 How would you do this using a regular list construct?
 
