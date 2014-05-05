@@ -185,15 +185,15 @@ print [i + a for i in alpha_list for a in rev_old]
 
 Output:
 
-```
+``` 
 ['AC', 'AB', 'AA', 'BC', 'BB', 'BA', 'CC', 'CB', 'CA']
 ['AC', 'AB', 'AA', 'BC', 'BB', 'BA', 'CC', 'CB', 'CA']
 ['AC', 'AB', 'AA', 'BC', 'BB', 'BA', 'CC', 'CB', 'CA']
 ['AC', 'AB', 'AA', 'BC', 'BB', 'BA', 'CC', 'CB', 'CA']
 ```
 
-Reversing a list is not the easiest thing to do in Python. In the above example the `reversed()` method creates a generator which we have to iterate over to get a list. This can be a costly task.
-
+1. In the first example the `reversed()` method creates a generator which we then cast to to a list.
+2. In the remaining examples, we're all doing something very similar except we're using list comprehensions to iterate through the generators to create the new lists.
 
 ## Part 4 - Dictionary Comprehension
 
