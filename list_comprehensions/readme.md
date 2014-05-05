@@ -4,7 +4,7 @@ Before beginning make sure you have a basic understanding of Lists, which are ju
 
 ## Part 1: Intro
 
-Let’s start with looking at simple list. It's common to construct a new list based on values from an existing list after they, say, are filtered by an expression. 
+Let’s start with looking at simple list comprehension. It's common to construct a new list based on values from an existing list after they, say, are filtered by an expression. 
 
 Try this in your shell:
 
