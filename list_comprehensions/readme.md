@@ -51,7 +51,7 @@ alpha_list = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H']
 print create_list(alpha_list)
 ```
 
-In this example, we're creating a new list, `beta_list`, of letters greater than or equal to 'B' by iterating through the `alpha_list` and applying the appropriate filter on the list. *This filter is just an expression called a predicate.*
+In this example, we're creating a new list, `beta_list`, of letters greater than or equal to 'B' by iterating through the `alpha_list` and applying the appropriate filter on the list. *This filter is called a predicate.*
 
 When you run this code you should see:
 
@@ -66,7 +66,6 @@ How do we do this with a list comprehension:
 
 
 def create_list(alpha_list):
-    # Read statements, left to right
     return [letter for letter in alpha_list if filter(letter)]
 
 
@@ -78,11 +77,13 @@ alpha_list = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H']
 print create_list(alpha_list)
 ```
 
-Run the code. You should see the same output. Now read it outloud, left to right: "return the letter for each letter in `alpha_list` if it's greater than or equal to 'B'". Simple. Concise. Efficient.
+Run the code. You should see the same output. Now read it outloud, right to left, starting with the original list, then applying the `if` statement: "Return ach letter in `alpha_list` if it's greater than or equal to 'B'". 
+
+Simple. Concise. Efficient.
 
 ## Part 2: Chained vs. Nested Lists
 
-Now that we have a a basic understanding of list comprehensions, let's take it a step further and look at how to chain or combine list comprehensions, which are akin to nested lists - both of which are used for iterating on more than one loop (a loop of loops).
+Now that we have a a basic understanding of list comprehensions, let's take it a step further and look at how to chain or combine list comprehensions, which are akin to nested lists - both of which are used for iterating on more than one loop.
 
 ```python
 # chained and nested loops - ex2
@@ -163,9 +164,18 @@ Test this out:
 ['A-2', 'A-4', 'B-2', 'B-4']
 ```
 
-So, you can nest a number of list comprehensions inside of one another; however, by doing so, you often sacrafice readability. 
+So, you can nest a number of list comprehensions inside of one another; however, by doing so, you often sacrafice readability. Notice in the last example set of list comprehensions that there are multiple `if` statements in comprehension. This is fairly common: In fact, you can add any number of loop in a list comprehension, and each may have an optional `if` statement associated with it:
 
-## Part 3: Reversed / Iterators
+`print ['{}-{}'.format(letter, number) for letter in alpha_list if letter < 'C' for number in num_list if number < 5]`
+
+This example is fairly complex. Can you tell what's happening? Beak it down into pieces, if necessary:
+
+1. First, return the letter from `alpha` list, if it's less than 'C'.
+2. Then, return the number from `num_list` if it's less than 5.
+
+Make sense?
+
+## Part 3: Iterators
 
 ```python
 # reversed / iterators - ex3
@@ -195,9 +205,9 @@ Output:
 1. In the first example the `reversed()` method creates a generator which we then cast to to a list.
 2. In the remaining examples, we're all doing something very similar except we're using list comprehensions to iterate through the generators to create the new lists.
 
-## Part 4 - Dictionary Comprehension
+## Part 4 - Dictionary Comprehensions
 
-Dictionary comprehension is like list comprehension only it models a dictionary instead of a list.
+A dictionary comprehensionc is like a list comprehension only it models a dictionary instead of a list.
 
 ```python
 # dict comps - ex4
@@ -243,11 +253,11 @@ Try this out in your shell:
 {1: 'a', 2: 'b', 3: 'c'}
 ```
 
-This just flipped the keys and valyes of the `abc` dict.
+This just flipped the keys and values of the `abc` dict. Based on this example, can you tell what's happening in the examples from above?
 
 ## Part 5: Set Comprehensions
 
-As you probably guessed, set Comprehensions allow sets to be constructed in the same manner as list comprehensions.
+As you probably guessed, a set comprehensions allows sets to be constructed in the same manner as a list comprehension.
 
 Test it out:
 
