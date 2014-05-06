@@ -272,7 +272,7 @@ That's it.
 
 ## Conclusion
 
-List comprehensions provide a clear, concise means for creating lists plus they provide a substantial performance boost because they run a C language speed within the Python interpreter:
+List comprehensions provide a clear, concise means for creating lists plus they provide a substantial performance boost because they run at C language speed within the Python interpreter:
 
 ```python
 import time
