@@ -14,7 +14,7 @@ Try this in your shell:
 [9, 81, 102, 36, 15]
 ```
 
-Read this from right to left. We're looping through `numbers`, assigning each indiivdual numbers to the temprary variable, `num`. We're then applying the expression `num * 3`, then apppending each result to a new list.
+Read this from right to left. We're looping through `numbers`, assigning each individual numbers to the temporary variable, `num`. We're then applying the expression `num * 3`, then appending each result to a new list.
 
 How would you do this using a regular list construct?
 
@@ -77,7 +77,7 @@ alpha_list = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H']
 print create_list(alpha_list)
 ```
 
-Run the code. You should see the same output. Now read it outloud, right to left, starting with the original list, then applying the `if` statement: "Return ach letter in `alpha_list` if it's greater than or equal to 'B'". 
+Run the code. You should see the same output. Now read it out loud, right to left, starting with the original list, then applying the `if` statement: "Return each letter in `alpha_list` if it's greater than or equal to 'B'". 
 
 Simple. Concise. Efficient.
 
@@ -164,7 +164,7 @@ Test this out:
 ['A-2', 'A-4', 'B-2', 'B-4']
 ```
 
-So, you can nest a number of list comprehensions inside of one another; however, by doing so, you often sacrafice readability. Notice in the last example set of list comprehensions that there are multiple `if` statements in comprehension. This is fairly common: In fact, you can add any number of loop in a list comprehension, and each may have an optional `if` statement associated with it:
+So, you can nest a number of list comprehensions inside of one another; however, by doing so, you often sacrifice readability. Notice in the last example set of list comprehensions that there are multiple `if` statements in comprehension. This is fairly common: In fact, you can add any number of loop in a list comprehension, and each may have an optional `if` statement associated with it:
 
 `print ['{}-{}'.format(letter, number) for letter in alpha_list if letter < 'C' for number in num_list if number < 5]`
 
@@ -207,7 +207,7 @@ Output:
 
 ## Part 4 - Dictionary Comprehensions
 
-A dictionary comprehensionc is like a list comprehension only it models a dictionary instead of a list.
+A dictionary comprehension is like a list comprehension only it models a dictionary instead of a list.
 
 ```python
 # dict comps - ex4
