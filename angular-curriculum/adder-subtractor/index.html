@@ -1,43 +1,45 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Adder-Subtractor</title>
+    <title>Add - Subtract - Multiply - Divide</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="http://netdna.bootstrapcdn.com/bootswatch/3.1.1/yeti/bootstrap.min.css" rel="stylesheet" media="screen">
     <link href="css/main.css" rel="stylesheet" media="screen">
   </head>
   <body>
-    <div class="container">
+    <div class="container-one">
       <div class="row">
-        <div class="col-md-4 col-md-offset-4">
-          <h1>Adder/Subtractor</h1>
+        <div class="col-md-8 col-md-offset-2">
+          <h1>Add - Subtract - Multiply - Divide</h1>
+          <p class="lead">Enter two integers - then calculate!<p>
           <br>
-          <form role="form">
-            <div class="form-group">
-              <h4>
-                <label for="value1" class="col-sm-2 control-label">x =</label>
-                <div class="col-sm-10">
-                  <input type="number" class="form-control" id="value1" placeholder="Enter an Integer">
-                </div>
-              </h4>
-              <br><br>
+          <form role="form" id="integerForm">
+          <div class="row">
+            <div class="col-md-4 col-md-offset-4">
+              <div class="form-group">
+                <input type="number" class="form-control input-lg" id="value1" placeholder="Enter an integer ...">
+              </div>
+              <div class="form-group">
+                <input type="number" class="form-control input-lg" id="value2" placeholder="Enter an integer ...">
+              </div>
             </div>
-            <div class="form-group">
-              <h4>
-                <label for="value2" class="col-sm-2 control-label">y =</label>
-                <div class="col-sm-10">
-                  <input type="number" class="form-control" id="value2" placeholder="Enter an Integer">
-                </div>
-              </h4>
-              <br><br>
-            </div>
-            <button type="submit" class="btn btn-default" id="add-btn">+</button>
-            <button type="submit" class="btn btn-default" id="subtract-btn">-</button>
+          </div>
+          <button class="btn btn-default btn-sm btn" id="add-btn">+</button>
+          <button class="btn btn-default btn-sm btn" id="subtract-btn">-</button>
+          <button class="btn btn-default btn-sm btn" id="multiply-btn">*</button>
+          <button class="btn btn-default btn-sm btn" id="divide-btn">\</button><br><br>
+          <button class="btn btn-primary btn-sm btn" id="reset-btn">Reset</button>
           </form>
+        </div>
+      </div>
+    </div>
+    <div class="container-two">
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3">
           <br>
-          <div class="alert alert-danger" id="value-alert"></div>
-          <h2 id="add-answer">X plus y is <span id="addition"></span></h2>
-          <h2 id="subtract-answer">X minus y is <span id="subtraction"></span></h2>
+          <hr>
+          <h2 id="answer"></h2>
+          <div id="alert"></div>
         </div>
       </div>
     </div>

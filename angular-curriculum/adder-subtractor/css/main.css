@@ -1,17 +1,14 @@
-#add-answer {
+#answer {
   display: none;
 }
 
-#subtract-answer {
-  display: none;
-}
-
-.container {
+.container-one {
   text-align: center;
   margin-top: 50px;
   border: 1px solid gray;
+  padding-bottom: 20px;
 }
 
-#value-alert {
-  display: none;
+.container-two {
+  text-align: center;
 }
