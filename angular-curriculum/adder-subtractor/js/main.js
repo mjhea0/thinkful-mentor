@@ -23,7 +23,7 @@ $(function() {
 
   // validate values
   function validateValues(operator, value1, value2) {
-    if ((is_valid = !/^[0-9]+(\.[0-9]+)?$/.test(value1)) || (is_valid = !/^[0-9]+(\.[0-9]+)?$/.test(value2))) { 
+    if ((is_valid = !/^[0-9]*(\.[0-9]+)?$/.test(value1)) || (is_valid = !/^[0-9]*(\.[0-9]+)?$/.test(value2))) { 
       $('#alert').html('<span class="alert alert-danger">You must supply valid integers!</span>'); 
     } else {
       $('#alert').html('');
