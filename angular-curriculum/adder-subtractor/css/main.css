@@ -1,0 +1,17 @@
+#add-answer {
+  display: none;
+}
+
+#subtract-answer {
+  display: none;
+}
+
+.container {
+  text-align: center;
+  margin-top: 50px;
+  border: 1px solid gray;
+}
+
+#value-alert {
+  display: none;
+}
