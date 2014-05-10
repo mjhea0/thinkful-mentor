@@ -12,6 +12,7 @@ $(function() {
       if (operator === 'reset-btn') { 
         $('#value1').val('')
         $('#value2').val('')
+        $('#alert').html('');
       } else {
         value1 = $('#value1').val()
         value2 = $('#value2').val()
