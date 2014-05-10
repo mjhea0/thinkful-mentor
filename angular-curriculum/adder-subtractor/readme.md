@@ -1,8 +1,8 @@
-# Preview - 
+## Preview
 
-- http://www.backwardsteps.com/adder-subtractor/
+http://www.backwardsteps.com/adder-subtractor/
 
-# Assignment
+## Assignment
 
 In this assignment you'll need to build a simple static web page that allows a user to add and subtract two numbers. Building this app will demonstrate your compentency with web basics. 
 
