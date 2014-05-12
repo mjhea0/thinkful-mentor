@@ -21,3 +21,7 @@ body {
 img {
   padding: 10px 0px;
 }
+
+#male-text, #female-text, #inputs {
+  display: none;
+}
