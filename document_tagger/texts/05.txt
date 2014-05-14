@@ -1,0 +1,960 @@
+Title: Double or Nothing
+Author: Jack Sharkey
+Language: English
+
+***START***
+
+                          DOUBLE or NOTHING
+
+                           By JACK SHARKEY
+
+    [Transcriber's Note: This etext was produced from Fantastic Stories
+    of Imagination May 1962. Extensive research did not uncover any
+    evidence that the U.S. copyright on this publication was renewed.]
+
+
+
+
+     _The mind quails before certain contemplations?_
+
+     _The existence of infinity, for instance._
+
+     _Or finity, for that matter._
+
+     _Or 50,000 batches of cornflakes dumped from the sky._
+
+
+I don't know why I listen to Artie Lindstrom. Maybe it's because at
+times (though certainly not--I hope--on as permanent a basis as Artie)
+I'm as screwy as he is. At least, I keep letting myself get sucked into
+his plans, every time he's discovered the "invention that will change
+the world". He discovers it quite a bit; something new every time.
+And, Artie having a natural mechanical aptitude that would probably
+rate as point-nine-nine-ad-infinitum on a scale where one-point-oh was
+perfection, all his inventions work. Except--
+
+Well, take the last thing we worked on. (He usually includes me in his
+plans because, while he's the better cooker-upper of these gadgets,
+I've got the knack for building them. Artie can't seem to slip a radio
+tube into its socket without shattering the glass, twist a screwdriver
+without gouging pieces out of his thumb, nor even solder an electrical
+connection without needing skin-grafts for the hole he usually burns in
+his hand.)
+
+So we're a team, Artie and me. He does the planning, I do the
+constructing. Like, as I mentioned, the last thing we worked on. He
+invented it; I built it. A cap-remover (like for jars and ketchup
+bottles). But not just a clamp-plus-handle, like most of the same
+gadgets. Nope, this was electronic, worked on a tight-beam radio-wave,
+plus something to do with the expansion coefficients of the metals
+making up the caps, so that, from anyplace in line-of-sight of her home,
+the housewife could shove a stud, and come home to find all the caps
+unscrewed on her kitchen shelves, and the contents ready for getting at.
+It did, I'll admit, have a nice name: The Teletwist.
+
+Except, where's the point in unscrewing caps unless you're physically
+present to make use of the contents of the jars? I mentioned this to
+Artie when I was building the thing, but he said, "Wait and see. It'll
+be a novelty, like hula hoops a couple of decades back. Novelties always
+catch on."
+
+       *       *       *       *       *
+
+Well, he was wrong. When we finally found a manufacturer softheaded
+enough to mass-produce a few thousand of the gadgets, total sales for
+the entire country amounted to seventeen. Of course, the price was kind
+of prohibitive: Thirteen-fifty per Teletwist. Why would a housewife
+lay that kind of money on the line when she'd already, for a two-buck
+license, gotten a husband who could be relied upon (well, most of the
+time) to do the same thing for her?
+
+Not, of course, that we didn't finally make money on the thing. It was
+just about that time, you'll remember, that the Imperial Martian Fleet
+decided that the third planet from Sol was getting a bit too powerful,
+and they started orbiting our planet with ultimatums. And while they
+were waiting for our answer, our government quietly purchased Artie's
+patent, made a few little adjustments on his cap-twister, and the _next_
+thing the Martians knew, all their airlocks were busily unscrewing
+themselves with nothing outside them except hungry vacuum. It was also
+the _last_ thing the Martians knew.
+
+So Artie's ideas seem to have their uses, all right. Only, for some
+reason, Artie never thinks of the proper application for his latest
+newfound principle. That neat little disintegrator pistol carried by the
+footsoldiers in the Three Day War (with Venus; remember Venus?) was a
+variation on a cute little battery-powered device of Artie's, of which
+the original function had been to rid one's house of roaches.
+
+At any rate--at a damned _good_ rate, in fact--the government always
+ended up paying Artie (and me, as his partner-confederate-cohort) an
+anything-but-modest fee for his patents. We weren't in the millionaire
+class, yet, but neither were we very far out of it. And we were much
+better off than any millionaires, since Artie had persuaded the
+government to let us, in lieu of payment for another patent of his
+(for his Nixsal; the thing that was supposed to convert sea-water into
+something drinkable, and did: Gin.), be tax-free for the rest of our
+lives.
+
+(It was quite a concession for the government to make. But then, the
+government-produced "George Washington Gin" is quite a concession in
+itself.)
+
+So I guess you could say I keep listening to Artie Lindstrom because
+of the financial rewards. I must admit they're nice. And it's kind of
+adventurous, when I'm working on Artie's latest brainstorm, to let
+myself wonder what--since I generally scrap Artie's prognosis for the
+gadget's future--the damned thing will _actually_ be used for.
+
+Or, at least, it _was_ kind of adventurous, until Artie started in on
+his scheme of three weeks ago: a workable anti-gravity machine. And now,
+I'm feeling my first tremors of regret that I ever hooked up with the
+guy. Because--Well, it happened like this:
+
+       *       *       *       *       *
+
+"It looks great," I said, lifting my face from the blueprint, and
+nodding across the workbench at Artie. "But what the hell does it do?"
+
+Artie shoved a shock of dust-colored hair back off his broad, dull pink
+forehead, and jabbed excitedly with a grimy forefinger at the diagram.
+"Can't you _tell_, Burt? What does _this_ look like!"
+
+My eyes returned to the conglomeration of sketchy cones beneath his
+flailing finger, and I said, as truthfully as possible, "A pine forest
+on a lumpy hill."
+
+"Those," he said, his tone hurt as it always was when I inadvertently
+belittled his draftmanship, "are flywheels."
+
+"Cone-shaped flywheels?" I said. "Why, for pete's sake?"
+
+"Only," he said, with specious casualness, "in order to develop a
+centrifugal thrust that runs in a _straight line_!"
+
+"A centr--" I said, then sat back from the drawings, blinking. "That's
+impossible, Artie."
+
+"And why should it be?" he persisted. "Picture an umbrella, with the
+fabric removed. Now twirl the handle on its axis. What do the ribs do?"
+
+"I suppose they splay out into a circle?"
+
+"Right," he exulted. "And if they _impeded_ from splaying out? If,
+instead of separate ribs, we have a hollow, bottomless cone of metal?
+Where does the force go?"
+
+I thought it over, then said, with deliberation, "In _all_ directions,
+Artie. One part shoving up-to-the-right, one part up-to-the-left, like
+that."
+
+"Sure," he said, his face failing to fight a mischievous grin. "And
+since none of them move, where does the _resultant_ force go?"
+
+I shrugged, "Straight up, I guess--" Then my ears tuned in belatedly on
+what I'd said, and a moment later I squeaked, "Artie! Straight _up_!"
+
+       *       *       *       *       *
+
+He nodded eagerly. "Or, of course, straight east, straight west, or
+whichever way the ferrule of this here theoretical umbrella was pointed
+at the time the twirling began. The point is, we can generate pure force
+in _any_ direction. What do you think? Can you build it?"
+
+"It'd be child's play. In fact, Artie, it's _too_ damned simple to be
+believed! What's the hitch? Why hasn't anyone tried it before _now_?"
+
+"Who knows?" he said, his blue eyes dancing. "Maybe no one ever thought
+of it before. You could sit down and twist a paper clip out of a hunk
+of soft wire, couldn't you? Easy as pie. But someone had to invent the
+thing, first. All the great inventions have been simple. Look at the
+wheel."
+
+"Okay, okay," I said, since I'd been sold on his gadget the moment
+I pictured that umbrella moving ferruleward like a whirling arrow.
+"Still, it looks like you're getting something for nothing. A kind of
+by-your-own-bootstraps maneuver...."
+
+"An inventor," said Artie, quoting his favorite self-coined aphorism,
+"must never think like a scientist!"
+
+"But"--I said, more to stem the tide I expected than to really make a
+coherent objection.
+
+"An inventor," he went dreamily onward, "is essentially a dreamer; a
+scientist is an observer. An inventor tries to make a result he wants
+happen; a scientist tries to tell the inventor that the result cannot be
+achieved."
+
+"Please. Artie. Don't tell me about the bee again."
+
+But Artie told me about the bumblebee, and how there were still some
+scientists who insisted, according to the principles of aerodynamics,
+that it was not constructed properly to enable it to fly. And about
+how men of this short-sighted ilk were still scoffing at the ancient
+alchemist's talk of the Philosopher's Stone for transmuting metals, even
+though transmutation of metals was being done every day in atomic piles.
+And how he'd theorized that there _was_ once a genuine Philosopher's
+Stone, probably a hunk of pure U-235, that someone had managed to make,
+which might explain why so many alchemists (lacking, unfortunately, any
+knowledge of heavy radiations or Geiger counters) sort of died off in
+their quest for the stone.
+
+       *       *       *       *       *
+
+It was nearly lunchtime when he finished his spiel, and I was kicking
+myself in my short-memoried brain for having let him get onto the
+subject, when abruptly the joyous glow behind his eyes damped its
+sparkle a bit.
+
+"There _is_ one little hitch--"
+
+"I thought it looked too easy," I sighed, waiting for the clinker.
+"Don't tell me it has to be made out of pure Gallium, which has the
+regrettable tendency to liquiefy at about thirty degrees centigrade? Or
+perhaps of the most elusive of its eleven isotopes?"
+
+"No, no, nothing like that," he murmured almost distractedly. "It's the
+force-per-gram part that's weak."
+
+"Don't tell me," I said unhappily, "that this thing'll only generate
+enough force to lift itself?"
+
+A feeble ghost of his erstwhile grin rode briefly across his lips.
+"That's the way it works out on paper," he said.
+
+"Which means," I realized aloud, "that it's commercially useless,
+because what's the good of an anti-gravity machine that can't lift
+anything except _itself_! It falls into the class of lifeboats that
+float up to the gunwales in the water while still _empty_. Fun to watch,
+but impossible to use. Hell, Artie, if that's the setup, then this
+thing wouldn't be any more help to a space-aiming government than an
+aborigine's boomerang; it flies beautifully, but not if the aborigine
+tries to go _with_ it."
+
+"However," he said, a bit more brightly, "I've been wrong on paper
+before. Remember the bumblebee, Burt! _That_ theory still holds up on
+paper. But the bee still flies."
+
+He had me, there. "So you want I should build it anyhow, just on the
+off-chance that it _won't_ follow the rules of physical logic, and will
+decide to generate a force above and beyond its own gravitic drag?"
+
+"That's it," he said happily. "And even if it only manages to negate
+its own weight, we'll have an easier time ironing the bugs out of a
+model than we would out of a diagram. After all, who'd have figured that
+beyond _Mach I_, all the lift-surfaces on a plane work in _reverse_?"
+
+It wasn't, I had to admit, anything that an inventor could have
+reasonably theorized at the outset.... So I locked myself in the lab for
+a week, and built his gadget, while he spent his time pacing through his
+fourteen-room mansion across the way from the lab building (the "way"
+being the flat grassy region on Artie's estate that housed his swimming
+pool, private heliport, and movie theatre), trying to coin a nifty name
+for the thing. We both finished in a dead heat.
+
+       *       *       *       *       *
+
+I unlocked the door of the lab, blinked hard against the sting of warm
+yellow sunlight after a week of cool blue fluorescents, and just as I
+wheezed, "Got it," Artie was counterpointing with, "We'll call it The
+_Uuaa_!" (He made four syllables out of it.)
+
+"The Oo-oo-_ah_-ah?" I glottaled. "In honor of the fiftieth state, or
+what? I know 'aa' is a type of lava, but what the hell's 'uu', besides
+the noise a man makes getting into an overheated bath?"
+
+Artie pouted. "'Uuaa' is initials. For 'Up, up, and away!' I thought it
+was pretty good."
+
+I shook my head. "Why feed free fodder to the telecomics? I can hear
+them now, doing monologues about people getting beri-beri flying from
+Walla Walla to Pago Pago on their Uuaas...."
+
+"So what would _you_ call it!" he grunted.
+
+"A bust," I sighed, left-thumbing over my shoulder at the lab. "It sits
+and twirls and whistles a little, but that's about the size of it,
+Artie."
+
+He spanieled with his eyes, basset-hounded with his mouth, and
+orangutaned with his cheeks, then said, with dim hope, "Did you weigh
+it? Maybe if you weighed it--"
+
+"Oh, it lost, all right," I admitted. "When I connected the batteries,
+the needle on the scale dropped down to zero, and stopped there. And I
+found that I could lift the machine into the air, and it'd stay where it
+was put, just whistling and whirling its cones. But then it started to
+settle." I beckoned him back inside.
+
+"Settle? Why?" Artie asked.
+
+"Dust," I said. "There's always a little dust settling out of the air.
+It doesn't weigh _much_, but it made the machine weigh at least what the
+dust-weight equalled, and down it went. Slow and easy, but down."
+
+Artie looked at the gadget, sitting and whistling on the floor of the
+lab, then turned a bleak-but-still-hopeful glance my way. "Maybe--If we
+could make a _guy_ take on a cone-shape, and whirled him--"
+
+"Sure," I muttered. "Bend over, grab his ankles, and fly anywhere in
+the world, with his torso and legs pivoting wildly around his peaked
+behind." I shook my head. "Besides the manifestly undignified posturing
+involved, we have to consider the other effects; like having his
+eyeballs fly out."
+
+"If--If we had a bunch of men lie in a circle around a kind of
+Maypole-thing, each guy clutching the ankles of the next one...."
+
+"Maybe they'd be weightless, but they _still_ wouldn't go _up_," I
+said. "Unless they could be towed, somehow. And by the time they
+landed, they'd be too nauseous to be of any use for at least three
+days. Always assuming, of course, that the weak-wristed member of the
+sick circlet didn't lose his grip, and have them end up playing mid-air
+crack-the-whip before they fell."
+
+"So all right, it's got a couple of bugs!" said Artie. "But the
+principle's sound, right?"
+
+"Well--Yeah, there you got me, Artie. The thing _cancels_ weight,
+anyhow...."
+
+"Swell. So we work from there," He rubbed his hands together joyously.
+"And who knows what we'll come up with."
+
+"_We_ never do, that's for sure," I mumbled.
+
+But Artie just shrugged. "I like surprises," he said.
+
+       *       *       *       *       *
+
+The end of the day--me working, Artie inventing--found us with some
+new embellishments for the machine. Where it was originally a sort
+of humped metal box (the engine went inside the hump) studded with
+toothbrush-bristle rows of counter-revolving cones (lest elementary
+torque send the machine swinging the other way, and thus destroy the
+thrust-effect of the cones), it now had an additional feature: A helical
+flange around each cone.
+
+"You see," Artie explained, while I was torching them to order from
+plate metal, "the helices will provide _lift_ as the cones revolve."
+
+"Only in the atmosphere of the planet," I said.
+
+"Sure, I know. But by the time the outer limits of the air are reached,
+the machine, with the same mass-thrust, will have less gravity-drag
+to fight, being that much farther from the Earth. The effect will be
+cumulative. The higher it gets, the more outward thrust it'll generate.
+Then nothing'll stop it!"
+
+"You could be right," I admitted, hammering out helix after helix on an
+electric anvil (another gadget of Artie's; the self-heating anvil--The
+Thermovil--had begun life as a small inspiration in Artie's mind for a
+portable toaster).
+
+It was just after sunset when we figured the welds were cool enough so
+we could test it. Onto the scale it went again, I flicked the toggle,
+and we stood back to watch the needle as the cones picked up speed.
+Along with the original whistling sound made by the cones we began to
+detect a shriller noise, one which abruptly became a genuine pain in the
+ear. As Artie and I became somewhat busy with screaming (the only thing
+we could think of on the spur of the moment to counteract the terrible
+waves of noise assaulting our tympana), it was all at once much easier
+to see the needle of the scale dropping toward zero, as the glass disc
+facing the dial dissolved into gritty powder, along with the glass panes
+in every window in the lab, the house, the heliport, and the movie
+theatre. (Not to mention those of a few farmhouses a couple of miles
+down the highway, but we didn't find that out till their lawyers showed
+up with bills for damages.)
+
+Sure enough, though, the thing lifted. Up it bobbed, like a metal
+dirigible with agonizing gas pains, shrieking louder by the second.
+When the plaster started to trickle and flake from the walls, and the
+fillings in my teeth rose to a temperature just short of incandescence,
+I decided it was time to cancel this phase of the experiment, and, with
+very little regret, I flung a blanket-like canvas tarpaulin up and over
+the ascending machine before it started using its helices to screw into
+the ceiling. The cones bit into the tarpaulin, tangled, jammed, and the
+machine--mercifully noiseless, now--crashed back onto the scale, and
+lost a lot of symmetry and a couple of rivets.
+
+"What's Plan C?" I said to Artie.
+
+"_Quiet!_" he said, either because I'd interrupted his thinking or
+because that was our next goal.
+
+       *       *       *       *       *
+
+The next four days were spent in the arduous and quite tricky business
+of reaming acoustically spaced holes along the flanges. Artie's theory
+was that if we simply ("simply" was his word, not mine) fixed it so
+that the sound made by each flange (anything whirly with a hole or two
+in it is bound to make a calculated noise) was of the proper number of
+vibrations to intermesh with the compression/rarefaction phases of the
+sounds made by the other flanges, a veritable sphere of silence would be
+thereby created, since there'd be no room for any sound waves to pass
+through the already crowded atmosphere about the machine.
+
+"It'll make less noise than a mouse in sneakers drooling on a blotter!"
+enthused Artie, when I had it rigged again, and ready to go.
+
+"Still," I said uncertainly, "whether we _hear_ it or not, all that
+soundwave-energy has to do _something_, Artie. If it turns ultrasonic,
+we may suddenly find ourselves in a showerbath of free electrons and
+even _worse_ subatomic particles from disrupted air molecules. Or the
+lab might turn molten on us. Or--"
+
+"Oh, turn it _on_, Burt!" said Artie. "That's just a chance we have to
+take."
+
+"Don't see why we _have_ to take it...." I groused, but I'm as curious
+as the next man, so I turned it on. (I could have arranged to do it by
+remote control, except for two pressing deterrents: One--At a remote
+point of control, I wouldn't be able to watch what, if anything,
+the machine did, and Two--Who knows where the _safe_ spot is where
+soundwaves are concerned? With some sonic forces, you're safer the
+_nearer_ you get to the source.) So, like I said, I turned it on.
+
+Silence. Beautiful, blissful, silence. There before us twirled the rows
+of shiny cones, lifting slowly into the air, and there was nothing
+to hear at all. Beside me, Artie's lips moved, but I couldn't catch
+a syllable. This time around, we'd looped a rope through a few metal
+grommets in the base of the machine, and as it rose, Artie slipped the
+trailing ends under his arms from behind, and proceeded to lash it
+across his chest, to test the thing's lift-power. As he fumbled with the
+knot, I shouted at him, "Use a firm hitch!"
+
+       *       *       *       *       *
+
+Nothing came out, but Artie wasn't a bad lip-reader. He scowled, and
+his lips made a "_What?!_" motion, so I repeated my caution. Next thing
+I knew, he was taking a poke at me, and I, to fend him off, ended up
+wrestling on the floor with him, while the untended machine burred its
+way into the ceiling, until the engine overheated and burned away the
+electrical insulation on the wires, and the machine, plus a good two
+feet square of lab-ceiling, once more descended to demolish the scale.
+
+"--your language!" Artie was snarling, as sound returned.
+
+"All I said was 'Use a firm hitch!'" I pleaded, trying to shove his
+shins off my floor-pinned biceps.
+
+Artie stared at me, then rocked off my prostrate body, convulsed in
+a fit of laughter. "Say it silently in front of a mirror, sometime,"
+he choked out. Before I had time to see what he was talking about,
+I smelled smoke, above and beyond that engendered by the scorched
+insulation.
+
+I ran to the door, and opened it to observe the last glowing,
+crackling timbers of the house, the theatre, and the heliport vanish
+into hot orange sparks, in the grip of a dandy ring of fire that--in
+a seventy-yard path--had burned up everything in a sixty-five to
+hundred-thirty-five yard radius of the lab.
+
+"I told you those soundwaves had to do something," I said. "Ready to
+give up?"
+
+But Artie was already staring at the debris around the scale and making
+swift notes on a memo pad....
+
+       *       *       *       *       *
+
+"It looks awfully damned complex--" I hedged, eight days later,
+looking at the repaired, refurbished, and amended gadget on the table.
+"Remember, Artie, the more parts to an invention, the more things can go
+wrong with it. In geometric progression...."
+
+"Unh-uh," he shook his head. "Not the more parts, Burt. The more
+_moving_ parts. All we've done is added a parabolic sound-reflector, to
+force all the waves the cones make down through a tube in the middle of
+the machine. And we've insulated the tube to keep extraneous vibration
+from shattering it with super-induced metal fatigue."
+
+"Yeah," I said, "but about that _insulation_, Artie--"
+
+"You got a _better_ idea?" he snapped. "We tried rubber; it charred
+and flaked away. We tried plastics; they bubbled, melted, extruded,
+or burned. We tried metal and mineral honeycombs; they distorted,
+incandesced, fused or vaporized. Ceramic materials shattered. Fabrics
+tore, or petrified and cracked. All the regular things failed us. So
+what's wrong with trying something new?"
+
+"Nothing, Artie, nothing. But--_Cornflakes_?"
+
+"Well, we sogged 'em down good with water, right? And they've still got
+enough interstices between the particles to act as sound-baffles, right?
+And by the time they get good and hot and dry, they'll cook onto the
+metal, right? (Ask anyone who ever tried to clean a pot after scorching
+cereal just how hard they'll stick!) And even when most of them flake
+away, the random distribution of char will circumvent any chance the
+soundwaves have of setting up the regular pulse-beat necessary to
+fatigue the metal in the tube, okay?"
+
+"Yeah, sure, Artie, it's okay, but--_Cornflakes_?"
+
+"I take it your objections are less scientific than they are esthetic?"
+he inquired.
+
+"Well, something like that," I admitted. "I mean, aw--For pete's sake,
+Artie! The patent office'll laugh at us. They'll start referring us to
+the copyright people, as inventors of cookbooks!"
+
+"Maybe not," he said philosophically. "The thing _still_ may not _work_,
+you know."
+
+"Well, _there's_ one bright spot, anyhow!" I agreed, fiddling with the
+starting switch. "So okay, I'm game if you are."
+
+"Let 'er rip," he pontificated, and I flicked the switch.
+
+       *       *       *       *       *
+
+It worked beautifully. Not even a faint hum. The only way we could tell
+it was working was from the needle on the--rebuilt again--scale, as it
+dropped lazily down to the zero mark. Our ears didn't sting, no glass
+went dusting into crystalline powder, and a quick peek through the door
+showed no ring of fire surrounding the lab.
+
+"We may just have _done_ it!" I said, hopefully, as the silver-nosed
+machine began to float upward (We hadn't _had_ to mount the parabolic
+reflector in the position of a nose-cone, but it made the thing look
+neater, somehow.)
+
+It seemed a little torpid in its ascent, but that could be credited to
+the extra weight of the reflector and cornflakes, not to mention the
+fact that the helices had to suck all their air in under the lip of the
+silvery nose-cone before they could thrust properly. But its rise was
+steady. Six inches, ten inches--
+
+Then, at precisely one foot in height, something unexpected happened.
+Under the base of the machine, where the sound-heated air was at its
+most torrid, a shimmering disc-like thing began to materialize, and
+warp, and hollow out slightly, and beside it, a glinting metal rod-thing
+flattened at one end, then the flat end went concave in the center and
+kind of oval about the perimeter, and something brownish and shreddy
+plopped and hissed into the now-very-concave disc-like thing.
+
+"Artie--!" I said, uneasily, but by then, he, too, had recognized the
+objects for what they were.
+
+"Burt--" he said excitedly. "Do you realize what we've done? We've
+invented a _syntheticizer_!"
+
+Even as he was saying it, the objects completed their mid-air
+materialization (time: five seconds, start to finish), and clattered
+and clinked onto the scale. We stood and looked down at them: A bowl of
+cornflakes and a silver spoon.
+
+"How--?" I said, but Artie was already figuring it out, aloud.
+
+"It's the soundwaves," he said. "At ultrasonic, molecule-disrupting
+vibrations, they're doing just what that Philosopher's Stone was
+supposed to: Transmuting. Somehow, we didn't clean out the reflector
+sufficiently, and some of the traces of our other trial insulations
+remained inside. The ceramics formed the bowl, the metals formed the
+spoon, the cornflakes formed the cornflakes!"
+
+"But," I said logically (or as logically as could be expected under the
+circumstances), "what about the rubber, or the fabrics?"
+
+       *       *       *       *       *
+
+Artie's face lit up, and he nodded toward the machine, still hovering at
+one foot above the scale. In its wake, amid the distorting turbulence of
+the sound-tortured air, two more objects were materializing: a neatly
+folded damask napkin, and a small rubber toothpick. As they dropped down
+to join their predecessors, the machine gave a satisfied shake, and
+rose steadily to the two-foot level. I was scribbling frantically in my
+notebook: _Bowl + cereal + spoon: 5 seconds. Lag: 10 seconds. Napkin +
+toothpick: 3 seconds. Total synthesizing time: 18 seconds. Allowance for
+rise of machine per foot: 2 seconds._
+
+"Burt--!" Artie yelled joyously, just as I completed the last item,
+"Look at that, will you?!"
+
+I looked, and had my first presentiment of disaster. At two feet, the
+machine was busily fabricating--out of the air molecules themselves, for
+all I knew--_two_ bowls, _two_ spoons, and _two_ bowlfuls of cereal.
+
+"Hey, Artie--" I began, but he was too busy figuring out this latest
+development.
+
+"It's the altimeter," he said. "We had it gauged by the foot, but it's
+taking the numerical calibrations as a kind of output-quota, instead!"
+
+"Look, Artie," I interrupted, as twin napkins and toothpicks dropped
+down beside the new bowls on the table where the scale lay. "We're going
+to have a little problem--"
+
+"You're telling _me_!" he sighed, unhappily. "All those damned _random_
+factors! How many times did the machine have to be repaired after each
+faulty test! What thickness of ceramics, or fabric, or rubber, or metal
+remained! What was the precise distribution and dampness of each of
+those soggy cornflakes! Hell, Burt, we may be _forever_ trying to make a
+duplicate of this!"
+
+"Artie--" I said, as three toothpick-napkin combinations joined the
+shattered remains of triple bowl-cereal-spoon disasters from the
+one-yard mark over the scale, "that is _not_ the problem I had in mind."
+
+"Oh?" he said, as four shimmering discs began to coalesce and shape
+themselves. "What, then?"
+
+"It's not that I don't appreciate the side-effect benefits of free
+cornflake dinners," I said, speaking carefully and somberly, to hold
+his attention. "But isn't it going to put a crimp in our anti-gravity
+machine sales? Even at a mere mile in height, it means that the spot
+beneath it is due for a deluge of five-thousand-two-hundred-eighty bowls
+of cornflakes. Not to mention all those toothpicks, napkins and spoons!"
+
+Artie's face went grave. "Not to mention the
+five-thousand-two-hundred-seventy-nine of the same that the spot beneath
+would get from the gadget when it was just one foot _short_ of the mile!"
+
+"Of course," I said, calculating rapidly as the five-foot mark produced
+a neat quintet of everything, a quintet which crashed noisily onto the
+ten lookalikes below it as the machine bobbed silently to the six-foot
+mark, "we have one interesting thing in our favor: the time element."
+
+"How so?" said Artie, craning over my shoulder to try and read my lousy
+calligraphics on the pad.
+
+       *       *       *       *       *
+
+"Well," I said, pointing to each notation in turn, "the first batch,
+bowl-to-toothpick, took twenty seconds, if we include the time-lapse
+while the machine was ascending to the one-foot mark."
+
+"Uh-huh," he nodded. "I see. So?"
+
+"So the second batch took double. Forty seconds. Not only did it require
+thirty-six seconds for the formation of the stuff, it took the machine
+twice as many seconds to reach the two-foot mark."
+
+"I get it," he said. "So I suppose it took three times the base number
+for the third batch?"
+
+"Right. A full minute. And the materialization of the objects is--Boy,
+that's noisy!" I interrupted myself as batch number six came smashing
+down. "--always at a point where the objects fit into a theoretical
+conical section below the machine."
+
+"How's that again?" said Artie.
+
+"Well, bowl number one formed just below the exhaust vent of the central
+cylinder. Bowls two and three, or--if you prefer--bowl-batch two,
+formed about six inches lower, edge to edge, at the cross-section of an
+imaginary cone (whose rather truncated apex is the exhaust vent) that
+seems to form a vertical angle of thirty degrees."
+
+"In other words," said Artie, "each new formation comes in a spot
+beneath this cone where it's possible for the new formations to
+materialize side-by-side, right?" When I nodded, he said, "Fine. But so
+what?"
+
+"It means that each new materialization occurs at a steadily increasing
+height, but one which--" I calculated briefly on the pad "--is never
+greater than two-thirds the height of the machine itself."
+
+Artie looked blank. "Thank you very kindly for the math lesson," he said
+finally, "but I still don't see what you are driving at, Burt. How does
+this present a problem?"
+
+I pointed toward the un-repaired hole in the lab ceiling, where the
+machine, after dutifully disgorging the number-seven load, was slowly
+heading. "It means that unless we grab that thing before it gets too
+much higher, the whole damn planet'll be up to its ears in cornflakes.
+And the one-third machine-height gap between artifacts and machine means
+that we can't even use the mounding products to climb on and get it.
+We'd always be too low, and an _increasing_ too-low at that!"
+
+"Are you trying to say, in your roundabout mathematical way, let's grab
+that thing, fast?"
+
+"Right," I said, glad I had gotten through to him. "I would've said as
+much sooner, only you never listen until somebody supplies you with all
+the pertinent data on a crisis first."
+
+       *       *       *       *       *
+
+Load number nine banged and splintered down into the lab, bringing the
+cumulative total of bowl-cereal-spoon-napkin-toothpick debris up to
+forty-five.
+
+"Come on, Burt," said Artie. "We'll have to get to the roof of the lab.
+There's a ladder up at the--"
+
+He'd been going to say "house", but realized that there wasn't a house
+anymore. "Quick!" he rasped, anxiously. "We can still get there by--" He
+stopped before saying "helicopter", for similar reasons.
+
+"Burt--" he said, after a pause that allowed the total to rise to
+fifty-five with a crash. "What'll we _do_?"
+
+"As usual with your inventions," I said, "we get on the phone and alert
+the government."
+
+"The phone," said Burt, his face grey, "was in the house."
+
+I felt the hue of my face match his, then. "The car," I blurted. "We'll
+have to drive someplace where there's a phone!"
+
+We ran out of the lab, dodged a few flying shards of pottery that
+sprayed out after us from load-eleven-total-sixty-six, and roared off
+down the road in Artie's roadster. He did the driving, I kept my eyes on
+my watch, timing the arrivals of each new load. (Formula: _n × 20 = lag
+between loads in seconds_.)
+
+By the time Artie discovered we were out of gas in the middle of a
+deserted country road, load number twenty had fallen.
+
+By the time we arrived on foot at the nearest farmhouse, and were
+ordered off the property by the irate farmer who still had bare boards
+on his windowless house, and a shotgun in his gnarled brown hands, load
+twenty-five had fallen.
+
+By the time we hitchhiked into town and got on the phone in time to find
+all the governmental agencies had closed their offices for the day, load
+thirty had fallen.
+
+By the time we finally convinced the Washington Operator that this
+was a national emergency that could _not_ (though she kept suggesting
+it) be handled by the ordinary Civil Defense members (the town had a
+population of two hundred, and a one-percent enrollment in CD. Those
+two guys wouldn't be any more help than we were, ourselves.), and were
+able to locate Artie's congressional contact (he was out at a movie),
+load fifty had dropped, and I was bone-tired, and it was (since load
+fifty took a thousand seconds to form, load one had taken twenty, and
+their total--one thousand twenty seconds--divided by two made an
+average formulation-time of five hundred ten seconds per formulation)
+over seven hours since that first bowl had started to appear, and my
+mind, whether I wanted it to or not, gave me the distressing information
+that by now Artie's estate was cluttered with a numbing totality of
+one-thousand-two-hundred-seventy-five bowl-cereal-spoon-napkin-toothpick
+sets. And fifty-one more due in seventeen minutes.
+
+       *       *       *       *       *
+
+"What's he say?" I asked Artie, leaning into the phone booth.
+
+"He thinks I'm drunk!" Artie groaned, slamming down the receiver. "I
+only wish I were!"
+
+I gave a stoical shrug, and pointed to the bright red neon lure across
+the street. "Don't just stand there wishing. Join me?" I started across
+toward the bar.
+
+"But Burt--" Artie babbled, hurrying along beside me. "We can't just
+_forget_ about it...."
+
+"We did our bit," I said. "You told your contact, right? Well, by
+tomorrow morning, when the total is up to over three thousand (I
+calculated five-thousand-fifty sets by the time the machine reaches the
+hundred-foot mark, a little better than twenty-eight hours from the
+starting time), somebody's sure to notice all the birds in the region,
+if only an ornithologist, and--"
+
+"Birds?"
+
+"Eating the cornflakes," I said, and when he nodded in comprehension,
+went on, "--pretty soon the word'll get to the government."
+
+"Or," said Artie, hopefully, "the batteries and engine'll wear out....
+Won't they?"
+
+"It's a radium-powered motor," I said, as we slipped into the coolness
+of a booth at the rear of the bar. "The power-source will deplete itself
+by half in about six hundred years, maybe. Meantime, what'll we do with
+all those cornflakes?"
+
+The waiter came by and we ordered two beers.
+
+"Wait--" said Artie, gripping my sleeve. "As the machine reaches the
+upper atmosphere, the soundwaves'll thin out, weaken, as the medium
+grows scarce."
+
+"Sure," I said, prying my cuff free of his fingers, "so we only get
+bombarded with _badly made_ artifacts by the time the thing gets ten
+miles up. But that's about fifty-thousand artifacts per foot rise,
+Artie, at that height! No, I take that back. Fifty thousand _sets_! And
+at five items per set (if we don't count the precise number of flakes
+per batch of cereal), we have twenty-five thousand items per foot per
+batch, merely a _rough_ estimate!"
+
+The beers came, and we ordered two more, the orders to keep coming until
+we said whoa.
+
+       *       *       *       *       *
+
+"You know," said Artie, after draining half the bottle, "I just had a
+horrible thought--"
+
+"Horrible above and beyond the _present_ horrors?" I said, horrified.
+
+He nodded, thoughtfully. "What happens to anything that gets sucked into
+the machine under the lip of the reflector? Does the machine just use it
+as more raw material ... Or does it start duplicating _that_?"
+
+"Holy hell!" I choked. "As if there weren't too many pigeons already!"
+
+"There's no room for a pigeon to fit under that lip," said Artie,
+patting the back of my hand as though he thought it was soothing me (it
+wasn't), "or any other bird, for that matter. What I was thinking of was
+stuff like nits and gnats and mosquitoes and--"
+
+"Stop!" I shuddered, reaching for my beer and finding the bottle empty.
+I looked for the waiter, but he was at the front window, watching
+a crowd that was gathering in the street. They were looking in the
+direction of the lab. It was a few miles away, of course, but that
+machine was--if on time, and why shouldn't it be?--due to deliver
+fifty-two sets just about now, and even a few miles away, fifty-two
+bowl-spoon-napkin-toothpick-cereal combinations, shimmering in the air
+as they took form, would be hard to miss if you were looking in the
+right direction. I said as much to Artie, but he shook his head.
+
+"It's ten o'clock of a moonless night, Burt. They couldn't see a damned
+thing, unless there were some kind of illumination--" I saw by his face
+that he'd thought of a possible source.
+
+"What?" I said.
+
+"Fireflies?" he hypothesized weakly.
+
+       *       *       *       *       *
+
+We got out of the booth and joined our waiter as he hurried out into the
+street. And there, in the distant blackness of the skies, was a sight
+like a Fourth of July celebration gone berserk. From the number of those
+fireflies, I figure the first one got sucked in at about the fifteen
+mark, and possibly a few of his pals with him.
+
+"Despite everything--" said Artie, softly, "it sure is beautiful."
+
+"A gorgeous sight," I had to agree. "But--What the hell is that thing in
+the air under the fireflies? You can just make it out in the reflected
+flashes. It kind of looks like the--the _lab_...."
+
+Artie's fingers sank into my forearm. "But. It _is_ the lab! Not _the_
+lab, but another like it! With all those falling bowls and things,
+enough plaster-dust and wood-splinters and glass-spicules must've been
+sucked in to let the machine make a dupl--_There it goes!_"
+
+A one-story building dropping from a height of around thirty feet onto
+another one-story building covered over with spoons, crunchy cereal,
+and broken pottery makes much more racket than can be absorbed by the
+cushioning effect of thousands of napkins and rubber toothpicks. We were
+a few miles off, so the sound--when it finally got to us--was muted by
+distance, but it was still a lulu.
+
+"And to think," Artie murmured, "that this is happening because we tried
+to make it _noiseless_!"
+
+"What I'm worried about," I said sickly, "is that new cloud of dust
+rising from the latest debris. There are crumbs of _two_ smashed
+buildings in it, Artie. And in roughly twenty minutes the process is
+going to repeat, and there'll be crumbs from _four_ labs in the air; two
+labs that'll be the second duplicate of the original, and two that'll be
+the first duplicate of the original-plus-first-duplicate!"
+
+Artie shook his head sadly. "Crumbs from _six_, Burt. Remember, when
+those four new labs fall in twenty minutes, they're going to raise dust
+from the wreckage of the two _already_ on the ground!"
+
+"Maybe," I said, less lackadaisically than I'd spoken when we left the
+phone booth for the bar, "you'd better get your man in Washington,
+again."
+
+"He'll never believe I'm sober, _now_!" Artie complained.
+
+"Oops--Never mind, Artie," I said, resignedly, looking at the latest
+development in the distant sky. "He'll get the word indirectly, from the
+forest rangers."
+
+"Huh?" said Artie, and looked toward the machine.
+
+       *       *       *       *       *
+
+Amid the sparking cloud of fireflies, fluttering cornflakes, glinting
+spoons, and a foursome of hazy, still-processing new labs, there was a
+newcomer to the chaos. Something in one of the plunging artifacts must
+have rubbed something else the wrong way, made a spark, and--Well, the
+machine was complacently sucking in raw blazing energy, now, tongue upon
+tongue of orange flame and black, spiralling smoke that rose from the
+pyre of shattered synthetics. It was the first geometrically cone-shaped
+blaze I'd ever seen in my life, but that suction was going pretty good,
+now. And all that glaring heat was going to be suddenly re-created going
+in the _other_ direction in about twenty minutes. But--
+
+"Flames go _up_," said Artie, his thought-processes apparently running
+parallel to mine. "So the new fires...."
+
+"Will be sucked in with the next batch," I finished. "And come out
+double-strength next time around."
+
+"Burt--" said Artie, "What's the temperature at which water breaks down
+into free hydrogen and oxygen again?"
+
+"A little less than the melting point of iron," I said. "Figure about
+fifteen hundred degrees Centigrade. Why?"
+
+"I just wondered if perhaps the machine might not only double the amount
+of the fire, but its temperature as well...."
+
+I didn't _want_ to theorize about _that_. It was summer, and the air
+was pretty humid, and that meant an awful lot of free hydrogen and
+oxygen, all at once, ready to re-combine explosively in the heat from
+the flames that had separated them in the first place, thence to become
+disrupted again, thence to explode again.... The mind refuses certain
+contemplations. I turned away from the chaotic display in the distant
+skies, and said to Artie, "How's chances of the _machine_ getting melted
+down?"
+
+He shook his head with great sadness. "We made it out of damn near
+heat-proof metals, remember? So it wouldn't burn up at entry speeds from
+outer space?"
+
+"Oh, yeah," I said. "So what'll we do, now?"
+
+He glanced at the increasing holocaust on the horizon. "Pray for rain?"
+
+       *       *       *       *       *
+
+Well, that was yesterday. Today, as I write this, the government has
+finally gotten wind of the thing, and the area is under martial law. Not
+that all those uniformed men standing just out of heat-range about the
+ever-increasing perimeter are going to be of much help. Maybe to keep
+the crowds back, they'd help, except no one in his right mind is heading
+any direction but away from the mound. A few trees went up in smoke
+during the blaze, too, and now, every _n_-times-twenty seconds, a whole
+uprooted forest is joining the crash.
+
+No one knows quite what to do about it. The best weapon we possess is
+Artie's inadvertent disintegrator pistol (remember Venus?), and ever
+since the Three Day War, they've been banned. There's a proposition up
+before Congress to un-ban the things and blast the machine, of course,
+but the opposition keeps putting the kibosh on things by simply asking,
+"What if the machine doesn't vanish? And what if, during the attempted
+shooting, it starts duplicating disintegrator-beams?"
+
+The vote was negative.
+
+We figure it'll take quite a few years before the machine gets
+beyond the point where the atmosphere stops acting as a medium for
+the soundwaves. And that, of course, is only if the machine isn't
+duplicating the atmosphere, too. And why couldn't it be?
+
+In the meantime, the avian population in the region is on the increase,
+thanks to all those cornflakes-and-firefly dinners. Not to mention the
+birds the machine has started to produce since a few foolish sparrows
+got incinerated in the blaze.
+
+Artie figures that if enough snow falls on the machine, it may weight
+it down and stop the process. So far, that's the only hope we have.
+Meantime, it's still the middle of June.
+
+It looks like a long summer.
+
+
+THE END
+
+
+***END***
