@@ -19,53 +19,61 @@
             </div>
           </div>
           <div id="inputs">
-            <br>
-            <form role="form" ng-submit="add(name)">
+            <form name="madForm" ng-submit="submitForm()" novalidate>
+              <h2>Please select a gender:</h2>
+              <div class="form-group dropdown">
+                <select class="form-control" name="gender" ng-model="gender" required>
+                  <option>Male</option>
+                  <option>Female</option>
+                </select>
+              </div>
               <h2>Please provide the following words:</h2>
+              <p>&nbsp;All fields are required!</p>
               <div class="row">
                 <div class="col-md-4">
-                  <div class="form-group">
-                    <input type="text" class="form-control" id="name" placeholder="Name" name="name" ng-model="name">
+                  <div class="form-group" ng-class="{'has-error' : madForm.name.$invalid && !madForm.name.$pristine}">
+                    <input type="text" name="name" class="form-control" ng-model="name" placeholder="Name" required>
                   </div>
-                  <div class="form-group">
-                    <input type="text" class="form-control" id="jobTitle" placeholder="Job Title" ng-model="job_title">
+                  <div class="form-group" ng-class="{'has-error' : madForm.jobTitle.$invalid && !madForm.jobTitle.$pristine}">
+                    <input type="text" name="jobTitle" class="form-control" placeholder="Job Title" ng-model="jobTitle" required>
                   </div>
-                  <div class="form-group">
-                    <input type="text" class="form-control" id="tediusTask" placeholder="Tedius Task" ng-model="tedious_task">
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <div class="form-group">
-                    <input type="text" class="form-control" id="dirtyTask" placeholder="Dirty Task" ng-model="dirty_task">
-                  </div>
-                  <div class="form-group">
-                    <input type="text" class="form-control" id="Celebrity" placeholder="Celebrity" ng-model="celebrity">
-                  </div>
-                  <div class="form-group">
-                    <input type="text" class="form-control" id="uselessSkill" placeholder="Useless Skill" ng-model="useless_skill">
+                  <div class="form-group" ng-class="{'has-error' : madForm.tediusTask.$invalid && !madForm.tediusTask.$pristine}">
+                    <input type="text" class="form-control" name="tediusTask" placeholder="Tedius Task" ng-model="tediousTask" required>
                   </div>
                 </div>
                 <div class="col-md-4">
-                  <div class="form-group">
-                    <input type="text" class="form-control" id="adjective" placeholder="Adjective" ng-model="adjective">
+                  <div class="form-group" ng-class="{'has-error' : madForm.dirtyTask.$invalid && !madForm.dirtyTask.$pristine}">
+                    <input type="text" class="form-control" name="dirtyTask" placeholder="Dirty Task" ng-model="dirty_task" required>
                   </div>
-                  <div class="form-group">
-                    <input type="text" class="form-control" id="obnoxousCelebrity" placeholder="Obnoxious Celebrity" ng-model="obnoxious_celebrity">
+                  <div class="form-group" ng-class="{'has-error' : madForm.celebrity.$invalid && !madForm.celebrity.$pristine}">
+                    <input type="text" class="form-control" name="celebrity" placeholder="Celebrity" ng-model="celebrity" required>
                   </div>
-                  <div class="form-group">
-                    <input type="text" class="form-control" id="hugeNumber" placeholder="Huge Number" ng-model="huge_number">
+                  <div class="form-group" ng-class="{'has-error' : madForm.uselessSkill.$invalid && !madForm.uselessSkill.$pristine}">
+                    <input type="text" class="form-control" name="uselessSkill" placeholder="Useless Skill" ng-model="uselessSkill" required>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-group" ng-class="{'has-error' : madForm.adjective.$invalid && !madForm.adjective.$pristine}">
+                    <input type="text" class="form-control" name="adjective" placeholder="Adjective" ng-model="adjective" required>
+                  </div>
+                  <div class="form-group" ng-class="{'has-error' : madForm.obnoxiousCelebrity.$invalid && !madForm.obnoxiousCelebrity.$pristine}">
+                    <input type="text" class="form-control" name="obnoxousCelebrity" placeholder="Obnoxious Celebrity" ng-model="obnoxiousCelebrity" required>
+                  </div>
+                  <div class="form-group" ng-class="{'has-error' : madForm.hugeNumber.$invalid && !madForm.hugeNumber.$pristine}">
+                    <input type="number" class="form-control" name="hugeNumber" placeholder="Huge Number" ng-model="hugeNumber" required>
+                    <p ng-if="!userForm.hugeNumber.$pristine" class="help-block">You must enter a number.</p>
                   </div>
                 </div>
               </div>
-              <br>
-              <input type="submit" class="btn btn-primary" value="Generate">
+              <button type="submit" class="btn btn-primary" ng-disabled="madForm.$invalid">Submit</button>
+              <button type="submit" class="btn btn-success" id="reset-btn" ng-click="resetForm()">Reset?</button> 
             </form>
           </div>
           <hr>
-          <h4 id="male-text"><span class="input">{{ name }}</span> was a <span class="input">{{ job_title }}</span> who loved technology. Although he loved parts of his job, he absolutely hated  <span class="input">{{ tedious_task }}</span> and <span class="input">{{ dirty_task }}</span>. So, <span class="input">{{ name }}</span> met with his life mentor <span class="input">{{ celebrity }}</span> who told him to learn how to <span class="input">{{ useless_skill }}</span> with Thinkful. Thinkful didn't offer a course on <span class="input">{{ useless_skill }}</span> so he studied programming instead.</p>
-          <p>What a great decision! With his new skills, <span class="input">{{ name }}</span> built a(n) <span class="input">{{ adjective }}</span> robot named <span class="input">{{ obnoxious_celebrity }}</span> that not only loved <span class="input">{{ dirty_task }}</span> but did it <span class="input">{{ huge_number }}</span> faster.</h4>
-          <h4 id="female-text"><span class="input">{{ name }}</span> was a <span class="input">{{ job_title }}</span> who loved technology. Although she loved parts of her job, she absolutely hated  <span class="input">{{ tedious_task }}</span> and <span class="input">{{ dirty_task }}</span>. So, <span class="input">{{ name }}</span> met with her life mentor <span class="input">{{ celebrity }}</span> who told her to learn how to <span class="input">{{ useless_skill }}</span> with Thinkful. Thinkful didn't offer a course on <span class="input">{{ useless_skill }}</span> so she studied programming instead.</p>
-          <p>What a great decision! With her new skills, <span class="input">{{ name }}</span> built a(n) <span class="input">{{ adjective }}</span> robot named <span class="input">{{ obnoxious_celebrity }}</span> that not only loved <span class="input">{{ dirty_task }}</span> but did it <span class="input">{{ huge_number }}</span> faster.</h4>
+          <h4 id="male-text"><span class="input">{{ name }}</span> was a <span class="input">{{ jobTitle }}</span> who loved technology. Although he loved parts of his job, he absolutely hated  <span class="input">{{ tediousTask }}</span> and <span class="input">{{ dirtyTask }}</span>. So, <span class="input">{{ name }}</span> met with his life mentor <span class="input">{{ celebrity }}</span> who told him to learn how to <span class="input">{{ uselessSkill }}</span> with Thinkful. Thinkful didn't offer a course on <span class="input">{{ uselessSkill }}</span> so he studied programming instead.</p>
+          <p>What a great decision! With his new skills, <span class="input">{{ name }}</span> built a(n) <span class="input">{{ adjective }}</span> robot named <span class="input">{{ obnoxiousCelebrity }}</span> that not only loved <span class="input">{{ dirtyTask }}</span> but did it <span class="input">{{ hugeNumber }}</span> faster.</h4>
+          <h4 id="female-text"><span class="input">{{ name }}</span> was a <span class="input">{{ jobTitle }}</span> who loved technology. Although she loved parts of her job, she absolutely hated  <span class="input">{{ tediousTask }}</span> and <span class="input">{{ dirtyTask }}</span>. So, <span class="input">{{ name }}</span> met with her life mentor <span class="input">{{ celebrity }}</span> who told her to learn how to <span class="input">{{ uselessSkill }}</span> with Thinkful. Thinkful didn't offer a course on <span class="input">{{ uselessSkill }}</span> so she studied programming instead.</p>
+          <p>What a great decision! With her new skills, <span class="input">{{ name }}</span> built a(n) <span class="input">{{ adjective }}</span> robot named <span class="input">{{ obnoxiousCelebrity }}</span> that not only loved <span class="input">{{ dirtyTask }}</span> but did it <span class="input">{{ hugeNumber }}</span> faster.</h4>
         </div>
       </div>
     </div>

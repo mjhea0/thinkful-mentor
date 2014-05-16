@@ -22,7 +22,7 @@ img {
   padding: 10px 0px;
 }
 
-#male-text, #female-text {
+#male-text, #female-text, #reset-btn {
   display: none;
 }
 
