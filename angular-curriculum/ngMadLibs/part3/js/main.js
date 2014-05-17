@@ -4,6 +4,7 @@ $(function() {
 
 angular.module('ngMadlibs', [])
   .controller('madlibsController', function($scope) {
+    'use strict';
     $scope.submitForm = function() {
       // check to make sure the form is valid
       if ($scope.madForm.$valid) {
@@ -18,7 +19,13 @@ angular.module('ngMadlibs', [])
         }
       }
     }
-    $scope.resetForm = function() {
-      console.log("almost done!")
+    $scope.reset = function() {
+      $scope.formData = {};
+      $('#female-text').hide()
+      $('#male-text').hide()
+      $scope.madForm.$setPristine();
+      $('#reset-btn').hide()
     }
   });
+
+
