@@ -79,3 +79,4 @@ So, although these are just basic examples, you should understand what a regular
 1. [TutorialsPoint Regular Expressions](http://www.tutorialspoint.com/python/python_reg_expressions.htm)
 2. [Python Course: Regular Expressions](http://www.python-course.eu/re.php)
 3. [Python Module of the Week - re](http://pymotw.com/2/re/)
+4. [http://www.pythonschool.net/regex](http://www.pythonschool.net/regex)
