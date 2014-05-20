@@ -1,12 +1,12 @@
 # Interlude: Regular Expressions
 
-Regular expressions (or regex) are used to *find* or *replace* patterns in strings.
+Regular expressions (also known as regex) is a powerful syntax used for pattern matching in order to extract information from text documents.
 
-Python has a special module for performing such operations called [re](http://docs.python.org/2/library/re.html), which is based on the regex syntax in Perl.
+## When should you use regular expressions?
 
-*When should you use regular expressions?*
+Unless you absolutely need to use regular expressions, stick with Python basic string functions - like `find` and `replace`. They are *much* easier to learn, use, and understand.
 
-Finding a string can be extremely easy in Python, when you know exactly what you are looking for.
+However, these are generally only useful when you know *exactly* what you're looking for.
 
 For example:
 
@@ -16,7 +16,7 @@ For example:
 24
 ```
 
-But what happens if we don't know *exactly* what we're looking for, such as a 10-digit phone number. In that case, we only know that the pattern is an integer, with 10-digits. This is the perfect use case for regex:
+But what happens if we don't know *exactly* what we're looking for, such as a 10-digit phone number. In that case, we only know that the pattern is an integer, with 10-digits (that may or may not be seperated by a dash or some other character). This is the perfect use case for regex:
 
 ```sh
 >>> import re
@@ -34,7 +34,7 @@ Here, we have the regular expression `r'(\d{3})\D*(\d{3})\D*(\d{4})$'`, which in
 
 > Check out [https://pythex.org/](https://pythex.org/) for a nice regex cheatsheet. You can also test expressions and patterns out. Click [here](https://pythex.org/?regex=%5Cd%7B3%7D%5CD*%5Cd%7B3%7D%5CD*%5Cd%7B4%7D&test_string=415-680-5773&ignorecase=0&multiline=0&dotall=0&verbose=0) to view the results of the above example.
 
-What if you have an entire list of phone numbers that need to be standardized into the following format xxxxxx-xxx - and the numbers are in any one of these formats:
+What if you have an entire list of phone numbers that need to be standardized into the following format xxxxxxxxxx - and the numbers are in any one of these formats:
 
 1. 555-555-5555
 2. 555 555 5555
@@ -73,7 +73,6 @@ for email in email_list:
 ```
 
 Here, we are given a list of email addresses, and we are just confirming whether they match the correct pattern - e.g., *something@something.com*.
-
 
 So, although these are just basic examples, you should understand what a regular is and how to use them. Used correctly, in the right situation, you can save much time when having to parse a string. For further information, please check out these guides and tutorials:
 
