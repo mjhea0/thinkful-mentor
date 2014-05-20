@@ -4,9 +4,9 @@ Regular expressions (also known as regex) provide a powerful syntax for pattern 
 
 ## When should you use regular expressions?
 
-Unless you absolutely need to use regular expressions, stick with Python basic string functions - like `find` and `replace`. They are *much* easier to learn, use, and understand.
+Unless you absolutely need to use regular expressions, stick with Python's basic string-matching primitives - like `find` and `replace`. They are *much* easier understand. However, these can only take you so far. I tend to take a lazy approach and start with the primitive functions, then if the code starts becoming overly complex, I'll switch to regular expressions. 
 
-However, these are generally only useful when you know *exactly* what you're looking for.
+Generally, when you can implement all of your logic in a single predicate, you should string with the primitives.
 
 For example:
 
@@ -16,7 +16,7 @@ For example:
 24
 ```
 
-But what happens if we don't know *exactly* what we're looking for, such as a 10-digit phone number. In that case, we only know that the pattern is an integer, with 10-digits (that may or may not be seperated by a dash or some other character). This is the perfect use case for regex:
+In the above case we know exactly what we're loooking for. But what happens if we don't? Such as a 10-digit phone number. In that case, we only know that the pattern is an integer, with 10-digits (that may or may not be seperated by a dash or some other character). This is the perfect use case for regex:
 
 ```sh
 >>> import re
