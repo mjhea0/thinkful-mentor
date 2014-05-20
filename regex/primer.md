@@ -1,6 +1,6 @@
 # Interlude: Regular Expressions
 
-Regular expressions (also known as regex) provide a powerful syntax for pattern matching used to extract information from text documents.
+Regular expressions (also known as regex) provide a powerful syntax for pattern matching in text documents.
 
 ## When should you use regular expressions?
 
