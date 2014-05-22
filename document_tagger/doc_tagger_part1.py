@@ -7,7 +7,7 @@ documents = [DIV_COMM, MAG_CART]
 
 keywords = {}
 for keyword in sys.argv[1:]:
-    keywords[keyword] = re.compile(r'\b{}r\b'.format(re.IGNORECASE))
+    keywords[keyword] = re.compile(r'\b' + keyword + r'\b', re.IGNORECASE)
 
 title_search = re.compile(r'(title:\s*)(?P<title>[a-zA-Z, \n]* \s)', re.IGNORECASE)
 title_search = re.compile(r'(?:title:\s*)(?P<title>((\S*(\ )?)+)((\n(\ )+)(\S*(\ )?)*)*)',re.IGNORECASE | re.VERBOSE)
@@ -37,5 +37,5 @@ for document_number, document in enumerate(documents):
     print "Illustrator(s): {}".format(illustrator)
     print "Keywords:"
     for keyword in keywords:
-        keyword_count = len(re.findall(keyword, document))
+        keyword_count = len(re.findall(keywords[keyword], document))
         print " - '{0}': {1}\n".format(keyword, keyword_count)
