@@ -67,7 +67,7 @@ for file_name in (os.listdir(directory)):
         print "Translator(s): {}".format(translator)
         print "Illustrator(s): {}".format(illustrator)
 
-        # count # of times each keyword appeara in the searched texts and output the results
+        # count # of times each keyword appears in the searched texts and output the results
         print "\n# ---- KEYWORD REPORT ---- #\n\n"
         for keyword in keywords:
             print "'{0}': {1}".format(
@@ -75,3 +75,4 @@ for file_name in (os.listdir(directory)):
                 len(re.findall(keywords[keyword], full_text))
                 )
         print "\n"
+        break
