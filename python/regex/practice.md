@@ -44,19 +44,19 @@ India   778,424   2011   23.68%
 
 ### Steps
 
-1. Remove blank lines
+1. Remove blank lines - `^\s*\n`
 
   ![remove-blank-lines](images/remove-blank-lines.png)
 
-1. Remove spaces from the beginning of each line
+1. Remove spaces from the beginning of each line - `^\s+`
 
   ![remove-spaces](images/remove-spaces.png)
 
-1. Remove bracketed numbers
+1. Remove bracketed numbers - `\[\d+\]`
 
   ![remove-bracket-numbers](images/remove-bracket-numbers.png)
 
-1. Remove the first column of rankings
+1. Remove the first column of rankings - `^\d+\s+`
 
   ![remove-first-column](images/remove-first-column.png)
 
