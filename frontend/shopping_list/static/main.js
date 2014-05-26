@@ -2,10 +2,11 @@ $(function() {
 
   console.log('ready!')
 
+  addValues()
   getValues()
 
   // on click event ...
-  function getValues() {
+  function addValues() {
 
     // handle button click
     $('#add-btn').click(function() {
@@ -29,6 +30,21 @@ $(function() {
 
     });
 
+  };
+
+  function getValues() {
+    var listCount = JSON.parse(localStorage.getItem("listSize"));
+    if (localStorage.listSize != undefined ) {
+      for (i=1;i<=listCount;i++) {
+        var number = parseInt(i) + 1;
+        var listRow = jQuery.parseJSON(localStorage.getItem("item_" + i));
+        appendValue(listRow)
+      }; 
+    };
+  };
+
+  function appendValue(listRow) {
+    console.log(listRow)
   };
 
   // validate values
@@ -69,6 +85,7 @@ $(function() {
 
       // convert data to array
       data = {
+        'id': new Date().getTime(),
         'name':itemValue,
         'quantity':quantityValue,
         'price':floatPrice,
@@ -76,8 +93,12 @@ $(function() {
         'complete':0, 
       }
 
-      // add item to local storage
-      localStorage.setItem("listData", JSON.stringify(data));
+      if (localStorage.listSize == undefined ) {
+        localStorage.setItem('listSize', 0)
+      };
+      var listSize = parseInt(localStorage.listSize) + 1;
+      addValuesToStorage(listSize, data)
+      getValues()
 
     };
 
@@ -85,6 +106,16 @@ $(function() {
     function calculateTotal(quantityValue, floatPrice) {
       return (quantityValue * floatPrice).toFixed(2)
     };
+
+    // add values to local storage
+    function addValuesToStorage(listSize, data) {
+      // create unique id
+      var key = 'item_' + listSize;
+      localStorage.setItem('listSize', listSize);
+
+      // add to storage
+      localStorage.setItem(key, JSON.stringify(data));
+    }
 
   };
 
