@@ -15,7 +15,7 @@ $(function() {
       var price = $('#price-input').val();
 
       // clear out errors/alerts
-      $('#alert').html('');
+      $('#alert').html('<br>');
 
       // ensure no inputs are empty
       if ((item === '') || (quantity === '') || (price === '')) {
@@ -56,7 +56,7 @@ $(function() {
         '</td><td>$'+total+
         '</td></tr>');
 
-      $('#alert').html('<span class="alert-text">Thanks for adding!</span>').fadeOut(3000); // if empty
+      $('#alert').html('<br>');
     };
 
     // calculate total
