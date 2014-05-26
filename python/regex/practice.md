@@ -1,6 +1,6 @@
 ## Assignment: Data Cleansing with Regular Expressions
 
-Your assignment is simple: Using Sublime's **Find and Replace** tool and regular expressions, turn *sloppy_data.txt* -
+Your assignment is simple: Using Sublime's **Find and Replace** facilities along with regular expressions, turn *sloppy_data.txt*-
 
 ```
 1   Russia   7,762,602   2011   45.40%[2]
@@ -25,7 +25,7 @@ Your assignment is simple: Using Sublime's **Find and Replace** tool and regular
 12   India   778,424   2011   23.68%[13]
 '''
 
--into *clean_data.txt* -
+-into *clean_data.txt*-
 
 ```
 Russia   7,762,602   2011   45.40%
