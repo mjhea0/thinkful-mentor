@@ -5,7 +5,7 @@ body {
 .container {
   text-align: center;
   max-width: 700px;
-  padding-top: 50px;
+  padding: 50px 0px;
 }
 
 #quantity-input, #price-input {
@@ -21,7 +21,10 @@ body {
   font-style: italic;
 }
 
-#incomplete-items, #complete-items {
+#hide-btn, #all-items {
   display: none;
 }
 
+.btn-sm {
+  padding: 2px 8px;
+}

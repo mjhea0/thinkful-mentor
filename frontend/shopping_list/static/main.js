@@ -17,11 +17,15 @@ $(function() {
 
     // ensure no inputs are empty
     if ((item === '') || (quantity === '') || (price === '')) {
+
       // if empty
       $('#alert').html('<span class="alert-text">All fields are required!</span>');
+
     } else {
+
       // if not empty
       validateValues(item, quantity, price)
+      location.reload();
     };
 
   });
@@ -32,12 +36,16 @@ $(function() {
 
     // validate each value with regex
     if (is_valid = !/[^0-9()]+[a-zA-Z]*/.test(itemValue)) { 
+
       // if invalid
       $('#alert').html('<span class="alert-text">The item name must be a string!</span>');
+
     } else if ((is_valid = !/^[0-9]*(\.[0-9]+)?$/.test(quantityValue)) || 
+
       // if invalid
       (is_valid = !/^[0-9]*(\.[0-9]+)?$/.test(priceValue))) {
       $('#alert').html('<span class="alert-text">The quantity and price must be integers!</span>');
+
     } else {
       // if valid
 
@@ -55,12 +63,11 @@ $(function() {
 
       // convert data to a object
       data = {
-        'id': new Date().getTime(),
         'name':itemValue,
         'quantity':quantityValue,
         'price':floatPrice,
         'total':total,
-        'complete':0, 
+        'delete':0,
       }
 
       // test to see if there are any items in storage
@@ -74,6 +81,9 @@ $(function() {
 
       // pass the current size, plus the object to the `addValuesToStorage()` function
       addValuesToStorage(listSize, data)
+
+      // remove data from dom
+      $(".table").find('tr:gt(0)').remove();
 
       // call the `getValues()` function to get new data
       getValues()
@@ -105,33 +115,27 @@ $(function() {
   // append values to the dom
   function appendValue(listRow, number) {
 
-    if (listRow.complete === 0) {
-      // append values to incomplete table
+    // append values to incomplete table
+    if (listRow["delete"] === 0) {
       $('#my-values').append(
-        '<tr><td><input type="checkbox" class="checkbox" id="item_'+(number-1)+'">'+
-        '</td><td>'+listRow.name+
+        '<tr><td>'+listRow.name+
         '</td><td>'+listRow.quantity+
         '</td><td>$'+listRow.price+
         '</td><td>$'+listRow.total+
+        '</td><td><button type="button" class="btn btn-warning btn-sm delete-btn" id="item_'+(number-1)+'">Delete</button>'+
         '</td></tr>');
-    } else {
-      // append values to complete table 
-      $('#my-complete-values').append(
-        '<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;'+
-        '</td><td>'+listRow.name+
-        '</td><td>'+listRow.quantity+
-        '</td><td>$'+listRow.price+
-        '</td><td>$'+listRow.total+
-        '</td></tr>');
-    }
+    };
 
-  $('#alert').html('<br>');
+    $('#all-items').show();
+    $('#show-btn').hide()
+    $('#hide-btn').show();
+    $('#alert').html('<br>');
 
   };
 
 
   // grab id of the checkbox when clicked
-  $('.checkbox').change(function(){
+  $('.delete-btn').click(function(){
 
     elementId = $(this).attr('id')
 
@@ -139,14 +143,15 @@ $(function() {
 
     // update complete value to 1
     data = jQuery.parseJSON(grabItem)
-    data["complete"] = 1
+    data["delete"] = 1
 
-    // remove element from dom
-    $('#'+elementId).remove()
 
-    // update storage
-    localStorage.removeItem(elementId);
+    // update local storage
+    localStorage.removeItem($(this).attr('id'));
     localStorage.setItem(elementId, JSON.stringify(data));
+
+    // remove data from dom
+    $(".table").find('tr:gt(0)').remove();
 
     // call the `getValues()` function to get new data
     getValues()
@@ -170,14 +175,16 @@ $(function() {
     };
   };
 
-  $('#complete-btn').click(function() {
-    $('#complete-items').toggle();
-    $('#incomplete-items').hide();
+  $('#show-btn').click(function() {
+    $('#all-items').show();
+    $('#show-btn').hide()
+    $('#hide-btn').show();
   });
 
-  $('#incomplete-btn').click(function() {
-    $('#incomplete-items').toggle();
-    $('#complete-items').hide();
+  $('#hide-btn').click(function() {
+    $('#all-items').hide();
+    $('#show-btn').show()
+    $('#hide-btn').hide();
   });
 
 

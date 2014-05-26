@@ -10,7 +10,7 @@
     <div class="container">
 
       <h1>My Shopping List</h1>
-      <p class="lead"><span class="glyphicon glyphicon-shopping-cart"></span> by Michael Herman</p>
+      <p class="lead">By Michael Herman<br><span class="glyphicon glyphicon-shopping-cart"></span></p>
       <br>
 
       <!-- add item form -->
@@ -25,52 +25,33 @@
           <input type="number" class="form-control" id="price-input" placeholder="$0.00">
         </div>
         &nbsp;&nbsp;
+        <br><br>
         <div class="form-group">  
-          <button type="button" class="btn btn-default" id="add-btn">Add Item</button>
+          <button type="button" class="btn btn-primary" id="add-btn">Add NEW Item</button>
+          <button type="button" class="btn btn-success" id="show-btn">Show ALL Items</button>
+        <button type="button" class="btn btn-success" id="hide-btn">Hide ALL Items</button>
         </div>
       </form>
+
       <br>
       <h4 id="alert"><br></h4>
       <hr>
-      <button type="button" class="btn btn-primary" id="incomplete-btn">Incomplete Items</button>
-      <button type="button" class="btn btn-success" id="complete-btn">Completed Items</button>
-      <br>
-      <br>
 
-      <!-- incomplete list -->
-      <div id="incomplete-items">
-        <h3>Incomplete</h3>
+      <!-- item list -->
+      <div id="all-items">
+        <h3>All Items</h3>
         <br>
-        <table class="table">
+        <table class="table table-hover">
           <thead>
             <tr>
-              <th></th>
               <th class="centered">Item</th>
               <th class="centered">Quantity</th>
               <th class="centered">Unit Price</th>
               <th class="centered">Total</th>
+              <th></th>
             </tr>
           </thead>
           <tbody id="my-values">
-          </tbody>
-        </table>
-      </div>
-
-      <!-- complete list -->
-      <div id="complete-items">
-        <h3>Complete</h3>
-        <br>
-        <table class="table">
-          <thead>
-            <tr>
-              <th></th>
-              <th class="centered">Item</th>
-              <th class="centered">Quantity</th>
-              <th class="centered">Unit Price</th>
-              <th class="centered">Total</th>
-            </tr>
-          </thead>
-          <tbody id="my-complete-values">
           </tbody>
         </table>
       </div>
