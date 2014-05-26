@@ -1,3 +1,7 @@
+body {
+  background: url('crossword.png')
+}
+
 .container {
   text-align: center;
   max-width: 700px;
@@ -16,4 +20,6 @@
   color: #f04124;
   font-style: italic;
 }
+
+
 
