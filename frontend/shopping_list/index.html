@@ -20,20 +20,23 @@
           <input type="text" class="form-control" id="quantity-input" placeholder="quantity">
           &nbsp;
           <input type="number" class="form-control" id="price-input" placeholder="$0.00">
-          &nbsp;&nbsp;
-          <button type="button" class="btn btn-primary" id="add-btn">Add</button>
+        </div>
+        &nbsp;&nbsp;
+        <div class="form-group">  
+          <button type="button" class="btn btn-primary" id="add-btn">Add Item</button>
         </div>
       </form>
       <br>
-      <div id="alert"></div>
+      <h4 id="alert"></h4>
+      <br>
       <hr><br>
       <table class="table">
         <thead>
           <tr>
-            <th>Item</th>
-            <th>Quantity</th>
-            <th>Unit Price</th>
-            <th>Total</th>
+            <th class="centered">Item</th>
+            <th class="centered">Quantity</th>
+            <th class="centered">Unit Price</th>
+            <th class="centered">Total</th>
           </tr>
         </thead>
         <tbody id="my-values">
