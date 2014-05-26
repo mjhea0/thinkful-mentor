@@ -49,13 +49,14 @@ $(function() {
 
       // append values to new table row
       $('#my-values').append(
-        '<tr><td>'+itemValue+
+        '<tr><td><input type="checkbox">'+
+        '</td><td>'+itemValue+
         '</td><td>'+quantityValue+
         '</td><td>$'+floatPrice+
         '</td><td>$'+total+
         '</td></tr>');
 
-      $('#alert').html('<span class="alert-text">Thanks for adding!</span>'); // if empty
+      $('#alert').html('<span class="alert-text">Thanks for adding!</span>').fadeOut(3000); // if empty
     };
 
     // calculate total
@@ -67,3 +68,4 @@ $(function() {
 
 
 });
+
