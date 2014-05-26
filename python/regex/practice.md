@@ -23,7 +23,7 @@ Your assignment is simple: Using Sublime's **Find and Replace** facilities along
 11   Venezuela   747,881   2011   82.00%[12]
 
 12   India   778,424   2011   23.68%[13]
-'''
+```
 
 -into *clean_data.txt*-
 
