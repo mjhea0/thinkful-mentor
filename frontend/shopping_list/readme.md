@@ -6,3 +6,10 @@
 ### Issues
 
 1. Update DOM (without refresh) after adding new items
+1. Scope/Closure
+
+### Example
+
+1. http://www.realpython.com/learn/frontend/list/
+
+
