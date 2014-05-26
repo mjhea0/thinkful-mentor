@@ -8,9 +8,12 @@
   </head>
   <body>
     <div class="container">
+
       <span class="glyphicon glyphicon-shopping-cart"></span>
       <h1>My Shopping List</h1>
       <br>
+
+      <!-- add item form -->
       <h3>Add new item</h3>
       <br>
       <form class="form-inline" role="form">
@@ -29,6 +32,10 @@
       <br>
       <h4 id="alert"><br></h4>
       <hr><br>
+
+      <!-- incomplete list -->
+      <h3>Incomplete</h3>
+      <br>
       <table class="table">
         <thead>
           <tr>
@@ -42,6 +49,26 @@
         <tbody id="my-values">
         </tbody>
       </table>
+
+      <br><br>
+
+      <!-- complete list -->
+      <h3>Complete</h3>
+      <br>
+      <table class="table">
+        <thead>
+          <tr>
+            <th></th>
+            <th class="centered">Item</th>
+            <th class="centered">Quantity</th>
+            <th class="centered">Unit Price</th>
+            <th class="centered">Total</th>
+          </tr>
+        </thead>
+        <tbody id="my-values">
+        </tbody>
+      </table>
+
     </div>
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>

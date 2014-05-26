@@ -7,6 +7,7 @@ $(function() {
   // on click event ...
   function getValues() {
 
+    // handle button click
     $('#add-btn').click(function() {
 
       // grab values of the inputs
@@ -19,9 +20,11 @@ $(function() {
 
       // ensure no inputs are empty
       if ((item === '') || (quantity === '') || (price === '')) {
-        $('#alert').html('<span class="alert-text">All fields are required!</span>'); // if empty
+        // if empty
+        $('#alert').html('<span class="alert-text">All fields are required!</span>');
       } else {
-        validateValues(item, quantity, price) // if not empty
+        // if not empty
+        validateValues(item, quantity, price)
       };
 
     });
@@ -33,18 +36,25 @@ $(function() {
 
     // validate each value with regex
     if (is_valid = !/[^0-9()]+[a-zA-Z]*/.test(itemValue)) { 
-      $('#alert').html('<span class="alert-text">The item name must be a string!</span>'); // if invalid
+      // if invalid
+      $('#alert').html('<span class="alert-text">The item name must be a string!</span>');
     } else if ((is_valid = !/^[0-9]*(\.[0-9]+)?$/.test(quantityValue)) || 
+      // if invalid
       (is_valid = !/^[0-9]*(\.[0-9]+)?$/.test(priceValue))) {
-      $('#alert').html('<span class="alert-text">The quantity and price must be integers!</span>'); // if invalid
+      $('#alert').html('<span class="alert-text">The quantity and price must be integers!</span>');
     } else {
+      // if valid
+      
       // clear out errors/alerts and inputs
       $('#alert').html('');
       $('#item-input').val('');
       $('#quantity-input').val('');
       $('#price-input').val('');
 
+      // convert priceValue to float
       var floatPrice = parseFloat(priceValue).toFixed(2);
+
+      // calculate total
       var total = calculateTotal(quantityValue, floatPrice)
 
       // append values to new table row
@@ -55,7 +65,6 @@ $(function() {
         '</td><td>$'+floatPrice+
         '</td><td>$'+total+
         '</td></tr>');
-
       $('#alert').html('<br>');
     };
 
