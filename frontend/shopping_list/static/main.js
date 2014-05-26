@@ -32,20 +32,6 @@ $(function() {
 
   };
 
-  function getValues() {
-    var listCount = JSON.parse(localStorage.getItem("listSize"));
-    if (localStorage.listSize != undefined ) {
-      for (i=1;i<=listCount;i++) {
-        var number = parseInt(i) + 1;
-        var listRow = jQuery.parseJSON(localStorage.getItem("item_" + i));
-        appendValue(listRow)
-      }; 
-    };
-  };
-
-  function appendValue(listRow) {
-    console.log(listRow)
-  };
 
   // validate values
   function validateValues(itemValue, quantityValue, priceValue) {
@@ -93,11 +79,19 @@ $(function() {
         'complete':0, 
       }
 
+      // test to see if there are any items in storage
       if (localStorage.listSize == undefined ) {
+        // if not, set list size (number of items in storage) to 0
         localStorage.setItem('listSize', 0)
       };
+
+      // update list size
       var listSize = parseInt(localStorage.listSize) + 1;
+
+      // pass the current size, plus the array to the `addValuesToStorage()` function
       addValuesToStorage(listSize, data)
+
+      // call the `getValues()` function to get new data
       getValues()
 
     };
@@ -109,6 +103,7 @@ $(function() {
 
     // add values to local storage
     function addValuesToStorage(listSize, data) {
+
       // create unique id
       var key = 'item_' + listSize;
       localStorage.setItem('listSize', listSize);
@@ -117,6 +112,29 @@ $(function() {
       localStorage.setItem(key, JSON.stringify(data));
     }
 
+  };
+
+
+  // get values from local storage
+  function getValues() {
+
+    // test to see if there are any items in storage
+    var listCount = JSON.parse(localStorage.getItem("listSize"));
+
+    // if so - loop through them, passing each to the `appendValue()` function
+    if (localStorage.listSize != undefined ) {
+      for (i=1;i<=listCount;i++) {
+        var number = parseInt(i) + 1;
+        var listRow = jQuery.parseJSON(localStorage.getItem("item_" + i));
+        appendValue(listRow)
+      }; 
+    };
+  };
+
+
+  // append values to the dom
+  function appendValue(listRow) {
+    console.log(listRow)
   };
 
 
