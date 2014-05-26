@@ -5,7 +5,7 @@ $(function() {
   getValues()
 
   // handle button click
-  $('#add-btn').click(function() {
+  $('#add-btn').on('click', function() {
 
     // grab values of the inputs
     var item = $('#item-input').val();
@@ -25,7 +25,6 @@ $(function() {
 
       // if not empty
       validateValues(item, quantity, price)
-      location.reload();
     };
 
   });
@@ -84,6 +83,12 @@ $(function() {
 
       // remove data from dom
       $(".table").find('tr:gt(0)').remove();
+      $('#all-items').hide();
+      $('#show-btn').show()
+      $('#hide-btn').hide();
+      location.reload()
+
+      $('#alert').html('<br>');
 
       // call the `getValues()` function to get new data
       getValues()
@@ -126,16 +131,13 @@ $(function() {
         '</td></tr>');
     };
 
-    $('#all-items').show();
-    $('#show-btn').hide()
-    $('#hide-btn').show();
     $('#alert').html('<br>');
 
   };
 
 
   // grab id of the checkbox when clicked
-  $('.delete-btn').click(function(){
+  $('.delete-btn').on('click', function(){
 
     elementId = $(this).attr('id')
 
