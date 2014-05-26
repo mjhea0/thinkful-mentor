@@ -2,35 +2,29 @@ $(function() {
 
   console.log('ready!')
 
-  addValues()
   getValues()
 
-  // on click event ...
-  function addValues() {
+  // handle button click
+  $('#add-btn').click(function() {
 
-    // handle button click
-    $('#add-btn').click(function() {
+    // grab values of the inputs
+    var item = $('#item-input').val();
+    var quantity = $('#quantity-input').val();
+    var price = $('#price-input').val();
 
-      // grab values of the inputs
-      var item = $('#item-input').val();
-      var quantity = $('#quantity-input').val();
-      var price = $('#price-input').val();
+    // clear out errors/alerts
+    $('#alert').html('<br>');
 
-      // clear out errors/alerts
-      $('#alert').html('<br>');
+    // ensure no inputs are empty
+    if ((item === '') || (quantity === '') || (price === '')) {
+      // if empty
+      $('#alert').html('<span class="alert-text">All fields are required!</span>');
+    } else {
+      // if not empty
+      validateValues(item, quantity, price)
+    };
 
-      // ensure no inputs are empty
-      if ((item === '') || (quantity === '') || (price === '')) {
-        // if empty
-        $('#alert').html('<span class="alert-text">All fields are required!</span>');
-      } else {
-        // if not empty
-        validateValues(item, quantity, price)
-      };
-
-    });
-
-  };
+  });
 
 
   // validate values
@@ -59,17 +53,7 @@ $(function() {
       // calculate total
       var total = calculateTotal(quantityValue, floatPrice)
 
-      // append values to new table row
-      $('#my-values').append(
-        '<tr><td><input type="checkbox">'+
-        '</td><td>'+itemValue+
-        '</td><td>'+quantityValue+
-        '</td><td>$'+floatPrice+
-        '</td><td>$'+total+
-        '</td></tr>');
-      $('#alert').html('<br>');
-
-      // convert data to array
+      // convert data to a object
       data = {
         'id': new Date().getTime(),
         'name':itemValue,
@@ -88,7 +72,7 @@ $(function() {
       // update list size
       var listSize = parseInt(localStorage.listSize) + 1;
 
-      // pass the current size, plus the array to the `addValuesToStorage()` function
+      // pass the current size, plus the object to the `addValuesToStorage()` function
       addValuesToStorage(listSize, data)
 
       // call the `getValues()` function to get new data
@@ -96,10 +80,12 @@ $(function() {
 
     };
 
+
     // calculate total
     function calculateTotal(quantityValue, floatPrice) {
       return (quantityValue * floatPrice).toFixed(2)
     };
+
 
     // add values to local storage
     function addValuesToStorage(listSize, data) {
@@ -110,9 +96,62 @@ $(function() {
 
       // add to storage
       localStorage.setItem(key, JSON.stringify(data));
+
     }
 
   };
+
+
+  // append values to the dom
+  function appendValue(listRow, number) {
+
+    if (listRow.complete === 0) {
+      // append values to incomplete table
+      $('#my-values').append(
+        '<tr><td><input type="checkbox" class="checkbox" id="item_'+(number-1)+'">'+
+        '</td><td>'+listRow.name+
+        '</td><td>'+listRow.quantity+
+        '</td><td>$'+listRow.price+
+        '</td><td>$'+listRow.total+
+        '</td></tr>');
+    } else {
+      // append values to complete table 
+      $('#my-complete-values').append(
+        '<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;'+
+        '</td><td>'+listRow.name+
+        '</td><td>'+listRow.quantity+
+        '</td><td>$'+listRow.price+
+        '</td><td>$'+listRow.total+
+        '</td></tr>');
+    }
+
+  $('#alert').html('<br>');
+
+  };
+
+
+  // grab id of the checkbox when clicked
+  $('.checkbox').change(function(){
+
+    elementId = $(this).attr('id')
+
+    var grabItem = localStorage.getItem(elementId)
+
+    // update complete value to 1
+    data = jQuery.parseJSON(grabItem)
+    data["complete"] = 1
+
+    // remove element from dom
+    $('#'+elementId).remove()
+
+    // update storage
+    localStorage.removeItem(elementId);
+    localStorage.setItem(elementId, JSON.stringify(data));
+
+    // call the `getValues()` function to get new data
+    getValues()
+
+  });
 
 
   // get values from local storage
@@ -126,16 +165,20 @@ $(function() {
       for (i=1;i<=listCount;i++) {
         var number = parseInt(i) + 1;
         var listRow = jQuery.parseJSON(localStorage.getItem("item_" + i));
-        appendValue(listRow)
-      }; 
+        appendValue(listRow, number)
+      };
     };
   };
 
+  $('#complete-btn').click(function() {
+    $('#complete-items').toggle();
+    $('#incomplete-items').hide();
+  });
 
-  // append values to the dom
-  function appendValue(listRow) {
-    console.log(listRow)
-  };
+  $('#incomplete-btn').click(function() {
+    $('#incomplete-items').toggle();
+    $('#complete-items').hide();
+  });
 
 
 });

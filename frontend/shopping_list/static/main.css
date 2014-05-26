@@ -21,5 +21,7 @@ body {
   font-style: italic;
 }
 
-
+#incomplete-items, #complete-items {
+  display: none;
+}
 

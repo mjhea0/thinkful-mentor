@@ -9,8 +9,8 @@
   <body>
     <div class="container">
 
-      <span class="glyphicon glyphicon-shopping-cart"></span>
       <h1>My Shopping List</h1>
+      <p class="lead"><span class="glyphicon glyphicon-shopping-cart"></span> by Michael Herman</p>
       <br>
 
       <!-- add item form -->
@@ -26,50 +26,57 @@
         </div>
         &nbsp;&nbsp;
         <div class="form-group">  
-          <button type="button" class="btn btn-primary" id="add-btn">Add Item</button>
+          <button type="button" class="btn btn-default" id="add-btn">Add Item</button>
         </div>
       </form>
       <br>
       <h4 id="alert"><br></h4>
-      <hr><br>
+      <hr>
+      <button type="button" class="btn btn-primary" id="incomplete-btn">Incomplete Items</button>
+      <button type="button" class="btn btn-success" id="complete-btn">Completed Items</button>
+      <br>
+      <br>
 
       <!-- incomplete list -->
-      <h3>Incomplete</h3>
-      <br>
-      <table class="table">
-        <thead>
-          <tr>
-            <th></th>
-            <th class="centered">Item</th>
-            <th class="centered">Quantity</th>
-            <th class="centered">Unit Price</th>
-            <th class="centered">Total</th>
-          </tr>
-        </thead>
-        <tbody id="my-values">
-        </tbody>
-      </table>
-
-      <br><br>
+      <div id="incomplete-items">
+        <h3>Incomplete</h3>
+        <br>
+        <table class="table">
+          <thead>
+            <tr>
+              <th></th>
+              <th class="centered">Item</th>
+              <th class="centered">Quantity</th>
+              <th class="centered">Unit Price</th>
+              <th class="centered">Total</th>
+            </tr>
+          </thead>
+          <tbody id="my-values">
+          </tbody>
+        </table>
+      </div>
 
       <!-- complete list -->
-      <h3>Complete</h3>
-      <br>
-      <table class="table">
-        <thead>
-          <tr>
-            <th></th>
-            <th class="centered">Item</th>
-            <th class="centered">Quantity</th>
-            <th class="centered">Unit Price</th>
-            <th class="centered">Total</th>
-          </tr>
-        </thead>
-        <tbody id="my-values">
-        </tbody>
-      </table>
+      <div id="complete-items">
+        <h3>Complete</h3>
+        <br>
+        <table class="table">
+          <thead>
+            <tr>
+              <th></th>
+              <th class="centered">Item</th>
+              <th class="centered">Quantity</th>
+              <th class="centered">Unit Price</th>
+              <th class="centered">Total</th>
+            </tr>
+          </thead>
+          <tbody id="my-complete-values">
+          </tbody>
+        </table>
+      </div>
 
     </div>
+
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
     <script src="static/main.js"></script>
