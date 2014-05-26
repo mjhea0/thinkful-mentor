@@ -21,31 +21,25 @@
           &nbsp;
           <input type="number" class="form-control" id="price-input" placeholder="$0.00">
           &nbsp;&nbsp;
-          <button type="submit" class="btn btn-primary">Add</button>
+          <button type="button" class="btn btn-primary" id="add-btn">Add</button>
         </div>
       </form>
       <br><hr><br>
       <table class="table">
         <thead>
-          <tr>
+          <tr class="center-tag">
             <th>Item</th>
             <th>Quantity</th>
             <th>Unit Price</th>
             <th>Total</th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          </tr>
+        <tbody id="my-values">
         </tbody>
       </table>
     </div>
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="static/main.js"></script>
   </body>
 </html>

@@ -7,3 +7,8 @@
 #quantity-input, #price-input {
   max-width: 75px;
 }
+
+.center-tag {
+  text-align: center;
+}
+
