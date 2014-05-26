@@ -2,3 +2,7 @@
 
 1. validate input values with regex
 1. store data in browser's localstorage
+
+### Issues
+
+1. Update DOM (without refresh) after adding new items
