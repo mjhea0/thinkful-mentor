@@ -44,7 +44,7 @@ $(function() {
       $('#alert').html('<span class="alert-text">The quantity and price must be integers!</span>');
     } else {
       // if valid
-      
+
       // clear out errors/alerts and inputs
       $('#alert').html('');
       $('#item-input').val('');
@@ -66,6 +66,19 @@ $(function() {
         '</td><td>$'+total+
         '</td></tr>');
       $('#alert').html('<br>');
+
+      // convert data to array
+      data = {
+        'name':itemValue,
+        'quantity':quantityValue,
+        'price':floatPrice,
+        'total':total,
+        'complete':0, 
+      }
+
+      // add item to local storage
+      localStorage.setItem("listData", JSON.stringify(data));
+
     };
 
     // calculate total
