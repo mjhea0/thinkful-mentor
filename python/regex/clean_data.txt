@@ -1,6 +1,6 @@
 1	James Borg	888665555	1927-11-10	450 Stone	 Houston	 TX	M	5500
 2 	Franklin Wong	333445555	1945-12-08	638 Voss	 Houston	 TX	M	40000	5
-3 	Jennifer Wallace	987654321	1931-06-20	291 Berry	 Bellaire	 TX	F	43000	4
+3 	Jenn Wallace	987654321	1931-06-20	291 Berry	 Bellaire	 TX	F	43000	4
 4 	John Smith	123456789	1955-01-09	731 Fondren	 Houston	 TX	M	30000	5
 5 	Alicia Zelaya	999887777	1958-07-19	3321 Castle	 Spring	 TX	F	25000	4
 6 	Ramesh Narayan	666884444	1952-08-15	971 Fire Oak	 Humble	 TX	M	38000	5
