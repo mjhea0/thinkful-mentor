@@ -13,3 +13,8 @@
 1. http://www.realpython.com/learn/frontend/list/
 
 
+
+### Scope Issues
+
+When a new item is appended to the DOM, a refresh is necessary before it can be deleted.
+
