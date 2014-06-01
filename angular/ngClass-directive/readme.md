@@ -53,7 +53,109 @@ The `$index` property evalautes to the index value of the employee in the for lo
 
 This is very similar to the previous example. See if you can figure it out on your own.
 
-Another example: [http://jsfiddle.net/mjhea0/q8yLn/](http://jsfiddle.net/mjhea0/q8yLn/)
+Another similar example: [http://jsfiddle.net/mjhea0/q8yLn/](http://jsfiddle.net/mjhea0/q8yLn/)
+
+### Example 4: Strings
+
+The value of the input or dropdown element is added as a CSS class. 
+
+```html
+<div class="container" ng-app>
+    <form role="form">
+         <h1>ngClass example<br><span class="small">String Syntax</h1>
+        <br>
+        <div class="form-group">
+            <p>Use the dropdown to pick the class you want assign to the below 'h2' element. Or type the name of the class in the input box.</p>
+            <select class="form-control" ng-model="text">
+                <option value="">- Please pick a class -</option>
+                <option>selected</option>
+                <option>background</option>
+                <option>purple</option>
+                <option>text-danger</option>
+                <option>bigger</option>
+            </select>
+            <br>
+            <input class="form-control" ng-model="text" placeholder="- Please type a class -">
+            <br>
+             <h2 ng-class="text">Watch me change colors</h2>
+        </div>
+    </form>
+</div>
+```
+
+[http://jsfiddle.net/mjhea0/At5Qk/](http://jsfiddle.net/mjhea0/At5Qk/)
+
+### Example 5: Arrays
+
+This syntax allows you to apply more than one class to a single element. Change the value of the first dropdown to update the background color and the other dropdown to update the font color.
+
+
+```html
+<div class="container" ng-app>
+  <form role="form">
+    <h1>ngClass example<br><span class="small">Array Syntax</h1>
+    <br>
+    <div class="form-group">
+      <p>Use the dropdowns to pick the classes you want assigned to the below 'h2' element.
+      <select class="form-control" ng-model="background">
+        <option value="">- Class for the background color -</option>
+        <option>brown</option>
+        <option>red</option>
+        <option>green</option>
+        <option>blue</option>
+        <option>purple</option>
+      </select>
+      <br>
+      <select class="form-control" ng-model="text">
+        <option value="">- Class for the font color -</option>
+        <option>gray</option>
+        <option>pink</option>
+        <option>orange</option>
+        <option>white</option>
+        <option>black</option>
+      </select>
+      <br>
+      <h2 ng-class="[background, text]">Watch me change colors</h2>
+    </div>
+  </form>
+</div>
+```
+
+[http://jsfiddle.net/mjhea0/76bLd/](http://jsfiddle.net/mjhea0/76bLd/)
+
+### Example 6: Maps
+
+This syntax allows you to apply more than one class to a single element. Change the value of the first dropdown to update the background color and the other dropdown to update the font color.
+
+
+```html
+<div class="container" ng-app>
+  <form role="form">
+    <h1>ngClass example<br><span class="small">Map Syntax</h1>
+    <br>
+    <div class="form-group">
+      <p>Use the checkboxes to pick the class you want assigned to the below 'h2' element.
+      <div class="form-group">
+        <input type="checkbox" ng-model="selected"> selected class<br>
+        <input type="checkbox" ng-model="background"> background class<br>
+        <input type="checkbox" ng-model="purple"> purple class<br>
+        <input type="checkbox" ng-model="bigger"> bigger class<br>
+        <input type="checkbox" ng-model="reverse"> reverse class<br>
+      </div>
+      <br>
+      <h2 ng-class="{
+        'selected class': selected,
+        'background class': background,
+        'purple class': purple,
+        'bigger class': bigger,
+        'reverse class': reverse
+      }">Watch me change colors</h2>
+    </div>
+  </form>
+</div>
+```
+
+[http://jsfiddle.net/mjhea0/ebt3K/](http://jsfiddle.net/mjhea0/ebt3K/)
 
 <hr>
 
