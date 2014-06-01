@@ -2,16 +2,7 @@ $(function() {
 
   console.log('ready!')
 
-  // get items
-  $('#show-btn').on('click', function() {
-
-    // remove data from dom
-    $(".table").find('tr:gt(0)').remove();
-
-    // call the `getValues()` function to get new data
-    getValues()
-
-  });
+  getValues()
 
   // handle button click
   $('#add-btn').on('click', function() {
@@ -33,35 +24,29 @@ $(function() {
     } else {
 
       // if not empty
-      if (dataObject = validateValues(item, quantity, price)) {
-
-        // if valid
-        updateLocalStorage(dataObject)
-
-      }
-
+      validateValues(item, quantity, price)
     };
 
   });
 
 
-  // validate values using regex
+  // validate values
   function validateValues(itemValue, quantityValue, priceValue) {
 
-    // validate number
-    if ((validateNum(quantityValue)) || (validateNum(priceValue))) {
-
-      // if invalid
-      $('#alert').html('<span class="alert-text">The quantity and price must be integers!</span>');
-
-    // validate string
-    } else if (validateStr(itemValue)) {
+    // validate each value with regex
+    if (is_valid = !/[^0-9()]+[a-zA-Z]*/.test(itemValue)) { 
 
       // if invalid
       $('#alert').html('<span class="alert-text">The item name must be a string!</span>');
 
-      // if valid
+    } else if ((is_valid = !/^[0-9]*(\.[0-9]+)?$/.test(quantityValue)) || 
+
+      // if invalid
+      (is_valid = !/^[0-9]*(\.[0-9]+)?$/.test(priceValue))) {
+      $('#alert').html('<span class="alert-text">The quantity and price must be integers!</span>');
+
     } else {
+      // if valid
 
       // clear out errors/alerts and inputs
       $('#alert').html('');
@@ -75,7 +60,7 @@ $(function() {
       // calculate total
       var total = calculateTotal(quantityValue, floatPrice)
 
-      // convert data to an object
+      // convert data to a object
       data = {
         'name':itemValue,
         'quantity':quantityValue,
@@ -84,70 +69,52 @@ $(function() {
         'delete':0,
       }
 
-      // return object
-      return data
+      // test to see if there are any items in storage
+      if (localStorage.listSize == undefined ) {
+        // if not, set list size (number of items in storage) to 0
+        localStorage.setItem('listSize', 0)
+      };
+
+      // update list size
+      var listSize = parseInt(localStorage.listSize) + 1;
+
+      // pass the current size, plus the object to the `addValuesToStorage()` function
+      addValuesToStorage(listSize, data)
+
+      // remove data from dom
+      $(".table").find('tr:gt(0)').remove();
+      $('#all-items').hide();
+      $('#show-btn').show()
+      $('#hide-btn').hide();
+      location.reload()
+
+      $('#alert').html('<br>');
+
+      // call the `getValues()` function to get new data
+      getValues()
+
+    };
+
+
+    // calculate total
+    function calculateTotal(quantityValue, floatPrice) {
+      return (quantityValue * floatPrice).toFixed(2)
+    };
+
+
+    // add values to local storage
+    function addValuesToStorage(listSize, data) {
+
+      // create unique id
+      var key = 'item_' + listSize;
+      localStorage.setItem('listSize', listSize);
+
+      // add to storage
+      localStorage.setItem(key, JSON.stringify(data));
 
     }
 
   };
-
-
-  function updateLocalStorage(dataObject) {
-
-    //test to see if there are any items in storage
-    if (localStorage.listSize == undefined ) {
-
-      // if not, set list size (number of items in storage) to 0
-      localStorage.setItem('listSize', 0)
-
-    };
-
-    // update list size
-    var listSize = parseInt(localStorage.listSize) + 1;
-
-    // pass the current size, plus the object to the `addValuesToStorage()` function
-    addValuesToStorage(listSize, data)
-
-    // remove data from dom
-    $(".table").find('tr:gt(0)').remove();
-
-    $('#all-items').hide();
-    $('#show-btn').show()
-    $('#hide-btn').hide();
-    location.reload()
-
-    $('#alert').html('<br>');
-
-  };
-
-
-  // validate integers
-  function validateStr(value) {
-    if (!/[^0-9()]+[a-zA-Z]*/.test(value)) { return true };
-  };
-
-  function validateNum(value) {
-    if (!/^[0-9]*(\.[0-9]+)?$/.test(value)) { return true };
-  };
-
-
-  // calculate total
-  function calculateTotal(quantityValue, floatPrice) {
-    return (quantityValue * floatPrice).toFixed(2)
-  };
-
-
-  // add values to local storage
-  function addValuesToStorage(listSize, data) {
-
-    // create unique id
-    var key = 'item_' + listSize;
-    localStorage.setItem('listSize', listSize);
-
-    // add to storage
-    localStorage.setItem(key, JSON.stringify(data));
-
-  }
 
 
   // append values to the dom
@@ -160,8 +127,7 @@ $(function() {
         '</td><td>'+listRow.quantity+
         '</td><td>$'+listRow.price+
         '</td><td>$'+listRow.total+
-        // '</td><td><button type="button" class="btn btn-warning btn-sm delete-btn" id="item_'+(number-1)+'">Delete</button>'+
-        '</td><td><div class="centered"><input type="checkbox" class="checkbox" id="item_'+(number-1)+'"></div>'+
+        '</td><td><button type="button" class="btn btn-warning btn-sm delete-btn" id="item_'+(number-1)+'">Delete</button>'+
         '</td></tr>');
     };
 
@@ -169,17 +135,9 @@ $(function() {
 
   };
 
-  $(".checkbox").change(function() {
-    if(this.checked) {
-        console.log("hey")
-    }
-  });
 
-
-  // grab id on button click
+  // grab id of the checkbox when clicked
   $('.delete-btn').on('click', function(){
-
-    console.log("test")
 
     elementId = $(this).attr('id')
 
