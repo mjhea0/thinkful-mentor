@@ -24,6 +24,10 @@
       .head, .add {
         margin-left:40px;
       }
+      .container {
+        padding: 50px;
+        max-width: 500px;
+      }
     </style>
     <script>
       function TodoCtrl($scope) {
@@ -36,19 +40,19 @@
         
         $scope.addTodo = function () {
           $scope.todos.push({text:$scope.formTodoText});
-          $scope.formTodoText = '';
+          $scope.formTodoText = ''
         };
        
       }
     </script>
   </head>
   <body>
-    <div ng-controller="TodoCtrl">
+    <div class="container" ng-controller="TodoCtrl">
       <h2 class="head">To do ...</h2>
       <ul class="checkboxList">
         <li class="unchecked" ng-repeat="todo in todos" ng-class="{'checked': todo.check}">
-          <input type="checkbox" ng-model="todo.check"/>
-          <span class="done-{{todo.done}}">{{todo.text}}</span>
+          <input type="checkbox" ng-model="todo.check">
+          <span>{{todo.text}}</span>
         </li>
       </ul>
       <form class="add">
