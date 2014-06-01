@@ -125,7 +125,7 @@ This syntax allows you to apply more than one class to a single element. Change 
 
 ### Example 6: Maps
 
-This syntax allows you to apply more than one class to a single element. Change the value of the first dropdown to update the background color and the other dropdown to update the font color.
+You can add CSS classes to an element using key/value pairs, where the key is the label and the value is the name of the actuval class. When a key evaluates as true - that is, when an input is checked - then the key's value is the class that's assigned to the element. If more than one keys evaluate to true, then multiple classes will be added. For example, check the "purple class" as well as the "bigger class".
 
 
 ```html
