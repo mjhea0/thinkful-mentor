@@ -53,6 +53,8 @@ The `$index` property evalautes to the index value of the employee in the for lo
 
 This is very similar to the previous example. See if you can figure it out on your own.
 
+Another example: [http://jsfiddle.net/mjhea0/q8yLn/](http://jsfiddle.net/mjhea0/q8yLn/)
+
 <hr>
 
 Think about how you could use this directive for other events, like -
