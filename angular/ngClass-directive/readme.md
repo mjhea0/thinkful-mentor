@@ -15,8 +15,7 @@ Here, each todo in the list is appended to an `li` along with a checkbox. When t
 
 Think about how you could use this directive for other events, like -
 
-1. Hovering over an element
-1. On a button click
+1. On a mouseover or button click
 1. When the text value of an element changes
 
 *Note*: You do not have to set a default class. Instead, you could just have a class applied when the item is checked.
