@@ -11,3 +11,11 @@ def fizzbuzz(upper_limit):
 
 if __name__ == '__main__':
     fizzbuzz(30)
+
+
+"""
+Does the main routine make sense?
+
+If not, please read this:
+https://github.com/mjhea0/thinkful-mentor/tree/master/python/main_routine
+"""
