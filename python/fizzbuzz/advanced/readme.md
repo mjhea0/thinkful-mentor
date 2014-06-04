@@ -26,7 +26,7 @@ Steps ...
 
 1. How are your tests? Still passing?
 
-1. Finally, you probably used the modulus operator, '%', to to test if a number is a multiple of 3, 5, or 15. Refactor your code so you are not using that operator.
+1. Finally, you probably used the modulus operator, `%`, to to test if a number is a multiple of 3, 5, or 15. Refactor your code so you are not using that operator.
 
 1. Make sure you have 4 total functions that are named appropriately. Add docstrings to each. Make sure all your tests pass. Then PUSH your code to Github. 
 
