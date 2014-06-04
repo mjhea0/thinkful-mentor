@@ -36,7 +36,7 @@ Steps ...
 
 1. In the final iteration of your program, look for each concept. Add a comment next to each and label them appropriately. Add any additional comments that you find necessary that will help you understand each concept.
 
-1. What did we not covered? Control Flow (`if`-`elif`-`else` statements) and Test Driven Development. Homework!
+1. What did we not cover? Control Flow (`if`-`elif`-`else` statements) and Test Driven Development. Homework!
 
 ## Homework
 
