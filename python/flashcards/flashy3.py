@@ -10,6 +10,41 @@ to do:
 5. make sure you don't repeat options (recursive function)
 6. error handling - input (must be number!)
 
+CODE REVIEW:
+
+I would have FlashCards encapsulate it’s data. So the file open would be in
+the FlashCards class (probably in the init) or if not in the read_files
+function. Currently the files are just text files, but if you were to change
+it to a database, they way you have it structured now, your main function
+would have to know about how to access the database and thus would have to
+know about the back-end storage for the FlashCards. This breaks encapsulation.
+Consumers of your class shouldn’t have to know / care about how the 
+flashcards are stored… they should just use it.
+
+For display_questions. It’s actually doing doing things. 
+Retrieving a question (with possible answers) and prompting the user for a choice.  
+So that to me should be two functions.  get_questions and prompt user.  
+However I wouldn’t have the FlashCards do any user interaction (i.e. not prints).  
+What if you wanted to use FlashCards in a web app?  Then you would have to change 
+the get_questions to return html instead of text. 
+(or inherit and create an HTMLFlashCards class).  
+But then  your class is not just flash cards but also FlashCardsDisplay, 
+so it’s covering to much stuff.  If however you FlashCards.display_questsion 
+(which should be called get questions) just returns the question and the 
+possible answers perhaps in a dictionary i.e. return 
+{‘question’ : the_question, ‘answers’: answerList}.  
+Then it would be up to the client to decide how to display that data to the user, 
+which means you could reuse your class for a web page, 
+a terminal, an iPhone or whatever….
+
+3.  Similarly to 2 above you want the FlashCards class to manage it’s own data, 
+so it can be self contained and encapsulated which means read_files 
+should probably store the content_list in a member variable instead of returning it.  
+This way you don’t need to pass back content_list to display_questions and as a 
+consumer of the FlashCards class you don’t need to worry about the underlying 
+storage / data structure at all.
+
+
 """
 
 from os import system, name
