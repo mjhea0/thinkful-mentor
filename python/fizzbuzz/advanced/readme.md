@@ -38,7 +38,7 @@ Before you start, in the final iteration of your program, look for each concept.
 
 ## Homework
 
-1. Update the program so that the user can supply a command line argument for the upper limit. If none is provided, then the user is asked for the upper limit. 
+1. Update the program so that the user can supply a command line argument for the upper limit. If an argument is not provided then the user should be to supply an upper limit. 
 1. What happens if the user enters a number of 0 or a floating point? Handle each accordingly.
 1. Wait a week. Do this entire program over again but this time utilize test driven development. Write a test. Watch it fail. Write just enough code for it to pass. Rinse then repeat.
 1. Replace the `fizzbuzz` function with this:
