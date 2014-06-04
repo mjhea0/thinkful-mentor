@@ -32,11 +32,9 @@ Steps ...
 
 ## Concepts
 
-1. This assignment covered the following concepts - Data Types, Exception Handling, Functions, Unit Tests, Data Structures, and Algorithms. 
+This assignment covered the following concepts - Data Types, Exception Handling, Functions, Unit Tests, Data Structures, and Algorithms. With regard to the Python basic, what did we not cover? Control Flow (`if`-`elif`-`else` statements) and Test Driven Development. Homework!
 
-1. In the final iteration of your program, look for each concept. Add a comment next to each and label them appropriately. Add any additional comments that you find necessary that will help you understand each concept.
-
-1. What did we not cover? Control Flow (`if`-`elif`-`else` statements) and Test Driven Development. Homework!
+Before you start, in the final iteration of your program, look for each concept. Add a comment next to each and label them appropriately. Add any additional comments that you find necessary that will help you understand each concept.
 
 ## Homework
 
