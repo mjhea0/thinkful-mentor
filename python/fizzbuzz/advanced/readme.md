@@ -14,7 +14,7 @@ Steps ...
 
 1. Create a separate file to test your code with unit tests. Name this file *tests.py*. Write tests for each scenario (e.g, multiple of 3, 5, 15, etc.).
 
-1. One potential error is that the user supplies a string instead of an integer for the `fizzbuzz()` function's argument. What happens in this situation? Run your code and find out. Then update your code so that if a string is supplied, the code enters a loop where the user is asked to supply a new number. This loop should continue to loop, asking for a new value, and only end once an integer is provided. Since this is a completely new feature, write a new function for this. This function should be called from `fizzbuzz()`.
+1. One potential error is that the user supplies a string instead of an integer for the `fizzbuzz()` function's argument. What happens in this situation? Run your code and find out. Then update your code so that if a string is supplied, the code enters a loop where the user is asked to supply a new number. This loop should continue to loop, asking for a new value, ending only when an integer is provided. Since this is a completely new feature, write a new function for this. This function should be called from `fizzbuzz()`.
 
 1. Refactor your code once again so that the function's argument is obtained by asking the user for a number. Use a separate function for this. How will this affect your main routine? Where is the best place to call this function?
 
