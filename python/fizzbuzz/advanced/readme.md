@@ -12,7 +12,7 @@ Steps ...
 
 1. Refactor again. This time, update the function so that instead of printing the output, all numbers and strings are added to a single list. Return the entire list, which you should then loop through within the main routine and then print the numbers. 
 
-1. Create a separate file to test your code with unit tests. Name this file *tests.py*.
+1. Create a separate file to test your code with unit tests. Name this file *tests.py*. Write tests for each scenario (e.g, multiple of 3, 5, 15, etc.).
 
 1. One potential error is that the user supplies a string instead of an integer as the `fizzbuzz()` function's argument. What happens in this situation? Run your code and find out. Then update your code so that if a string is supplied, the code enters a loop where the user is asked to supply a new number. This loop should continue to loop, asking for a new value, and only end once an integer is provided. Since this is a completely new feature, write a new function for this. This function should be called from `fizzbuzz()`.
 
@@ -22,7 +22,7 @@ Steps ...
 
 1. Run your tests again to make sure they didn't break.
 
-1. Let's add one more function that takes two integers as arguments and returns true if the first number is evenly divisible by the second, otherwise it returns false. Refactor the `fizzbuzz()` function so that it calls this function for each case (e.g, multiple of 3, 5, 15) instead of performing the logic itself.
+1. Let's add one more function that takes two integers as arguments and returns true if the first number is evenly divisible by the second, otherwise it returns false. Refactor the `fizzbuzz()` function so that it calls this function for each scenario (e.g, multiple of 3, 5, 15, etc.) instead of performing the logic itself.
 
 1. How are your tests? Still passing?
 
