@@ -18,7 +18,7 @@ Steps ...
 
 1. Refactor your code once again so that the function's argument is obtained by asking the user for a number. Use a separate function for this. How will this affect your main routine? Where is the best place to call this function?
 
-1. Update your main routine so that you first call the function to get the value from the user. The return value is then past to a function for validation, which you've already written. Make sure you remove the function call from `fizzbuzz()` where you first set up the validation in Step 6.
+1. Update your main routine so that you first call the function to get the value from the user. The return value is then passed to a function for validation, which you've already written. Make sure you remove the function call from `fizzbuzz()` where you first set up the validation in Step 6.
 
 1. Run your tests again to make sure they didn't break.
 
