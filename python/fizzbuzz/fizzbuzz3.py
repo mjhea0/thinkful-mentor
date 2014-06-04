@@ -22,21 +22,19 @@ def convert_value(upper_limit):
 
 def fizzbuzzed(upper_limit=30):
     for i in xrange(1, upper_limit+1):
-        if test(i, 15):
+        if is_divisible(i, 15):
             print "FizzBuzz"
-        elif test(i, 5):
+        elif is_divisible(i, 5):
             print "Fizz"
-        elif test(i, 3):
+        elif is_divisible(i, 3):
             print "Buzz"
         else:
             print i
 
 
-def test(num1, num2):
-    if num1 % num2 == 0:
-        return True
-    else:
-        return False
+def is_divisible(num1, num2):
+    return num1 % num2 == 0
+
 
 if __name__ == '__main__':
     value = get_value()
