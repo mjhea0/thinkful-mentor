@@ -32,7 +32,7 @@ Steps ...
 
 ## Concepts
 
-1. This assignment covered the following concepts - Data Types, Exception Handling, Functions, Unit Tests, Data Structures, and Algorithms
+1. This assignment covered the following concepts - Data Types, Exception Handling, Functions, Unit Tests, Data Structures, and Algorithms. 
 
 1. In the final iteration of your program, look for each concept. Add a comment next to each and label them appropriately. Add any additional comments that you find necessary that will help you understand each concept.
 
