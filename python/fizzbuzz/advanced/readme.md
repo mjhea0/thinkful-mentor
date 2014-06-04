@@ -59,4 +59,4 @@ Before you start, in the final iteration of your program, look for each concept.
 
 	Update the program so that all of the tests still pass. 
 
-1. Share your code on [Code Review Stack Exchange](http://codereview.stackexchange.com/). Ask for feedback as well as an additional stretch goal. 
+1. Share your code on [Code Review Stack Exchange](http://codereview.stackexchange.com/). Ask for feedback as well as an additional stretch goal for you to implement.
