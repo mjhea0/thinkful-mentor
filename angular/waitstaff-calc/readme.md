@@ -24,6 +24,6 @@ http://www.realpython.com/learn/waitstaff-calc/
 
   Or - can you I regex `<input type="text" pattern="\d*">` ?
 
-  **Update**: Ripped out Angular validation, let HTML5 handle it. 
+  **Update**: Ripped out Angular validation, let HTML5 handle it. (look into this - http://www.html5rocks.com/en/tutorials/forms/constraintvalidation/)
 
 2. Add local storage
