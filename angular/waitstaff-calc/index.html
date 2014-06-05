@@ -23,13 +23,13 @@
           <!-- call validate() function on click/submit -->
           <form name="mealForm" ng-submit="validate(); submitted=true;"> 
             <div class="form-group">
-              <input class="form-input" type="number" placeholder="Enter the meal price ..." name="mealData.mealPrice" ng-model="mealData.mealPrice" min="0" required>
+              <input class="form-input" type="number" placeholder="Enter the meal price ..." name="mealData.mealPrice" ng-model="mealData.mealPrice" min="0" step=".01" required>
             </div>
             <div class="form-group">
-              <input class="form-input" type="number" placeholder="Enter the tax rate ... "name="mealData.taxRate" ng-model="mealData.taxRate" min="0" max="100" required>
+              <input class="form-input" type="number" placeholder="Enter the tax rate ... "name="mealData.taxRate" ng-model="mealData.taxRate" min="0" max="100" step=".01" required>
             </div>
             <div class="form-group">
-              <input class="form-input" type="number" placeholder="Enter the tip percentage ..." name="mealData.tipRate" ng-model="mealData.tipRate" min="0" max="100" required>
+              <input class="form-input" type="number" placeholder="Enter the tip percentage ..." name="mealData.tipRate" ng-model="mealData.tipRate" min="0" max="100" step=".01" required>
             </div>          
             <input class="btn btn-default btn-sm" type="submit" value="Submit">
             <input class="btn btn-default btn-sm" type="button" value="Clear" ng-click="clear()"> 
