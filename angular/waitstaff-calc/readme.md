@@ -14,7 +14,8 @@ There are three main components to the interface. Here's how each one should wor
 
 ## URL
 
-http://www.realpython.com/learn/waitstaff-calc/
+1. http://www.realpython.com/learn/waitstaff-calc/
+2. http://www.realpython.com/learn/waitstaff-calc-mobile/
 
 ## To do
 
