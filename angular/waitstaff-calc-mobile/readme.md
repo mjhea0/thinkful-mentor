@@ -10,20 +10,12 @@ There are three main components to the interface. Here's how each one should wor
 
 1. Note the "Reset" button in the bottom right of the interface. When the user clicks this button, the app should return to its initial state. All of the cumulative info should reset.
 
-**I updated the section names and changed the functionality of the "Reset" button.**
+**I updated the section names and changed the functionality of the "Reset" button. MOBILE STYLE**
 
 ## URL
 
-http://www.realpython.com/learn/waitstaff-calc/
+http://www.realpython.com/learn/waitstaff-calc-mobile/
 
 ## To do
 
-1. Form validation
-
-  Form validation does not work right. When the type is set to "number", if you enter a non-number, the form thinks the input is empty. How to fix - set the type to text, write function to convert to int, handle errors appropriately.
-
-  Or regex - `<input type="text" pattern="\d*">` ?
-
-  **Update**: Ripped out Angular validation, let HTML5 handle it. (look into this - http://www.html5rocks.com/en/tutorials/forms/constraintvalidation/)
-
-2. Add local storage
+1. Add local storage
