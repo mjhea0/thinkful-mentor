@@ -22,7 +22,7 @@ http://www.realpython.com/learn/waitstaff-calc/
 
   Form validation does not work right. When the type is set to "number", if you enter a non-number, the form thinks the input is empty. How to fix - set the type to text, write function to convert to int, handle errors appropriately.
 
-  Or - can you I regex `<input type="text" pattern="\d*">` ?
+  Or regex - `<input type="text" pattern="\d*">` ?
 
   **Update**: Ripped out Angular validation, let HTML5 handle it. (look into this - http://www.html5rocks.com/en/tutorials/forms/constraintvalidation/)
 
