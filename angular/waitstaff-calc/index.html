@@ -3,13 +3,14 @@
   <head>
     <title>Waitstaff Calculator, powered by Angular</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- stylsheets -->
     <link href="http://netdna.bootstrapcdn.com/bootswatch/3.1.1/yeti/bootstrap.min.css" rel="stylesheet" media="screen">
     <link href="main.css" rel="stylesheet" media="screen">
   </head>
 
     <div class="container" ng-app="waitstaff" ng-controller="waitstaffController">
 
-      <h1 class="centered">Waitstaff Calculator</h1>
+      <h1 class="centered">Waitstaff Calculator<br><p class="small">Powered by Angular</p></h1>
 
       <hr>
       <br>
@@ -19,6 +20,7 @@
         <div id="box" class="col-md-3 col-md-offset-1">
           <h2>Meal Details</h2>
           <br>
+          <!-- call validate() function on click/submit -->
           <form name="mealForm" ng-submit="validate(); submitted=true;"> 
             <div class="form-group">
               <input class="form-input" type="number" placeholder="Enter the meal price ..." name="mealData.mealPrice" ng-model="mealData.mealPrice" min="0" required>
@@ -36,6 +38,7 @@
           <br>
         </div>
 
+        <!-- summary -->
         <div class="col-md-6 col-md-offset-1">
           <div class="row">
             <div class="col-md-6">
@@ -62,12 +65,15 @@
         </div>  
 
       </div>
+      <!-- for my sanity -->
       <h3>Sanity Check:</h3>
       <p>{{ mealData }}</p>
       <p>{{ charges }}</p>
       <p>{{ earnings }}</p>
+      <br>
     </div>
 
+    <!-- github link -->
     <a href="https://github.com/mjhea0/thinkful-mentor/tree/master/angular/waitstaff-calc"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
 
     <!-- scripts -->
