@@ -2,6 +2,8 @@
 
 ## Sample
 
+http://waitflask.herokuapp.com/
+
 ## Setup
 
 1. clone
