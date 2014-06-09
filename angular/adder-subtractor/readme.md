@@ -2,6 +2,10 @@
 
 http://www.backwardsteps.com/adder-subtractor/
 
+## To do
+
+Gracefully handle spaces in numbers - "2 0"
+
 ## Assignment
 
 In this assignment you'll need to build a simple static web page that allows a user to add and subtract two numbers. Building this app will demonstrate your compentency with web basics. 
