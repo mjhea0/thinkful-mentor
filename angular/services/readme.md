@@ -101,7 +101,7 @@ app.controller('myController', function($scope, calculateService) {
 
 And you're app should be working. Test it out.
 
-***
+## Conclusion
 
 Hopefully, you now have a better sense as to - 
 
