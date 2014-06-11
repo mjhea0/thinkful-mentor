@@ -59,7 +59,7 @@ app.controller('myController', function($scope) {
 });
 ```
 
-> You can grab the code from [this](https://github.com/mjhea0/thinkful-mentor/tree/master/angular/services) repo.
+> You can grab the code from [this](https://github.com/mjhea0/thinkful-mentor/tree/master/angular/services) repo or from [JSFiddle](http://jsfiddle.net/mjhea0/fS4P6/).
 
 So, this just takes an input value and multiplies it by 10 in the `calculate()` function, appending the results to the DOM. Not only is the controller defining scope - but it also calculates the total. Despite this being a small app, too much is happening in the controller. We should seperate out the calculate `function()` into a seperate service.
 
@@ -99,7 +99,7 @@ app.controller('myController', function($scope, calculateService) {
 });
 ```
 
-And you're app should be working. Test it out.
+And you're app should be working. Test it out. [JSFiddle](http://jsfiddle.net/mjhea0/Q9b23/)
 
 ## Conclusion
 
