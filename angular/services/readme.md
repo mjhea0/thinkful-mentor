@@ -11,7 +11,7 @@ Much to my surprise, the Angular [documentation](https://docs.angularjs.org/guid
 
 > Angular offers several useful services (like $http), but for most applications you'll also want to create your own.
 
-Services are powerful in that they help keep your code DRY by encapsulating functionlity. Simply from an architecture standpoint, services help seperate out concerns, ensuring that each object is responsible for a single piece of functionality. For example, it's common for beginners to put *all* of their app's functionality into the controller. This if fine for smaller apps, but just know that it's not a good practice and your controller will balloon quickly as your app scales. 
+Services are powerful in that they help keep your code DRY by encapsulating functionlity. Simply from an architecture standpoint, services help seperate out concerns, ensuring that each object is responsible for a single piece of functionality. For example, it's common for beginners to put *all* of their app's functionality into the controller. This is fine for smaller apps, but just know that it's not a good practice and your controller will balloon quickly as your app scales. 
 
 Get in the habit early on to seperate concerns. If you're controller is handling more than just defining the scope or initial state of your app, connecting your models and views, then you are *probably* doing too much.
 
