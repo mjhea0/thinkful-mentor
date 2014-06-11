@@ -106,8 +106,8 @@ And you're app should be working. Test it out.
 Hopefully, you now have a better sense as to - 
 
 - What a service is,
-- Why you want to use services, and
-- How to use services.
+- Why you should use them, and
+- How to use them.
 
 Want some practice? Create seperate services fo each piece of functionality in [this](https://github.com/mjhea0/thinkful-mentor/tree/master/angular/waitstaff-flask) app's controller. Remember: The controller is responsible for defining scope, all else should be moved out of the controller altogether. If you need help, start by creating a service that handles the actual API calls.
 
