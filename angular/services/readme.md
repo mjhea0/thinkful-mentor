@@ -84,7 +84,7 @@ app.factory('calculateService', function(){
 });
 ```
 
-This code creates a service called `calculateService`. You may be wondering why we have to use the `factory()` method for this instead of just a regular function. It's simple: That method registers the service with Angular, so Angular is aware of it's existence, it can be dependency injected into the controller, giving us access to the defined functions - e.g, `calculate` within the controller. We can now use this in multiple places within our application, allowing for easy code reuse. 
+This code creates a service called `calculateService`. You may be wondering why we have to use the `factory()` method for this instead of just a regular function. It's simple: That method registers the service with Angular, so Angular is aware of it's existence, so it can be dependency injected into the controller, giving us access to the defined functions - e.g, `calculate` within the controller. We can now use this in multiple places within our application, allowing for easy code reuse. 
 
 So, we have simply abstracted the logic of taking the user inputted number and multiplying it by 10. 
 
