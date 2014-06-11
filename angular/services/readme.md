@@ -1,6 +1,6 @@
 # Primer on AngularJS Service Types
 
-Much to my surprise, the Angular [documentation](https://docs.angularjs.org/guide/services) provides a great of services: 
+Much to my surprise, the Angular [documentation](https://docs.angularjs.org/guide/services) provides a great of definition services: 
 
 > Angular services are substitutable objects that are wired together using dependency injection (DI). You can use services to organize and share code across your app.
 
@@ -11,85 +11,102 @@ Much to my surprise, the Angular [documentation](https://docs.angularjs.org/guid
 
 > Angular offers several useful services (like $http), but for most applications you'll also want to create your own.
 
-Services are powerful in that they help keep your code DRY by encapsulating functionlity. Simply from an architecture stanpoint, services help seperate concerns, ensuring that each object is responsible for a single piece of functionality. For example, it's common for beginners to put *all* of their app's functionality into the controller. This if fine for smaller apps, but just know that it's not a good practice and your controller will balloon quickly as your app scales. 
+Services are powerful in that they help keep your code DRY by encapsulating functionlity. Simply from an architecture standpoint, services help seperate out concerns, ensuring that each object is responsible for a single piece of functionality. For example, it's common for beginners to put *all* of their app's functionality into the controller. This if fine for smaller apps, but just know that it's not a good practice and your controller will balloon quickly as your app scales. 
 
-Get in the habit early to seperate concerns. If you're controller is handling more than just defining the scope or initial state of your app, connecting your models and views, then you are *probably* doing too much.
+Get in the habit early on to seperate concerns. If you're controller is handling more than just defining the scope or initial state of your app, connecting your models and views, then you are *probably* doing too much.
 
-We are all guilty of this:
+We are all (err, I am) guilty of this. Let's look at a very simple app ...
+
+HTML:
+
+```html
+<!doctype html>
+<html lang="en" ng-app='myApp'>
+<head>
+  <meta charset="UTF-8">
+  <title>Angular Boilerplate</title>
+  <!-- syles -->
+  <link href="http://netdna.bootstrapcdn.com/bootswatch/3.1.1/yeti/bootstrap.min.css" rel="stylesheet" media="screen">
+  <link href="main.css" rel="stylesheet" media="screen">
+</head>
+  <body>
+    <div class="container">
+      <div ng-controller="myController">
+        <h1>Enter Quantity:</h1>
+        <input type="number" ng-model="quantity"></p>
+        <h2>Total Cost: {{calculate(quantity) | currency}}</h2>
+      </div>
+    </div>
+    <!-- scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js" type="text/javascript"></script>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="main.js" type="text/javascript"></script>
+  </body>
+</html>
+```
+
+Javascript:
 
 ```javascript
-app.controller('earningsController', function($scope, $http) {
+var app = angular.module('myApp', [])
 
-  var getData = function() {
-    $http.get('/api/v1/earnings')
-    .success(function(items) {
-      console.log(items)
-      $scope.items = items;
-    })
-    .error(function(items) {
-      console.log('Error: ' + items);
-    });
-  };
-
-  var init = function() {
-
-    // totals
-    $scope.mealData = {};
-    $scope.charges = {};
-
-    // total values
-    $scope.charges.subtotal = 0;
-    $scope.charges.tip = 0;
-    $scope.charges.total = 0;
-    $scope.submitted = false;
-  };
-
-  // call init(), getData() functions
-  init(); 
-  getData();
-
-  // compute totals
-  var compute = function() {
-
-    // total per customer
-    $scope.charges.subtotal = ($scope.mealData.mealPrice * (1 + $scope.mealData.taxRate/100));
-    $scope.charges.tip = $scope.charges.subtotal * $scope.mealData.tipRate/100;
-    $scope.charges.total = $scope.charges.subtotal + $scope.charges.tip;
-
-    // post request
-    $http.post(
-      '/api/v1/earnings',
-      JSON.stringify($scope.mealData),
-      {'Content-Type': 'application/json'}
-    )
-    .success(function(data) {
-      console.log(data)
-      getData();
-    });
-  };
-
-  // validate data
-  $scope.validate = function() {
-    if($scope.mealForm.$valid) {
-      compute();  // run form validation before computing totals
-    }
+app.controller('myController', function($scope) {
+  $scope.quantity = 100;
+  $scope.calculate = function(number) {
+    return number * 10;
   }
-
-  // clear input fields
-  $scope.clear = function() {
-    $scope.mealData = {};
-    $scope.charges = {"subtotal":0,"tip":0,"total":0}
-    $scope.submitted = false;
-  }
-
 });
 ```
 
-Yes, I wrote this code. (Mantra: *I am not my code*) Not only am I defining scope - but also making an API call, consuming data, calculating totals, handling validation, and so forth, all in the controller. Too much is happening in the controller, it's not DRY, and if I continue writing code like this in my controller, the app will become unmanageable very quickly.
+So, this just takes an input value and multiplies it by 10 in the calculate function, appending the results to the DOM. Not only am I defining scope - but also making calculating totals. Despite this being a small app, too much is happening in the controller. We should seperate out the calculate function into a seperate service.
 
-This is where services come into play. 
+## Creating a custom service
 
+By moving the business logic out of the controller, abstracting much of the code, our controller becomes leaner. *It's a good practice to write fat services and lean controllers*.
 
+To do this, we are going use a service type called a factory, which is the most common type.
 
+> This is a good time to stop and learn the major service types - constants, values, services, providers, decorators. Check out [this](http://angular-tips.com/blog/2013/08/understanding-service-types/) excellent article for more on the various service types and how and when to use them. 
 
+Within the same JS file add the following code beneath the controller:
 
+```javascript
+// Service 
+app.factory('calculateService', function(){
+  return {
+    calculate: function(number){
+      return number * 10
+    }  
+ }               
+});
+```
+
+This code creates a service called `calculateService`. You may be wondering why we have to use the `factory()` method for this instead of just a regular function. It's simple: That method registers the service with Angular, so Angular is aware of it's existence, it can be dependency injected into the controller, giving us access to the defined functions - e.g, `calculate` within the controller. We can now use this in multiple places within our application, allowing for easy code reuse. 
+
+So, we have simply abstracted the logic of taking the user inputted number and multiplying it by 10. 
+
+Now update the controller:
+
+```javascript
+app.controller('myController', function($scope, calculateService) {
+  $scope.quantity = 100;
+   $scope.calculate = function(number) {                      
+    return calculateService.calculate(number);
+  }
+});
+```
+
+And you're app should be working. Test it out.
+
+<hr>
+
+Hopefully, you now have a better sense as to - 
+
+- What a service is,
+- Why you would want to use a service, and
+- How you use services.
+
+Want some practice? Create seperate services fo each piece of functionality in [this](https://github.com/mjhea0/thinkful-mentor/tree/master/angular/waitstaff-flask) app's controller. Remember: The controller is responsible for defining scope, all else should be moved out of the controller altogether. If you need help, start by creating a service that handles the actual API calls.
+
+Good luck!
