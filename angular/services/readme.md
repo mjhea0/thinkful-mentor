@@ -17,7 +17,7 @@ Get in the habit early on to seperate concerns. If you're controller is handling
 
 We are all (err, I am) guilty of this. Let's look at a very simple app ...
 
-HTML:
+#### HTML:
 
 ```html
 <!doctype html>
@@ -46,7 +46,7 @@ HTML:
 </html>
 ```
 
-Javascript:
+#### Javascript:
 
 ```javascript
 var app = angular.module('myApp', [])
@@ -58,6 +58,8 @@ app.controller('myController', function($scope) {
   }
 });
 ```
+
+> You can grab the code from [this](https://github.com/mjhea0/thinkful-mentor/tree/master/angular/services) repo.
 
 So, this just takes an input value and multiplies it by 10 in the calculate function, appending the results to the DOM. Not only am I defining scope - but also making calculating totals. Despite this being a small app, too much is happening in the controller. We should seperate out the calculate function into a seperate service.
 
