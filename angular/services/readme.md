@@ -11,7 +11,7 @@ Much to my surprise, the Angular [documentation](https://docs.angularjs.org/guid
 
 > Angular offers several useful services (like $http), but for most applications you'll also want to create your own.
 
-Services are powerful in that they help keep your code DRY by encapsulating functionlity. Simply from an architecture standpoint, services help seperate out concerns, ensuring that each object is responsible for a single piece of functionality. For example, it's common for beginners to put *all* of their app's functionality into the controller. This is fine for smaller apps, but just know that it's not a good practice and your controller will balloon quickly as your app scales. 
+Services are powerful in that they help keep your code DRY by encapsulating functionlity. From an architecture standpoint alone, services help seperate out concerns, ensuring that each object is responsible for a single piece of functionality. For example, it's common for beginners to put *all* of their app's functionality into the controller. This is fine for smaller apps, but just know that it's not a good practice and your controller will balloon quickly as your app scales. 
 
 Get in the habit early on to seperate concerns. If you're controller is handling more than just defining the scope or initial state of your app, connecting your models and views, then you are *probably* doing too much.
 
@@ -69,7 +69,7 @@ By moving the business logic out of the controller, abstracting much of the code
 
 To do this, we are will use service type called a factory, which is the most common type.
 
-> This is a good time to stop and learn the major service types - constants, values, services, providers, decorators. Check out [this](http://angular-tips.com/blog/2013/08/understanding-service-types/) excellent article for more on the various service types and how and when to use them. 
+> This is a good time to stop and learn the major service types - constants, values, services, providers, decorators. Check out [this](http://angular-tips.com/blog/2013/08/understanding-service-types/) excellent article for more on the various service types and how and when to use them. All are slightly different, but, in general, all are dependendy injected modules of functionality.
 
 Within the same JS file add the following code beneath the controller:
 
@@ -109,6 +109,14 @@ Hopefully, you now have a better sense as to -
 - Why you should use them, and
 - How to use them.
 
-Want some practice? Create seperate services fo each piece of functionality in [this](https://github.com/mjhea0/thinkful-mentor/tree/master/angular/waitstaff-flask) app's controller. Remember: The controller is responsible for defining scope, all else should be moved out of the controller altogether. If you need help, start by creating a service that handles the actual API calls.
+Want some practice? Create seperate services fo each piece of functionality in [this](https://github.com/mjhea0/thinkful-mentor/tree/master/angular/waitstaff-flask) app's controller. Remember: The controller is responsible for defining scope, all else should be moved out of the controller altogether. 
+
+If you need help, start by creating a service that handles the actual API calls. Perhaps use a service name of `getData` then set up functions for the different HTTP requests - i.e., `readData()` for GET and `writeData()` for POST Then when you dependency inject this service into your controller, you can simply use the following syntax for accessing the `readData()` function:
+
+```javascript
+getData.readData(some_argument)
+```
+
+Presumably you would pass in an argument supplied by the user. Now You can access that function from the controller without knowing anything about the actual service except for how you use it. The controller is cleaner because you abstratced out all the messy code for making API calls.
 
 Good luck!
