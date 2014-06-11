@@ -67,7 +67,7 @@ So, this just takes an input value and multiplies it by 10 in the `calculate()` 
 
 By moving the business logic out of the controller, abstracting much of the code, our controller becomes leaner. *It's a good practice to write fat services and lean controllers*.
 
-To do this, we are going use a service type called a factory, which is the most common type.
+To do this, we are will use service type called a factory, which is the most common type.
 
 > This is a good time to stop and learn the major service types - constants, values, services, providers, decorators. Check out [this](http://angular-tips.com/blog/2013/08/understanding-service-types/) excellent article for more on the various service types and how and when to use them. 
 
