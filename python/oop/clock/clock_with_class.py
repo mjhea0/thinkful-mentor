@@ -51,8 +51,8 @@ class ClockWithClass(object):
             self.minutes = self.minutes
             self.hours = self.hours + self.offsetH
 
+        # If city is behind GMT
         else:
-            # If city is behind GMT
             self.seconds = 60 - self.seconds
             self.minutes = self.minutes
             self.hours = self.hours + self.offsetH
