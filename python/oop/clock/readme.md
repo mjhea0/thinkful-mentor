@@ -19,3 +19,4 @@ Local time in NYC is 19:5:6
 1. Allow user to elect to have time displayed in 12 or 24hr format
 1. Refactor conversion to helper method
 1. Refactor business logic to helper method
+1. Handle exceptons

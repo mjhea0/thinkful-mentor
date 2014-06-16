@@ -18,6 +18,7 @@
         1. Allow user to elect to have time displayed in 12 or 24hr format
         2. Refactor conversion to helper method
         3. Refactor business logic to helper method
+        4. Handle exceptions
 """
 
 from time import time, gmtime
