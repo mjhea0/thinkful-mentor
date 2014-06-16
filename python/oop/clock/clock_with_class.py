@@ -47,7 +47,6 @@ class ClockWithClass(object):
 
         # If city is ahead of GMT
         if self.offsetH >= 0:
-
             self.minutes = self.minutes
             self.hours = self.hours + self.offsetH
 
