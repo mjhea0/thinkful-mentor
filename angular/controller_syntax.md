@@ -20,9 +20,10 @@ var app = angular.module('app', []);
 app.controller('MainController', function($scope) {
   $scope.val = "test123"
 })
+```
 
 Issue: Not modular. Okay for small apps. Will suffice for the Thinkful course.
-```
+
 
 ## Method 3
 
