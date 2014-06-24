@@ -16,7 +16,11 @@ waitstaffApp.controller('inputController', function($scope, $rootScope) {
     };
 
     function resetForm() {
-        $scope.input = {};
+        $scope.input = {
+            meal_price:0,
+            tax_rate:0,
+            tip_percent:0
+        };
     }
 })
 .controller("customerController", function($scope ,$rootScope) {
