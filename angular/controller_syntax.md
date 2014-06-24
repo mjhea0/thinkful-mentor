@@ -10,7 +10,7 @@ var MainController = function($scope) {
 }
 ```
 
-Issue: Polutes global name space. DO NOT USE.
+Issue: Pollutes global name space. DO NOT USE.
 
 ## Method 2
 
@@ -35,4 +35,4 @@ angular.module('controllers', []).controller('MainController', function($scope) 
 })
 ```
 
-Issue: Meant for large, production apps. Each controller should be in a separata JS file. It's a bit verbose for the Thinkful course.
+Issue: Meant for large, production apps. Each controller should be in a separate JS file. It's a bit verbose for the Thinkful course.
