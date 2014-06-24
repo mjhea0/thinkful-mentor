@@ -26,9 +26,9 @@ Issue: Not modular. Okay for small apps. Will suffice for the Thinkful course.
 
 ## Method 3
 
+```javascript
 var app = angular.module('app', ['controllers']);
 
-```javascript
 angular.module('controllers', []).controller('MainController', function($scope) {
     $scope.val = "test123"
 })
