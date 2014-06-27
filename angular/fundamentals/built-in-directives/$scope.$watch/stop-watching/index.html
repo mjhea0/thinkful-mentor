@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html ng-app="app">
   <head>
-    <title>$scope.$watch Example</title>
+    <title>stop $scope.$watch Example</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet" media="screen">
   </head>
   <body>
     <div class="container">
-      <h1>$scope.$watch Example: <br><small>Watching the 'myData.val' to see if it goes over 15 characters</small></h1>
-        <br><br>
+      <h1>stop $scope.$watch Example<br><small>Keep your watch list thin as this can negatively impact performance.</small></h1>
+        <br>
+
         <div ng-controller="MainController">
-            <input ng-model="myData.val">
-            <h2>{{ myData.val }}</h2>
-            <!-- $scope.$watch -->
-            <span ng-show="myData.toolong">Name is too long!</span>
+            <div>Num: {{ number }}</div>
+            <div>Array: {{ numArray }}</div>
+            <br>
+            <button class="btn btn-default" ng-click="increment()">Increment</button>
+            <button class="btn btn-default" ng-click="stop()">Stop Watching</button>
         </div>
+
     </div>
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
