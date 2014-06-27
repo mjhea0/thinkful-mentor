@@ -1,0 +1,53 @@
+body {
+  background-color: white;
+  font-family: "Comic Sans MS", serif;
+  font-size: 250%;
+}
+footer {
+  font-size: small;
+  text-align: center;
+}
+.inputs {
+  font-size: 70%;
+}
+.border {
+  border: thick solid black;
+}
+.almost-border {
+  border-top: thick solid black;
+  border-bottom: thick solid black;
+  border-right: thick solid black;
+}
+.override {
+  border-top: thin solid black;
+  padding: 40px;
+}
+.superBig {
+  font-size: 200%;
+  position: relative;
+  top: -15px;
+}
+.expanded {
+  padding: 20px;
+}
+.row-height-min {
+  height: 140px;
+}
+.logo {
+  width: 40%;
+}
+.smiley {
+  padding: 5px;
+  max-height: 90%;
+  max-width: 90%;
+  width: auto;
+  display: inline-block;
+  vertical-align: middle;
+}
+.standout {
+  font-weight: bold;
+  color: red;
+}
+.submit-btn {
+  margin-top: 15px;
+}

@@ -1,0 +1,1 @@
+Check out the blog post here - http://mherman.org/blog/2014/06/12/primer-on-angularjs-service-types/#.U5mROZRdUZ0
