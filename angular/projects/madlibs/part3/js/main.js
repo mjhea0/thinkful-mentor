@@ -12,10 +12,13 @@ angular.module('ngMadlibs', [])
           $('#reset-btn').show()
           $('#male-text').show()
           $('#female-text').hide()
+          $('#all-inputs').hide()
+          $scope.isSubmitted = true
         } else if ($scope.madForm.gender.$modelValue === "Female") {
           $('#reset-btn').show()
           $('#female-text').show()
           $('#male-text').hide()
+          $('#all-inputs').hide()
         }
       }
     }
@@ -25,6 +28,8 @@ angular.module('ngMadlibs', [])
       $('#male-text').hide()
       $scope.madForm.$setPristine();
       $('#reset-btn').hide()
+      $('#all-inputs').show()
+      $scope.isSubmitted = false
     }
   });
 

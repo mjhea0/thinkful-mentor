@@ -19,7 +19,7 @@
             </div>
           </div>
           <div id="inputs">
-            <form name="madForm" ng-submit="submitForm()" id="myMadForm" novalidate>
+            <form name="madForm" id="myMadForm">
               <h2>Please select a gender:</h2>
               <div class="form-group dropdown">
                 <select class="form-control" name="gender" ng-model="formData.gender" required>
@@ -61,12 +61,11 @@
                   </div>
                   <div class="form-group" ng-class="{'has-error' : madForm.hugeNumber.$invalid && !madForm.hugeNumber.$pristine}">
                     <input type="number" class="form-control" name="hugeNumber" placeholder="Huge Number" ng-model="formData.hugeNumber" required>
-                    <p ng-if="!userForm.hugeNumber.$pristine" class="help-block">You must enter a number.</p>
                   </div>
                 </div>
               </div>
-              <button type="submit" class="btn btn-primary" ng-disabled="madForm.$invalid">Submit</button>
-              <button type="button" class="btn btn-success" id="reset-btn" ng-click="reset()">Reset?</button> 
+              <button ng-hide="isSubmitted" type="submit" ng-click="submitForm()" class="btn btn-primary" ng-disabled="madForm.$invalid">Submit</button>
+              <button type="button" class="btn btn-success" id="reset-btn" ng-click="reset()">Reset?</button>
             </form>
           </div>
           <hr>

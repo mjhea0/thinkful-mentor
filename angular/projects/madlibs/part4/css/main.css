@@ -47,3 +47,18 @@ footer {
 .content {
   min-height: 450px;
 }
+.results {
+  -webkit-transition:0.5s linear all;
+  transition:0.5s linear all;
+  opacity:1;
+}
+
+.results.ng-hide {
+  -webkit-transition:0.5s linear all;
+  transition:0.0s linear all;
+  opacity:0;
+}
+
+.results.ng-hide-add, .results.ng-hide-remove {
+  display:block!important;
+}
