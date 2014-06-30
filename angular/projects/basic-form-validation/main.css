@@ -1,0 +1,12 @@
+.container {
+  max-width: 400px;
+  padding-top: 50px;
+}
+
+input.ng-dirty.ng-valid {
+  background-color: #009933;
+}
+
+input.ng-dirty.ng-invalid {
+  background-color: #EB3333;
+}

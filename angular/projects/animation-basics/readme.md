@@ -44,4 +44,45 @@ It's a little harder to see what's happening in this example, but Angular adds t
 
 ## Part 3
 
+http://embed.plnkr.co/3UmSZy/preview
+
+### Before the button click:
+
+**HTML**
+
+```html
+<div id="rectangle" ng-show="showRectangle" class="btn btn-warning animate-rectangle ng-hide" ng-class="{ extra: extraClass }" style="">i am the rectangle</div>
+```
+
+### After the button click:
+
+**HTML**
+
+<div id="rectangle" ng-show="showRectangle" class="btn btn-warning animate-rectangle" ng-class="{ extra: extraClass }" style="">i am the rectangle</div>
+
+
+### What's happening?
+
+This example combines the functionality from the first two examples. You can see that before the button click, to show the rectangle, the rectangle has a class of `ng-hide` assigned to it. The actual CSS for `ng-hide` looks like this:
+
+```css
+.ng-hide {
+  display:none!important;
+}
+```
+
+Thus, when removed, you can see the element. However, you also have to add the following CSS so that the element is visible *during* the animation:
+
+```css
+#rectangle.ng-hide-add,
+#rectangle.ng-hide-remove {
+  display: block !important;
+}
+```
+
+Like the last example, Angular adds the appropriate classes during the animation lifecycle to trigger the appropriate animation.
+
+## Part 4
+
+
 
