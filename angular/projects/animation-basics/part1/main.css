@@ -1,0 +1,17 @@
+.container {
+  text-align: center;
+  max-width: 400px;
+  padding-top: 50px;
+}
+h2 {
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -o-transition: 1s;
+  opacity: 1;
+}
+.fade {
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -o-transition: 1s;
+  opacity: 0.2;
+}
