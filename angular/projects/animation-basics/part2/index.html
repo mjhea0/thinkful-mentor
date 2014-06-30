@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Angular Animation - part 1</title>
+  <title>Angular Animation - part 2</title>
   <!-- styles -->
   <link href="http://netdna.bootstrapcdn.com/bootswatch/3.1.1/yeti/bootstrap.min.css" rel="stylesheet" media="screen">
   <link href="main.css" rel="stylesheet" media="screen">
@@ -10,13 +10,16 @@
   <body>
     <div class="container">
       <div ng-app='animateApp' ng-controller="animateController">
-        <h1>Angular Animation - part 1</h1>
+        <h1>Angular Animation - part 2</h1>
         <br><br>
-        <!-- on click, fade is set to true, adding it to the DOM -->
-        <button type="button" class="btn btn-primary" ng-click="fade = !fade">Toggle Opacity</button>
-        <h2 ng-class="{fade:fade}">Hello World!</h2>
-        <br>
-        <p>Value of fade: <strong>{{fade}}</strong></p>
+        <label>Find an item from your grocery list</label><br>
+        <input type="text" ng-model="search" class="search-query form-control" placeholder="Enter item">
+        <br><br>
+        <ul class="nav nav-pills">
+          <li class="animate" ng-repeat="item in groceries | filter:search">
+            <a href="#"> {{item}} </a>
+          </li>
+        </ul>
       </div>
     </div>
     <!-- scripts -->
@@ -27,3 +30,11 @@
     <script src="main.js" type="text/javascript"></script>
   </body>
 </html>
+
+
+
+
+
+
+
+

@@ -1,0 +1,27 @@
+.container {
+  text-align: center;
+  max-width: 400px;
+  padding-top: 50px;
+}
+#rectangle {
+  width: 100%;
+  transition: 0.4s all ease-out;
+}
+#rectangle.extra {
+  box-shadow: 0 0 10px 3px black;
+  color: black;
+}
+#rectangle.ng-hide-add,
+#rectangle.ng-hide-remove {
+  display: block !important;
+}
+#rectangle.ng-hide-remove,
+#rectangle.ng-hide-add.ng-hide-add-active {
+  margin-left: -80px;
+  opacity: 0;
+}
+#rectangle.ng-hide-remove.ng-hide-remove-active,
+#rectangle.ng-hide-add {
+  margin-left: 0;
+  opacity: 1;
+}
