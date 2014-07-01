@@ -1,3 +1,5 @@
+// no jquery in angular controllers! bad practice!
+
 $(function() {
   console.log('ready!');
 });
