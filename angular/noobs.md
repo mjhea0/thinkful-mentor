@@ -34,22 +34,25 @@ Have you tried using Batarang for debugging?  https://chrome.google.com/webstore
 
 Also, I just got back from Future Insights conference and had attended a full-day Angular bootcamp lead by John Lindquist. One of the things that stood out to me in his workshop was his use of the "controller as" syntax.  I was under the impression it was still considered experimental but after talking with him he told me  it's now considered a best practice.  Things change pretty quickly I guess!  I noticed that using controller as made the hierarchy a lot cleaner and helps to demystify the "$scope" object that is used for a bunch of things.  It also helps clarify what properties you are accessing:
 
+```
 <div ng-controller="GroupCtrl as group">
    <h2>{{ group.title }}</h2>
    <div ng-controller="GroupItemCtrl as item">
       <h3>{{ group.title}} - {{ item.title }}</h3>
    </div>
 </div>
+```
 
 The JavaScript behind it changes a little bit as well.  Most importantly, you attach properties to the controller itself rather than the scope.  The created $scope, then, is used only for Angular-specific things such as watching, broadcasting, etc.
 
+```
 app.controller('GroupCtrl', function() {
    this.title = "Group Title";
    this.updateGroup = function() { }
    // other properties
 });
+```
 
 As you can see, the $scope is not even injected into the controller unless it's needed for something.  This keeps the code cleaner and avoids treating $scope as some confusing black box.  The main downside of this approach is having to know what you named the controller when using the "as xxxx" format.  But accurate naming of dependencies is something you have to be mindful of with Angular anyway so doesn't seem too much of a stretch.
 
-## Feedback 3
-
+## More Feedback ...
