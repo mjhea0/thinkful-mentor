@@ -55,4 +55,13 @@ app.controller('GroupCtrl', function() {
 
 As you can see, the $scope is not even injected into the controller unless it's needed for something.  This keeps the code cleaner and avoids treating $scope as some confusing black box.  The main downside of this approach is having to know what you named the controller when using the "as xxxx" format.  But accurate naming of dependencies is something you have to be mindful of with Angular anyway so doesn't seem too much of a stretch.
 
+## Feedback 3 (Michael Whelan)
+Responding to a couple of points now.
+- MVVWhatever. I was disappointed that the Angular guy came out with this. I would prefer clear direction. A lot of people say Angular is really MVVM and I find this very helpful. Specifically, they call out $scope as the view model. I like this article which applies that convention:
+http://www.johnpapa.net/angularjss-controller-as-and-the-vm-variable/
+(By the way, this article also recommends the Controller As syntax).
+- Error messages. The single hardest thing for me is debugging when things go wrong. The Angular error messages are not great and I've found google has produced the answer. I do use Batarang, which helps, but it would be good if Angular had better error messages and docs discussing particular common types of errors.
+
+
+
 ## More Feedback ...
