@@ -13,7 +13,8 @@ fizzbuzz = "fizz buzz"
 fizz = "fizz"
 buzz = "buzz"
 
-for i in range(1, userinput + 1):
+# use xrange rather than range for python 2.7x
+for i in xrange(1, userinput + 1):
     # if (i % 3 == 0) and (i % 5 == 0):
     # slightly simplier syntax
     if (i % 15 == 0):
