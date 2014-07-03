@@ -15,7 +15,7 @@ while True:
         upper_limit = raw_input(
             "Incorect data type. Please enter an 'integer' for the upper limit of the range: "
         )
-        
+
 # run fizzbuzz
 for i in xrange(1, value + 1):
     if i % 15 == 0:
@@ -26,5 +26,3 @@ for i in xrange(1, value + 1):
         print "Buzz"
     else:
         print i
-
-    
