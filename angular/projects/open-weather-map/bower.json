@@ -1,0 +1,21 @@
+{
+  "name": "open-weather-map",
+  "version": "0.0.0",
+  "homepage": "https://github.com/mjhea0/thinkful-mentor/angular/open-weather-map",
+  "authors": [
+    "Michael Herman <hermanmu@gmail.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.2.19",
+    "angular-route": "~1.2.19"
+  }
+}
