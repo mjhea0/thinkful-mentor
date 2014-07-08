@@ -1,0 +1,35 @@
+<!doctype html ng-app="myApp">
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Angular Promises Example</title>
+  <!-- styles -->
+  <link href="http://netdna.bootstrapcdn.com/bootswatch/3.1.1/yeti/bootstrap.min.css" rel="stylesheet" media="screen">
+  <link href="main.css" rel="stylesheet" media="screen">
+  <!-- scripts -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js" type="text/javascript"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.18/angular-route.min.js"></script>
+  <script src="main.js" type="text/javascript"></script>
+  <!-- partials -->
+  <script type="text/ng-template" id="partials/one">
+  <h1>One</h1>
+  </script>
+  <script type="text/ng-template" id="partials/two">
+  <h1>Two</h1>
+  </script>
+</head>
+
+  <body>
+
+    <div class="container" ng-controller="MyCtrl">
+      <ul>
+        <li ng-class="{active:isActive('/one')}"><a href="#/one">One</a></li>
+        <li ng-class="{active:isActive('/two')}"><a href="#/two">Two</a></li>
+      </ul>
+      <hr>
+      <div ng-view></div>
+    </div>
+
+  </body>
+</html>
+
