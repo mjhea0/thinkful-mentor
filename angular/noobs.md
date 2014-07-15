@@ -1,15 +1,15 @@
 I'm putting together a post on conventions/best practices for Angular newbies. These are some of the hurdles that my students faced.
 
-# Tentative outline. 
+# Tentative outline.
 
 Thoughts?
 
 ## Best Practices
 1. MVC/MV Presenter/MVVW - whatever you want to call the third piece (controller, presenter, view-model, whatever, *) - just adhere to separating the model, view, and business logic. In other words, model updates view, user consumes view, user interacts with controller to manipulate/update model
 1. DRY - this is a given, but it doesn't hurt to repeat
-1. Do not got against the framework; in most cases, Angular offers a reasonable solution - find it. Stay away from jQuery, especially in the Angular controller. Be smart with hacking. 
+1. Do not got against the framework; in most cases, Angular offers a reasonable solution - find it. Stay away from jQuery, especially in the Angular controller. Be smart with hacking.
 1. Learn directives and how to compartmentalize/modularize code. The quicker you do, the better off you will be.
-1. Did I mention refactor. Refactor, refactor, reactor. 
+1. Did I mention refactor. Refactor, refactor, reactor.
 1. Building blocks - interpolation, controller
 
 ## Be aware that
@@ -27,7 +27,7 @@ Few quick points I could think of...
  - Keep your controllers skinny, don't keep business logic in your controller methods, let a service manage data manipulating and access.  The controller should just coordinate access between your services <-> $scope <-> view
  - I get asked "so where is the model" from a lot of people, thinking that the model is some magic Angular feature that will give them extension methods (like backbone models).  The model is your service (data + business logic).
  - Where possible let the view manage display logic, if you're finding that you are creating a bunch of $scope.showCustomerPanel style of properties, revisit your model design to see if you can manage view state there, if it doesn't quite add up, extend your $scope with a domain view model object property like $scope.panels.customer.show.  This will lead to cleaner controllers and more logically separated UI view state management.
- 
+
 ## Feedback 2
 
 Have you tried using Batarang for debugging?  https://chrome.google.com/webstore/detail/angularjs-batarang/ighdmehidhipcmcojjgiloacoafjmpfk?hl=en  It adds a tab to the inspector/debugger for view Scopes, models, etc.
@@ -65,3 +65,6 @@ http://www.johnpapa.net/angularjss-controller-as-and-the-vm-variable/
 
 
 ## More Feedback ...
+
+
+Modules are the an important part of the foundation for Angularjs’ dependency injection system. The beauty of Angularjs is that it is declarative, and by making declarations in your modules, you are telling Angularjs about all the objects you are going to need for your application to run and how you want it to load them right at application startup. That way, any time you need a particular object, it is already available and all you have to do is ask for it. Modules provide a way to group dependencies for a functional area of your application and a mechanism for automatically resolving those dependencies.
