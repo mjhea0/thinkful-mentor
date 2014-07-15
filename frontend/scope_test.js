@@ -30,3 +30,22 @@ $(function() {
     ping();
 
 });
+
+
+
+// 1. Scope is your current location
+// 2. Global scope is the entire world; you are everywhere, touching everything (susceptible)
+// 3. Within a function, you are bound by that function; you are boxed in (safe)
+
+// Then show a quick example -
+
+// var globalScope = "global";
+
+// function scopeTest() { 
+//   var localScope = "local";
+//   console.log(localScope); // reference error
+// }
+
+// scopetest(); // outputs correctly
+// console.log(localScope); // reference error
+// console.log(globalScope); // outputs correctly
