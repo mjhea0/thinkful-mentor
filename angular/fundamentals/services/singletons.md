@@ -83,3 +83,11 @@ Toss in some HTML:
   </body>
 </html>
 ```
+
+OUTPUT:
+
+```
+public: This is public
+
+private: This is private
+```
