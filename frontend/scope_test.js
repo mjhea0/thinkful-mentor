@@ -41,11 +41,11 @@ $(function() {
 
 // var globalScope = "global";
 
-// function scopeTest() { 
+// function scopeTest() {
 //   var localScope = "local";
-//   console.log(localScope); // reference error
+//   console.log(localScope); // outputs correctly
 // }
 
-// scopetest(); // outputs correctly
-// console.log(localScope); // reference error
+// scopeTest(); // outputs correctly
 // console.log(globalScope); // outputs correctly
+// console.log(localScope); // reference error
