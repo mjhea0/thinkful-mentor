@@ -1,4 +1,49 @@
+# Singletons
+
+Angular Services are Singletons ...
+
+## What's a Singletong?
+
 Services are singletons, which is a design pattern that limits the instantiantion, by the `$injector`, of the class to only once per app. Thus, every area where you inject the service, it's using the same instance.
+
+## Why should you use them?
+
+Used for when an object needs to maintain a global state while also isolating the code from the global namespace.
+
+## JavaScript Example
+
+```
+var mySingleton = function () {
+
+    /*private variables and functions */
+
+    var privateVariable = 'foo is private';
+
+    function privateFunction() {
+        alert(privateVariable);
+    }
+
+    /* public variables and functons */
+    return {
+        publicFunction: function() {
+            privateFunction();
+        },
+        publicVariable: 'this is publicly accessible'
+    }
+}
+
+var single = mySingleton(); // instantiates the class
+single.publicFunction(); // alerts 'foo is private'
+alert(single.publicVariable); // alerts 'this is publicly accessible'
+```
+
+### What's happening?
+
+Here have private variables and functions by encapsulating variable and function declarations inside a closure, and exposing only those that we want to be publicly accessible.
+
+Run this in your console. What happens?
+
+## Angular Service (Factory) Example
 
 Let's look at a quick example of a Factory.
 
