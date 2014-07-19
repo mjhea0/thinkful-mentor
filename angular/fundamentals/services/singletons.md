@@ -2,7 +2,7 @@
 
 Angular Services are Singletons ...
 
-## What's a Singletong?
+## What's a Singleton?
 
 Services are singletons, which is a design pattern that limits the instantiantion, by the `$injector`, of the class to only once per app. Thus, every area where you inject the service, it's using the same instance.
 
@@ -23,7 +23,7 @@ var mySingleton = function () {
         alert(privateVariable);
     }
 
-    /* public variables and functons */
+    /* public variables and functions */
     return {
         publicFunction: function() {
             privateFunction();
