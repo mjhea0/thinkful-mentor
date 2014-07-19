@@ -12,7 +12,7 @@ Used for when an object needs to maintain a global state while also isolating th
 
 ## JavaScript Example
 
-```
+```javascript
 var mySingleton = function () {
 
     /*private variables and functions */
