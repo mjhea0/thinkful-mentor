@@ -39,7 +39,7 @@ alert(single.publicVariable); // alerts 'this is publicly accessible'
 
 ### What's happening?
 
-Here have private variables and functions by encapsulating variable and function declarations inside a closure, and exposing only those that we want to be publicly accessible.
+Here we have private variables and functions because the declarations are encapsulated inside a closure. We then expose only those that we want to be publicly accessible.
 
 Run this in your console. What happens?
 
