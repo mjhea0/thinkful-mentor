@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en" ng-app='myApp'>
+<head>
+  <meta charset="UTF-8">
+  <title>Angular - Services == Singletons</title>
+  <!-- styles -->
+  <link href="http://netdna.bootstrapcdn.com/bootswatch/3.1.1/yeti/bootstrap.min.css" rel="stylesheet" media="screen">
+  <link href="main.css" rel="stylesheet" media="screen">
+</head>
+  <body>
+    <div class="container">
+      <div ng-controller="firstCtrl">
+        <h1>First Controller</h1>
+      </div>
+      <div ng-controller="secondCtrl">
+        <h1>Second Controller</h1>
+      </div>
+      <br>
+      <div ng-controller="thirdCtrl">
+        <h1>Third Controller</h1>
+      </div>
+      <div ng-controller="fourthCtrl">
+        <h1>Fourth Controller</h1>
+      </div>
+    </div>
+    <!-- scripts -->
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js" type="text/javascript"></script>
+    <script src="main.js" type="text/javascript"></script>
+  </body>
+</html>
+
