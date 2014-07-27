@@ -80,6 +80,8 @@ There should just be one `c {}` in the console. No matter how many times you inj
 
 2. Refresh your browser. You should see: *Are they equal? true* in the console.
 
+> Needs to be changed since this will always be true.
+
 ## How about a Factory?
 
 1. Add a new Factory service:
