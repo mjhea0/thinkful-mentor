@@ -1,0 +1,31 @@
+﻿<a href="#!/"><button type="button" class="btn btn-default">Return Home</button></a>
+<br><br><br>
+<div class="table-responsive">
+    <div class="scrollTable">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th class="text-center">Name</th>
+                    <th class="text-center">Country Code</th>
+                    <th class="text-center">Capital</th>
+                    <th class="text-center">Area (km2)</th>
+                    <th class="text-center">Population</th>
+                    <th class="text-center">Continent</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- loop through list of countries, order by name -->
+                <tr ng-repeat="country in countries | orderBy:'countryName'">
+                    <td><a ng-href="#!/countries/{{ country.countryCode | uppercase }}">{{ country.countryName }}</a></td>
+                    <td>{{ country.countryCode }}</td>
+                    <td>{{ country.capital }}</td>
+                    <td>{{ country.areaInSqKm | number:0 }}</td>
+                    <td>{{ country.population | number:0 }}</td>
+                    <td>{{ country.continentName }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<br><br>
+
