@@ -2,15 +2,12 @@
 
 Angular app utilizing gulp, browserify, and bower.
 
-### Setup
+### Install dependencies
 
-1. Clone
-2. Install dependencies
-
-    ```
-    $ npm install
-    $ bower install
-    ```
+```
+$ npm install
+$ bower install
+```
 
 ### Run
 
