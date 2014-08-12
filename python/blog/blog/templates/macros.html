@@ -1,0 +1,23 @@
+{% macro render_post(post) %}
+<div class="row">
+    <div class="col-md-2 text-right metadata">
+        <ul class="list-unstyled">
+            <li>
+                {{ post.datetime | dateformat("%d/%m/%y") }}
+            </li>
+        </ul>
+    </div>
+    <div class="col-md-10">
+        <h1>
+            <a href="/post/{{ post.id }}">{{ post.title }}</a>
+        </h1>
+        {{ post.content | safe }}
+        {{ post.author.name }}
+
+        <a href="/post/{{ post.id }}/edit"> Edit Post</a>
+        <form action="/post/{{ post.id }}/delete" method="post">
+        <button type="submit" value="remove">Delete</button>
+
+    </div>
+</div>
+{% endmacro %}

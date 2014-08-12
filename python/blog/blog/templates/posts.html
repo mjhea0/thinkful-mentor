@@ -1,0 +1,22 @@
+{% import "macros.html" as macros %}
+{% extends "base.html" %}
+{% block content %}
+
+{% for post in posts %}
+{{ macros.render_post(post) }}
+{% endfor %}
+
+<ul class="pager">
+    {% if has_next %}
+    <li class="previous" >
+    <a href="{{ url_for('posts', page=page + 1) }}">&larr; Older</a>
+    </li>
+    {% endif %}
+    {% if has_prev %}
+    <li class="next">
+    <a href="{{ url_for('posts', page=page - 1) }}">&rarr; Newer</a>
+    </li>
+    {% endif %}
+</ul>
+
+{% endblock %}

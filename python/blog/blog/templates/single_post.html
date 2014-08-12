@@ -1,0 +1,17 @@
+{% import "macros.html" as macros %}
+{% extends "base.html" %}
+{% block content %}
+
+{% for post in posts %}
+{{ macros.render_post(post) }}
+{% endfor %}
+
+<h1>
+    {{ post.title }}
+</h1>
+
+<p>
+{{ post.content | safe }}
+</p>
+
+{% endblock %}
