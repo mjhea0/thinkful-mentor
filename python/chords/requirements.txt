@@ -1,0 +1,10 @@
+librosa==0.3.0
+Flask==0.10.1
+Jinja2==2.7.2
+MarkupSafe==0.21
+SQLAlchemy==0.9.4
+Werkzeug==0.9.4
+argparse==1.2.1
+itsdangerous==0.24
+jsonschema==2.3.0
+wsgiref==0.1.2
