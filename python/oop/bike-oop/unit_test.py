@@ -36,7 +36,7 @@ class BicyleModelTest(unittest.TestCase):
             "Good Build", self._frontWheel, self._backWheel2, self._frame
         )
 
-    def testDifferentWheelTypeInit(self):
+    def test_different_heel_type_init(self):
         self.assertRaises(
             AssertionError,
             BicycleModel,
