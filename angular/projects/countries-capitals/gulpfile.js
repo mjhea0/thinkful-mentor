@@ -48,4 +48,4 @@ gulp.task('connectDist', function () {
 
 // Default Task
 gulp.task('default', ['connect']);
-gulp.task('build', ['copy-html-files', 'usemin']);
+gulp.task('build', ['copy-html-files']);
