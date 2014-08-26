@@ -2,7 +2,10 @@
   "name": "countries-capitals",
   "version": "0.0.1",
   "main": "gulpfile.js",
-  "dependencies": {},
+  "dependencies": {
+    "karma": "^0.12.22",
+    "karma-jasmine": "^0.1.5"
+  },
   "devDependencies": {
     "gulp": "^3.8.6",
     "gulp-jshint": "^1.6.4",
@@ -14,7 +17,8 @@
     "gulp-sass": "^0.7.1",
     "gulp-uglify": "^0.3.1",
     "gulp-usemin": "^0.3.5",
-    "gulp-util": "^2.2.19"
+    "gulp-util": "^2.2.19",
+    "karma-chrome-launcher": "^0.1.4"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

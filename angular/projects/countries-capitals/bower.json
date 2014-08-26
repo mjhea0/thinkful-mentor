@@ -11,7 +11,8 @@
     "jquery": "~2.1.1",
     "animate.css": "~3.1.1",
     "bootstrap": "~3.2.0",
-    "fontawesome": "~4.1.0"
+    "fontawesome": "~4.1.0",
+    "angular-mocks": "~1.2.23"
   },
   "ignore": [
     "**/.*",
