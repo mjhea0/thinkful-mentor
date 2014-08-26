@@ -15,6 +15,6 @@
 
 ## Updating an existing project
 
-1. After you make your updates, add files to staging `git add .` (taking a snapshot)
+1. After you make your updates, add files to staging `git add -A` (taking a snapshot)
 1. Add files (snapshot) to local repo: `git commit -am "commit message"`
 1. Now push your local repo to Github: `git push origin master`
