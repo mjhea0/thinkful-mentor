@@ -2,18 +2,12 @@
 
 
 import requests
-import json
-
-APP_ID = 'test'
-APP_KEY = 'test'
+from secret import APP_ID, APP_KEY
 
 
-def get_ingredients(self):
+def get_ingredients(ingredient):
     res = requests.get(
-        "http://api.yummly.com/v1/api/metadata/ingredient",
-        params={'_app_id': APP_ID, '_app_key': APP_KEY}
+        "http://api.yummly.com/v1/api/recipes",
+        params={'_app_id': APP_ID, '_app_key': APP_KEY, 'q': ingredient}
     )
-    response = res.text
-    ingredients = json.loads(response)
-    for ingredient in ingredients:
-        print ingredient
+    return res.text
