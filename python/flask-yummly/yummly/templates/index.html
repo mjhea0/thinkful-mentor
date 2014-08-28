@@ -24,8 +24,11 @@
       <button type="submit" class="btn btn-success">Submit</button>
     </form>
     <br><br>
+
     <!-- results -->
-    <center><img src={{ image_url }} alt="Recipe photo"></center>
+    {% if image_url %}
+      <center><img src={{ image_url }} alt="Recipe photo"></center>
+    {% endif %}
 
     </div>
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
