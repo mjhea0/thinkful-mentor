@@ -1,12 +1,13 @@
 var http = require('http');
 var url = require('url');
 var items = ["first", "second", "third", "fourth", "fifth"];
-var idx;
+var key;
 var item;
 
 var server = http.createServer(function (req, res) {
 
-    var getItemNumFromUrl = function() {
+    // helper functions
+    var getItem = function() {
         var pathname = url.parse(req.url).pathname;
         return parseInt(pathname.slice(1),10);
     };
@@ -23,6 +24,7 @@ var server = http.createServer(function (req, res) {
         }
     };
 
+    // crud
     switch (req.method) {
         case 'POST':
             item = '';
@@ -43,23 +45,23 @@ var server = http.createServer(function (req, res) {
             res.end();
             break;
         case 'DELETE':
-            idx = getItemNumFromUrl();
-            if (handleItemNum(idx)) {
-                items.splice(idx,1);
+            key = getItem();
+            if (handleItemNum(key)) {
+                items.splice(key,1);
                 res.end('Item deleted successfully');
                 console.log("items is " + items);
             }
             break;
         case 'PUT':
-            idx = getItemNumFromUrl();
-            if (handleItemNum(idx)) {
+            key = getItem();
+            if (handleItemNum(key)) {
                 item = '';
                 req.setEncoding('utf8');
                 req.on('data', function (chunk) {
                     item += chunk;
                 });
                 req.on('end', function () {
-                    items[idx] = item;
+                    items[key] = item;
                     res.end('Item changed\n');
                     console.log("items is " + items);
                 });
