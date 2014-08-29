@@ -34,7 +34,7 @@ var server = http.createServer(function (req, res) {
             });
             req.on('end', function () {
                 items.push(item);
-                console.log("items is " + items);
+                console.log("items are " + items);
                 res.end('Item added\n');
             });
             break;
