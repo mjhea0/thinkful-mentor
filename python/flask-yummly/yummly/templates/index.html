@@ -27,7 +27,7 @@
 
     <!-- results -->
     {% if recipe_response %}
-      <h2><a href={{ recipe_response[2] }}>{{ recipe_response[0] }}</a><h2>
+      <h2><a href="http://www.yummly.com/{{ recipe_response[2] }}">{{ recipe_response[0] }}</a><h2>
       <p><img src={{ recipe_response[1] }} alt="Recipe photo"></p>
     {% else %}
       <p><strong>Sorry! No recipes match your search. Try again! </strong></p>
