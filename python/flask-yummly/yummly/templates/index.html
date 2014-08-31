@@ -25,26 +25,28 @@
     </form>
     <br><br>
 
+    <hr>
+
     <!-- results -->
     {% if recipe_response %}
       <h2><a href="http://www.yummly.com/{{ recipe_response[2] }}">{{ recipe_response[0] }}</a><h2>
       <p><img src={{ recipe_response[1] }} alt="Recipe photo"></p>
-    {% else %}
-      <p><strong>Sorry! No recipes match your search. Try again! </strong></p>
     {% endif %}
 
     {% if ingredients %}
       <h3>Ingredients</h3>
         <ul>
           {% for ingredient in ingredients %}
-          <li>{{ ingredient }}</li>
+            <li>{{ ingredient }}</li>
           {% endfor %}
         </ul>
-    {% else %}
-      <p><strong>Sorry! No ingredients. Perhaps you should try a different search. </strong></p>
     {% endif %}
 
-    <hr>
+    {% if errors %}
+      {% for error in errors %}
+        <li class="alert alert-warning">{{ error }}</li>
+      {% endfor %}
+    {% endif %}
 
     </div>
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
