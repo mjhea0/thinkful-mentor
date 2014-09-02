@@ -29,17 +29,9 @@
 
     <!-- results -->
     {% if recipe_response %}
-      <h2><a href="http://www.yummly.com/{{ recipe_response[2] }}">{{ recipe_response[0] }}</a><h2>
-      <p><img src={{ recipe_response[1] }} alt="Recipe photo"></p>
-    {% endif %}
-
-    {% if ingredients %}
-      <h3>Ingredients</h3>
-        <ul>
-          {% for ingredient in ingredients %}
-            <li>{{ ingredient }}</li>
-          {% endfor %}
-        </ul>
+        {% for recipe in recipe_response["matches"] %}
+            {{ recipe }}
+        {% endfor %}
     {% endif %}
 
     {% if errors %}

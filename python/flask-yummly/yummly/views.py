@@ -2,7 +2,6 @@ from flask import render_template, request
 
 from yummly import app
 import api
-import json
 
 
 @app.route("/", methods=["GET", "POST"])
@@ -18,17 +17,14 @@ def index():
 
         try:
             response = api.get_ingredients(ingredient)  # make api call
-            response_to_json = json.loads(response)  # convert to json from unicode
 
-            matches = response_to_json["matches"]
+            for match in response["matches"]:  # loop through json results
 
-            for match in matches:  # loop through json results
-
-                image = match['imageUrlsBySize']['90'].replace('s90-c', 's230-c')
+                image = match['imageUrlsBySize']['90'].replace('s90-c', 's230-c')  # update url
 
                 recipe_response.extend([
                     match["recipeName"], image, match["id"]
-                ])  # grab certain results
+                ])  # grab reciepe name, image, and id
                 ingredients.append(match["ingredients"])
                 break  # just loop once for now, grabbing the first recipe
 
@@ -40,8 +36,7 @@ def index():
 
         return render_template(
             "index.html",
-            recipe_response=recipe_response,
-            ingredients=ingredients,
+            recipe_response=response,
             errors=errors
         )
 
