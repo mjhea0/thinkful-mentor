@@ -1,8 +1,3 @@
-class DevelopmentConfig(object):
-    # DATABASE_URI = "sqlite:///yum-dev.db"
-    DEBUG = True
-
-
-class TestingConfig(object):
-    # DATABASE_URI = "sqlite://yum-test.db"
-    DEBUG = True
+class Config(object):
+    # DATABASE_URI = "sqlite:///my_database"
+    DEBUG = False

@@ -27,12 +27,16 @@
 
     <hr>
 
-    <!-- results -->
     {% if recipe_response %}
         {% for recipe in recipe_response["matches"] %}
+            <h2><a href="http://www.yummly.com/recipe/{{ recipe["id"] }}">{{ recipe["recipeName"] }}</a></h2>
+            <p><img src={{ recipe['imageUrlsBySize']['90'].replace('s90-c', 's230-c') }} alt="Recipe photo"></p>
             <ul>
-            <li>{{ recipe["recipeName"] }}</li>
+                {% for ingredient in recipe["ingredients"] %}
+                    <li>{{ ingredient }}</li>
+                {% endfor %}
             </ul>
+            <hr>
         {% endfor %}
     {% endif %}
 

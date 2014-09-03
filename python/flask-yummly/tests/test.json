@@ -1,0 +1,381 @@
+{
+    "attribution": {
+        "html": "Recipe search powered by <a href='http://www.yummly.com/recipes'><img alt='Yummly' src='http://static.yummly.com/api-logo.png'/></a>",
+        "url": "http://www.yummly.com/recipes/",
+        "text": "Recipe search powered by Yummly",
+        "logo": "http://static.yummly.com/api-logo.png"
+    },
+    "totalMatchCount": 39786,
+    "facetCounts": {},
+    "matches": [
+        {
+            "imageUrlsBySize": {
+                "90": "http://lh3.ggpht.com/Rucjg1Kw_qm2l6as5Fq-CM4BsC8Z9mH612WCUGNakMKOiFXd0yXafuyx91J2IYEhmrFxF_WXIWVk0zFEgOQerzs=s90-c"
+            },
+            "sourceDisplayName": "Camille Styles",
+            "ingredients": [
+                "apple juice",
+                "apple brandy",
+                "ginger ale",
+                "apples"
+            ],
+            "id": "Apple-orchard-cocktail-333101",
+            "smallImageUrls": [
+                "http://lh3.ggpht.com/WDfzvORLhaXglhRoPlpGr5ilDZsazcCrHUKK4fcuaBkyWEyW6qLJnw7-FM1jIZ6o-giqnX7GjfqJ2WdVVJYPpA=s90"
+            ],
+            "recipeName": "Apple Orchard Cocktail",
+            "totalTimeInSeconds": 600,
+            "attributes": {
+                "course": [
+                    "Beverages"
+                ]
+            },
+            "flavors": {
+                "sweet": 0.5,
+                "salty": 0,
+                "meaty": 0,
+                "sour": 0.16666666666666666,
+                "bitter": 0,
+                "piquant": 0
+            },
+            "rating": 5
+        },
+        {
+            "imageUrlsBySize": {
+                "90": "http://lh6.ggpht.com/OawW2WRM8pXFC4RRaz5-x6bUU-Qx5jSDSXdj_ZxencZTJaaFZpcG3k9NCeVG4KvMksFNGQLmN8nvyNjxzRH4zQ=s90-c"
+            },
+            "sourceDisplayName": "Food52",
+            "ingredients": [
+                "apples",
+                "ground cinnamon"
+            ],
+            "id": "Apple-Chips-529473",
+            "smallImageUrls": [
+                "http://lh5.ggpht.com/KQcY9HylDD-GXQSrwx_VhaqK5VC6UXvU1_likZhb8chhgPZd-D_xLXzyNTJRW1CKuYOC0zDC6dolcp_5jh3pGA=s90"
+            ],
+            "recipeName": "Apple Chips",
+            "totalTimeInSeconds": 4800,
+            "attributes": {
+                "course": [
+                    "Lunch and Snacks"
+                ],
+                "holiday": [
+                    "Fall"
+                ]
+            },
+            "flavors": {
+                "sweet": 0.5,
+                "sour": 0.16666666666666666,
+                "salty": 0,
+                "piquant": 0,
+                "meaty": 0,
+                "bitter": 0.16666666666666666
+            },
+            "rating": 3
+        },
+        {
+            "imageUrlsBySize": {
+                "90": "http://lh5.ggpht.com/B8S8dKDOFCwaN_MqmT6Jmri0yQm3v1BCQqgDNAIcBIUzV2J0vgfwla96DIJjboaPrWib4NV55xi5v0Yg-Gc8iA=s90-c"
+            },
+            "sourceDisplayName": "Smitten Kitchen",
+            "ingredients": [
+                "eggs",
+                "milk",
+                "all-purpose flour",
+                "baking powder",
+                "salt",
+                "sugar",
+                "apples",
+                "flavoring",
+                "vegetable oil",
+                "confectioners sugar"
+            ],
+            "id": "Apple-pancakes-307171",
+            "smallImageUrls": [
+                "http://lh3.ggpht.com/7aX-go6apee8TAV7ZqB_Tgf2caA4Jh3YasRNF4o4nTlE_084ONt7GmuzIZfI9ch3RmUDPnvgc3wmx-lN55G5sQ=s90"
+            ],
+            "recipeName": "Apple Pancakes",
+            "totalTimeInSeconds": 1800,
+            "attributes": {
+                "course": [
+                    "Breakfast and Brunch"
+                ]
+            },
+            "flavors": {
+                "sweet": 0.8333333333333334,
+                "sour": 0.5,
+                "salty": 0.5,
+                "piquant": 0,
+                "meaty": 0.5,
+                "bitter": 0.3333333333333333
+            },
+            "rating": 5
+        },
+        {
+            "imageUrlsBySize": {
+                "90": "http://lh4.ggpht.com/lYVFERBfGAcvhuqo8scFtGh6vSWfE6iBvDTcfTjvLYnz6EQzoW0GcV92uoaj508ArFryxpU9PzK_hkDz5wdWdA=s90-c"
+            },
+            "sourceDisplayName": "The Kitchn",
+            "ingredients": [
+                "rolled oats",
+                "ground cinnamon",
+                "peanut butter",
+                "honey",
+                "raisins",
+                "apples"
+            ],
+            "id": "Apple-sandwiches-308524",
+            "smallImageUrls": [
+                "http://lh3.ggpht.com/jPsjKcxoufEVFFMJgU4Unv3-ncEB884r9hsw0bBp0h--Db7Qy7DBXOPy8DAHDmofyNJ_eIDD9XO5oS60ixuU=s90"
+            ],
+            "recipeName": "Apple Sandwiches",
+            "totalTimeInSeconds": null,
+            "attributes": {
+                "course": [
+                    "Lunch and Snacks",
+                    "Breakfast and Brunch"
+                ],
+                "holiday": [
+                    "Fall"
+                ]
+            },
+            "flavors": {
+                "sweet": 0.6666666666666666,
+                "sour": 0.16666666666666666,
+                "salty": 0.3333333333333333,
+                "piquant": 0,
+                "meaty": 0.5,
+                "bitter": 0.3333333333333333
+            },
+            "rating": 5
+        },
+        {
+            "imageUrlsBySize": {
+                "90": "http://lh5.ggpht.com/iUbj03ItfE4-pG5P7JCUcBeOAjzpL6fK2N4PilM3MRVSyoXMELWJSeBLVx3KIs0mLc3Gp3-GIkQiZe_It-mA0A=s90-c"
+            },
+            "sourceDisplayName": "MyRecipes",
+            "ingredients": [
+                "butter",
+                "granny smith apples",
+                "brown sugar",
+                "ground cinnamon"
+            ],
+            "id": "Sauteed-Apples-548822",
+            "smallImageUrls": [
+                "http://lh4.ggpht.com/fxhUK8581vN7kxWG4QY7_l5FP0pYTS81d0sZmiEKo7wsmP-_bL47wVM3BXvf4fYOrpPvUFA5ypYU1vd-vrXsGw=s90"
+            ],
+            "recipeName": "Sautéed Apples",
+            "totalTimeInSeconds": 1500,
+            "attributes": {
+                "course": [
+                    "Side Dishes",
+                    "Desserts"
+                ],
+                "cuisine": [
+                    "American"
+                ],
+                "holiday": [
+                    "Fall"
+                ]
+            },
+            "flavors": {
+                "piquant": 0,
+                "meaty": 0.16666666666666666,
+                "sour": 0.3333333333333333,
+                "bitter": 0.16666666666666666,
+                "salty": 0.16666666666666666,
+                "sweet": 0.8333333333333334
+            },
+            "rating": 4
+        },
+        {
+            "imageUrlsBySize": {
+                "90": "http://lh5.ggpht.com/9zB6Y4KfUN8E43bhZuHy6GgrGtTS93Pr6a8INZSg4WuwCQ3-9EjUIt2Vmu6ZrbM75HaCS_DK-2d0rS9ld7U2=s90-c"
+            },
+            "sourceDisplayName": "Smitten Kitchen",
+            "ingredients": [
+                "butter",
+                "tart apples",
+                "large eggs",
+                "granulated sugar",
+                "vanilla extract",
+                "all-purpose flour",
+                "ground cinnamon",
+                "powdered sugar"
+            ],
+            "id": "Apple-sharlotka-305659",
+            "smallImageUrls": [
+                "http://lh3.ggpht.com/fdzHan2UFsV_6xNopp2qXvpoahNyFyaH90JBcAf9UXCy5mA0OVAb8XZW0fH_cFVwwWl03rZwEV594tCf_HZe24o=s90"
+            ],
+            "recipeName": "Apple Sharlotka",
+            "totalTimeInSeconds": 4800,
+            "attributes": {
+                "course": [
+                    "Desserts"
+                ],
+                "holiday": [
+                    "Fall"
+                ]
+            },
+            "flavors": {
+                "sweet": 1,
+                "sour": 0.5,
+                "salty": 0,
+                "piquant": 0,
+                "meaty": 0.16666666666666666,
+                "bitter": 0.16666666666666666
+            },
+            "rating": 5
+        },
+        {
+            "imageUrlsBySize": {
+                "90": "http://lh6.ggpht.com/9Kigl4G3SGaBwAZUH9e8avOvQYvXe0v0JTGpH1pfZyio7rEjwXzWB0KsMe7yucmi0tHDDA4m1EAneMNlcHri=s90-c"
+            },
+            "sourceDisplayName": "101 Cookbooks",
+            "ingredients": [
+                "fine sea salt",
+                "rosemary leaves",
+                "garlic cloves",
+                "sugar",
+                "crème fraîche",
+                "white wine vinegar",
+                "ground black pepper",
+                "celery ribs",
+                "apples",
+                "arugula",
+                "roasted hazelnuts"
+            ],
+            "id": "Heirloom-apple-salad-308608",
+            "smallImageUrls": [
+                "http://lh4.ggpht.com/rETz3jFSxUQn4v-jpEmt9Vqv8aEHBor5HSXeoTn-4bFKwiVOWPUJ33trQ2DvsdxqTLSJRCiGGZIbJ0sTcSz-Jg=s90"
+            ],
+            "recipeName": "Heirloom Apple Salad",
+            "totalTimeInSeconds": 1500,
+            "attributes": {
+                "course": [
+                    "Salads"
+                ]
+            },
+            "flavors": null,
+            "rating": 5
+        },
+        {
+            "imageUrlsBySize": {
+                "90": "http://lh6.ggpht.com/UVPn9QllxZfvv79Fk_D1d-kPklujbC1NtIum6EHkO-QUXneWxDzG0cmJf-Oo_tNnSbxvBipyuyceyY99jjoq5Dw=s90-c"
+            },
+            "sourceDisplayName": "Food52",
+            "ingredients": [
+                "granny smith apples",
+                "juice",
+                "sugar",
+                "butter",
+                "flour"
+            ],
+            "id": "Apple-crumble-332381",
+            "smallImageUrls": [
+                "http://lh4.ggpht.com/ptM5kL7KTjweQePJKZl3flt0bpzVnbhZDeOR_dj3WD3CHhfuhrOrBb183R4nNPla2bNt9NYmkYpeHCzYVCPzmw=s90"
+            ],
+            "recipeName": "Apple Crumble",
+            "totalTimeInSeconds": 2400,
+            "attributes": {
+                "course": [
+                    "Desserts"
+                ]
+            },
+            "flavors": {
+                "salty": 0.16666666666666666,
+                "sour": 0.5,
+                "sweet": 0.6666666666666666,
+                "bitter": 0.16666666666666666,
+                "meaty": 0.16666666666666666,
+                "piquant": 0
+            },
+            "rating": 3
+        },
+        {
+            "imageUrlsBySize": {
+                "90": "http://lh3.ggpht.com/-WstEqLz2p9Wf7XddpR_fhTxaXUA92aMNHJ019FOJo4P8hXqM55brWPhFLHlIykN8BK5EVwPnnwOSPFaAboD6w=s90-c"
+            },
+            "sourceDisplayName": "Big Girls Small Kitchen",
+            "ingredients": [
+                "orange juice",
+                "granny smith apples",
+                "eggs",
+                "white flour",
+                "milk",
+                "vanilla extract",
+                "clarified butter",
+                "ground cinnamon",
+                "sugar"
+            ],
+            "id": "Apple-pancakes-310206",
+            "smallImageUrls": [
+                "http://lh3.ggpht.com/0UwQHafcOvXULh1_xelxJY9msH0jywNaTnKp-E6lPcod_JeQlr3cID4p7u5v1wbv5mQjoZJx7tYLQWqy4e10Zg=s90"
+            ],
+            "recipeName": "Apple Pancakes",
+            "totalTimeInSeconds": 1500,
+            "attributes": {
+                "course": [
+                    "Breakfast and Brunch"
+                ]
+            },
+            "flavors": {
+                "sweet": 0.5,
+                "salty": 0.16666666666666666,
+                "meaty": 0.16666666666666666,
+                "sour": 0.16666666666666666,
+                "bitter": 0.16666666666666666,
+                "piquant": 0
+            },
+            "rating": 5
+        },
+        {
+            "imageUrlsBySize": {
+                "90": "http://lh5.ggpht.com/L1DZ5ykxW0y0Q53dfXEkzi8kqjd29eL1hlnVYd3zI2vFf6QVyHvc9darM1JmCsR7CW9ZqqZY8e_iRS_BpxBgpA=s90-c"
+            },
+            "sourceDisplayName": "Smitten Kitchen",
+            "ingredients": [
+                "apples",
+                "lemon juice",
+                "sugar",
+                "corn starch",
+                "cinnamon",
+                "salt",
+                "unsalted butter",
+                "honey",
+                "flour",
+                "oats",
+                "sliced almonds",
+                "shredded coconut"
+            ],
+            "id": "Breakfast-apple-granola-crisp-305530",
+            "smallImageUrls": [
+                "http://lh5.ggpht.com/6-yeaR_JsH7w9tmh-KfcqMb8-hO2xULqEy9dfGiX6ZUyIiwKU1OkyMEj-sHlVO-JpB-R2FMYiOQljGwlnFmb=s90"
+            ],
+            "recipeName": "Breakfast Apple Granola Crisp",
+            "totalTimeInSeconds": 4800,
+            "attributes": {
+                "course": [
+                    "Breakfast and Brunch"
+                ],
+                "holiday": [
+                    "Fall"
+                ]
+            },
+            "flavors": {
+                "sweet": 1,
+                "sour": 0.5,
+                "salty": 0.16666666666666666,
+                "piquant": 0,
+                "meaty": 0.5,
+                "bitter": 0.8333333333333334
+            },
+            "rating": 5
+        }
+    ],
+    "criteria": {
+        "excludedIngredients": null,
+        "allowedIngredients": null,
+        "terms": null
+    }
+}
