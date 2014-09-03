@@ -30,7 +30,9 @@
     <!-- results -->
     {% if recipe_response %}
         {% for recipe in recipe_response["matches"] %}
-            {{ recipe }}
+            <ul>
+            <li>{{ recipe["recipeName"] }}</li>
+            </ul>
         {% endfor %}
     {% endif %}
 
