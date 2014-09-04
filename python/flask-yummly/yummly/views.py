@@ -7,9 +7,14 @@ from yummly import api
 def index():
     if request.method == "POST":
         errors = []
-        ingredient = request.form["ingredient"]  # grab ingredient from the form
+        ingredients = []
+
+        form_data = request.values  # grab form values
+        for key, value in form_data.items():
+            ingredients.append(value)
+
         try:
-            response = api.get_ingredients(ingredient)  # make api call
+            response = api.get_ingredients(ingredients)  # make api call
         except:  # silencing all errors - bad!
             errors.append("Something went wrong!")
         return render_template(

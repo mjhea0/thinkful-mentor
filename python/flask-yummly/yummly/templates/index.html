@@ -19,25 +19,40 @@
     <!-- search form -->
     <form role="form" method="POST">
       <div class="form-group">
-        <input type="text" class="form-control" name="ingredient" placeholder="Enter an ingredient..." required>
+        <label>Ingredient 1</label>
+        <input type="text" class="form-control" name="ingredient1" placeholder="Enter an ingredient..." required>
+      </div>
+      <div class="form-group">
+        <label>Ingredient 2</label>
+        <input type="text" class="form-control" name="ingredient2" placeholder="Enter an ingredient..." required>
+      </div>
+      <div class="form-group">
+        <label>Ingredient 3</label>
+        <input type="text" class="form-control" name="ingredient3" placeholder="Enter an ingredient..." required>
       </div>
       <button type="submit" class="btn btn-success">Submit</button>
     </form>
-    <br><br>
 
+    <br><br>
     <hr>
 
     {% if recipe_response %}
-        {% for recipe in recipe_response["matches"] %}
-            <h2><a href="http://www.yummly.com/recipe/{{ recipe["id"] }}">{{ recipe["recipeName"] }}</a></h2>
-            <p><img src={{ recipe['imageUrlsBySize']['90'].replace('s90-c', 's230-c') }} alt="Recipe photo"></p>
-            <ul>
-                {% for ingredient in recipe["ingredients"] %}
-                    <li>{{ ingredient }}</li>
-                {% endfor %}
-            </ul>
-            <hr>
-        {% endfor %}
+      {% for recipe in recipe_response["matches"] %}
+        {% if recipe["recipeName"] %}
+          <h2><a href="http://www.yummly.com/recipe/{{ recipe["id"] }}">{{ recipe["recipeName"] }}</a></h2>
+        {% endif %}
+        {% if recipe["imageUrlsBySize"] %}
+          <p><img src={{ recipe['imageUrlsBySize']['90'].replace('s90-c', 's230-c') }} alt="Recipe photo"></p>
+        {% endif %}
+        {% if recipe["ingredients"] %}
+        <ul>
+          {% for ingredient in recipe["ingredients"] %}
+            <li>{{ ingredient }}</li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+        <hr>
+      {% endfor %}
     {% endif %}
 
     {% if errors %}
