@@ -14,7 +14,7 @@ def index():
 
         if cuisines:
             value = "{0}&allowedCuisine[]={1}".format(value, cuisines)
-            value = value.strip()
+
         try:
             response = api.get_ingredients(value)  # make api call
         except:  # silencing all errors - bad!
