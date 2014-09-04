@@ -18,18 +18,39 @@
 
     <!-- search form -->
     <form role="form" method="POST">
+
       <div class="form-group">
-        <label>Ingredient 1</label>
-        <input type="text" class="form-control" name="ingredient1" placeholder="Enter an ingredient..." required>
+        <label><h4>Ingredient<h4></label>
+        <input type="text" class="form-control" name="ingredient" placeholder="Enter an ingredient..." required>
       </div>
-      <div class="form-group">
-        <label>Ingredient 2</label>
-        <input type="text" class="form-control" name="ingredient2" placeholder="Enter an ingredient..." required>
+
+      <label><h4>Cuisine</h4></label>
+      <div class="checkbox">
+        <label><input type="checkbox" name="cuisine" value="cuisine^cuisine-american"> American</label>
       </div>
-      <div class="form-group">
-        <label>Ingredient 3</label>
-        <input type="text" class="form-control" name="ingredient3" placeholder="Enter an ingredient..." required>
+      <div class="checkbox">
+        <label><input type="checkbox" name="cuisine" value="cuisine^cuisine-thai"> Thai</label>
       </div>
+      <div class="checkbox">
+        <label><input type="checkbox" name="cuisine" value="cuisine^cuisine-french"> French</label>
+      </div>
+      <div class="checkbox">
+        <label><input type="checkbox" name="cuisine" value="cuisine^cuisine-german"> German</label>
+      </div>
+      <div class="checkbox">
+        <label><input type="checkbox" name="cuisine" value="cuisine^cuisine-greek"> Greek</label>
+      </div>
+      <div class="checkbox">
+        <label><input type="checkbox" name="cuisine" value="cuisine^cuisine-indian"> Indian</label>
+      </div>
+      <div class="checkbox">
+        <label><input type="checkbox" name="cuisine" value="cuisine^cuisine-italian"> Italian</label>
+      </div>
+      <div class="checkbox">
+        <label><input type="checkbox" name="cuisine" value="cuisine^cuisine-mexican"> Mexican</label>
+      </div>
+
+      <br>
       <button type="submit" class="btn btn-success">Submit</button>
     </form>
 

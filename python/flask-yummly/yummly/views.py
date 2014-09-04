@@ -7,14 +7,16 @@ from yummly import api
 def index():
     if request.method == "POST":
         errors = []
-        ingredients = []
 
-        form_data = request.values  # grab form values
-        for key, value in form_data.items():
-            ingredients.append(value)
+        value = request.values.get('ingredient')  # grab ingredient from form
+        cuisines = request.form.getlist('cuisine')  # grab cuisines from form
+        cuisines = ', '.join(cuisines).replace(", ", "+")
 
+        if cuisines:
+            value = "{0}&allowedCuisine[]={1}".format(value, cuisines)
+            value = value.strip()
         try:
-            response = api.get_ingredients(ingredients)  # make api call
+            response = api.get_ingredients(value)  # make api call
         except:  # silencing all errors - bad!
             errors.append("Something went wrong!")
         return render_template(
