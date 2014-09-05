@@ -1,0 +1,1 @@
+angular.module("CountriesCapitalsApp").controller("CountryController",["$scope","CountryRepo",function(n,o){o.getCountry().then(function(o){n.country=o.geonames[0]}),o.getNeighborList().then(function(o){n.neighbors=o.geonames}),o.getCapitalDetails().then(function(o){n.capitalPopulation=o.geonames[0].population})}]);

@@ -1,29 +1,34 @@
-﻿'use strict';
+﻿(function () {
 
-angular.module('CountriesCapitalsApp', ['DataServices', 'ngRoute', 'ngAnimate'])
+    'use strict';
 
-.constant('VERSION', "0.1")
+    angular.module('CountriesCapitalsApp', ['DataServices', 'ngRoute', 'ngAnimate'])
 
-.config([
-    '$locationProvider',
-    '$routeProvider',
-    function($locationProvider, $routeProvider) {
-        $locationProvider.hashPrefix('!');
-        // routes
-        $routeProvider
-            .when("/", {
-                templateUrl: "./home/home.html"
-            })
-            .when("/countries", {
-                templateUrl: "./countries/countries.html",
-                controller: "CountriesController"
-            })
-            .when("/countries/:countryCode", {
-                templateUrl: "./countries/country.html",
-                controller: 'CountryController'
-            })
-            .otherwise({
-                redirectTo: '/'
-            });
-    }
-]);
+    .constant('VERSION', "0.1")
+
+    .config([
+        '$locationProvider',
+        '$routeProvider',
+        function($locationProvider, $routeProvider) {
+            $locationProvider.hashPrefix('!');
+            // routes
+            $routeProvider
+                .when("/", {
+                    templateUrl: "./home/home.html"
+                })
+                .when("/countries", {
+                    templateUrl: "./countries/countries.html",
+                    controller: "CountriesController"
+                })
+                .when("/countries/:countryCode", {
+                    templateUrl: "./countries/country.html",
+                    controller: 'CountryController'
+                })
+                .otherwise({
+                    redirectTo: '/'
+                });
+        }
+    ]);
+
+
+}());
