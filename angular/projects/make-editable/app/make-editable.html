@@ -1,0 +1,9 @@
+<div ng-transclude
+     contenteditable="{{editingStatus}}"
+     ng-class="{editing: editingStatus}"
+     class="make-editable">
+</div>
+<br>
+<div>
+  <button ng-click='toggleEdit()' class="btn btn-primary btn-lg">{{buttonText}}</button>
+</div>
