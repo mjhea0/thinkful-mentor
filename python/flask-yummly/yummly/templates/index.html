@@ -1,89 +1,93 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
     <title>Recipe Search</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet" media="screen">
-    <style>
-      .container {
-        max-width: 400px;
-        padding-top: 60px;
-      }
-    </style>
+    <!-- styles -->
+    <link href="http://maxcdn.bootstrapcdn.com/bootswatch/3.2.0/cosmo/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="{{ url_for('static', filename='css/jumbotron-narrow.css') }}" rel="stylesheet" media="screen">
+    <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet" media="screen">
   </head>
   <body>
+
     <div class="container">
-      <h1>Recipe Search!</h1>
-      <br>
 
-    <!-- search form -->
-    <form role="form" method="POST">
+      <div class="jumbotron" style="background-color: #fff;">
 
-      <div class="form-group">
-        <label><h4>Ingredient<h4></label>
-        <input type="text" class="form-control" name="ingredient" placeholder="Enter an ingredient..." required>
-      </div>
+        <img src="{{ url_for('static', filename='img/fridge.png') }}" style="max-width: 125px;">
 
-      <label><h4>Cuisine</h4></label>
-      <div class="checkbox">
-        <label><input type="checkbox" name="cuisine" value="cuisine^cuisine-american"> American</label>
-      </div>
-      <div class="checkbox">
-        <label><input type="checkbox" name="cuisine" value="cuisine^cuisine-thai"> Thai</label>
-      </div>
-      <div class="checkbox">
-        <label><input type="checkbox" name="cuisine" value="cuisine^cuisine-french"> French</label>
-      </div>
-      <div class="checkbox">
-        <label><input type="checkbox" name="cuisine" value="cuisine^cuisine-german"> German</label>
-      </div>
-      <div class="checkbox">
-        <label><input type="checkbox" name="cuisine" value="cuisine^cuisine-greek"> Greek</label>
-      </div>
-      <div class="checkbox">
-        <label><input type="checkbox" name="cuisine" value="cuisine^cuisine-indian"> Indian</label>
-      </div>
-      <div class="checkbox">
-        <label><input type="checkbox" name="cuisine" value="cuisine^cuisine-italian"> Italian</label>
-      </div>
-      <div class="checkbox">
-        <label><input type="checkbox" name="cuisine" value="cuisine^cuisine-mexican"> Mexican</label>
-      </div>
+        <br>
 
-      <br>
-      <button type="submit" class="btn btn-success">Submit</button>
-    </form>
+        <h1>Recipe Search!</h1>
+        <p class="lead">Find recipes with the ingredients you already have.</p>
 
-    <br><br>
-    <hr>
+        <br>
 
-    {% if recipe_response %}
-      {% for recipe in recipe_response["matches"] %}
-        {% if recipe["recipeName"] %}
-          <h2><a href="http://www.yummly.com/recipe/{{ recipe["id"] }}">{{ recipe["recipeName"] }}</a></h2>
+        <!-- search form -->
+        <form role="form" method="POST">
+          <div class="form-group">
+            <input type="text" class="form-control" name="ingredient" placeholder="for example: chocolate, kale, high fructose corn syrup..." required>
+          </div>
+          <br>
+          <button type="submit" class="btn btn-lg btn-info">Feeling lucky BIG search button</button>
+        </form>
+
+        <br>
+
+        <!-- totals -->
+        {% if recipes %}
+          <span>We found <strong>{{ recipes['totalMatchCount'] }}</strong> recipes. Boom!<br>That's {{ recipes['totalMatchCount'] -1 }} too many.<br>Displaying <strong>1</strong> result...</span>
         {% endif %}
-        {% if recipe["imageUrlsBySize"] %}
-          <p><img src={{ recipe['imageUrlsBySize']['90'].replace('s90-c', 's230-c') }} alt="Recipe photo"></p>
-        {% endif %}
-        {% if recipe["ingredients"] %}
-        <ul>
-          {% for ingredient in recipe["ingredients"] %}
-            <li>{{ ingredient }}</li>
+
+        <!-- errros -->
+        {% if errors %}
+          {% for error in errors %}
+            <li class="alert alert-warning">{{ error }}</li>
           {% endfor %}
-        </ul>
         {% endif %}
+
         <hr>
-      {% endfor %}
-    {% endif %}
 
-    {% if errors %}
-      {% for error in errors %}
-        <li class="alert alert-warning">{{ error }}</li>
-      {% endfor %}
-    {% endif %}
+        <!-- results -->
+        {% if recipe %}
+          <strong>...and the winner is...</strong>
+          <br><br>
+          {% if recipe["imageUrlsBySize"] %}
+            <p>
+              <a href="http://www.yummly.com/recipe/{{ recipe["id"] }}">
+               <img src={{ recipe['imageUrlsBySize']['90'].replace('s90-c', 's230-c') }} alt="Recipe photo" style="border-radius:50%;">
+              </a>
+            </p>
+          {% endif %}
+          {% if recipe["recipeName"] %}
+            <h4><a href="http://www.yummly.com/recipe/{{ recipe["id"] }}">{{ recipe["recipeName"] }}</a></h4>
+          {% endif %}
+<!--           {% if recipe["ingredients"] %}
+            <ul>
+              {% for ingredient in recipe["ingredients"] %}
+                <li>{{ ingredient }}</li>
+              {% endfor %}
+            </ul>
+          {% endif %} -->
+          <strong>...enjoy!</strong>
+        {% endif %}
 
-    </div>
+      </div>
+
+
+      <div class="footer">
+        <p>&copy; Let's Eat! 2014</p>
+      </div>
+
+    </div> <!-- /container -->
+
+    <!-- scripts -->
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
   </body>
 </html>
