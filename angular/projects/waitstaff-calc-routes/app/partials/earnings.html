@@ -1,0 +1,20 @@
+<br>
+<div>
+  <h4>My Earnings Info</h4>
+
+    <div class="form-group">
+        <span class="subtitle">Total Tips:</span>
+        <sapn class="result">{{tip_total | number:2 | currency}}</sapn>
+    </div>
+    <div class="form-group">
+        <span class="subtitle">Meal count:</span>
+        <sapn class="result">{{meal_count}}</sapn>
+    </div>
+    <div class="form-group">
+        <span class="subtitle">Average Tip per Meal:</span>
+        <sapn class="result">{{average_tip | number:2 | currency}}</sapn>
+    </div>
+
+ <button class="btn btn-default btn-sm" id="resetBtn" type="button" ng-click="resetCalc()">Reset</button>
+</div>
+

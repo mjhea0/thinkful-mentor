@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ngWaitstaffApp">
+  <head>
+    <title>Waitstaff Calculator with Routes!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" media="screen">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Waitstaff Calculator</h1>
+        <ul class="mynav">
+          <li><a href="#/">Home</a></li>
+          <li><a href="#/new-meal">New Meal</a></li>
+          <li><a href="#/earnings">My Earnings</a></li>
+      </ul>
+      <div class="theview" ng-view></div>
+    </div>
+    <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+    <script type="text/javascript" src="bower_components/angular-route/angular-route.js"></script>
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+  </body>
+</html>
