@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html ng-app="yay">
+    <head lang="en">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>Just another free invoicing app built with AngularJS</title>
+        <!-- styles -->
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"/>
+        <link rel="stylesheet" href="bower_components/fontawesome/css/font-awesome.css"/>
+        <link rel="stylesheet" href="bower_components/animate.css/animate.css"/>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <style>
+            .container{
+                padding-top: 20px;
+                text-align: center;
+            }
+            th {
+              text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+
+      <div ng-controller="LineCtrl">
+        <div class="container">
+          <h1>Just another free invoicing app built with AngularJS</h1>
+          <br>
+          <form ng-submit="addRow()">
+            <input class="btn btn-lg btn-primary" type="submit" value="add a new row">
+          </form>
+          <br>
+          <table class="table">
+            <thead>
+            <tr>
+              <th></th>
+              <th>item</th>
+              <th>description</th>
+              <th>rate</th>
+              <th>hours</th>
+            </tr>
+            </thead>
+            <tbody>
+              <tr ng-repeat="row in rows">
+                <td><button type="button" class="btn btn-danger btn-xs" ng-click="removeRow(row.id)">X</button></td>
+                <td><input type="text" value="{{row.item}}" placeholder=" ..."></td>
+                <td><input type="text" value="{{row.description}}" placeholder=" ..."></td>
+                <td><input type="number" value="{{row.rate}}" placeholder=" ..."></td>
+                <td><input type="number" value="{{row.hours}}" placeholder=" ..."></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+        <!-- scripts -->
+        <script src="bower_components/jquery/dist/jquery.js"></script>
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/angular-route/angular-route.js"></script>
+        <script src="bower_components/angular-animate/angular-animate.js"></script>
+        <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
