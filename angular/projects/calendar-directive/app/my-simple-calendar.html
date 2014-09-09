@@ -1,0 +1,38 @@
+<form class="form-inline">
+  <div class="form-group">
+    <select class="form-control dropdown" name="month" id="month" ng-model="selectedMonth" ng-change="refreshCalendar()">
+      <option value="0">January</option>
+      <option value="1">February</option>
+      <option value="2">March</option>
+      <option value="3">April</option>
+      <option value="4">May</option>
+      <option value="5">June</option>
+      <option value="6">July</option>
+      <option value="7">August</option>
+      <option value="8">September</option>
+      <option value="9">October</option>
+      <option value="10">November</option>
+      <option value="11">December</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <select class="form-control dropdown" name="year" id="year" ng-model="selectedYear" ng-change="refreshCalendar()">
+      <option value="2014">2014</option>
+      <option value="2015">2015</option>
+    </select>
+  </div>
+</form>
+<br>
+<div class="calendar" >
+  <div class="day header">Sunday</div>
+  <div class="day header">Monday</div>
+  <div class="day header">Tuesday</div>
+  <div class="day header">Wednesday</div>
+  <div class="day header">Thursday</div>
+  <div class="day header">Friday</div>
+  <div class="day header">Saturday</div>
+  <div class="day {{day.monthClass}}" ng-repeat="day in range.days" >
+    <span>{{day.day}}</span>
+  </div>
+</div>
+

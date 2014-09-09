@@ -1,8 +1,8 @@
 {
-  "name": "waitstaff-calc-routes",
+  "name": "calendar-directive",
   "version": "0.0.0",
-  "authors": [
-    "Michael Herman <hermanmu@gmail.com>"
+  "moduleType": [
+    "globals"
   ],
   "license": "MIT",
   "private": true,

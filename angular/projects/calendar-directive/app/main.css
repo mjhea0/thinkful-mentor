@@ -1,0 +1,30 @@
+.dropdown {
+  max-width: 150px;
+}
+
+.container {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+.calendar {
+  max-width: 700px;
+}
+
+.day {
+  width: 100px;
+  height: 90px;
+  border: 1px solid #CCC;
+  float:left;
+  position: relative;
+}
+
+.day.previous-or-next-month {
+  background-color: #e4e4e4;
+}
+
+.day.header {
+  max-height: 23px;
+  font-weight: bold;
+}
