@@ -26,17 +26,16 @@
           </div>
 
           <div id="search">
-            <h3>Step One: Enter the ingredients you have.</h3>
-            <form role="form" method="POST">
+            <form role="form" method="POST" id="post-form" onsubmit="return false">
               <div class="form-group">
-              <center><input type="text" class="form-control" name="ingredient" placeholder="for example: chocolate, kale, high fructose corn syrup..." style="max-width: 400px;" required></center>
+                <center><input type="text" class="form-control ingredients" name="ingredient" placeholder="for example: chocolate, kale, high fructose corn syrup..." style="max-width: 400px;" required></center>
               </div>
-              <h3>Step Two: Click the button.</h3>
               <button type="submit" class="btn btn-lg btn-info boom">Boom!</button>
+              <button type="submit" class="btn btn-md btn-default another"><span class="glyphicon glyphicon-thumbs-up"></span></button>
+              <button type="submit" class="btn btn-md btn-default another"><span class="glyphicon glyphicon-thumbs-down"></span></button>
             </form>
           </div>
 
-          <br><br>
 
 <!--           <div id="image">
             <img src="{{ url_for('static', filename='img/fridge.png') }}" style="max-width: 125px;">
@@ -44,22 +43,23 @@
 
         </div>
 
-        <div id="results">
-
+        <div id="results"></div>
+        <br>
+        <p class="new-link"><a href="#">Seach Again?</a></p>
           <!-- totals -->
-          {% if recipes %}
+<!--           {% if recipes %}
             <span>We found <strong>{{ recipes['totalMatchCount'] }}</strong> recipes. Boom!<br>That's {{ recipes['totalMatchCount'] -1 }} too many.<br>Displaying <strong>1</strong> result...</span>
-          {% endif %}
+          {% endif %} -->
 
           <!-- errros -->
-          {% if errors %}
+<!--           {% if errors %}
             {% for error in errors %}
               <li class="alert alert-warning">{{ error }}</li>
             {% endfor %}
-          {% endif %}
+          {% endif %} -->
 
           <!-- results -->
-          {% if recipe %}
+<!--           {% if recipe %}
             <br>
             <strong>...and the winner is...</strong>
             <br><br>
@@ -68,11 +68,11 @@
                 <a href="http://www.yummly.com/recipe/{{ recipe["id"] }}">
                  <img src={{ recipe['imageUrlsBySize']['90'].replace('s90-c', 's230-c') }} alt="Recipe photo" style="border-radius:50%;">
                 </a>
-              </p>
-            {% endif %}
+              </p> -->
+<!--             {% endif %}
             {% if recipe["recipeName"] %}
               <h4><a href="http://www.yummly.com/recipe/{{ recipe["id"] }}">{{ recipe["recipeName"] }}</a></h4>
-            {% endif %}
+            {% endif %} -->
   <!--           {% if recipe["ingredients"] %}
               <ul>
                 {% for ingredient in recipe["ingredients"] %}
@@ -80,10 +80,9 @@
                 {% endfor %}
               </ul>
             {% endif %} -->
-            <strong>...enjoy!</strong>
-          {% endif %}
+<!--             <strong>...enjoy!</strong>
+          {% endif %} -->
 
-        </div>
 
       </div> <!-- /jumbotron -->
 

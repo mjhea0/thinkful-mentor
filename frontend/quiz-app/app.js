@@ -78,7 +78,7 @@ $(document).ready(function () {
                 $("#" + questionNumber).hide();
                 $("#" + questionNumber).next().show();
                 counter--;
-            } else if (counter == 1) {
+            } else if (counter === 1) {
                 // remove questions, add results
                 checkAnswer(userInput, questionNumber, questions);
                 $("#questions").find("form").remove();
