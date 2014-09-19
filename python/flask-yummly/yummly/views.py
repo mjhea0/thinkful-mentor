@@ -13,11 +13,11 @@ def index():
     3. return results to the template
     """
     if request.method == "POST":
-        ingredient_list = request.values.get('ingredient')
+        ingredient_list = request.form.get('ingredient_list')
+        recipe = []
         try:
             response = api.get_ingredients(ingredient_list)
             recipe = random.choice(response["matches"])
-            print recipe
             result = {
                 "recipe_id": recipe["id"],
                 "recipe_name": recipe["recipeName"],
