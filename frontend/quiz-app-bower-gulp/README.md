@@ -10,8 +10,8 @@ Hi.
 
 ### Adding Bower and Gulp to a Project
 
-**Gulp**: Task runner (Makefile on steroids)
-**Bower**: Front end dependency manager
+- **Gulp**: Task runner (Makefile on steroids)
+- **Bower**: Front end dependency manager
 
 1. Make sure you have Node installed
 1. Create a *package.json* file to install Bower, Gulp, and Gulp dependencies
