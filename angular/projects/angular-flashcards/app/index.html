@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="ngFlashcards">
+  <head>
+   <title>Angular Flashcards</title>
+    <link rel="stylesheet" type="text/css" href="./bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="./main.css" />
+  </head>
+  <body>
+    <div class="container" ng-controller="mainController">
+      <h1>Flashcards are cool</h1>
+      <p>{{test}}</p>
+      <ul >
+        <li ng-repeat="card in cards">
+          {{card.question}}
+        </li>
+      </ul>
+    </div>
+  <script type="text/javascript" src="./bower_components/angular/angular.js"></script>
+  <script type="text/javascript" src="./bower_components/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="./app.js"></script>
+</body>
+</html>
