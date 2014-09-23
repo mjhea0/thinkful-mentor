@@ -1,0 +1,22 @@
+/* your css code goes here */
+table td {
+  border: solid 1px black;
+  height: 100px;
+  width: 100px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.date-prev-month, .date-next-month {
+  background-color: lightgrey;
+}
+
+th {
+  background-color: black;
+  color: white;
+}
+
+.dropdown-toggle {
+  float: left;
+  margin-right: 10px;
+}

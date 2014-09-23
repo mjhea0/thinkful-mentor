@@ -1,0 +1,32 @@
+<h1 class="heading">
+  <div ng-if="formCtrl.edit">
+    Edit Existing Link
+  </div>
+  <div ng-if="!formCtrl.edit">
+    Create New Link
+  </div>
+</h1>
+<form name="newUrl" ng-submit="submitted = true; formCtrl.submit(formCtrl.form, newUrl.$valid)" novalidate ng-class="{submitted:submitted}">
+
+  <div class="form-input">
+    <label>Title:</label>
+    <input type="text" ng-model="formCtrl.form.title" name="title" required />
+    <div ng-messages="newUrl.title.$error" class="errors" ng-if="submitted">
+      <div ng-message="required">You did not enter a title</div>
+    </div>
+  </div>
+
+  <div class="form-input">
+    <label>URL:</label>
+    <input type="url" ng-model="formCtrl.form.url" name="url" required ng-disabled="formCtrl.edit" />
+    <div ng-messages="newUrl.url.$error" ng-if="!formCtrl.edit && submitted" class="errors">
+      <div ng-message="required">You did not enter a URL</div>
+      <div ng-message="url">Please enter a valid URL</div>
+    </div>
+  </div>
+
+  <nav class="form-nav">
+    <input type="submit" value="Submit" class="btn btn-primary" />
+  </nav>
+
+</form>

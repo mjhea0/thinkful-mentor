@@ -1,0 +1,59 @@
+<div ng-controller="calendarCtrl">
+<table>
+  <thead>
+    <tr>
+      <th colspan="7">
+        <div class="dropdown">
+          <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMonth" data-toggle="dropdown">
+            month
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMonth">
+            <li role="presentation"><a role="menuitem" tabindex="-1" ng-click="setMonth(0)" href="#">january</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" ng-click="setMonth(1)" href="#">february</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" ng-click="setMonth(2)" href="#">march</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" ng-click="setMonth(3)" href="#">april</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" ng-click="setMonth(4)" href="#">may</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" ng-click="setMonth(5)" href="#">june</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" ng-click="setMonth(6)" href="#">july</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" ng-click="setMonth(7)" href="#">august</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" ng-click="setMonth(8)" href="#">september</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" ng-click="setMonth(9)" href="#">october</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" ng-click="setMonth(10)" href="#">november</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" ng-click="setMonth(11)" href="#">december</a></li>
+          </ul>
+        </div>
+        <div class="dropdown">
+          <button class="btn btn-default dropdown-toggle" type="button" id="dropdownYear" data-toggle="dropdown">
+            year
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownYear">
+            <li role="presentation"><a role="menuitem" tabindex="-1" ng-click="setYear(2005)" href="#">2005</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" ng-click="setYear(2006)" href="#">2006</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" ng-click="setYear(2007)" href="#">2007</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" ng-click="setYear(2008)" href="#">2008</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" ng-click="setYear(2009)" href="#">2009</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" ng-click="setYear(2010)" href="#">2010</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" ng-click="setYear(2011)" href="#">2011</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" ng-click="setYear(2012)" href="#">2012</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" ng-click="setYear(2013)" href="#">2013</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" ng-click="setYear(2014)" href="#">2014</a></li>
+          </ul>
+        </div>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="week in weeks">
+      <td ng-class="week.days[0].cssclass">{{week.days[0].day}}</td>
+      <td ng-class="week.days[1].cssclass">{{week.days[1].day}}</td>
+      <td ng-class="week.days[2].cssclass">{{week.days[2].day}}</td>
+      <td ng-class="week.days[3].cssclass">{{week.days[3].day}}</td>
+      <td ng-class="week.days[4].cssclass">{{week.days[4].day}}</td>
+      <td ng-class="week.days[5].cssclass">{{week.days[5].day}}</td>
+      <td ng-class="week.days[6].cssclass">{{week.days[6].day}}</td>
+    </tr>
+  </tbody>
+</table>
+</div>

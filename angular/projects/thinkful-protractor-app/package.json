@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "express": "^4.6.1",
+    "gulp": "^3.8.6",
+    "sqlite3": "^2.2.4",
+    "gulp-shell": "^0.2.8",
+    "colors": "^0.6.2",
+    "gulp-nodemon": "^1.0.4",
+    "body-parser": "^1.4.3",
+    "connect": "^3.0.2",
+    "MD5": "^1.2.1",
+    "protractor": "^1.0.0-rc6",
+    "gulp-protractor": "0.0.11"
+  }
+}

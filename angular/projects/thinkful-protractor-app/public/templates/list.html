@@ -1,0 +1,33 @@
+<table class="listings">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Original URL</th>
+      <th>Shortened URL</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody ng-if="listCtrl.results.length == 0">
+    <tr>
+      <td colspan="4" class="empty-url-listing">
+        There are currently no URL listings in the database
+        <a href="#/new" class="btn">Click here to create one</a>
+      </td>
+    </tr>
+  </tbody>
+  <tbody ng-if="listCtrl.results.length > 0">
+    <tr ng-repeat="url in listCtrl.results | filter:q" class="url-listing">
+      <td class="listing-title">
+        <a ng-href="#/edit/{{ url.id }}">{{ url.title }}</a>
+      </td>
+      <td class="listing-url">{{ url.url }}</td>
+      <td class="listing-shortened-url">
+        <a target="_blank" ng-href="{{ url.actual_url }}">{{ url.shortened_url }}</a>
+      </td>
+      <td class="listing-actions">
+        <button class="btn btn-danger" ng-click="listCtrl.destroy(url)">Delete</button>
+        <a ng-href="#/edit/{{ url.id }}" class="btn btn-primary">Edit</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
