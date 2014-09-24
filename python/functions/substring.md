@@ -6,5 +6,5 @@ Write a function, called `substring()`, that takes two strings as arguments and 
 
 ### Strategy
 
-1. Break down the problem with a pen and paper. Think about all the different conditions that checked.
+1. Break down the problem with a pen and paper. Think about all the different conditions that must be checked.
 2. Turn your words, pictures, diagrams into pseudo-code.
