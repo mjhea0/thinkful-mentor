@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <font face="corbel"><title>Recipe Search</title>
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="{{ url_for('static', filename='css/jumbotron-narrow.css') }}" rel="stylesheet" media="screen">
+    <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet" media="screen">
+  </head>
+  <body>
+
+    <div class="container">
+
+      <div class="jumbotron" style="background-color: #fff;">
+
+        <div id="top">
+
+          <div id="main">
+            <h1>Recipe Search!</h1>
+            <p class="lead">What's for dinner?</p>
+                <!-- <div id="image">
+                  <img src="{{ url_for('static', filename='img/fridge.png') }}" style="max-width: 125px;">
+                </div> -->
+          </div>
+
+    <!-- search form -->
+    <div id="search">
+      <h3>Step One: Enter the ingredients you have.</h3>
+      <form role="form" method="POST" id="post-form" onsubmit="return false">
+        <div class="form-group">
+        <center><input type="text" class="form-control" name="ingredient"   placeholder="for example: chocolate, kale, high fructose corn syrup..." style="max-width: 400px;" required></center>
+        </div>
+        <h3>Step Two: Click the button.</h3>
+        <button type="submit" class="btn btn-lg btn-info boom">Go!</button>
+        <button type="submit" class="btn btn-lg btn-info retry">I don't like this one! Send me another.</button>
+      </form>
+    </div>
+      
+      <br><br>
+
+
+    </div>
+    <div id="results">
+    </div>
+
+
+    <br>
+    <p class="new-link"><a href="#">New Search?</a></p>
+
+    </div>
+    <div id="errors">
+    </div>
+    
+
+<!--     <div id="results">
+      {% if recipe %}
+      <span>We found <strong>{{ recipes['totalMatchCount'] }}</strong> recipes.<br>That's {{ recipes['totalMatchCount'] -1 }} too many.<br>Displaying <strong>1</strong> result...</span>
+      {% endif %}
+
+
+       {% if errors %}
+        {% for error in errors %}
+            <li class="alert alert-warning">{{ error }}</li>
+          {% endfor %}
+      {% endif %}
+
+
+     {% if recipe %}
+      <br>
+      <strong>...and the winner is...</strong>
+      <br><br>
+      {% if recipe["imageUrlsBySize"] %}
+        <p>
+          <a href="http://www.yummly.com/recipe/{{ recipe["id"] }}">
+            <img src={{ recipe['imageUrlsBySize']['90'].replace('s90-c', 's230-c') }} alt="Recipe photo" style="border-radius:50%;">
+          </a>
+        </p>
+      {% endif %}
+      {% if recipe["recipeName"] %}
+      <h4><a href="http://www.yummly.com/recipe/{{ recipe["id"] }}">{{ recipe["recipeName"] }}</a></h4>
+      {% endif %}
+      {% if recipe["ingredients"] %}
+      <strong>You will need:</strong>
+          {% for ingredient in recipe["ingredients"] %}
+            <li>{{ ingredient }}</li>
+          {% endfor %}
+      {% endif %}
+        <strong>...enjoy!</strong>
+      {% endif %}
+
+        </div> -->
+
+      </div> <!-- /jumbotron -->
+
+    </div> <!-- /container -->
+
+    </div>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+  </body>
+</html>
