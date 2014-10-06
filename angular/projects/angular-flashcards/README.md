@@ -1,5 +1,4 @@
-# Angular Flashcards
+## Angular Flash cards
 
-1. `npm install`
-2. `bower install`
-3. `gulp`
+1. Install - `npm install && bower install`
+2. Run - `gulp`

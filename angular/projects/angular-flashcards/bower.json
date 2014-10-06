@@ -1,8 +1,8 @@
 {
   "name": "angular-flashcards",
   "version": "0.0.0",
-  "moduleType": [
-    "globals"
+  "authors": [
+    "Michael Herman <hermanmu@gmail.com>"
   ],
   "license": "MIT",
   "private": true,
@@ -15,7 +15,6 @@
     "tests"
   ],
   "dependencies": {
-    "angular-route": "~1.2.22",
     "angular": "~1.2.22",
     "bootstrap": "~3.2.0",
     "jquery": "~2.1.1"

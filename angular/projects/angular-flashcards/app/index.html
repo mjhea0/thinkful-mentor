@@ -1,23 +1,74 @@
 <!DOCTYPE html>
-<html ng-app="ngFlashcards">
+<html>
   <head>
-   <title>Angular Flashcards</title>
-    <link rel="stylesheet" type="text/css" href="./bower_components/bootstrap/dist/css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="./main.css" />
+    <title>Angular Flashcards</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- syles -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootswatch/3.2.0/yeti/bootstrap.min.css">
+    <style>
+      .container {
+        max-width: 700px;
+        padding-top: 20px;
+      }
+      ul {
+        list-style-type: none;
+      }
+    </style>
   </head>
-  <body>
-    <div class="container" ng-controller="mainController">
-      <h1>Flashcards are cool</h1>
-      <p>{{test}}</p>
-      <ul >
-        <li ng-repeat="card in cards">
-          {{card.question}}
-        </li>
-      </ul>
+
+  <body ng-app="angularFlashcards">
+
+    <div class="container" ng-controller="QuizCtrl">
+      <div class="jumbotron">
+        <div class="row">
+          <div class="col-md-6 text-center">
+            <h3>TIME REMAINING</h3>
+            <h1>{{ timeRemaining }}</h1>
+          </div>
+          <div class="col-md-6 text-center">
+            <h3>TOTAL SCORE</h3>
+            <h1>{{ totalScore }}</h1>
+          </div>
+        </div>
+        <hr>
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <button class="btn btn-primary btn-lg" ng-click="startTimer()" ng-disabled="isRunning">Start Quiz</button>
+            <button class="btn btn-danger btn-lg" ng-click="reloadPage()">Start Over</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4 col-md-offset-4 text-center">
+          <h3>Question # {{ currentCard + 1 }}!</h3>
+          <hr>
+          <h4>{{ quiz[currentCard].question }}</h4>
+          <ul class="text-left">
+            <li ng-repeat="option in quiz[currentCard].options">
+              <input type="radio" name="options" value="{{ option }}" ng-model="quiz[currentCard].chosenOption">
+              {{ option }}
+            </li>
+          </ul>
+          <div class="text-center" ng-controller="QuestionCtrl">
+            <button class="btn btn-primary btn-sm" ng-click="checkAnswer(quiz[currentCard])" ng-disabled="!isRunning || answered">Submit Answer</button>
+          </div>
+        </div>
+      </div>
+
     </div>
-  <script type="text/javascript" src="./bower_components/angular/angular.js"></script>
-  <script type="text/javascript" src="./bower_components/jquery/dist/jquery.min.js"></script>
-  <script type="text/javascript" src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="./app.js"></script>
-</body>
+
+    <!-- scrips -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angularLocalStorage/src/angularLocalStorage.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/quiz.js"></script>
+    <script src="scripts/controllers/question.js"></script>
+    <script src="scripts/services/quiz.js"></script>
+  </body>
 </html>
