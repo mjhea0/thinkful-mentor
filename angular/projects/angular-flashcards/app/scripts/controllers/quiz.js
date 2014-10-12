@@ -2,11 +2,12 @@
 
   'use strict';
 
-  angular.module('angularFlashcards')
+  angular.module('angularFlashcards', ['LocalStorageModule'])
 
-    .controller('QuizCtrl', function ($scope, $interval, Cards) {
+    .controller('QuizCtrl', function ($scope, $interval, Cards, localStorageService) {
 
       $scope.quiz = Cards; // all cards
+      // localStorageService.set('allcards',Cards);
       $scope.currentCard = 0;
 
       $scope.isRunning = false; // quiz is not running

@@ -25,7 +25,8 @@ $(function() {
                     '"><img src='+recipe.recipe_pic+' alt="Recipe photo" style="border-radius:50%;"></a><br><br>');
             },
             error: function(error) {
-                console.log(error)
+                console.log(error.responseJSON)
+                $("#results").html('<h3>'+error.responseJSON.error+'</h3>');
             }
         });
 
