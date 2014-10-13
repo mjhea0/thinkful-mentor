@@ -1,0 +1,5 @@
+*.pyc
+*.DS_Store
+secret.py
+output.log
+access.json

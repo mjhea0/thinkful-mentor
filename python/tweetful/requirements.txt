@@ -1,0 +1,4 @@
+oauthlib==0.6.3
+requests==2.4.3
+requests-oauthlib==0.4.1
+wsgiref==0.1.2
