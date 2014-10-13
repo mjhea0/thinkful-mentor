@@ -1,11 +1,10 @@
 import urlparse
-
+import json
 import requests
 from requests_oauthlib import OAuth1
 
-from secret import CLIENT_KEY, CLIENT_SECRET
-from urls import *
-import json
+from .secret import CLIENT_KEY, CLIENT_SECRET
+from .urls import REQUEST_TOKEN_URL, AUTHORIZE_URL, ACCESS_TOKEN_URL
 
 
 def store_credentials(access_token, access_secret):
