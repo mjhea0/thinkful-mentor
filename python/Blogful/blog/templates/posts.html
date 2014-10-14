@@ -1,0 +1,34 @@
+<!-- first import the macros.html file-->
+{% import "macros.html" as macros %}
+<!--specify the template should inherit from the base.html-->
+{% extends "base.html" %}
+
+<!--start the content block -->
+{% block content %}
+
+<!-- Loop through the posts -->
+{% for post in posts %}
+<!-- rendering each one using the render_post macro -->
+{{ macros.render_post(post) }}
+<!-- End the loop -->
+{% endfor %}
+
+<!-- Adjusted posts.html template to display some buttons which will direct us to the next and previous pages -->
+<ul class="pager">
+	{% if has_prev %}
+	<!-- If has_prev variable is true, add link to the previous page
+	using Flask's url_for function to generate the URL for the route -->
+	<li class="previous">
+		<a href="{{ url_for('posts', page=page - 1) }}">&larr; Older</a>
+	</li>
+	{% endif %}
+	<!-- If has_next variable is true, add a link to the next page
+	using Flask's url_for function to generate the URL for the route -->
+	{% if has_next %}
+	<li class="next">
+		<a href="{{url_for('posts', page=page + 1) }}">&rarr; Newer</a>
+	</li>
+	{% endif %}
+</ul>
+
+{% endblock %}

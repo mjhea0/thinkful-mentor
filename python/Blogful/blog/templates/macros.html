@@ -1,0 +1,38 @@
+<!-- Jinja Macro used since there will be a number of places where we might want to render a post-->
+
+<!-- This macro takes the post as a single argument -->
+<!-- When this is called, we render a narrow metadata column, containing the post date
+    And a wider body column, containing the post title and the post content -->
+{% macro render_post(post) %}
+<div class="row">
+    <div class="col-md-2 text-right metadata">
+        <ul class="list-unstyled">
+            <li>
+                <!-- dateformat filter to display the datetime in dd/mm/yy format -->
+                <!-- Jinja does not include date formatting filter by default,
+                    so need to add this to filters.py -->
+                {( post.datetime|dateformat("%d/%m/%y") )}
+            </li>
+        </ul>
+    </div>
+    <div class="col-md-10">
+        <h1>
+           <a href="{{url_for('view_post', id=post.id)}}">{( post.title )}</a>
+        </h1>
+        <!--Safe filter is used on post content,
+        allows us to inclue HTML in the post content,
+        without it being automatically escaped-->
+        {( post.content|safe )}
+    </div>
+</div>
+{% endmacro %}
+
+
+{% macro render_single_post(post) %}
+<div class="col-md-10">
+    <h1>
+        <a href="{{url_for('view_post', id=post.id)}}">{(post.title)}</a>
+    </h1>
+    {(post.content|safe)}
+</div>
+{% endmacro %}

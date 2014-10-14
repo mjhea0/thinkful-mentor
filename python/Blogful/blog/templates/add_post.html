@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+<!-- Creating an html form for user input -->
+
+{% block content %}
+<h1>
+	Add Post
+</h1>
+
+<!-- Form has a method attribute set to POST, which means
+when we submit the form, it will send data via a POST request -->
+<!-- Since form element has no action attribute, request will be sent to the same URL that we used to GET the form -->
+<form role="form" method="POST">
+	<!-- First field is for the title, the name attribute will be used to access the contents of the field -->
+	<div class="form-group">
+		<label for="title">Title</label>
+		<input type="text" class="form-control" id="title" name="title" placeholder="Post title" required>
+	</div>
+	<!-- Second field is for the content, the name attribute is used to access the contents of the field -->
+	<div class="form-group">
+		<label for="content">Content</label>
+		<textarea class="form-control" id="content" name="content" placeholder="Post Content" rows="20" required></textarea>
+	</div>
+	<button type="submit" class="btn btn-default">Submit</button>
+</form>
+
+{% endblock %}
