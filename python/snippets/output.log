@@ -1,0 +1,130 @@
+INFO:root:Starting snippets
+INFO:root:Constructing parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing get subparser
+DEBUG:root:Constructing search subparser
+DEBUG:root:Constructing modify subparser
+INFO:root:Starting snippets
+INFO:root:Constructing parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing get subparser
+DEBUG:root:Constructing search subparser
+DEBUG:root:Constructing modify subparser
+INFO:root:Starting snippets
+INFO:root:Constructing parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing get subparser
+DEBUG:root:Constructing search subparser
+DEBUG:root:Constructing modify subparser
+INFO:root:Retrieving test.csv snippet from snippets2.csv
+DEBUG:root:Opening file
+INFO:root:Starting snippets
+INFO:root:Constructing parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing get subparser
+DEBUG:root:Constructing search subparser
+DEBUG:root:Constructing modify subparser
+INFO:root:Retrieving test.csv snippet from snippets.csv
+DEBUG:root:Opening file
+INFO:root:Starting snippets
+INFO:root:Constructing parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing get subparser
+DEBUG:root:Constructing search subparser
+DEBUG:root:Constructing modify subparser
+INFO:root:Starting snippets
+INFO:root:Constructing parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing get subparser
+DEBUG:root:Constructing search subparser
+DEBUG:root:Constructing modify subparser
+INFO:root:Retrieving snippets.csv snippet from snippets.csv
+DEBUG:root:Opening file
+INFO:root:Starting snippets
+INFO:root:Constructing parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing get subparser
+DEBUG:root:Constructing search subparser
+DEBUG:root:Constructing modify subparser
+INFO:root:Starting snippets
+INFO:root:Constructing parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing get subparser
+DEBUG:root:Constructing search subparser
+DEBUG:root:Constructing modify subparser
+INFO:root:Writing spam:eggs to snippets.csv
+DEBUG:root:Opening file
+DEBUG:root:Writing snippet to file
+DEBUG:root:Write successful
+INFO:root:Starting snippets
+INFO:root:Constructing parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing get subparser
+DEBUG:root:Constructing search subparser
+DEBUG:root:Constructing modify subparser
+INFO:root:Writing spam:eggs to snippets.csv
+DEBUG:root:Opening file
+DEBUG:root:Writing snippet to file
+DEBUG:root:Write successful
+INFO:root:Starting snippets
+INFO:root:Constructing parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing get subparser
+DEBUG:root:Constructing search subparser
+DEBUG:root:Constructing modify subparser
+INFO:root:Retrieving spam snippet from snippets.csv
+DEBUG:root:Opening file
+INFO:root:Starting snippets
+INFO:root:Constructing parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing get subparser
+DEBUG:root:Constructing search subparser
+DEBUG:root:Constructing modify subparser
+INFO:root:Searching snippets.csv for a snippet matching 'spam'
+DEBUG:root:Opening file
+INFO:root:Starting snippets
+INFO:root:Constructing parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing get subparser
+DEBUG:root:Constructing search subparser
+DEBUG:root:Constructing modify subparser
+INFO:root:Searching snippets.csv for a snippet matching 'eggs'
+DEBUG:root:Opening file
+INFO:root:Starting snippets
+INFO:root:Constructing parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing get subparser
+DEBUG:root:Constructing search subparser
+DEBUG:root:Constructing modify subparser
+INFO:root:Modifying eggs:yoke to snippets.csv
+DEBUG:root:Opening file
+INFO:root:Starting snippets
+INFO:root:Constructing parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing get subparser
+DEBUG:root:Constructing search subparser
+DEBUG:root:Constructing modify subparser
+INFO:root:Modifying eggs:yoke to snippets.csv
+DEBUG:root:Opening file
+INFO:root:Starting snippets
+INFO:root:Constructing parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing get subparser
+DEBUG:root:Constructing search subparser
+DEBUG:root:Constructing modify subparser
+INFO:root:Modifying eggs:yoke to snippets.csv
+DEBUG:root:Opening file
+INFO:root:Starting snippets
+INFO:root:Constructing parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing get subparser
+DEBUG:root:Constructing search subparser
+DEBUG:root:Constructing modify subparser
+INFO:root:Starting snippets
+INFO:root:Constructing parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Constructing get subparser
+DEBUG:root:Constructing search subparser
+DEBUG:root:Constructing modify subparser
+INFO:root:Retrieving spam snippet from snippets.csv
+DEBUG:root:Opening file

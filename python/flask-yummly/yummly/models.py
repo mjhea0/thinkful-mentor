@@ -1,6 +1,6 @@
 # models
 
-from . import db
+from yummly import db
 
 
 class User(db.Model):
