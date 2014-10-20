@@ -4,7 +4,7 @@
  * - exposes the model to the template and provides event handlers
  */
 todomvc.controller('TodoCtrl', function TodoCtrl($scope, $location, $firebase) {
-  var url = 'https://ngfire-todo.firebaseio.com/';
+  var url = 'https://get-your-own.firebaseio.com/';
   var fireRef = new Firebase(url);
 
   $scope.$watch('todos', function () {
