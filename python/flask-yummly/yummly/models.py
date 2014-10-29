@@ -1,6 +1,6 @@
 # models
 
-from yummly import db
+from yummly import db, bcrypt
 
 
 class User(db.Model):
@@ -15,7 +15,7 @@ class User(db.Model):
     def __init__(self, name, email, password):
         self.name = name
         self.email = email
-        self.password = password
+        self.password = self.password = bcrypt.generate_password_hash(password)
 
     def is_authenticated(self):
         return True

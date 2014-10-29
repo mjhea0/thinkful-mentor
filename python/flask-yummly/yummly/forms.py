@@ -4,5 +4,5 @@ from wtforms.validators import DataRequired
 
 
 class LoginForm(Form):
-    username = TextField('Username', validators=[DataRequired()])
+    name = TextField('Name', validators=[DataRequired()])
     password = PasswordField('Password', validators=[DataRequired()])

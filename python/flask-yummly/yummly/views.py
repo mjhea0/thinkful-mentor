@@ -4,9 +4,10 @@ import random
 import requests
 from functools import wraps
 
-from yummly import app
+from yummly import app, bcrypt
 from yummly import api
 from yummly.forms import LoginForm
+from yummly.models import User
 
 
 def login_required(test):
@@ -24,14 +25,14 @@ def login_required(test):
 def login():
     error = None
     form = LoginForm(request.form)
-    if request.method == 'POST':
-        if form.validate_on_submit():
-            if request.form['username'] == "admin" and \
-                    request.form['password'] == "admin":
-                session['logged_in'] = True
-                return redirect(url_for('index'))
-            else:
-                error = 'Invalid username or password.'
+    if form.validate_on_submit():
+        user = User.query.filter_by(name=form.name.data).first()
+        if user and bcrypt.check_password_hash(
+                user.password, request.form['password']):
+            session['logged_in'] = True
+            return redirect(url_for('index'))
+        else:
+            error = 'Invalid name or password.'
     return render_template('login.html', form=form, error=error)
 
 

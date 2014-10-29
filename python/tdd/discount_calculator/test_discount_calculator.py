@@ -20,5 +20,9 @@ class DiscountCalculatorTests(unittest.TestCase):
         discounted_total = calculate_discount(5, 10, 30)
         self.assertEqual(discounted_total, 0)
 
+    def test_negative_discount(self):
+        self.assertEqual(200, calculate_discount(200, -25, 0))
+        self.assertEqual(17.99, calculate_discount(17.99, 0, -20))
+
 if __name__ == "__main__":
     unittest.main()
