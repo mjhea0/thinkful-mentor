@@ -1,0 +1,358 @@
+ {
+  outline: 1px solid red;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+/*--- the navigation bar ---*/
+header {
+  height:70px;
+  width:100%;
+  -webkit-background-color: rgba(0, 0, 0, 0.75);
+     -moz-background-color: rgba(0, 0, 0, 0.75);
+     -o-background-color: rgba(0, 0, 0, 0.75);
+      background-color: rgba(0, 0, 0, 0.75);
+}
+
+#icon-and-text {
+  display: inline-block;
+  height: 100%;
+  margin-left: 5%;
+  float: left;
+  cursor: pointer;
+}
+
+#icon-container {
+  display: inline-block;
+  height: 45px;
+  width: 45px;
+  margin-top: 7%;
+  vertical-align: bottom;
+  background-color: #84BD00;
+  border-radius: 100%;
+}
+
+#icon {
+  height: 75%;
+  width: 75%;
+  margin: 10%;
+}
+
+#searchify {
+  color: white;
+  font-size: 34px;
+  vertical-align: middle;
+}
+
+#nav {
+  display: inline-block;
+  list-style-type: none;
+  height: 100%;
+  width: 30%;
+  padding: 0;
+  margin: 0;
+  float: right;
+}
+
+#nav li {
+  display: inline-block;
+  margin: 5% 2%;
+  max-height: 10%;
+}
+
+#nav li a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 22px;
+  -webkit-transition:all 1s;
+     -moz-transition:all 1s;
+     -o-transition:all 1s;
+}
+
+#nav li a:hover {
+  color: white;
+}
+
+/*--- the 3 main buttons to choose a search type ---*/
+#ask-user {
+  color: #000;
+  font-size: 58px;
+  margin: 5% 0 1% 2%;
+  padding: 0;
+  text-shadow: 2px 2px 5px #000;
+}
+
+#buttons-container {
+  height: 100px;
+  width: 100%;
+  margin-bottom: 5%;
+}
+
+#buttons-container div {
+  display: inline-block;
+  position: absolute;
+  height: 70px;
+  width: 20%;
+  background-color: #84bd00;
+  font-size: 38px;
+  line-height: 70px;
+  text-align: center;
+  vertical-align: middle;
+  margin-top: 1%;
+  border-radius: 5px;
+  cursor: pointer;
+  -webkit-text-shadow: 2px 2px 5px #000;
+     -moz-text-shadow: 2px 2px 5px #000;
+     -o-text-shadow: 2px 2px 5px #000;
+      text-shadow: 2px 2px 5px #000;
+  -webkit-box-shadow: 1px 1px 5px #000;
+     -moz-box-shadow: 1px 1px 5px #000;
+     -o-box-shadow: 1px 1px 5px #000;
+      box-shadow: 1px 1px 5px #000;
+      -webkit-transition: color 1s;
+         -moz-transition: color 1s;
+         -o-transition: color 1s;
+          transition: color 1s;
+}
+
+#buttons-container div:hover {
+  color: #fff;
+}
+
+#artist-button {
+  left: 5%;
+}
+
+#album-button {
+  left: 40%;
+}
+
+#track-button {
+  left: 75%;
+}
+
+/*--- search input + mic icon + close button ---*/
+#search-container {
+  display: none;
+  margin-top: 5%;
+  margin-bottom: 20%;
+  width: 100%;
+}
+
+form {
+  position: absolute;
+  height: 70px;
+  width: 60%;
+  left: 5%;
+}
+
+.all-searchboxes {
+  display: none;
+  height: 100%;
+  width: 85%;
+  padding-left: 5%;
+  padding-right: 10%;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: #ccc;
+  outline: none;
+  border-radius: 5px;
+  border: 0px solid #000;
+  font-size: 32px;
+  -webkit-text-shadow: 2px 2px #000;
+     -moz-text-shadow: 2px 2px #000;
+     -o-text-shadow: 2px 2px #000;
+      text-shadow: 2px 2px #000;
+  -webkit-box-shadow: -1px 1px #000;
+     -moz-box-shadow: -1px 1px #000;
+     -o-box-shadow: -1px 1px #000;
+      box-shadow: -1px 1px #000;
+}
+
+.all-mics {
+  position: absolute;
+  height: 70px;
+  width: 5%;
+  left: 60%;
+  border-radius: 5px;
+  border: 0px solid #000;
+  -webkit-transition: all 1s;
+     -moz-transition: all 1s;
+     -o-transition: all 1s;
+      transition: all 1s;
+}
+
+.all-mics img {
+  display: none;
+  height: 100%;
+  width: 100%;
+}
+
+#close {
+  position: absolute;
+  height: 70px;
+  width: 20%;
+  left: 75%;
+  background-color: #84bd00;
+  font-size: 38px;
+  line-height: 70px;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 5px;
+  cursor: pointer;
+  -webkit-text-shadow: 2px 2px 5px #000;
+     -moz-text-shadow: 2px 2px 5px #000;
+     -o-text-shadow: 2px 2px 5px #000;
+      text-shadow: 2px 2px 5px #000;
+  -webkit-box-shadow: 1px 1px 5px #000;
+     -moz-box-shadow: 1px 1px 5px #000;
+     -o-box-shadow: 1px 1px 5px #000;
+      box-shadow: 1px 1px 5px #000;
+      -webkit-transition: color 1s;
+         -moz-transition: color 1s;
+         -o-transition: color 1s;
+          transition: color 1s;
+}
+
+#close:hover {
+  color: white;
+}
+
+/*--- results for users input or action ---*/
+.hidden {
+  display: none;
+}
+
+.result-background {
+  width: 100%;
+  border-top: 5px solid #84bd00;
+  border-bottom: 5px solid #84bd00;
+  background-color: #1D1F20;
+}
+
+.result-content {
+  width: 80%;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-left: 5%;
+  color: #ccc;
+  font-size: 48px;
+}
+
+.result-content img {
+  background-repeat: no-repeat;
+  vertical-align: middle;
+}
+
+.result-content span {
+  vertical-align: middle;
+  margin-left: 25px;
+}
+
+.result-content ul {
+  vertical-align: middle;
+  list-style-type: none;
+  display: inline-block;
+  -webkit-text-shadow: 2px 2px 5px #000;
+     -moz-text-shadow: 2px 2px 5px #000;
+     -o-text-shadow: 2px 2px 5px #000;
+      text-shadow: 2px 2px 5px #000;
+}
+
+.subheading {
+  font-size: 28px;
+  color: #8e9093;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.play-stop {
+  padding: 0;
+  margin-left: 5%;
+}
+
+.play-stop li {
+  margin: 15px;
+  text-align: center;
+  padding: 15px;
+  color: #000;
+  background-color: #84bd00;
+  border-radius: 5px;
+  cursor: pointer;
+  -webkit-text-shadow: 2px 2px 5px #000;
+     -moz-text-shadow: 2px 2px 5px #000;
+     -o-text-shadow: 2px 2px 5px #000;
+      text-shadow: 2px 2px 5px #000;
+  -webkit-box-shadow: 1px 1px 5px #000;
+     -moz-box-shadow: 1px 1px 5px #000;
+     -o-box-shadow: 1px 1px 5px #000;
+      box-shadow: 1px 1px 5px #000;
+      -webkit-transition: color 1s;
+         -moz-transition: color 1s;
+         -o-transition: color 1s;
+          transition: color 1s;
+}
+
+.play-stop li:hover {
+  color: white;
+}
+
+.results {
+  width: 100%;
+}
+
+/*--- the footer trying to keep at bottom of page ---*/
+footer {
+  display: none;
+  height: 100px;
+  width: 100%;
+  background-color: #ebedf2;
+}
+
+#footer-container {
+  height: 100%;
+  width: 90%;
+  float: left;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.all-links {
+  text-decoration: none;
+  color: #8e9093;
+}
+
+.all-links:hover {
+  color: #638e00;
+}
+
+#top-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#bottom-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#top-list li {
+  display: inline-block;
+  margin: 5px 2px;
+}
+
+#bottom-list li {
+  display: inline-block;
+  margin: 5px 2px;
+}

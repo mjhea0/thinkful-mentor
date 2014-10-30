@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Searchify</title>
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <script src="js/jquery.js"></script>
+  <script src="js/app.js"></script>
+</head>
+<body>
+
+<!-- the navigation bar -->
+  <header>
+    <div id="icon-and-text">
+      <div id="icon-container">
+        <img id="icon" src="images/icon.png" alt="magnifying glass icon for Searchify">
+      </div>
+      <span id="searchify">Searchify</span>
+    </div>
+    <ul id="nav">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">News</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Support</a></li>
+    </ul>
+  </header>
+
+<!-- the 3 main buttons to choose a search type -->
+  <p id="ask-user">Search for an:</p>
+  <div id="buttons-container">
+    <div id="artist-button">Artist</div>
+    <div id="album-button">Album</div>
+    <div id="track-button">Track</div>
+  </div>
+
+<!-- search input + mic icon + close button -->
+  <div id="search-container">
+    <form>
+      <input type="search" placeholder="Search for an artist" id="artist-search" class="all-searchboxes" autofocus required>
+      <input type="search" placeholder="Search for an album" id="album-search" class="all-searchboxes" autofocus required>
+      <input type="search" placeholder="Search for a track" id="track-search" class="all-searchboxes" autofocus required>
+    </form>
+
+    <span id="artist-mic" class="all-mics"><img src="images/mic.png" alt="a microphone icon"></span>
+    <span id="album-mic" class="all-mics"><img src="images/mic.png" alt="a microphone icon"></span>
+    <span id="track-mic" class="all-mics"><img src="images/mic.png" alt="a microphone icon"></span>
+
+    <div id="close">CLOSE</div>
+  </div>
+
+<!-- results for users input or action -->
+  <div class="results"></div>
+
+<!-- the footer -->
+  <footer>
+    <div id="footer-container">
+      <a href="#" class="all-links">Terms of Use</a>
+      <hr>
+      <ul id="top-list">
+        <li><a href="#" class="all-links">About</a></li>
+        <li><a href="#" class="all-links">Jobs</a></li>
+        <li><a href="#" class="all-links">Press</a></li>
+        <li><a href="#" class="all-links">News</a></li>
+      </ul>
+      <ul id="bottom-list">
+        <li><a href="#" class="all-links">Legal</a></li>
+        <li><a href="#" class="all-links">Cookies</a></li>
+        <li><img src="images/adchoices.png"><a href="#" class="all-links">AdChoices</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>
