@@ -16,13 +16,13 @@ $(document).ready(function() {
     $(".new").click(function() {
         newGame();
     });
- 
+
     /*---Declare variables---*/
     var numGuesses = 0;
     var diff;
     var guess;
     var finish = false;
-   
+
     /*---Generate random number and assign to variable---*/
     var target = Math.floor((Math.random() * 100) + 1);
     console.log("The random number is " + target);
@@ -40,9 +40,9 @@ $(document).ready(function() {
             $("#guessButton").click();
         }
     });
-   
+
   /*--- Validate and Process Guess---*/
-    
+
     function getGuess () {
         guess = +$("#userGuess").val();
         console.log("Guess is " + guess);
@@ -52,7 +52,7 @@ $(document).ready(function() {
         }
         else compareGuess(guess);
     }
-    
+
     function compareGuess(x) {
         diff = Math.abs(x - target);
             if (diff === 0) {
@@ -88,7 +88,7 @@ $(document).ready(function() {
         $("#userGuess").focus();
      }
 
-    
+
     function endGame(finish) {
          $('#guessButton').prop('disabled', finish);
          $('#userGuess').prop('disabled', finish);
