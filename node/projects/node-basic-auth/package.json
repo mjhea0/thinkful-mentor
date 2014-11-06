@@ -1,0 +1,17 @@
+{
+  "name": "node-basic-auth",
+  "version": "0.0.0",
+  "description": "1. clone 1. `npm install` 1. `node server.js` 1. `",
+  "main": "server.js",
+  "dependencies": {
+    "htpasswd": "^2.1.2",
+    "http-auth": "^2.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
