@@ -1,0 +1,26 @@
+.container {
+  padding-top: 20px;
+}
+
+.closed {
+  border: solid 1px red;
+  margin: 5px;
+  width: 500px;
+  display: none;
+}
+
+.closed div {
+    margin: 15px;
+}
+
+table td {
+  border: 1px solid black;
+  padding: 5px;
+  margin: 5px;
+}
+
+
+#map-canvas {
+  width: 500px;
+  height: 400px;
+}
