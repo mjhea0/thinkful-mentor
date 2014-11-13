@@ -1,0 +1,20 @@
+<h1>My Inventory <a class="add contain" href="/new">+</a></h1>
+
+<div class="content">
+	<ul class="items">
+	{{#each items}}
+		<li>
+			<div class="actions">
+				<a href="/{{id}}/edit" class="edit button">edit</a>
+				<span class="delete" data-id="{{id}}">&times;</span>
+			</div>
+			<a href="/{{id}}">
+				<div class="info">
+					<header class="name">{{name}}</header>
+					<p class="description">{{description}}</p>
+				</div>
+			</a>
+		</li>
+	{{/each}}
+	</ul>
+</div>
