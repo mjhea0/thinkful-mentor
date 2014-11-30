@@ -1,4 +1,5 @@
+## node basic authentication
 
-`node server.js`
+run: `node server.js`
 
-username/password = "admin"
+(username/password = "admin")
