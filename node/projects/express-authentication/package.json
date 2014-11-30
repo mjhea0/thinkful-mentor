@@ -1,0 +1,10 @@
+{
+  "name": "express-auth",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "express": "^4.10.4",
+    "express-session": "^1.9.2",
+    "body-parser": "^1.9.3"
+  }
+}
