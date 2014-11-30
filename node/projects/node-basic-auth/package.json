@@ -1,7 +1,6 @@
 {
   "name": "node-basic-auth",
   "version": "0.0.0",
-  "description": "1. clone 1. `npm install` 1. `node server.js` 1. `",
   "main": "server.js",
   "dependencies": {
     "htpasswd": "^2.1.2",

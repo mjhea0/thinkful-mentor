@@ -1,7 +1,7 @@
 var http = require("http");
 var auth = require("http-auth");
 
-var basic = auth.basic({file: __dirname + '/auth'});
+var basic = auth.basic({file: __dirname + '/auth.txt'});
 console.log(basic.options)
 
 http.createServer(basic, function(req, res) {
