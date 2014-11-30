@@ -2,4 +2,4 @@
 
 run: `node server.js`
 
-(username/password = "admin")
+(username/password = "test")
