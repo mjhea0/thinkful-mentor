@@ -1,0 +1,74 @@
+body { 
+    margin: 0; 
+    padding: 0;
+    background-color: #FFF5EE;
+    font-family: 'Josefin Slab', serif;
+}
+.container {
+    text-align: center;
+    /*font-family: 'Lato', sans-serif;*/
+    color: #708090;
+    font-size: 20px;
+}
+#search button {
+    height: 50px;
+    width: 100px;
+    font-size: 20px;
+    color: DarkGray;
+    background-color: #FFF;
+}
+.form-control {
+    width: 250px;
+    height: 20px;
+    border-radius: 5px;
+}
+#results {
+    margin-left: 250px;
+    margin-right: 250px;
+}
+#map-canvas {
+    width: 600px;
+    height: 300px;
+    background-color: #CCC;
+    display: block;
+    margin: 0 auto 15px auto;
+    border-radius: 20px;
+    border: 8px solid rgba(71, 71, 71, 0.91);
+}
+.hover {
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+}
+.hover_in {
+    -webkit-transform: translate(1em,0);
+    -moz-transform: translate(1em,0);
+    -o-transform: translate(1em,0);
+    -ms-transform: translate(1em,0);
+    transform: translate(1em,0);
+    transform: scale(1.5);
+}
+
+.hover_out {
+    -webkit-transition: 1s ease-in-out;
+    -moz-transition: 1s ease-in-out;
+    -o-transition: 1s ease-in-out;
+    transition: 1s ease-in-out;
+}
+.location, .tag {
+    color: DarkGray;
+    background-color: white;
+    height: 70px;
+    width: 200px;
+    border-radius: 15px;
+    font-family: 'Josefin Slab', serif;
+    font-size: 20px;
+}
+.location:hover, .tag:hover {
+    background-color: LightGray;
+    cursor: pointer;
+}
+.hidden {
+    display: none;
+}
