@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<form id="calculator">
+    <input type="text" name="a"></input>
+    <span style="display:inline-block;position:relative;top:25px">
+        <input type="radio" name="op" value="+">+</input><br>
+        <input type="radio" name="op" value="-">-</input><br>
+        <input type="radio" name="op" value="/">/</input><br>
+        <input type="radio" name="op" value="*">*</input>
+    </span>
+    <input type="text" name="b"></input>
+    <br>
+    <input type="submit" value="calculate"></input>
+</form>
+
+
+<div id="answer">
+    The answer is <span id="answer-val"></span>.
+</div>
+
+
+<div id="error">
+    <div id="msg"></div>
+    There was an error.  (maybe you didn't type in numeric inputs?)
+</div>
+
+
+<script src="/static/calculator.js"></script>  
+<script type="text/javascript">
+    $(document).ready(function() {
+        calculator = new Calculator({
+            $theForm :      $("form#calculator"),
+            $error :        $("#error"),
+            $answer :       $("#answer"),
+            $answerVal :    $("#answer-val")
+        });
+    });
+</script>
+
+</body>
+{% endblock %}

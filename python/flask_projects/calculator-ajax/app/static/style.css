@@ -1,0 +1,12 @@
+#error {
+    display:none;
+    color:red;
+}
+#answer {
+    display:none;
+    font-size:2em;
+    font-weight:bold;
+}
+#answer-val {
+    font-style:italic;
+}

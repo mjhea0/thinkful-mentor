@@ -1,0 +1,2 @@
+export DATABASE_URL=postgresql+psycopg2://you@localhost/my_garage_v1
+export SECRET_KEY=donottell

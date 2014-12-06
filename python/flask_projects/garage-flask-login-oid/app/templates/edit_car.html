@@ -1,0 +1,18 @@
+<form method="POST">
+    Manufacterer : 
+    {% include "mfg_select.html" %}
+    <br><br>
+
+    Color : 
+    <input type="text" name="color" value="{{car.color}}" /><br>
+
+    Model : 
+    <input type="text" name="model" value="{{car.model}}" /><br>
+
+    Year :
+    <input type="text" name="year" value="{{car.year}}" /><br>
+
+    <input type="submit" />
+
+</form>
+

@@ -1,0 +1,31 @@
+<select name = "mfg">
+    <option value="not specified"></option>
+    <option value="porsche"
+        {% if car %}
+            {% if car.mfg == "porsche" %}
+                selected
+            {% endif %}
+        {% endif %}
+    >
+        porsche
+    </option>
+    <option value="saab"
+        {% if car %}
+            {% if car.mfg == "saab" %}
+                selected
+            {% endif %}
+        {% endif %}
+    >
+        saab
+    </option>
+        <option value="mini"
+        {% if car %}
+            {% if car.mfg == "mini" %}
+                selected
+            {% endif %}
+        {% endif %}
+    >
+        mini
+    </option>
+
+</select>

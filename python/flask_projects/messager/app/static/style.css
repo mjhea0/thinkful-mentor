@@ -1,0 +1,6 @@
+#messages {
+    overflow: auto;
+    width:300px;
+    height:200px;
+    border:solid black 1px;
+}

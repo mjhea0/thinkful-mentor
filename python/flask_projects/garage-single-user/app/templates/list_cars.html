@@ -1,0 +1,33 @@
+<h1>My Garage</h1>
+<form style="float:left" method="POST">
+    filter by manufacturer: 
+    {% include "mfg_select.html" %}
+    <input type="submit" />
+</form>
+<a style="float:left; margin-left:20px" href="/list_cars">clear filters</a>
+
+<br style="clear:both" />
+<p>
+<a href="/add_car">add a car</a>
+</p>
+
+<table cellpadding=10>
+    <tr>
+        <th>manufacturer</th>
+        <th>model</th>
+        <th>color</th>
+        <th>year</th>
+        <th>edit</th>
+        <th>delete</th>
+    </tr>
+    {% for car in cars %}
+    <tr>
+        <td>{{car.mfg}}</td>
+        <td>{{car.model}}</td>
+        <td>{{car.color}}</td>
+        <td>{{car.year }}</td>
+        <td><a href="/edit_car/{{car.id}}">edit</a></td>
+        <td><a href="/delete_car/{{car.id}}">delete</a></td>
+    </tr>
+    {% endfor %}
+</table>

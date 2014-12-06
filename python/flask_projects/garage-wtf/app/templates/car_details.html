@@ -1,0 +1,39 @@
+<form method="POST">
+    {{form.csrf_token }}
+
+    {{ form.mfg.label}}
+    {{ form.mfg() }}
+    {% for error in form.errors.mfg %}
+        <span style="color: red;">[{{error}}]</span>
+    {% endfor %}
+    <br>
+
+
+    {{ form.color.label}}
+    {{ form.color(size=20) }}
+    {% for error in form.errors.color %}
+        <span style="color: red;">[{{error}}]</span>
+    {% endfor %}
+    <br>
+
+
+
+    {{ form.model.label}} 
+    {{ form.model(size=20) }}
+    {% for error in form.errors.model %}
+        <span style="color: red;">[{{error}}]</span>
+    {% endfor %}
+    
+    <br>
+
+    {{ form.year.label}}
+    {{ form.year(size=4) }}
+    {% for error in form.errors.year %}
+        <span style="color: red;">[{{error}}]</span>
+    {% endfor %}
+    <br>
+
+    <input type="submit" />
+
+</form>
+

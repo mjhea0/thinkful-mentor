@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+
+<form action="/answer" method="POST">
+<input type="text" name="a"></input> 
+
+<span style="display:inline-block;position:relative;top:25px">
+<input type="radio" name="op" value="+">+</input><br>
+<input type="radio" name="op" value="-">-</input><br>
+<input type="radio" name="op" value="/">/</input><br>
+<input type="radio" name="op" value="*">*</input>
+</span>
+<input type="text" name="b"></input>
+<input type="submit"></input>
+</form>
+{% endblock %}

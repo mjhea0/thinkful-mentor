@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="/static/style.css">
+    </head>
+    <body>
+        <h1>Messagr</h1>
+
+        <form method="POST" action="/add_message">
+            <input type="text" name="message"></input><br>
+            <input type="submit"></input>
+        </form>
+
+        <hr>
+
+        <div id="messages">
+            {% for m in messages %}
+                {{ m.txt }} <br><br>
+
+            {% endfor %}
+        </div>
+    </body>
+</html>
+
+
+
