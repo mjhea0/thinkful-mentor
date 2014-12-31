@@ -1,0 +1,14 @@
+{% import "macros.html" as macros %}
+{% extends "base.html" %}
+{% block content %}
+
+{% for post in posts %}
+{{ macros.render_post(post) }}
+{% endfor %}
+
+<ul>
+    <li>
+        <a href="{{ url_for('Post.id' ) }}">Post</a>
+    </li>
+</ul>
+{% endblock %}
