@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AJAX</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="main.css" rel="stylesheet" media="screen">
+  </head>
+  <body>
+    <div class="container">
+      <form role="form" method="POST" id="search-form" onsubmit="return false;">
+        <div class="form-group">
+          <input type="text" id="query" class="form-control" required>
+          <br>
+          <button type="submit" class="btn btn-default">Search!</button>
+        </div>
+      </form>
+      <br><br>
+      <div id="results"></div>
+    </div>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
