@@ -13,9 +13,48 @@ connection = psycopg2.connect("dbname='snippets' host='localhost'")
 logging.debug("Database connection established")
 
 
-def put(name, snippet, hide=False):
+def get(name):
+    """Retrieve the snippet with a given name."""
+    while True:
+        logging.info("Retrieving snippet {}".format(name))
+        with connection.cursor() as cursor:
+            cursor.execute(
+                "select message from snippets where \
+                    hidden=False AND keyword=%s", (name,))
+            row = cursor.fetchone()
+        logging.debug("Snippet retrieved successfully.")
+        if not row:
+            ans = raw_input(
+                "Snippet doesn't exist. Would you like to create it? (yes/no) ")
+            lower_ans = ans.lower()
+            if lower_ans == 'yes':
+                name = str(raw_input('Enter the snippet name: '))
+                snippet = str(raw_input('Enter the snippet message: '))
+                put(name, snippet)
+            else:
+                return "Snippet does not exist."
+                break
+        else:
+            return row[0]
+            break
+
+
+def push(name, snippet, hide=False):
     """Store a snippet with an associated name."""
-    logging.info("Storing snippet {!r}: {!r}".format(name, snippet))
+    logging.info("Storing snippet {}: {}".format(name, snippet))
+    with connection.cursor() as cursor:
+        cursor.execute(
+            "insert into snippets values (%s, %s, %s)",
+            (name, snippet, hide)
+        )
+        logging.debug("Snippet stored successfully.")
+        connection.commit()
+        return name, snippet
+
+
+def put(name, snippet, hide=False):
+    """Update a snippet with an associated name."""
+    logging.info("Storing snippet {}: {}".format(name, snippet))
     with connection.cursor() as cursor:
         try:
             cursor.execute(
@@ -46,7 +85,7 @@ def catalog():
 
 def search(string):
     """Return a list of snippets containing a given string"""
-    logging.info("Searching snippets for {!r}".format(string))
+    logging.info("Searching snippets for {}".format(string))
     with connection.cursor(cursor_factory=psycopg2.extras.DictCursor) as cursor:
         # I needed the % signs because ...
         cursor.execute(
@@ -58,26 +97,6 @@ def search(string):
     logging.debug("Search complete")
 
 
-def get(name):
-    """Retrieve the snippet with a given name."""
-    while True:
-        logging.info("Retrieving snippet {!r}".format(name))
-        with connection, connection.cursor() as cursor:
-            cursor.execute(
-                "select message from snippets where \
-                    hidden=False AND keyword=%s", (name,))
-            row = cursor.fetchone()
-        logging.debug("Snippet retrieved successfully.")
-        if not row:
-            ans = raw_input('Would you like to create it? ')
-            if ans == 'yes':
-                print "ok, we can do that"
-            else:
-                print "ok, nevermind"
-        else:
-            return row[0]
-
-
 def main():
     """Main function"""
     logging.info("Constructing parser")
@@ -86,6 +105,14 @@ def main():
 
     subparsers = parser.add_subparsers(
         dest="command", help="Available commands")
+
+    # Subparser for the push command
+    logging.debug("Constructing push subparser")
+    put_parser = subparsers.add_parser("push", help="Store a new snippet")
+    put_parser.add_argument("name", help="The name of the snippet")
+    put_parser.add_argument("snippet", help="The snippet text")
+    put_parser.add_argument(
+        "--hide", help="Sets the hidden column to True", action="store_true")
 
     # Subparser for the put command
     logging.debug("Constructing put subparser")
@@ -116,12 +143,15 @@ def main():
     arguments = vars(arguments)
     command = arguments.pop("command")
 
-    if command == "put":
+    if command == "push":
         name, snippet = put(**arguments)
-        print("Stored {!r} as {!r}.".format(snippet, name))
+        print("Stored {} as {}.".format(snippet, name))
+    elif command == "put":
+        name, snippet = put(**arguments)
+        print("Stored {} as {}.".format(snippet, name))
     elif command == "get":
         snippet = get(**arguments)
-        print("Retrieved snippet: {!r}".format(snippet))
+        print("Retrieved snippet: {}".format(snippet))
     elif command == "catalog":
         catalog()
         print("Retrieved keywords")
@@ -129,7 +159,7 @@ def main():
         search(**arguments)
         print
         print("Search complete")
-        print("Found {!r} in these messages".format(sys.argv[2]))
+        print("Found {} in these messages".format(sys.argv[2]))
 
 
 if __name__ == "__main__":
