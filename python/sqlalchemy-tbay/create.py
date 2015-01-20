@@ -2,7 +2,8 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
 from datetime import datetime
-from sqlalchemy import Column, Integer, String, DateTime, Float, ForeignKey
+from sqlalchemy import Table, Column, Integer, \
+    String, DateTime, Float, ForeignKey
 from sqlalchemy.orm import relationship
 
 
@@ -42,6 +43,13 @@ class Bid(Base):
     id = Column(Integer, primary_key=True)
     price = Column(Float, nullable=False)
     bidder_id = Column(Integer, ForeignKey('users.id'), nullable=False)
+
+
+item_user_table = Table(
+    'item_user_association', Base.metadata,
+    Column('item_id', Integer, ForeignKey('items.id')),
+    Column('user_id', Integer, ForeignKey('users.id'))
+)
 
 
 Base.metadata.create_all(engine)
