@@ -2,7 +2,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
 from datetime import datetime
-from sqlalchemy import Table, Column, Integer, \
+from sqlalchemy import Column, Integer, \
     String, DateTime, Float, ForeignKey
 from sqlalchemy.orm import relationship
 
@@ -15,6 +15,7 @@ Base = declarative_base()
 
 # Table Classes
 
+
 class Item(Base):
 
     __tablename__ = "items"
@@ -24,6 +25,7 @@ class Item(Base):
     description = Column(String)
     start_time = Column(DateTime, default=datetime.utcnow)
     owner_id = Column(Integer, ForeignKey('users.id'), nullable=False)
+    bid = relationship('Bid', backref='bid')
 
 
 class User(Base):
@@ -34,6 +36,7 @@ class User(Base):
     username = Column(String, nullable=False)
     password = Column(String, nullable=False)
     auction_item = relationship('Item', uselist=True, backref='user')
+    bidder = relationship('Bid', backref='bidder')
 
 
 class Bid(Base):
@@ -43,13 +46,7 @@ class Bid(Base):
     id = Column(Integer, primary_key=True)
     price = Column(Float, nullable=False)
     bidder_id = Column(Integer, ForeignKey('users.id'), nullable=False)
-
-
-item_user_table = Table(
-    'item_user_association', Base.metadata,
-    Column('item_id', Integer, ForeignKey('items.id')),
-    Column('user_id', Integer, ForeignKey('users.id'))
-)
+    item_id = Column(Integer, ForeignKey('items.id'), nullable=False)
 
 
 Base.metadata.create_all(engine)

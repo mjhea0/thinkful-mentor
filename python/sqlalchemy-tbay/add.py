@@ -24,9 +24,9 @@ auction_item = Item(
 session.add_all([auction_item])
 session.commit()
 
-bid1 = Bid(price='12.70', bidder_id=bidder1.id)
-bid2 = Bid(price='17.00', bidder_id=bidder2.id)
-bid3 = Bid(price='23.00', bidder_id=bidder3.id)
-bid4 = Bid(price='25.90', bidder_id=bidder1.id)
+bid1 = Bid(price='12.70', bidder_id=bidder1.id, item_id=auction_item.id)
+bid2 = Bid(price='17.00', bidder_id=bidder2.id, item_id=auction_item.id)
+bid3 = Bid(price='23.00', bidder_id=bidder3.id, item_id=auction_item.id)
+bid4 = Bid(price='25.90', bidder_id=bidder1.id, item_id=auction_item.id)
 session.add_all([bid1, bid2, bid3, bid4])
 session.commit()
