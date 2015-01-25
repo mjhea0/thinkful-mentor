@@ -36,7 +36,17 @@ miles_traveled = 0
 
 while True:
     if (2 * miles_traveled) + (miles_traveled) == 102:
-        print miles_traveled
+        print 2*miles_traveled
         break
     else:
         miles_traveled += 1
+
+
+position_a = 0
+position_b = 102
+
+while position_a < position_b:
+    position_a += 2
+    position_b -= 1
+
+print position_a
