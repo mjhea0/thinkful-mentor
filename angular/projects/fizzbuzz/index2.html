@@ -14,18 +14,14 @@
   <h1>Challenge Two:<br>Fizz Buzz</h1>
   <br>
   <div ng-controller="myCtrl">
-    <div ng-repeat="num in numbers">
-      <h3 ng-if="num % 3 === 0 && num % 5 === 0">FizzBuzz</h3>
-      <h3 ng-if="num % 5 === 0 && num % 3 != 0">Buzz</h3>
-      <h3 ng-if="num % 3 === 0 && num % 5 != 0">Fizz</h3>
-      <h3 ng-if="num % 3 != 0 && num % 5 != 0">{{num}}</h3>
-      <br>
+    <div ng-repeat="num in numbers track by $index">
+      <h3>{{num}}</h3><br>
     </div>
   </div>
   <br><br>
 </body>
 <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
-<script src="main.js"></script>
+<script src="main2.js"></script>
 </html>
 
 
