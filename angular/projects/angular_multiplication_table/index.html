@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Multiplication Tables</title>
+	<script src="app/bower_components/angular/angular.min.js"></script>
+	<link rel="stylesheet" href="app/bower_components/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" href="css/custom.css">
+</head>
+<body ng-app="myApp">
+	<div ng-controller="myTableCtrl">
+		<div class="container text-center inputSpace">
+			<input type="number" ng-model="numberLimit" required="true" placeholder="enter a number" initial-number-limit="10">
+		</div>
+		<div class="container">
+			<table class="table table-striped">
+				<tr ng-repeat="numberA in numbers">
+					<td ng-repeat="numberB in numbers">
+						{{compute(numberA, numberB)}}
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<!-- Custom Scripts -->
+	<script src="app.js"></script>
+	<script src="app/controllers/myCtrl.js"></script>
+	<script src="app/bower_components/jquery/dist/jquery.js"></script>
+	<script src="app/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+</body>
+</html>

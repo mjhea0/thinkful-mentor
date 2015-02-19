@@ -1,0 +1,24 @@
+{
+  "name": "multiplaction_table",
+  "version": "0.0.1",
+  "authors": [
+    "William Countiss <william.countiss@gmail.com>"
+  ],
+  "description": "thinkful lession 3.3 Multiplication table",
+  "main": "index.html",
+  "keywords": [
+    "thinkful",
+    "lession",
+    "3.3"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower_components",
+    "test",
+    "tests"
+  ]
+}
