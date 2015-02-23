@@ -1,38 +1,29 @@
-// no jquery in angular controllers! bad practice!
+angular.module('ngMadlibs',['ngMessages'])
+  .controller('madlibsController', function($scope){
 
-$(function() {
-  console.log('ready!');
-});
-
-angular.module('ngMadlibs', [])
-  .controller('madlibsController', function($scope) {
-    'use strict';
-    $scope.submitForm = function() {
-      // check to make sure the form is valid
-      if ($scope.madForm.$valid) {
-        if ($scope.madForm.gender.$modelValue === "Male") {
-          $('#reset-btn').show()
-          $('#male-text').show()
-          $('#female-text').hide()
-          $('#all-inputs').hide()
-          $scope.isSubmitted = true
-        } else if ($scope.madForm.gender.$modelValue === "Female") {
-          $('#reset-btn').show()
-          $('#female-text').show()
-          $('#male-text').hide()
-          $('#all-inputs').hide()
-        }
+    $scope.submitForm = function(){
+      if( $scope.madLibForm.$valid ) {
+        console.log('The form is valid!');
+        $scope.display = 1;
+      } else {
+        console.log('The form is NOT valid!');
       }
-    }
-    $scope.reset = function() {
-      $scope.formData = {};
-      $('#female-text').hide()
-      $('#male-text').hide()
-      $scope.madForm.$setPristine();
-      $('#reset-btn').hide()
-      $('#all-inputs').show()
-      $scope.isSubmitted = false
-    }
+    };
+
+    $scope.reset = function(){
+      console.log('Reset!');
+      $scope.display = 0;
+      $scope.male = null;
+      $scope.dirty = null;
+      $scope.obnox = null;
+      $scope.job = null;
+      $scope.celeb= null;
+      $scope.huge = null;
+      $scope.tedious = null;
+      $scope.useless = null;
+      $scope.adjective = null;
+    };
+
+    $scope.display = 0;
+
   });
-
-

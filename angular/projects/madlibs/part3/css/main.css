@@ -1,31 +1,31 @@
-body {
-  background-color: #B7BBBF;
-}
-
-.container {
-  margin-top: 50px;
-  border: 1px solid gray;
-  padding-bottom: 20px;
-  background-color: white;
-}
-
-.input {
-  font-weight: bold;
-}
-
-#smile {
+.smile {
   max-width: 125px;
-  max-height: auto;
 }
 
-img {
-  padding: 10px 0px;
+.madLib-input {
+  padding: 20px 0;
 }
 
-#male-text, #female-text, #reset-btn {
-  display: none;
+form .col-md-4 {
+  margin-bottom: 15px;
+  height: 50px;
 }
 
-.dropdown {
-  max-width: 150px;
+form .col-md-4 .error {
+  color: #a94442;
+  background-color: #f2dede;
+  border-color: #ebccd1;
+  margin: 1px;
+}
+
+.madlib {
+  margin: 40px auto;
+}
+
+.madlib span {
+  text-decoration: underline;
+}
+
+.madlib p {
+  font-size: 24px;
 }
