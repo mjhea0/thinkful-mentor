@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./style.css" />
+    <title>Angular Madlibs</title>
+    <link rel="icon" type="image/ico" href="favicon.ico">
+  </head>
+
+  <body ng-app="myApp">
+    <div class="container whiteContainer">
+      <div class="container" ng-controller="myCtrl">
+        <div class="container bannerBuffer clearfix">
+          <img src="img/mad-lib-happy-face.png" alt="smile face" class="smile_face img img-responsive center-block clearfix">
+          <img src="img/ng-mad-libs-logo.png" alt="ng-Madlibs" class="ngBanner img img-responsive">
+        </div>
+        <div class="container-fluid putHere" ng-show="!myForm.$submitted || !myForm.$valid">
+          <!-- MadLibs Form -->
+          <form name="myForm" novalidate ng-submit="submitMe()">
+            <!-- radio buttons -->
+            <label for="male" id="myRadio" >Male</label>
+            <input  id="myRadio" type="radio" ng-model="mad.gender" value="male" name="gender_radio" required>
+            <label  id="myRadio" for="female">Female</label>
+            <input  id="myRadio" type="radio" ng-model="mad.gender" value="female"  name="gender_radio" required>
+            <span ng-if="myForm.$submitted && myForm.gender_radio.$error.required" class="bg-danger"><br>Is this for a Boy or Girl?</span>
+            <!-- text inputs -->
+            <input type="text" placeholder="Name" ng-model="mad.name"  name="persons_name" required>
+            <span ng-if="myForm.$submitted && myForm.persons_name.$error.required" class="bg-danger">Type in a person's name. Anyone</span>
+            <input type="text" placeholder="Job title" ng-model="mad.job"  name="job_title" required>
+            <span ng-if="myForm.$submitted && myForm.job_title.$error.required" class="bg-danger">Think of a Job title that isn't so glamorous </span>
+            <input type="text" placeholder="Tedious task" ng-model="mad.tedious"  name="tedious_task" required>
+            <span ng-if="myForm.$submitted && myForm.tedious_task.$error.required" class="bg-danger">A long and tiresome task that is really boring</span>
+            <input type="text" placeholder="Dirty task" ng-model="mad.dirty"  name="dirty_task" required>
+            <span ng-if="myForm.$submitted && myForm.dirty_task.$error.required" class="bg-danger">A dirty dirty job</span>
+            <input type="text" placeholder="Celebrity" ng-model="mad.celebrity"  name="celebrity_name" required>
+            <span ng-if="myForm.$submitted && myForm.celebrity_name.$error.required" class="bg-danger">Someone Famous</span>
+            <input type="text" placeholder="Useless skill" ng-model="mad.useless"  name="useless_skill" required>
+            <span ng-if="myForm.$submitted && myForm.useless_skill.$error.required" class="bg-danger">Some useless ability. We all have one.</span>
+            <input type="text" placeholder="Obnoxious celebrity" ng-model="mad.obnoxious"  name="obnoxious_celebrity" required>
+            <span ng-if="myForm.$submitted && myForm.obnoxious_celebrity.$error.required" class="bg-danger">An obnoxious celebrity..I'm sure you can think of a few.</span>
+            <input type="text" placeholder="Adjective" ng-model="mad.adjective1"  name="adjective" required>
+            <span ng-if="myForm.$submitted && myForm.adjective.$error.required" class="bg-danger">a word or phrase naming an attribute, added to or grammatically related to a noun to modify or describe it. You know, and adjective.</span>
+            <!-- number input -->
+            <input type="number" placeholder="Huge number" ng-model="mad.huge"  name="huge_number" required min="1" max="1000000000">
+            <span ng-if="myForm.$submitted && myForm.huge_number.$error.required || myForm.huge_number.$error.number" class="bg-danger">Think of a really, really, really big <strong>NUMBER</strong>.</span>
+            <!-- submit button -->
+            <button type="submit" id="lastButton" placeholder="my place"class="myBtn btn btn-primary">Show me my Mad-lib!</button>
+            <!-- <input type="submit" ng-submit="submitMe()" id="lastButton" ng-disabled="myForm.persons_name.$invalid || myForm.job_title.$invalid || myForm.tedious_task.$invalid || myForm.dirty_task.$invalid || myForm.celebrity_name.$invalid || myForm.useless_skill.$invalid || myForm.obnoxious_celebrity.$invalid || myForm.adjective.$invalid || myForm.huge_number.$invalid"> -->
+          </form>
+        </div>
+        <div class="container">
+          <!-- <h3>Mad object</h3>
+          <pre>{{mad | json}}</pre> -->
+          <h3>myForm object</h3>
+          <pre>{{myForm.huge_number | json}}</pre>
+        </div>
+        <!-- <div class="container mainBody"> -->
+        <div class="container mainBody" ng-show="myForm.$submitted && mad != null && myForm.$valid">
+          <div class="container">
+              <p>
+              <span class="libWord">{{mad.name}}</span> was a <span class="libWord">{{mad.job}}</span> who loved technology. Although <span ng-if="mad.gender=='male'">he</span><span ng-if="mad.gender=='female'">she</span> loved parts of <span ng-if="mad.gender=='male'">his</span><span ng-if="mad.gender=='female'">her</span> job, <span ng-if="mad.gender=='male'">he</span><span ng-if="mad.gender=='female'">she</span> absolutely hated <span class="libWord">{{mad.tedious}}</span> and <span class="libWord">{{mad.dirty}}</span>. So, <span class="libWord">{{mad.name}}</span> met with <span ng-if="mad.gender=='male'">his</span><span ng-if="mad.gender=='female'">her</span> life mentor <span class="libWord">{{mad.celebrity}}</span> who told <span ng-if="mad.gender=='male'">him</span><span ng-if="mad.gender=='female'">her</span> to learn how to <span class="libWord">{{mad.useless}}</span> with
+              Thinkful. Thinkful didn't offer a course on how to <span class="libWord">{{mad.useless}}</span> so <span ng-if="mad.gender=='male'">he</span><span ng-if="mad.gender=='female'">she</span> studied programming instead.
+            </p>
+            <p>
+              What a great decision! With <span ng-if="mad.gender=='male'">his</span><span ng-if="mad.gender=='female'">her</span> new skills, <span class="libWord">{{mad.name}}</span> built a(n) <span class="libWord">{{mad.adjective1}}</span> robot named <span class="libWord">{{mad.obnoxious}}</span> that not only loved <span class="libWord">{{mad.dirty}}</span> but did it <span class="libWord">{{mad.huge | number}}</span> times faster.
+            </p>
+            <button class="btn btn-primary startOver" ng-click="mad = null; myForm.$submitted = false">Start Over</button>
+          </div> <!-- container -->
+        </div> <!-- container, mainBody -->
+      </div> <!-- container, myCtrl -->
+    </div><!-- whiteContainer -->
+    <!-- Additional Java Scripts -->
+    <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular-messages.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+
+</html>

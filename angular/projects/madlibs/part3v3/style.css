@@ -1,0 +1,108 @@
+body {
+  font-size: 18px;
+  line-height: 27px;
+  background-image: url("./img/lined-paper-new.svg");
+  background-size: 100%;
+}
+pre {
+  max-width: 95%;
+}
+p {
+  padding-right: 5%;
+}
+.whiteContainer {
+  background-color: white;
+}
+.putHere {
+  margin-bottom: 40px;
+  margin-right: 3%;
+  border: solid 4px;
+  background-color: white;
+  padding: 15px;
+}
+.putHere input {
+ width: 100%;
+ padding-top: 4px;
+ padding-bottom: 4px;
+ text-align: center;
+
+}
+.ngBanner {
+  min-height: 201px;
+
+}
+.bannerBuffer {
+  margin-bottom: 40px;
+}
+.libWord{
+  color: #808080;
+  font-size: 1.5em;
+  font-family: chalkDuster;
+}
+.mainBody {
+  margin-bottom: 40px;
+}
+#lastButton {
+  margin-bottom: 20px;
+}
+#myRadio {
+  width: 20%;
+  margin-left: 2%;
+}
+.startOver {
+  margin-left: 80%;
+  margin-top: 30px;
+}
+.bg-danger {
+  background-color: #D78E8E;
+}
+.myBtn {
+  width: 100%;
+  margin-top: 20px;
+  font-size: 1.7rem;
+}
+form span {
+  display: block;
+  text-align: center;
+  margin-left: 20px;
+}
+@media screen and (min-width: 400px) and (max-width: 480px) {
+  .smile_face {
+    display: block;
+    margin-left: 17%;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 550px) {
+  .smile_face {
+    display: block;
+    margin-left: 25%;
+  }
+}
+@media screen and (min-width: 551px) and (max-width: 660px) {
+  .smile_face {
+    display: block;
+    margin-left: 30%;
+  }
+}
+@media screen and (min-width: 661px) and (max-width: 991px) {
+  .smile_face {
+    display: block;
+    margin-left: 35%;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .smile_face {
+    display: block;
+    margin-left: 36%;
+  }
+  .ngBanner {
+    margin-left: 5%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .smile_face {
+    float: left;
+    display: inline;
+    margin-right: 8%;
+  }
+}
