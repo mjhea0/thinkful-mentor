@@ -1,4 +1,4 @@
-var app = angular.module('myApp', []).controller( 'myController', MyCtrl);
+var app = angular.module('myApp', []).controller( 'myController', myController);
 function myController( $q, $timeout) {
   function f() {
     var deferred = $q.defer();
