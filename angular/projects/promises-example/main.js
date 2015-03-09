@@ -6,13 +6,14 @@ app.controller('appController', function($scope, $q, $timeout) {
 
   var defer = $q.defer();
 
-  defer.promise
-    .then(function(val) {
-      $scope.mydata += val;
-      // return val;
+  defer.promise.then(function(val) {
+    $scope.mydata += val;
+    // return val;
     });
 
   $timeout(function() {
+    console.log("resolved!");
     defer.resolve("World!");
-  },3000);
+  }, 3000);
+
 });
