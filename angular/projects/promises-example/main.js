@@ -8,8 +8,7 @@ app.controller('appController', function($scope, $q, $timeout) {
 
   defer.promise.then(function(val) {
     $scope.mydata += val;
-    // return val;
-    });
+  });
 
   $timeout(function() {
     console.log("resolved!");
