@@ -1,0 +1,109 @@
+html, body {
+    height: 100%;
+}
+
+html, button, input, select, textarea,
+.pure-g [class *= "pure-u"] {
+    font-size: 18px;
+}
+
+div {
+    box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+  color: #000000;
+}
+
+a:hover {
+  outline: none;
+  color: #252A3A;
+  text-decoration: none;
+}
+
+header {
+    font-size: 2em;
+}
+
+div#wrapper {
+    height: 100%;
+    padding-bottom: 128px;
+}
+
+div#songs {
+    height: 100%;
+    background-color: #252A3A;
+    color: #FFFFFF;
+    overflow: auto;
+}
+
+div#songs .pure-menu {
+    background-color: #252A3A;
+    border: 0;
+}
+
+div#songs .pure-menu .pure-menu-heading {
+    color: inherit;
+}
+
+div#songs .pure-menu a {
+    color: inherit;
+}
+
+div#songs .pure-menu a:hover,
+div#songs .pure-menu a:focus {
+    background: rgb(55, 60, 90);
+}
+
+div#songs .pure-menu a {
+    margin-left: 0.5em;
+}
+div#songs .pure-menu-heading {
+    border-bottom: none;
+    font-size:110%;
+}
+
+div#luke {
+    height: 100%;
+    padding: 20px;
+}
+
+div#luke div {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+div#luke img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+div#waveform-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+div#play-pause {
+    text-align: center;
+    font-size: 2em;
+}
+
+div#play-pause i {
+    display: block;
+    margin: 0 auto;
+    line-height: 128px;
+    vertical-align: middle;
+    font-size: 2em;
+}
+
+img.spin {
+    animation: spin 3s linear infinite;
+}
+
