@@ -8,3 +8,4 @@ class TestingConfig(object):
     DATABASE_URI = "postgresql://localhost:5432/tuneful-test"
     DEBUG = True
     UPLOAD_FOLDER = "test-uploads"
+    TESTING = True
