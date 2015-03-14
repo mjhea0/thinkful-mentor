@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html ng-app="instagramApp">
+<head>
+  <title>Instagram Search</title>
+  <link href="http://netdna.bootstrapcdn.com/bootswatch/3.1.1/yeti/bootstrap.min.css" rel="stylesheet" media="screen">
+  <link href="css/main.css" rel="stylesheet" media="screen">
+</head>
+<body>
+
+  <div ng-controller="MainCtrl" class="container text-center">
+
+    <section class="header">
+      <img src="img/ng-instagram.png" alt="NG Instagram logo" >
+      <div class="row">
+        <br>
+        {{messageText}}
+      </div>
+    </section>
+
+    <section class="hero">
+      <form name="myForm" ng-submit="submitted=true; submit()" novalidate>
+        <br>
+        <div class="row">
+          <span ng-show="requiredFields==true">Please fill in the field!</span><br>
+          <input type="text" id="instaTag" placeholder="Enter a tag to search" ng-model="instaTag" name="instaTag" autofocus required>
+          <br><br>
+          <input class="btn btn-sm" type="submit" value="Submit">
+        </div>
+      </form>
+    </section>
+
+    <br><br>
+
+    <section class="text" ng-hide="needTag">
+      <span ng-repeat="pic in pictures">
+        <img src="{{pic.images.low_resolution.url}}">
+      </span>
+    </section>
+
+  </div>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.0/angular.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.0/angular-animate.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

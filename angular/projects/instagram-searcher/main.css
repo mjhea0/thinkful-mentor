@@ -11,8 +11,7 @@ hr {
 #images {
   transition: 0.7s all ease-out;
 }
-#images.ng-hide-enter,
- {
+#images.ng-hide-enter {
   display: block !important;
 }
 #images.ng-hide-enter.ng-hide-enter-active {

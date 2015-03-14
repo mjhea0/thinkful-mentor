@@ -9,9 +9,11 @@
 </head>
   <body>
     <div class="container">
+
       <!-- start of app, controller -->
       <div ng-controller="instaController" ng-app='instaApp' ng-model="initialText">
         <img src="instagram.png"><br>
+
         <form role="form" class="instaForm" ng-submit="submit()">
           <div class="form-group">
             <br>
@@ -20,14 +22,19 @@
           <button type="submit" class="btn btn-primary btn-sm">Submit</button>
           <span ng-if="submitted"><button class="btn btn-success btn-sm" ng-click="reset()">Clear</button></span>
         </form>
+
         <br>
+
         <!-- message for user -->
         <h3>{{message}}</h3>
+
         <br>
+
         <!-- add images -->
         <span class="images" ng-if="submitted" ng-repeat="image in images">
           <img src="{{image.images.low_resolution.url}}">
         </span>
+
         </div> <!-- end of app, controller -->
       </div>
     </div>
@@ -39,5 +46,3 @@
     <script src="main.js" type="text/javascript"></script>
   </body>
 </html>
-
-
