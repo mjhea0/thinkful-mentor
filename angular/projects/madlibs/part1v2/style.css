@@ -1,0 +1,234 @@
+/*--------style reset -------*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+ul {
+	display:block;
+	list-style: none;
+}
+
+
+html {
+	display:block;
+	font-family: 'Roboto Condensed', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	height:100%;
+}
+
+body {
+	position:relative;
+	height:95%;
+	margin:auto;
+	margin-top:1em;
+	width:850px;
+	min-width:800px;
+	
+}
+
+#wrapper {
+	width:100%;
+	position:relative;
+	border:.3em solid black;
+	overflow:auto;
+}
+
+header {
+	position:relative;
+	overflow:auto;
+	width:100%;
+	min-width:800px;
+	margin:auto;
+	height:8em;
+	border-bottom:.3em solid black;
+}
+
+#head-left{
+	position:relative;
+	float:left;
+	width:15%;
+	height:8em;
+	border-right:.3em solid black;
+}
+
+#head-right{
+	position:relative;
+	float:left;
+	width:84.5%;
+	height:8em;
+	overflow:auto;
+}
+
+#smiley {
+	position:relative;	
+	height:6em;
+	width:auto;
+	top:1em;
+	background-image:url('images/smiley.png');
+	background-size:contain;
+	background-position: center bottom; 
+	background-repeat: no-repeat;
+}
+
+#logo {
+	position:relative;
+	height:3em;
+	width:25em;
+	top:.7em;
+	margin:auto;
+	background-image:url('images/logo.png');
+	background-size:75%;
+	background-position:center; 
+	background-repeat: no-repeat;
+}
+
+#header-text {
+	text-align:center;
+	position:absolute;
+	bottom:.7em;
+	margin:auto;
+	width:100%;
+}
+
+#header-text span {
+	font-size:270%;
+	font-weight:600;
+}
+
+.words-section {
+	position:relative;
+	height:17em;
+	width:80%;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:1.5em;
+}
+
+#words-title {
+	position:absolute;
+	font-size:180%;
+}
+
+.result-section {
+	position:relative;
+	width:80%;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:1em;
+	margin-bottom:1.5em;
+	min-height:18em;
+	overflow:auto;
+	background-color:#8C3434;
+	border:.3em solid black;
+}
+
+#choices {
+	position:relative;
+	width:100%;
+	margin-left:auto;
+	margin-right:auto;
+	top:1.5em;
+}
+
+.column {
+	position:relative;
+	float:left;
+	width:33.33%;
+}
+
+textarea:focus, input:focus{
+    outline: 0;
+}
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:black;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:black;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:black;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+   color:black;
+}
+
+input:focus::-webkit-input-placeholder { color:transparent; }
+input:focus:-moz-placeholder { color:transparent; } /* FF 4-18 */
+input:focus::-moz-placeholder { color:transparent; } /* FF 19+ */
+input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
+
+
+input.box {
+	-webkit-appearance:none 
+	outline: none;
+	padding:0;
+	display:block;
+	position:relative;
+	margin:1.8em auto;
+	height:3em;
+	width:11em;
+	font-size:90%;
+	border:4px solid black;
+	line-height:3em;
+	text-align:center;
+}
+
+#result-text {
+	width:92%;
+	position:relative;
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom:1em;
+	top:1em;
+	line-height:200%;
+	font-size:110%;
+
+}
+
+#result {
+	color:white;
+}
