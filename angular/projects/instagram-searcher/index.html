@@ -32,7 +32,7 @@
 
         <!-- add images -->
         <span class="images" ng-if="submitted" ng-repeat="image in images">
-          <img src="{{image.images.low_resolution.url}}">
+          <img ng-src="{{image.images.low_resolution.url}}">
         </span>
 
         </div> <!-- end of app, controller -->

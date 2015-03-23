@@ -33,7 +33,7 @@
 
     <section class="text" ng-hide="needTag">
       <span ng-repeat="pic in pictures">
-        <img src="{{pic.images.low_resolution.url}}">
+        <img ng-src="{{pic.images.low_resolution.url}}">
       </span>
     </section>
 
