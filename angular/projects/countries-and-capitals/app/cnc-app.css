@@ -1,0 +1,36 @@
+hr.style {
+  border: 0;
+  height: 1px;
+  background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+  background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+  background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+  background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+}
+.frontpagetitle {
+  height: 60px;
+  margin: 0 auto 0 auto;
+  width: 300px;
+}
+.frontpagetitle a, h1 {
+  font-family: Arial, Helvetica, Sans-Serif;
+  font-size: 40px;
+  font-weight: normal;
+  text-align: left;
+  color: #363;
+  margin: 0 auto 0 auto;
+  height: 50px;
+  width: 250px;
+  padding: 5px 0 0 60px;
+  background: url(img/globe.gif) no-repeat top left;
+}
+.version {
+  position: fixed;
+  bottom: 0;
+  background-color: white;
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+  background-color: LightSkyBlue;
+}

@@ -1,0 +1,26 @@
+{
+  "name": "countries-and-capitals",
+  "version": "0.0.0",
+  "moduleType": [
+    "globals"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "./app/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.2.22",
+    "angular-animate": "~1.2.22",
+    "angular-ui-router": "~0.2.10",
+    "bootstrap": "~3.2.0"
+  },
+  "devDependencies": {
+    "angular-mocks": "~1.2.22"
+  }
+}

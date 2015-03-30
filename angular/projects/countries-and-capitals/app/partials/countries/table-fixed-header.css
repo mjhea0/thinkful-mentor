@@ -1,0 +1,32 @@
+.fixed-table .header-fixed {
+  position: absolute;
+  top: 0px;
+/*  z-index: 1020; /* 10 less than .navbar-fixed to prevent any overlap */
+  border-bottom: 2px solid #d5d5d5;
+  -webkit-border-radius: 0;
+     -moz-border-radius: 0;
+          border-radius: 0;
+}
+.fixed-table{
+  display:block;
+  position:relative;
+}
+.fixed-table th{
+  padding: 8px;
+  line-height: 18px;
+  text-align: left;
+}
+.fixed-table .table-content{
+  display:block;
+  position: relative;
+  height: 520px; /*FIX THE HEIGHT YOU NEED*/
+  overflow-y: auto;
+}
+.fixed-table .header-copy{
+  position:absolute;
+  top:0;
+  left:0;
+}
+.fixed-table .header-copy th{
+  background-color:#fff;
+}

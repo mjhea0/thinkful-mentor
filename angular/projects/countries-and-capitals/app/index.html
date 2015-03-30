@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- build:css ./assets/combined.css -->
+  <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./cnc-app.css">
+  <link rel="stylesheet" href="./partials/countries/table-fixed-header.css">
+  <link rel="stylesheet" href="./partials/country/detail.css">
+  <!-- endbuild -->
+  <meta charset='UTF-8'>
+  <title>Countries &amp; Capitals</title>
+</head>
+<body ng-app="cncApp" ng-controller="appCtrl">
+  <header>
+    <div class="h1 text-center">Countries &amp; Capitals</div>
+    <div><hr class="style"></div>
+  </header>
+  <div ui-view></div>
+  <footer>
+    <div class="h3 text-center">
+      <p>
+        <button type="button" class="btn btn-default" ng-hide="$state.current.name == 'home'" ng-click="$state.go('home')">Home</button>
+        <button id="BrowseCountries" type="button" class="btn btn-default" ng-hide="$state.current.name == 'countries'" ng-click="$state.go('countries')">Browse Countries</button>
+      </p>
+    </div>
+  </footer>
+  <!-- build:js ./assets/combined.js -->
+  <script type="text/javascript" src="./bower_components/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="./bower_components/angular/angular.min.js"></script>
+  <script type="text/javascript" src="./bower_components/angular-animate/angular-animate.min.js"></script>
+  <script type="text/javascript" src="./bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+  <script type="text/javascript" src="./cnc-app.js"></script>
+  <script type="text/javascript" src="./geonames.js"></script>
+  <script type="text/javascript" src="./partials/countries/countries.js"></script>
+  <script type="text/javascript" src="./partials/country/detail.js"></script>
+  <!-- endbuild -->
+<!--  // <script type="text/javascript" src="./partials/countries/table-fixed-header.js"></script> -->
+</body>
+</html>
