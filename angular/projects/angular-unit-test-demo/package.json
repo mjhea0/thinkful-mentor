@@ -1,0 +1,11 @@
+{
+  "name": "angular-unit-test-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "karma.conf.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Michael Herman <michael@mherman.org> (http://mherman.org)",
+  "license": "ISC"
+}
