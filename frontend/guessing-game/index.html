@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Guessing Game</title>
+    <link rel="stylesheet" href="css/main.css" type="css/stylesheet">
+  </head>
+  <body>
+    <h1 class="header"><a href="index.html">Guessing Game</a></h1>
+    <!-- <form> -->
+    <div class="wrapper">
+      <input type="number" min="1" max="100" id="playerGuess" name="playerGuess" placeholder="Enter a Number 1 - 100">
+      <br>
+      <p id="results"></p>
+      <div class="buttons">
+        <button class='submit-guess' id="submit">Submit Your Guess</button>
+        <button id='play-again'>Play Again!</button>
+        <button id='give-hint'>Give Me a Hint</button>
+        <h1 class="show-hint-text" id="show-hint"></h1>
+      </div>
+      <span id="your-guess">Your guesses: </span>
+    <!-- </form> -->
+    </div>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/app.js" type="text/javascript" charset="utf-8"></script>
+  </body>
+</html>
+

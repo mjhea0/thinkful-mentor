@@ -1,0 +1,69 @@
+body {
+  text-align: center;
+  background: radial-gradient(rgba(210, 187, 179, 0.29), rgba(53, 69, 81, 0.55));
+  margin: 0 auto;
+  width: 95%;
+  height: 95%;
+}
+
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+header {
+  font-size: 2.5em;
+   text-align: center;
+}
+
+header:hover {
+  color: rgba(60, 60, 60, 0.89);
+}
+
+.wrapper {
+  background-color: rgba(82, 83, 90, 0.3);
+  margin: 0 auto;
+  max-width: 300px;
+  padding: 20px 10px;
+  border-radius: 5px;
+}
+
+input {
+  display: block;
+  margin: 0 auto;
+  width: 200px;
+  height: 50px;
+  font-size: 1em;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.buttons button{
+  margin: 15px auto;
+  display: block;
+}
+
+.show-hint-text {
+  display: none;
+}
+
+button {
+  width: 225px;
+  font-size: 1.25em;
+  color: rgb(255, 136, 0);
+  background-color: rgba(119, 101, 101, 0.37);
+  display: block;
+  padding: 8px;
+  margin: 10px;
+  border-radius: 5px;
+  border: 6px solid #C8C8C8;
+}
+
+button:hover {
+  background-color: rgba(60, 60, 60, 0.89);
+}
+
+.submit-guess {
+  color: red;
+}
