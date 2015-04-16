@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Waitstaff Calculator</title>
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" type="text/css">
+  <link rel="stylesheet" href="./main.css" type="text/css">
+</head>
+
+<body ng-app="myApp">
+
+  <div class="container">
+
+    <header>
+      <h1><a href="#/details"><span>Waitstaff Calculator</span></a></h1>
+    </header>
+
+
+    <div class="nav" ng-controller="navCtrl">
+      <ul>
+        <a href="#/details"><div><li>Meal Details</li></div></a>
+        <a href="#/charges"><div><li>Charge Overview</li></div></a>
+        <a href="#/earnings"><div><li>Earnings Info</li></div></a>
+      </ul>
+    </div>
+
+    <div class="content" ng-view></div>
+
+    <div class="lower" ng-controller="resetCtrl">
+      <br>
+      <hr>
+      <button class="btn btn-default" ng-click="resetAll()">Reset All</button>
+    </div>
+
+
+  </div>
+
+  <script src="bower_components/angular/angular.min.js" type="text/javascript"></script>
+  <script src="bower_components/angular-route/angular-route.min.js" type="text/javascript"></script>
+  <script src="./app.js" type="text/javascript"></script>
+
+</body>
+
+</html>

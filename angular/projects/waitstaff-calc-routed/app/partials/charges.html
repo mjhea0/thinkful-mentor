@@ -1,0 +1,12 @@
+<div class="table">
+  <h3>Overview for Meal {{mealCount}}:</h3>
+  <button ng-click="back()" class="btn btn-default btn-sm">Prevous Meal</button>
+  <button ng-show="mealCount > 1 && $index <= mealCount" ng-click="forward()" class="btn btn-default btn-sm">Next Meal</button>
+  <br><br>
+  <div>
+    <h4>Subtotal: <em><span ng-repeat="meal in meals" ng-show="$index==(mealCount-1)">{{meal.subtotal | currency}}</span></em></h4>
+    <h4>Tip: <em><span  ng-repeat="meal in meals" ng-show="$index==(mealCount-1)">{{meal.tip | currency}}</span></em></h4>
+    <hr>
+    <h4>Total:<em><span  ng-repeat="meal in meals" ng-show="$index==(mealCount-1)">{{meal.total | currency}}</span></em></h4>
+  </div>
+</div>
