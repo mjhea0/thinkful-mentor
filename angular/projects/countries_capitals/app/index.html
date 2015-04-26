@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ccApp" ng-controller="mainController">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Countries and Capitals</title>
+     <!-- styles -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"/>
+      <link rel="stylesheet" href="bower_components/normalize.css/normalize.css"/>
+    <link rel="stylesheet" href="bower_components/fontawesome/css/font-awesome.css"/>
+    <link rel="stylesheet" href="bower_components/animate.css/animate.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Archivo+Narrow:400,400ita3lic,700,700italic' rel='stylesheet' type='text/css'>
+</head>
+<body ng-class="{loading: isLoading}">
+
+  <header class="gradient">
+    <div class="main-title">
+      <a href="#/home"><span id="title">countries & capitals</span></a>
+    </div>
+  </header>
+
+  <div class="container">
+    <div ng-view class="fade"></div>
+  </div>
+
+  <!-- scripts -->
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/angular-animate/angular-animate.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/controllers.js"></script>
+  <script src="js/factories/api.js"></script>
+  <script src="js/factories/data.js"></script>
+
+
+</body>
+
+</html>

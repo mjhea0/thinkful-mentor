@@ -1,0 +1,430 @@
+html {
+	position: relative;
+    min-height: 100%;
+}
+
+body {
+	 margin: 0 0 40em;
+	font-family: 'Source Sans Pro', sans-serif;
+	min-width:730px;
+	background-image: url('../img/striped-bg.png');
+}
+
+.container {
+	position:relative;
+	width:75%;
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom:1em;
+	padding:0 1em 1em 0;
+}
+
+header {
+	position:relative;
+	padding-top:1em;
+	height:8em;
+	background-color:#453E3E;
+	border-bottom:1.5em solid #CCEBBB;
+	box-shadow: 0 2px 3px #999;
+}
+
+.gradient {
+	background: -webkit-linear-gradient(#453E3E, #242020); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(#453E3E, #242020); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(#453E3E, #242020); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(#453E3E, #242020); /* Standard syntax */
+}
+
+
+.heading {
+	font-size:1.5em;
+	font-weight:600;
+}
+
+.main-title {
+	position:relative;
+	width:80%;
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
+}
+
+#title {
+	font-size:3em;
+	font-weight:700;
+}
+
+#caption {
+	margin-top:;
+}
+
+.main-title a {
+	color:#CCEBBB;
+	text-decoration:none;
+}
+
+.content {
+	position:relative;
+	max-height:25em;
+	overflow:auto;
+	font-size:1em;
+	margin-bottom:2em;
+	border:1px solid #ddd;
+}
+
+.home {
+	margin-top:2em;
+	border:1px solid #ddd;
+	padding:1em;
+	border-radius:1em;
+	background-color:rgba(255,255,255,.9);
+	box-shadow: 0 2px 3px #999;
+}
+
+.details-content {
+	position:relative;
+	width:48em;
+	max-height:37em;
+	overflow:auto;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:2em;
+	margin-bottom:2.5em;
+	font-size:1em;
+	border:1px solid #ddd;
+	padding:1em;
+	border-radius:1em;
+	background-color:rgba(255,255,255,.9);
+	box-shadow: 0 2px 3px #999;
+}
+
+#neighbors-list-dd {
+	margin-left:0;
+	text-indent:0;
+}
+
+#neighbors-list {
+	display:inline-block;
+	margin-left:0;
+	padding-left:0;
+	padding-right:.8em;
+}
+
+.paragraph {
+	margin-top:2em;
+	margin-bottom:3em;
+}
+
+.button {
+	border-radius:3px;
+	position:relative;
+	font-size:.9em;
+	display:inline-block;
+	margin-right:1em;
+	background-color:#453E3E;
+	border-top-color: #000;
+	padding:.5em 1em;
+}
+
+.button:hover {
+	background-color:#332E2E;
+}
+
+.details-buttons {
+	position:relative;
+	clear:both;
+	width:48em;
+	margin-left:2em;
+}
+
+.container a {
+	text-decoration:none;
+}
+
+a.white {
+	color:white;
+}
+
+#details-wrapper {
+	position:relative;
+	width:40em;
+	height:100% !important;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+#country-box {
+	position:relative;
+	width:50%;
+	height:100%;
+	float:left;
+}
+
+.details-box {
+	position:relative;
+	width:100%;
+	margin-left:2em;
+	margin-top:1em;
+}
+
+
+#image-box {
+	position:relative;
+	float:right;
+	margin-left:20px;
+	margin-top:1em;
+	width:40%;
+	height:100%;
+}
+
+#flag-box {
+	padding-top:2em;
+	padding-bottom:2em;
+	position:relative;
+}
+
+#flag-img {
+	width:150px;
+	height:100px;
+}
+
+#map-box {
+	padding-top:2em;
+	padding-bottom:2em;
+	position:relative;
+}
+
+#map-img {
+	width:150px;
+	height:auto;
+}
+
+.country-title {
+	margin-left:.8em;
+	font-size:2.5em;
+}
+
+#details-title {
+	font-size:1.5em;
+}
+
+.table {
+	position:relative;
+	width:100%;
+	max-height:450px;
+	overflow:scroll;
+	table-layout: fixed;
+	margin-bottom:-.5em;
+}
+
+#table-header {
+	position:relative;
+	width:100%;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:2em;
+	color:white;
+	height:6em;
+	line-height:3em;
+	border-top-right-radius:5px;
+	border-top-left-radius:5px;
+}
+
+#table-header ul {
+	display:table;
+	width:100%;
+	cursor:pointer;
+	margin-left:0;
+	padding:0;
+}
+
+
+#table-header li {
+	display:inline-block;
+	position:relative;
+	width:17.82% !important;
+	padding-left:.5em;
+}
+
+#table-header li:hover {
+	color:#CCEBBB;
+}
+
+#table-header li:nth-child(2) {
+	width:10.5% !important;
+}
+
+#table-search {
+	margin-top:.2em;
+	margin-left:.5em;
+	font-weight:400;
+}
+
+#table-search input {
+	color:black;
+}
+
+input:focus{
+    outline: 0;
+}
+
+#sort {
+	margin-left:.8em;
+}
+
+#arrow {
+	margin-left:.5em;
+}
+
+#table-search input {
+	margin-left:1em;
+}
+
+tbody {
+	box-shadow: 0 2px 3px #999;
+}
+
+th:first-child {
+	padding-left:2em;
+	border-top-left-radius:10px;	
+}
+
+th:last-child {
+	padding-left:2em;
+	border-top-right-radius:10px;
+}
+
+th {
+	padding-left:2em;
+	background-color:#453E3E;
+	color:#CCEBBB;
+}
+
+tr {
+	cursor:pointer;
+	height:3em;
+}
+
+td {
+	position:relative;
+	width:17.82% !important;
+	overflow:auto;
+	padding-left:1em;
+}
+
+td:nth-child(2) {
+	width:10.5% !important;
+}
+
+.country-name {
+	color:black;
+	font-weight:600;
+}
+
+dl {
+	margin-top:2em;
+}
+
+dt {
+	float:left;
+	text-align: center;
+	font-weight: bold;
+}
+
+dd {
+	padding: 0 0 1em 0;
+	text-indent:.5em;
+	margin-left:2em;
+}
+
+ul {
+	list-style:none;
+	margin-left:1em;
+}
+
+#footer {
+	position:absolute;
+	bottom:0;
+	right:0;
+	height:2em;
+	width:100%;
+	padding:0 8.5em;
+	margin-bottom:1em;
+}
+
+#footer-text {
+  font-size:1em;
+  float:right;
+  font-weight:400;
+
+}
+
+#social {
+	margin-left:1em;
+}
+
+#social a {
+	color: #453E3E;
+}
+
+#social a:hover {
+	color: #332E2E;
+}
+
+/******* Animations ***********/
+
+
+.fade {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    opacity: 1;
+}
+.fade.ng-enter,
+.fade.ng-leave {
+    -webkit-transition: all 1.3s ease;
+    transition: all 1.3s ease;
+}
+.fade.ng-enter {
+    opacity: 0;
+}
+.fade.ng-enter-active {
+    opacity: 1;
+}
+.fade.ng-leave {
+    opacity: 1;
+}
+.fade.ng-leave-active {
+    opacity: 0;
+}
+
+.animate-enter, 
+.animate-leave
+{ 
+	-webkit-transition: 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+	-moz-transition: 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+	-ms-transition: 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+	-o-transition: 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+	transition: 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+	position: relative;
+	display: block;
+	overflow: hidden;
+	text-overflow: clip;
+	white-space:nowrap;
+} 
+
+.animate-leave.animate-leave-active,
+.animate-enter {
+	opacity: 0;
+	width: 0px;
+	height: 0px;
+}
+
+.animate-enter.animate-enter-active, 
+.animate-leave {
+	opacity: 1;
+	width: 150px;
+	height: 30px;
+}
