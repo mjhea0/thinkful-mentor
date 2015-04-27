@@ -21,8 +21,6 @@ gulp.task('clean', function(cb) {
   del(['./dist'], cb);
 });
 
-gulp.task('default', ['clean:mobile']);
-
 gulp.task('minify-css', function() {
   var opts = {comments:true,spare:true};
   gulp.src(['./app/**/*.css', '!./app/bower_components/**'])
