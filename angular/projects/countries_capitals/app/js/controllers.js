@@ -2,10 +2,6 @@ angular.module('ccApp')
 
 .controller('mainController', ['$scope','countryData', function($scope, countryData) {}])
 
-.controller('homeController', ['$scope', function($scope) {
-  $scope.test = "Testing Home View...";
-}])
-
 .controller('countriesController', ['$scope','$location','$filter','countryData', '$q', function($scope, $location, $filter, countryData, $q) {
   'use strict';
 
@@ -32,9 +28,6 @@ angular.module('ccApp')
     country.areaInSqKm = parseFloat(country.areaInSqKm);
     country.population = parseFloat(country.population);
   });
-
-
-  // $scope.sortType = 'countryName'; //default sort type
 
 
   $scope.startsWith = function (actual, expected) {
