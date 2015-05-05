@@ -1,5 +1,5 @@
 // Karma configuration
-// Generated on Wed Apr 29 2015 10:34:45 GMT-0400 (EDT)
+// Generated on Mon Aug 25 2014 18:15:40 GMT-0700 (PDT)
 
 module.exports = function(config) {
   config.set({
@@ -14,20 +14,20 @@ module.exports = function(config) {
 
 
     // list of files / patterns to load in the browser
-
     files: [
-      "./app/bower_components/jquery/dist/jquery.js",
-      "./app/bower_components/angular/angular.js",
-      "./app/bower_components/angular-route/angular-route.js",
-      "./app/bower_components/angular-animate/angular-animate.js",
-      "./bower_components/angular-mocks/angular-mocks.js",
-      "./app/bower_components/bootstrap/dist/js/bootstrap.js",
-      "./app/js/main.js",
-      "./app/js/controllers.js",
-      "./app/js/factories/api.js",
-      "./app/js/factories/data.js",
-      "./tests/*.js"
+      //Load components from bower
+      './app/bower_components/angular/angular.js',
+      './app/bower_components/angular-animate/angular-animate.js',
+      './app/bower_components/angular-route/angular-route.js',
+      './app/bower_components/angular-mocks/angular-mocks.js',
+      './app/bower_components/jquery/dist/jquery.js',
+      //Program files
+      './app/js/main.js',
+      './app/js/controllers.js',
+      './app/js/factories/*.js',
+      './tests/*.js'
     ],
+
 
     // list of files to exclude
     exclude: [
@@ -67,9 +67,14 @@ module.exports = function(config) {
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
     browsers: ['Chrome'],
 
+    plugins: [
+      'karma-chrome-launcher',
+      'karma-jasmine'
+    ],
+
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
-    singleRun: true
+    singleRun: false
   });
 };
