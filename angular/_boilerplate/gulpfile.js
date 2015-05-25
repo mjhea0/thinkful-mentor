@@ -10,7 +10,7 @@ gulp.task('lint', function(){
 
 gulp.task('connect', function() {
   connect.server({
-    root: 'app/'
+    root: './app'
   });
 });
 
