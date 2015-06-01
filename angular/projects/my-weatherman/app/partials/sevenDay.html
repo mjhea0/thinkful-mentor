@@ -1,0 +1,25 @@
+<dl ng-repeat="day in days">
+	<dt class="day-name" ng-click="toggle=!toggle">
+		<span class="expand">
+			<i ng-class="{'fa fa-plus-square':!toggle, 'green fa fa-minus-square':toggle}"></i>
+			<strong>
+				<span ng-class="{'green':toggle}" id="day-of-week"> {{dayOfWeek($index) | date: 'EEE, MMM d' }} </span>
+			</strong> 
+		</span>
+		<div class="forecast-right">
+			<span id="icon" class="{{day.icon}}"></span>
+			<span class="high-low">
+			<span id="h-l">H</span>
+				<span class="hi-temp">{{day.temperatureMax.toFixed(0)}}</span>
+			<span id="h-l">L</span>
+				<span class="lo-temp">{{day.temperatureMin.toFixed(0)}}</span>
+			</span>
+		</div>
+	</dt>
+
+	<div ng-show="toggle" class="toggle">
+		<dd><span><strong><span id="details"> Details: </span></strong> {{day.summary}} </span></dd>
+		<dd><span><strong><span id="details"> Precip: </span></strong> {{day.precipProbability | percentage:0}} </span></dd>
+
+	</div>
+</dl>

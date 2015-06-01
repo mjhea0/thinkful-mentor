@@ -1,0 +1,90 @@
+<div class="main-section row">
+	<div id="forecast-box" class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
+		
+		
+		<form class="search-form" role="form" ng-submit="submit()">
+
+		<!--
+			<div class="zip-code">
+				<label for="zipcode" class="zip-label sr-only">Zip Code</label>
+	    		<div class="inner-addon right-addon">
+	   				<i ng-click="useLocation()" class="fa fa-location-arrow" data-toggle="tooltip" data-placement="top" title="click to use your location" tooltip></i>
+	    			<input ng-model="zip" type="number" class="form-control" id="zipcode" placeholder="Enter zip code" required />
+	    		</div>
+	    	</div>
+
+	    -->
+
+	    	<div class="form-group move-down">
+	    		<label for="Autocomplete2" class="sr-only">Autocomplete Model</label>
+	    		<input placeholder="Enter city or zip code" type="text" id="Autocomplete2" ng-model="autocomplete" class="city-zip form-control" ng-autocomplete="result1" details="details1" options="options1" required/>
+	    	</div>
+
+			<button type="submit" class="button float btn btn-default">Submit</button>
+			<button type="reset" ng-click="reset()" class="button float btn reset btn-default">Clear</button>
+		</form>
+
+
+	<div class="error" ng-show="notFound">
+		<span class="green"><i class="fa fa-exclamation"></i></span>
+		<span id="error">No results. Please enter a valid zip code.</span>
+	</div>
+
+	<div id="input-error" class="error" ng-show="tooLong">
+		<span class="green"><i class="fa fa-exclamation"></i></span>
+		<span id="error">Zip codes can not exceed 5 digits.</span>
+	</div>
+
+	<div id="input-error" class="error" ng-show="tooShort">
+		<span class="green"><i class="fa fa-exclamation"></i></span>
+		<span id="error">Zip codes must be at least 5 digits.</span>
+	</div>
+
+	<div class="results" ng-show="results" ng-class="slideInLeft">
+		<span id="results-title"><strong>Currently, in {{fullAddress}}:</strong></span>
+	
+		<div id="weather-details">
+
+			<ul class="current-weather">
+				<li>
+					<div class="conditions">
+						<div class="line"></div>
+						<div id="temperature">The temperature is &nbsp<span class="green-lg"><strong>{{currentTemp}}</strong></span></div>
+					</div>
+				</li>
+		
+				<li>
+					<div class="conditions">
+						<div class="line"></div>
+						<div id="temperature">Conditions: &nbsp<span class="green-lg"><strong>{{currentConditions}}</strong></span></div>
+					</div>
+				</li>
+
+				<li>
+					<div class="conditions">
+						<span class="ahead foundicon-search"></span>
+						<div id="temperature">
+							{{weather.hourly.summary}}
+						</div>
+						<!--<div id="temperature">
+							Tomorrow: high of <span class="green"><strong>{{tomorrowHigh}}</strong></span>
+							and a low of <span class="green"><strong>{{tomorrowLow}}</strong></span>
+						</div>-->
+					</div>
+				</li>
+
+			</ul>
+
+		</div>
+
+
+	</div>
+	
+	<sliding-bar></sliding-bar>
+
+	</div>
+
+	<seven-day ng-show="results" class="seven-day col-xs-7 col-sm-7 col-md-7 col-lg-7">
+	<seven-day>
+
+</div>
