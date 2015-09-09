@@ -50,3 +50,7 @@ $ python arg-ex1.py
 usage: arg-ex1.py [-h] square
 arg-ex1.py: error: too few arguments
 ```
+
+<hr>
+
+Want more? [Comparing Python Command-Line Parsing Libraries - Argparse, Docopt, and Click](https://realpython.com/blog/python/comparing-python-command-line-parsing-libraries-argparse-docopt-click/)
