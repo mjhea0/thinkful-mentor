@@ -5,7 +5,7 @@ def get_value():
     if sys.argv[1:]:
         upper_limit = sys.argv[1]
     else:
-        upper_limit = raw_input("Enter the upper limit of the range: ")
+        upper_limit = input("Enter the upper limit of the range: ")
     return upper_limit
 
 
@@ -15,21 +15,21 @@ def convert_value(upper_limit):
             value = int(upper_limit)
             return value
         except ValueError:
-            upper_limit = raw_input(
+            upper_limit = input(
                 "Incorect data type. Please enter an 'integer' for the upper limit of the range: "
             )
 
 
 def fizzbuzzed(upper_limit=30):
-    for i in xrange(1, upper_limit + 1):
+    for i in range(1, upper_limit + 1):
         if is_divisible(i, 15):
-            print "FizzBuzz"
+            print("FizzBuzz")
         elif is_divisible(i, 5):
-            print "Fizz"
+            print("Fizz")
         elif is_divisible(i, 3):
-            print "Buzz"
+            print("Buzz")
         else:
-            print i
+            print(i)
 
 
 def is_divisible(num1, num2):
