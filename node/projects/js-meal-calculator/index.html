@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Meal Calulator</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <div class="container">
+
+    <div>
+      <br><br>
+      <p>DINERS: <span id="diners">0</span></p>
+      <button onclick="addDiner()">More the merrier! (add another diner to your party)</button>
+    </div>
+
+    <div>
+      <br>
+      <p>DISHES ORDERED: <span id="dishes">0</span></p>
+      <button onclick="addDish()">Would you like fries with that shake? (add a dish)</button>
+    </div>
+
+    <div>
+      <br>
+      <p>TOTAL BILL: <span id="total">0</span></p>
+       <button onclick="checkout()">Check-bin! (calculate the total: total+tax+tip split amongst the hipsters; print it out)</button>
+      <br><br><hr>
+      <div id="receipt">0</div>
+    </div>
+
+  </div>
+
+  <script type="text/javascript" src="calculator.js" ></script>
+</body>
+</html>
