@@ -98,7 +98,7 @@ Code can be found [here](https://github.com/mjhea0/thinkful-mentor/tree/master/j
 
   You should see:
 
-  ![flask-jinja](https://raw.github.com/mjhea0/thinkful-mentor/master/jinja/images/flask-jinja.png)
+  ![flask-jinja](images/flask-jinja.png)
 
 6. It's worth noting that Jinja only supports a few control structures - `if`-statements and `for`-loops are the two primary structures. The syntax is similar to Python, differing in that no colon is required and that termination of the block is done using an `endif` or `endfor` instead of by whitespace. You can also complete the logic within your controller or views and then pass each value to the template using the template tags. However, it is much easier to perform such logic within the templates themselves.
 
@@ -170,7 +170,7 @@ Let's add inheritance to our example.
 
 3. Run it. You should see:
 
-  ![flask-jinja2](https://raw.github.com/mjhea0/thinkful-mentor/master/jinja/images/flask-jinja2.png)
+  ![flask-jinja2](images/flask-jinja2.png)
 
   One common use case is to add a navigation bar.
 
@@ -219,7 +219,7 @@ Let's add inheritance to our example.
 
   Now every single child template that extends from the base, will have the same navigation bar. To steal a line from Java philosophy: "Write once, use anywhere."
 
-  ![flask-jinja3](https://raw.github.com/mjhea0/thinkful-mentor/master/jinja/images/flask-jinja3.png)
+  ![flask-jinja3](images/flask-jinja3.png)
 
 ## Super Blocks
 
@@ -279,7 +279,7 @@ If you need to render a block from the base template, use the a [super block](ht
 
 2. Run the app. You should see that the footer is just part of the base:
 
-  ![jinja-super](https://raw.github.com/mjhea0/thinkful-mentor/master/jinja/images/jinja-super.png)
+  ![jinja-super](images/jinja-super.png)
 
 3. Now, add the super block to *template.html*
   ```python
@@ -304,7 +304,7 @@ If you need to render a block from the base template, use the a [super block](ht
 
 4. Check it out in your browser:
 
-  ![jinja-super2](https://raw.github.com/mjhea0/thinkful-mentor/master/jinja/images/jinja-super2.png)
+  ![jinja-super2](images/jinja-super2.png)
 
 5. The super block is used for common code that both the parent and child templates share, such as the `<title>` where both templates share part of the title, then you would just need to pass in the other part. Or for a heading. 
 For example:
@@ -328,7 +328,7 @@ For example:
 
   Let's see that in action:
 
-  ![jinja-super3](https://raw.github.com/mjhea0/thinkful-mentor/master/jinja/images/jinja-super3.png)
+  ![jinja-super3](images/jinja-super3.png)
 
   See what happens when you remove `{% block page %}Home{% endblock %}` from the child template
 
@@ -403,7 +403,7 @@ In Jinja2, we can place commonly used code snippets that are used over and over 
 
 4. Refresh the page. Test out the links at the top. Does the current page get highlighted? It should.
 
-  ![jinja-macros](https://raw.github.com/mjhea0/thinkful-mentor/master/jinja/images/jinja-macros.png)
+  ![jinja-macros](images/jinja-macros.png)
 
 ## Custom filters
 
@@ -465,7 +465,7 @@ Let's add one of our own. One common example is a custom datetime filter.
 
 4. Test.
 
-  ![jinja-filter](https://raw.github.com/mjhea0/thinkful-mentor/master/jinja/images/jinja-filter.png)
+  ![jinja-filter](images/jinja-filter.png)
 
 
 ## Conclusion
