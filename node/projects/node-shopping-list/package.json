@@ -1,0 +1,17 @@
+{
+  "name": "node-shopping-list",
+  "version": "0.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "mocha tests/test-server.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "express": "^4.13.4"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-http": "^2.0.1"
+  }
+}
