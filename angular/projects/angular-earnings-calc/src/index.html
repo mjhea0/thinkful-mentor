@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='earningsApp'>
+  <head>
+    <meta charset="utf-8">
+    <title>Earnings Calculator</title>
+    <!-- scripts -->
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+  </head>
+  <body>
+
+    <div class="container">
+      <!-- header -->
+      <header>
+        <h1><a href="#/details"><span>Earnings Calculator</span></a></h1>
+      </header>
+      <!-- navbar -->
+      <div class="nav">
+        <ul>
+          <a href="#/details"><div><li>Meal Details</li></div></a>
+          <a href="#/charges"><div><li>Charge Overview</li></div></a>
+          <a href="#/earnings"><div><li>Earnings Info</li></div></a>
+        </ul>
+      </div>
+      <!-- content -->
+      <div class="content" ng-view></div>
+      <!-- footer -->
+      <div class="lower" ng-controller="resetCtrl">
+        <br><hr>
+        <button class="btn btn-default" ng-click="resetAll()">Reset All</button>
+      </div>
+    </div>
+
+    <!-- scripts -->
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.10/angular.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.10/angular-route.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/routes.js"></script>
+    <script type="text/javascript" src="js/controllers.js"></script>
+    <script type="text/javascript" src="js/services.js"></script>
+
+  </body>
+</html>
