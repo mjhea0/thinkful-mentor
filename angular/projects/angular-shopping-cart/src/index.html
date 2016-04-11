@@ -6,9 +6,11 @@
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="./css/main.css">
   </head>
-  <body>
+   <body ng-cloak>
 
     <div class="container">
+      <br>
+      <div ng-include="'partials/header.html'"></div>
       <div ng-view></div>
     </div>
 
@@ -17,8 +19,6 @@
     <script type="text/javascript" src="./js/app.js"></script>
     <script type="text/javascript" src="./js/routes.js"></script>
     <script type="text/javascript" src="./js/controllers.js"></script>
-    <script type="text/javascript" src="./js/directives.js"></script>
     <script type="text/javascript" src="./js/services.js"></script>
-    <script type="text/javascript" src="./js/filters.js"></script>
   </body>
 </html>
