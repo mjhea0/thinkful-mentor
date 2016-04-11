@@ -149,10 +149,14 @@ app.service('dataService', function() {
       return shoppingCart;
     },
     updateSubtotal: function(id, newQuantity) {
-      shoppingCart.forEach(function(el){
+      shoppingCart.forEach(function(el, i) {
         if(el._id === id) {
-          el.quantity = newQuantity;
-          el.subtotal = parseFloat(el.price / 100 * newQuantity).toFixed(2);
+          if(newQuantity===0) {
+            shoppingCart.splice(i, 1);
+          } else {
+            el.quantity = newQuantity;
+            el.subtotal = parseFloat(el.price / 100 * newQuantity).toFixed(2);
+          }
           return;
         }
       });

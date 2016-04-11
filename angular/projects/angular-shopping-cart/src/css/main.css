@@ -20,3 +20,11 @@ img {
   width: 80%;
 }
 
+.total {
+  color: #d9534f;
+}
+
+.checkout-image {
+  max-width: 150px;
+}
+
