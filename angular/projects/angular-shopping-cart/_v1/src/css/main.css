@@ -1,0 +1,30 @@
+img {
+  max-width: 235px;
+}
+
+.float-right {
+  float: right;
+}
+
+.tea-name {
+  font-size: 24px;
+  margin: 1em 0;
+  font-weight: bold;
+}
+
+.image-column {
+  width: 20%;
+}
+
+.info-column {
+  width: 80%;
+}
+
+.total {
+  color: #d9534f;
+}
+
+.checkout-image {
+  max-width: 150px;
+}
+

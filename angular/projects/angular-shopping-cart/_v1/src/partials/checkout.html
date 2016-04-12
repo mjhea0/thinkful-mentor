@@ -1,0 +1,53 @@
+<div ng-show="cartItems.length">
+
+  <div class="row">
+    <div class="col-md-12">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Subtotal</th>
+          </tr>
+        </thead>
+        <tbody ng-repeat="checkoutItem in cartItems">
+          <tr>
+            <td>
+              <span class="tea-name">{{checkoutItem.name}}</span>
+              <br><br>
+              <ul>
+                <li><strong>Caffeine scale:&nbsp;</strong>{{checkoutItem.caffeineScale}}</li>
+                <li><strong>Ingredients:&nbsp;</strong> {{checkoutItem.ingredients}}</li>
+                <li><strong>Rating:&nbsp;</strong> {{checkoutItem.rating}}</li>
+                <img class="checkout-image" src="{{checkoutItem.imageUrl}}"><br>
+                <button class="btn btn-default btn-xs" ng-click="removeItem()">Remove Item</button>
+              </ul>
+
+            </td>
+            <td>
+              <select
+                ng-options="option for option in cartQuantityOptions"
+                ng-change="updateQuantity()"
+                ng-model="selectedOption"
+                ng-init="selectedOption=checkoutItem.quantity">
+              </select>
+            </td>
+            <td>${{checkoutItem.subtotal || currency}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12 text-right">
+      <h3>Total: <span class="total">${{total || currency}}</span></h3>
+    </div>
+  </div>
+
+</div>
+
+<div ng-show="!cartItems.length">
+  <br>
+  <h3>Your Shopping Cart is empty.</h3>
+</div>
