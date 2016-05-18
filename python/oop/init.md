@@ -47,3 +47,5 @@ johnny.talk()
 ```
 
 Now the `talk` method should work fine.
+
+> https://www.reddit.com/r/learnpython/comments/4jszi4/explanation_of_init_and_self/
