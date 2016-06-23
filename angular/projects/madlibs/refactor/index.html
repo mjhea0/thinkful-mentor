@@ -1,0 +1,50 @@
+<!doctype html>
+<!-- name the app appropriately -->
+<html ng-app="madlibsRefactor">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>MadLibs</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <!-- name the controller appropriately -->
+  <body ng-controller="indexController">
+
+    <header>
+      <img src="img/mad-lib-happy-face.png" id="face">
+      <img src="img/ng-mad-libs-logo.png" id="logo">
+    </header>
+
+    <!-- use semantic tags -->
+    <section ng-show="form">
+      <form ng-submit="submit()">
+        <input type="text" name="name" ng-model="content.name" required>
+        <input type="number" name="number" ng-model="content.numberOne" required>
+        <input type="text" name="verb" ng-model="content.verbOne" required>
+        <input type="text" name="celebrity" ng-model="content.celebrity" required>
+        <input type="number" name="number" ng-model="content.numberTwo" required>
+        <input type="text" name="adjective" ng-model="content.adjective" required>
+        <input type="text" name="verb" ng-model="content.verbTwo" required>
+        <input type="text" name="color" ng-model="content.color" required>
+        <input type="number" name="number" ng-model="content.numberThree" required>
+        <input type="text" name="plant" ng-model="content.plant" required>
+        <input type="submit" value="GENERATE" ></input>
+      </form>
+    </section>
+
+    <!-- use semantic tags -->
+    <section ng-show="passage">
+      <p>"You're no innocent, {{content.name}}. An honest citizen is content with an ordinary data set like yours there." She pointed across the living room at the {{content.numberOne}}-by-{{content.numberTwo}}-centimeter data set. It was the great-grandchild of the old CRTs. With color and {{content.numberTwo}}-line-per-millimeter resolution, it was the standard of government offices and the more conservative industries. There was a visible layer of dust on {{content.celebrity}}'s model. The femcop moved quickly across the living room and {{content.verbTwo}} into the drawers under the picture window. Her {{content.color}} business suit revealed a thin and angular figure. "An honest citizen would settle for a standard processor and a few {{content.number_3}} megabytes of fast storage." With some superior intuition she {{content.verb}} open the center drawer --- right under the {{content.plant}} plants --- to reveal at least five hundred cubic centimeters of optical memory, neatly racked and threaded through to the next drawer which held correspondingly {{content.adjective}} CPUs. Even so, it was nothing compared to the gear he had buried under the house."</p>
+      <!-- do not use input tags without a form -->
+      <button ng-click="reset()">RESET</button>
+    </section>
+
+    <!-- keep scripts at the bottom of the page -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="js/main.js"></script>
+
+  </body>
+</html>
