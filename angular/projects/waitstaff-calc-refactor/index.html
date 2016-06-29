@@ -1,0 +1,55 @@
+<!doctype html>
+  <html ng-app="waitStaffCalc">
+  <head>
+    <meta charset="utf-8">
+    <title>Waitstaff Calculator</title>
+  </head>
+  <body ng-controller="calcController">
+
+      <header>
+        <h1>Waitstaff Calculator</h1>
+      </header>
+
+      <section>
+        <h1>Enter the Meal Details</h1>
+        <span>Base Meal Price: $ <input type="number" step="any" ng-model="mealDetails.base"></input></span>
+        <br>
+        <span>Tax Rate: % <input type="number" step="any" ng-model="mealDetails.taxRate"></input></span>
+        <br>
+        <span>Tip Percentage: % <input type="number" step="any" ng-model="mealDetails.tipPercentage"></input></span>
+        <br>
+        <input type="submit" value="Submit" ng-click="submit()"></input>
+        <button ng-click="cancel()">Cancel</button>
+      </section>
+
+      <hr>
+
+      <section>
+        <h1>Customer Charges</h1>
+        <span>Subtotal: {{ totals.subtotal | currency }}</span>
+        <br>
+        <span>Tip: {{ totals.tip | currency }}</span>
+        <br>
+        <span>Total: {{ totals.total | currency }}</span>
+      </section>
+
+      <hr>
+
+      <section>
+        <h1>My Earnings Info</h1>
+        <span>Tip Total: {{ totals.tipTotal | currency }}</span>
+        <br>
+        <span>Meal count: {{ totals.count }}</span>
+        <br>
+        <span>Average Tip Per Meal: {{ totals.averageTip | currency }}</span>
+      </section>
+
+      <hr>
+
+      <button ng-click="reset()">Reset</button>
+
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+      <script src="js/app.js"></script>
+    </body>
+  </html>
+
