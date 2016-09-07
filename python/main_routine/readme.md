@@ -9,9 +9,9 @@ first.py:
 # first.py
 
 if __name__ == '__main__':
-  print 'This print statement is ran from the current module.'
+  print('This print statement is ran from the current module.')
 else:
-  print 'This print statement is ran from a different module'
+  print('This print statement is ran from a different module.')
 ```
 
 second.py:
@@ -33,7 +33,7 @@ This print statement is ran from a different module
 
 ### What's going on?
 
-By setting the `__name__` variable equal to `"__main__"`, we indicated that we're running the statements in the current file rather than importing it. So the first file runs the code within the current module, while the second file imports the code from the first.
+Behind the scenes, the `__name__` variable is set equal to `"__main__"`, indicating that we're running the statements in the current file rather than importing it. So the first file runs the code within the current module, while the second file imports the code from the first.
 
 
 
