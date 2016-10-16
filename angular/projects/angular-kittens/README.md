@@ -24,6 +24,7 @@ When I visit the index page
 And I see a list of kittens
 When I click the "View Comments" link for a kitten
 Then I am shown all the comments for that kitten
+```
 
 ```
 When I click the "Add Comment" link for a kitten
