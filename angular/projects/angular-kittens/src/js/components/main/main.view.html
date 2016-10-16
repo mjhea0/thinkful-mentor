@@ -1,0 +1,24 @@
+<h1>All Kittens</h1>
+<hr><br>
+
+<p ng-if="!kittens.length">No kittens!</p>
+<div ng-if="kittens.length">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Bio</th>
+        <th>Image</th>
+        <th>Likes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="kitten in kittens">
+        <td>{{kitten.name}}</td>
+        <td>{{kitten.bio}}</td>
+        <td><img src="{{kitten.url}}"></td>
+        <td>{{kitten.likes}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

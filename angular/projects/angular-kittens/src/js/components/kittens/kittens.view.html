@@ -1,0 +1,18 @@
+<h1>New Kitten</h1>
+<hr><br>
+
+<form ng-submit="kittensCtrl.addKitten()">
+  <div class="form-group">
+    <label for="name">Kitten Name</label>
+    <input type="text" class="form-control" id="name" ng-model="kittensCtrl.kitten.name" placeholder="Name" required>
+  </div>
+  <div class="form-group">
+    <label for="url">Image URL</label>
+    <input type="url" class="form-control" id="url" ng-model="kittensCtrl.kitten.url" required>
+  </div>
+  <div class="form-group">
+    <label for="bio">Kitten Bio</label>
+    <textarea class="form-control" rows="5" id="bio" ng-model="kittensCtrl.kitten.bio" required></textarea>
+  </div>
+  <button type="submit" class="btn btn-default">Add</button>
+</form>
