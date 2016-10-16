@@ -24,7 +24,7 @@
 
   function init() {
     const kitten = {};
-    kitten.url = 'https://placekitten.com/g/200/300';
+    kitten.url = 'https://placekitten.com/g/100/100';
     return kitten;
   }
 
