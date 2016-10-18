@@ -6,13 +6,11 @@
     .module('ngKittens.components.main', [])
     .controller('mainController', mainController);
 
-  mainController.$inject = ['$rootScope'];
+  mainController.$inject = ['$rootScope', 'kittensService'];
 
-  function mainController($rootScope) {
+  function mainController($rootScope, kittensService) {
     /*jshint validthis: true */
-    if (!$rootScope.kittens) {
-      $rootScope.kittens = [];
-    }
+    this.kittens = kittensService.getAllKittens();
   }
 
 })();

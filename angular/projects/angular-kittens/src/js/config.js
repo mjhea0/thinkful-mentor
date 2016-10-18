@@ -18,6 +18,11 @@
         controller: 'kittensController',
         controllerAs: 'kittensCtrl'
       })
+      .when('/comments', {
+        templateUrl: 'js/components/comments/comments.view.html',
+        controller: 'commentsController',
+        controllerAs: 'commentsCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });

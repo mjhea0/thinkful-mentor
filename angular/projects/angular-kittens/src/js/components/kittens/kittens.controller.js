@@ -6,17 +6,16 @@
     .module('ngKittens.components.kittens', [])
     .controller('kittensController', kittensController);
 
-  kittensController.$inject = ['$rootScope', '$location'];
+  kittensController.$inject = ['$rootScope', '$location', 'kittensService'];
 
-  function kittensController($rootScope, $location) {
+  function kittensController($rootScope, $location, kittensService) {
     /*jshint validthis: true */
-    if (!$rootScope.kittens) {
-      $rootScope.kittens = [];
-    }
     this.kitten = init();
     this.addKitten = function() {
       this.kitten.likes = 0;
-      $rootScope.kittens.push(this.kitten);
+      this.kitten.comments = [];
+      this.kitten.id = kittensService.getNextID();
+      kittensService.addKitten(this.kitten);
       this.kitten = init();
       $location.path('/');
     };

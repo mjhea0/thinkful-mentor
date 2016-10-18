@@ -19,17 +19,19 @@ And the number of likes a kitten has
 
 ## Part 2
 
+> Make sure to add a service to store all kittens
+
 ```
-When I visit the index page
+When I visit the index (`/#/`) page
 And I see a list of kittens
 When I click the "View Comments" link for a kitten
-Then I am shown all the comments for that kitten
+Then I am shown all the comments for that kitten (on a new route - `/#/comments`)
 ```
 
 ```
-When I click the "Add Comment" link for a kitten
-Then I see a form
-And I can input a comment author
+When I click the "Add Comment" link for a kitten on the comments (`/#/comments/:id`) page
+Then I see a form (on a new route - `/#/comments/:id/new`)
+And I can input a comment email
 And I can input a comment body  
 And when I click the "Create Comment" link
 Then I can see my comment in the list of comments for that kitten
