@@ -1,1 +1,29 @@
 <h1>Comments</h1>
+<hr><br>
+
+<a ng-if="!commentsCtrl.isVisible" ng-click="commentsCtrl.showForm()" class="btn btn-primary btn-xs">Add Comment</a>
+
+<div ng-if="commentsCtrl.isVisible">
+  <form ng-submit="commentsCtrl.addComment()">
+    <div class="form-group">
+      <label for="comment">Comment</label>
+      <textarea class="form-control" rows="5" id="comment" ng-model="commentsCtrl.comment" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-default">Add</button>
+    <button ng-click="commentsCtrl.hideForm()" class="btn btn-default">Cancel</button>
+  </form>
+</div>
+
+<br><br>
+
+<h2>All Comments</h2>
+
+<p ng-if="!commentsCtrl.comments.length">No comments!</p>
+
+<div ng-if="commentsCtrl.comments.length">
+  <ul>
+    <li ng-repeat="comment in commentsCtrl.comments">
+      {{comment}}
+    </li>
+  </ul>
+</div>

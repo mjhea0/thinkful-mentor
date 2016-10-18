@@ -24,8 +24,20 @@
     this.getAllKittens = function() {
       return kittens;
     };
+    this.getComments = function(id) {
+      return kittens.filter((el) => {
+        return el.id === parseInt(id);
+      })[0].comments;
+    };
     this.addKitten = function(kitten) {
       kittens.push(kitten);
+    };
+    this.addComment = function(id, comment) {
+      for (let kitten of kittens) {
+        if (kitten.id === parseInt(id)) {
+          kitten.comments.push(comment);
+        }
+      }
     };
     this.getNextID = function() {
       return parseInt(kittens[kittens.length - 1].id) + 1;

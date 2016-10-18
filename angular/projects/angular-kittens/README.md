@@ -25,16 +25,16 @@ And the number of likes a kitten has
 When I visit the index (`/#/`) page
 And I see a list of kittens
 When I click the "View Comments" link for a kitten
-Then I am shown all the comments for that kitten (on a new route - `/#/comments`)
+Then I am shown all the comments for that kitten (on a new route - `/#/comments/:id`)
 ```
 
 ```
 When I click the "Add Comment" link for a kitten on the comments (`/#/comments/:id`) page
-Then I see a form (on a new route - `/#/comments/:id/new`)
-And I can input a comment email
+Then I see a form (on the same page)
 And I can input a comment body  
 And when I click the "Create Comment" link
 Then I can see my comment in the list of comments for that kitten
+And I can no longer see the form
 ```
 
 ## Part 3

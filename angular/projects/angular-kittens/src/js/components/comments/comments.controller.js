@@ -6,11 +6,25 @@
     .module('ngKittens.components.comments', [])
     .controller('commentsController', commentsController);
 
-  commentsController.$inject = [];
+  commentsController.$inject = ['$routeParams', 'kittensService'];
 
-  function commentsController() {
+  function commentsController($routeParams, kittensService) {
     /*jshint validthis: true */
-    console.log('hi!');
+    this.kittenID = $routeParams.id;
+    this.comments = kittensService.getComments($routeParams.id);
+    this.comment = '';
+    this.showForm = function () {
+      this.isVisible = true;
+    };
+    this.hideForm = function () {
+      this.isVisible = false;
+      this.comment = '';
+    };
+    this.addComment = function() {
+      kittensService.addComment($routeParams.id, this.comment);
+      this.isVisible = false;
+      this.comment = '';
+    };
   }
 
 })();

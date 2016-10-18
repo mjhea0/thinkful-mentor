@@ -18,7 +18,7 @@
         controller: 'kittensController',
         controllerAs: 'kittensCtrl'
       })
-      .when('/comments', {
+      .when('/comments/:id', {
         templateUrl: 'js/components/comments/comments.view.html',
         controller: 'commentsController',
         controllerAs: 'commentsCtrl'
