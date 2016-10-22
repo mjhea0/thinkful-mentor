@@ -7,6 +7,7 @@
   <table class="table">
     <thead>
       <tr>
+        <th></th>
         <th>Name</th>
         <th>Bio</th>
         <th>Image</th>
@@ -16,9 +17,13 @@
     </thead>
     <tbody>
       <tr ng-repeat="kitten in mainCtrl.kittens">
+        <td>
+          <span ng-click="mainCtrl.vote(kitten.id, '+')" class="glyphicon glyphicon-arrow-up"></span>
+          <span ng-click="mainCtrl.vote(kitten.id, '-')" class="glyphicon glyphicon-arrow-down"></span>
+        </td>
         <td>{{kitten.name}}</td>
         <td>{{kitten.bio}}</td>
-        <td><img src="{{kitten.url}}"></td>
+        <td><img ng-src="{{kitten.url}}"></td>
         <td>{{kitten.likes}}</td>
         <td><a href="/#/comments/{{kitten.id}}" class="btn btn-primary btn-xs">View</a></td>
       </tr>

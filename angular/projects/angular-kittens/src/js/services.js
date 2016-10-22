@@ -42,6 +42,17 @@
     this.getNextID = function() {
       return parseInt(kittens[kittens.length - 1].id) + 1;
     };
+    this.updateLikes = function(id, type) {
+      for (let kitten of kittens) {
+        if (kitten.id === parseInt(id)) {
+          if (type === '+') {
+            kitten.likes++;
+          } else {
+            kitten.likes--;
+          }
+        }
+      }
+    };
   }
 
 })();
