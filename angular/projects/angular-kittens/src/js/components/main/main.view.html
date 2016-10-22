@@ -4,19 +4,21 @@
 <p ng-if="!mainCtrl.kittens.length">No kittens!</p>
 
 <div ng-if="mainCtrl.kittens.length">
+  (click column title to sort)
+  <br><br>
   <table class="table">
     <thead>
       <tr>
         <th></th>
-        <th>Name</th>
+        <th ng-click="mainCtrl.changeOrder('name')">Name</th>
         <th>Bio</th>
         <th>Image</th>
-        <th>Likes</th>
+        <th ng-click="mainCtrl.changeOrder('likes')">Likes</th>
         <th>Comments</th>
       </tr>
     </thead>
     <tbody>
-      <tr ng-repeat="kitten in mainCtrl.kittens">
+      <tr ng-repeat="kitten in mainCtrl.kittens | orderBy:mainCtrl.order">
         <td>
           <span ng-click="mainCtrl.vote(kitten.id, '+')" class="glyphicon glyphicon-arrow-up"></span>
           <span ng-click="mainCtrl.vote(kitten.id, '-')" class="glyphicon glyphicon-arrow-down"></span>

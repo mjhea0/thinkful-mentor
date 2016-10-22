@@ -19,6 +19,17 @@
           'So nice',
           'Is that hajek?'
         ]
+      },
+      {
+        id: 2,
+        name: 'Anna',
+        bio: 'likes to read',
+        likes: 22,
+        url: 'https://placekitten.com/g/100/200',
+        comments: [
+          'Soooo nice',
+          'Is that anna?'
+        ]
       }
     ];
     this.getAllKittens = function() {
