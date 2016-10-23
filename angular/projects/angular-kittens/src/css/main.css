@@ -3,5 +3,15 @@ body {
 }
 
 .selected {
-  color: red;
+  background-color: #5bc0de;
+  cursor: pointer;
+}
+
+.not-selected:hover {
+  background-color: #5bc0de;
+  cursor: pointer;
+}
+
+.arrow:hover {
+  cursor: pointer;
 }

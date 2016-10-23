@@ -11,6 +11,7 @@
   function commentsController($routeParams, kittensService) {
     /*jshint validthis: true */
     this.kittenID = $routeParams.id;
+    this.kittenName = kittensService.getName($routeParams.id);
     this.comments = kittensService.getComments($routeParams.id);
     this.comment = '';
     this.showForm = function () {

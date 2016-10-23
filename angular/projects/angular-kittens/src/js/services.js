@@ -35,6 +35,11 @@
     this.getAllKittens = function() {
       return kittens;
     };
+    this.getName = function(id) {
+      return kittens.filter((el) => {
+        return el.id === parseInt(id);
+      })[0].name;
+    };
     this.getComments = function(id) {
       return kittens.filter((el) => {
         return el.id === parseInt(id);

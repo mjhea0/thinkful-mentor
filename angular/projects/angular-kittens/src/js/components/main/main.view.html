@@ -4,24 +4,40 @@
 <p ng-if="!mainCtrl.kittens.length">No kittens!</p>
 
 <div ng-if="mainCtrl.kittens.length">
-  (click column title to sort)
-  <br><br>
-  <table class="table">
+  <table class="table table-bordered">
     <thead>
       <tr>
         <th></th>
-        <th ng-click="mainCtrl.changeOrder('name')">Name</th>
+        <th
+          ng-click="mainCtrl.changeOrder('name')"
+          ng-class="mainCtrl.orderBy == 'name' ? 'selected' :
+          'not-selected'">
+          <span>Name</span>
+          <span
+            ng-if="mainCtrl.orderBy == 'name'"
+            ng-class="mainCtrl.orderBySymbol == '-' ? 'glyphicon glyphicon-chevron-down' : 'glyphicon glyphicon-chevron-up'">
+          </span>
+        </th>
         <th>Bio</th>
         <th>Image</th>
-        <th ng-click="mainCtrl.changeOrder('likes')">Likes</th>
+        <th
+          ng-click="mainCtrl.changeOrder('likes')"
+          ng-class="mainCtrl.orderBy == 'likes' ? 'selected' :
+          'not-selected'">
+          <span>Likes</span>
+          <span
+            ng-if="mainCtrl.orderBy == 'likes'"
+            ng-class="mainCtrl.orderBySymbol == '-' ? 'glyphicon glyphicon-chevron-down' : 'glyphicon glyphicon-chevron-up'">
+          </span>
+        </th>
         <th>Comments</th>
       </tr>
     </thead>
     <tbody>
       <tr ng-repeat="kitten in mainCtrl.kittens | orderBy:mainCtrl.order">
         <td>
-          <span ng-click="mainCtrl.vote(kitten.id, '+')" class="glyphicon glyphicon-arrow-up"></span>
-          <span ng-click="mainCtrl.vote(kitten.id, '-')" class="glyphicon glyphicon-arrow-down"></span>
+          <span ng-click="mainCtrl.vote(kitten.id, '+')" class="glyphicon glyphicon-arrow-up arrow"></span>
+          <span ng-click="mainCtrl.vote(kitten.id, '-')" class="glyphicon glyphicon-arrow-down arrow"></span>
         </td>
         <td>{{kitten.name}}</td>
         <td>{{kitten.bio}}</td>
