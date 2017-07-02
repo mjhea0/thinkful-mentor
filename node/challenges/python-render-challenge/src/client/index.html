@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Python Renderer Challenge</title>
+    <link
+      rel="stylesheet"
+      href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    >
+    <link
+      rel="stylesheet"
+      href="./assets/main.css"
+    >
+  </head>
+  <body>
+
+    <div class="container">
+
+      <div class="main">
+        <h1>Python Evaluator</h1>
+        <hr><br>
+      </div>
+
+      <div class="row">
+
+        <!-- editor -->
+        <div class="col-md-6">
+          <form>
+            <div class="form-group editor">
+              <textarea class="form-control" rows="10" id="code-input" name="code" required>print('hello world!')</textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg btn-block">Run</button>
+          </form>
+        </div>
+
+        <!-- renderer -->
+        <div class="col-md-6">
+          <div class="well renderer" id="eval-output"></div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <script
+      src="//code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous">
+    </script>
+    <script
+      type="text/javascript"
+      src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+    </script>
+    </script>
+    <script
+      type="text/javascript"
+      src="assets/main.js">
+    </script>
+  </body>
+</html>

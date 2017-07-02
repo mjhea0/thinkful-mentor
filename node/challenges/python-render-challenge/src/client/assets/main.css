@@ -1,0 +1,23 @@
+/*
+  main
+ */
+
+.main {
+  text-align: center;
+}
+
+/*
+  editor
+ */
+
+.editor > textarea {
+  min-height: 400px;
+}
+
+/*
+  renderer
+ */
+
+.renderer  {
+  min-height: 400px;
+}

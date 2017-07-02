@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Markdown Renderer Challenge</title>
+    <link
+      rel="stylesheet"
+      href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    >
+    <link
+      rel="stylesheet"
+      href="./main.css"
+    >
+  </head>
+  <body>
+
+    <div class="container">
+
+      <div class="main">
+        <h1>Markdown to HTML</h1>
+        <hr><br>
+      </div>
+
+      <div class="row">
+
+        <!-- editor -->
+        <div class="col-md-6">
+          <form>
+            <div class="form-group editor">
+              <textarea class="form-control" rows="10" id="markdown-input" required># Test document
+
+Let's create a variable `x`, equal to 5.
+
+```
+x = 5
+```</textarea>
+            </div>
+            <!-- <button type="submit" class="btn btn-primary btn-lg btn-block">Render</button> -->
+          </form>
+        </div>
+
+        <!-- renderer -->
+        <div class="col-md-6">
+          <div class="well renderer" id="html-output"></div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <script
+      src="//code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous">
+    </script>
+    <script
+      type="text/javascript"
+      src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+    </script>
+    <script
+      type="text/javascript"
+      src="//cdnjs.cloudflare.com/ajax/libs/marked/0.3.6/marked.min.js"
+    >
+    </script>
+    <script
+      type="text/javascript"
+      src="main.js">
+    </script>
+  </body>
+</html>
