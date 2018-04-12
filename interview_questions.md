@@ -33,7 +33,7 @@ A list of problems found at [reddit](https://www.reddit.com/r/cscareerquestions/
 
 - [ ] HARD: Given a 2D array of 1s and 0s, count the number of "islands of 1s" (e.g. groups of connecting 1s)
 
-##Strings
+## Strings
 - [ ] Find the first non-repeated character in a String
 
 - [ ] Reverse a String iteratively and recursively
@@ -52,7 +52,7 @@ A list of problems found at [reddit](https://www.reddit.com/r/cscareerquestions/
 
 - [ ] HARD: Given a single-line text String and a maximum width value, write the function 'String justify(String text, int maxWidth)' that formats the input text using full-justification, i.e., extra spaces on each line are equally distributed between the words; the first word on each line is flushed left and the last word on each line is flushed right
 
-##Trees
+## Trees
 - [ ] Implement a BST with insert and delete functions
 
 - [ ] Print a tree using BFS and DFS
@@ -79,7 +79,7 @@ A list of problems found at [reddit](https://www.reddit.com/r/cscareerquestions/
 
 - [ ] HARD: Construct a BST given the pre-order and in-order traversal Strings
 
-##Stacks, Queues, and Heaps
+## Stacks, Queues, and Heaps
 
 - [ ] Implement a stack with push and pop functions
 
@@ -93,7 +93,7 @@ A list of problems found at [reddit](https://www.reddit.com/r/cscareerquestions/
 
 - [ ] HARD: Implement a queue using 2 stacks
 
-##Linked Lists
+## Linked Lists
 
 - [ ] Implement a linked list (with insert and delete functions)
 
@@ -110,7 +110,7 @@ A list of problems found at [reddit](https://www.reddit.com/r/cscareerquestions/
 
 - [ ] Reverse a linked list iteratively and recursively
 
-##Sorting
+## Sorting
 
 - [ ] Implement bubble sort
 
