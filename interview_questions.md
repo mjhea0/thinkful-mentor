@@ -121,3 +121,41 @@ A list of problems found at [reddit](https://www.reddit.com/r/cscareerquestions/
 - [ ] Implement merge sort
 
 - [ ] Implement quick sort
+
+## Whiteboarding
+
+1. Palindrome (with native functions)
+1. Reverse a string
+1. FizzBuzz
+1. factoralize
+1. Flatten
+1. Recursion
+1. currying
+1. FIFO
+1. LIFO
+
+### Basic
+
+1. Loops  https://www.freecodecamp.org/challenges/repeat-a-string-repeat-a-string
+1. Factoralize https://www.freecodecamp.org/challenges/factorialize-a-number
+1. Split  https://www.freecodecamp.org/challenges/title-case-a-sentence
+1. Nested Loops  https://www.freecodecamp.org/challenges/return-largest-numbers-in-arrays
+1. while loop  https://www.freecodecamp.org/challenges/chunky-monkey
+1. splice  https://www.freecodecamp.org/challenges/drop-it
+1. data map https://www.codewars.com/kata/5862e0db4f7ab47bed0000e5
+1. data map  https://www.codewars.com/kata/545cedaa9943f7fe7b000048/train/javascript
+1. split accumulation https://www.codewars.com/kata/55bf01e5a717a0d57e0000ec/train/javascript
+1. pangram loops https://www.codewars.com/kata/545cedaa9943f7fe7b000048/train/javascript
+1. nested loop https://www.codewars.com/kata/5432fd1c913a65b28f000342/train/javascript
+1. modulus https://www.codewars.com/kata/58223370aef9fc03fd000071/train/javascript
+
+### Mid
+
+1. Diff Array  https://www.freecodecamp.org/challenges/diff-two-arrays
+1. recursion  https://www.codewars.com/kata/persistent-bugger/train/javascript
+1. currying, reduce https://www.codewars.com/kata/54ca3e777120b56cb6000710/train/javascript
+
+### Hard
+
+1. Flatten, recursion  https://www.freecodecamp.org/challenges/steamroller
+1. while, FILO, https://www.codewars.com/kata/57b06f90e298a7b53d000a86/train/javascript
