@@ -62,5 +62,7 @@ There are also some files that have no library component and shall never be impo
 
 This all works for one specific reason; when directly executed the `__name__` variable in the file being executed will always contain the `__main__ `value.
 
+### Resources
 
+https://towardsdatascience.com/learn-enough-python-to-be-useful-part-2-34f0e9e3fc9d
 
