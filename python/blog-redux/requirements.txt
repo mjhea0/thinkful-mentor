@@ -25,7 +25,7 @@ decorator==3.4.0
 distribute==0.6.45
 ## FIXME: could not find svn URL in dependency_links for this package:
 flup==1.0.3.dev-20110405
-httplib2==0.8
+httplib2==0.18.0
 itsdangerous==0.23
 lpthw.web==1.1
 mistune==0.5
