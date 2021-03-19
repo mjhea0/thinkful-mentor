@@ -7,7 +7,7 @@ Flask-OpenID==1.2.1
 Flask-SQLAlchemy==0.16
 Flask-WTF==0.8.4
 Flask-WhooshAlchemy==0.54a
-Jinja2==2.7.2
+Jinja2==2.11.3
 MarkupSafe==0.18
 SQLAlchemy==0.7.9
 Tempita==0.5.2
