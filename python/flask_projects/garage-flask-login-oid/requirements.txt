@@ -3,7 +3,7 @@ Flask-Login==0.2.10
 Flask-OpenID==1.2.1
 Flask-SQLAlchemy==1.0
 Flask-WTF==0.9.5
-Jinja2==2.7.2
+Jinja2==2.11.3
 MarkupSafe==0.19
 SQLAlchemy==0.9.3
 WTForms==1.0.5
