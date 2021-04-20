@@ -7,7 +7,7 @@ Jinja2==2.7.2
 MarkupSafe==0.19
 SQLAlchemy==0.9.3
 WTForms==1.0.5
-Werkzeug==0.9.4
+Werkzeug==0.15.3
 gunicorn==18.0
 itsdangerous==0.23
 psycopg2==2.5.2
