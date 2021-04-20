@@ -16,7 +16,7 @@ MarkupSafe==0.18
 SQLAlchemy==0.9.1
 Tempita==0.5.3dev
 WTForms==1.0.5
-Werkzeug==0.9.4
+Werkzeug==0.15.3
 Whoosh==2.5.6
 alembic==0.7.2
 beautifulsoup4==4.3.2
