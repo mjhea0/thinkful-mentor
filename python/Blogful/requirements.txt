@@ -11,5 +11,5 @@ Werkzeug==0.9.6
 alembic==0.6.7
 argparse==1.2.1
 itsdangerous==0.24
-mistune==0.4
+mistune==2.0.3
 wsgiref==0.1.2
