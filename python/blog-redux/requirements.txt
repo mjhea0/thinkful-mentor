@@ -11,7 +11,7 @@ Flask-Script==2.0.5
 Flask-WTF==0.9.4
 Flask-WhooshAlchemy==0.55a
 Jinja2==2.7.2
-Mako==1.0.0
+Mako==1.2.2
 MarkupSafe==0.18
 SQLAlchemy==0.9.1
 Tempita==0.5.3dev
